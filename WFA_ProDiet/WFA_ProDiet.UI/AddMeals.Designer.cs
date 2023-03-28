@@ -35,23 +35,31 @@
             this.txtSearchFood = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
+            this.btnAddNewFood = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.ıconButton3 = new FontAwesome.Sharp.IconButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cbOrderByFilter = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnOrder = new FontAwesome.Sharp.IconButton();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new FontAwesome.Sharp.IconButton();
+            this.btnRemove = new FontAwesome.Sharp.IconButton();
+            this.lstDailyMeal = new System.Windows.Forms.ListBox();
+            this.dtpMealDate = new System.Windows.Forms.DateTimePicker();
+            this.lblMealName = new System.Windows.Forms.Label();
+            this.btnAddMeal = new FontAwesome.Sharp.IconButton();
+            this.txtFood = new System.Windows.Forms.TextBox();
+            this.nudQuantity = new System.Windows.Forms.NumericUpDown();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblMeasure = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,8 +98,8 @@
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(80)))));
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(80)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Check;
             this.btnClose.IconColor = System.Drawing.Color.Black;
@@ -112,22 +120,22 @@
             // 
             this.dgvFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFoods.Location = new System.Drawing.Point(300, 164);
+            this.dgvFoods.Location = new System.Drawing.Point(416, 166);
             this.dgvFoods.Name = "dgvFoods";
             this.dgvFoods.RowTemplate.Height = 25;
-            this.dgvFoods.Size = new System.Drawing.Size(741, 419);
+            this.dgvFoods.Size = new System.Drawing.Size(625, 417);
             this.dgvFoods.TabIndex = 3;
             // 
             // txtSearchFood
             // 
-            this.txtSearchFood.Location = new System.Drawing.Point(53, 301);
+            this.txtSearchFood.Location = new System.Drawing.Point(12, 31);
             this.txtSearchFood.Name = "txtSearchFood";
             this.txtSearchFood.Size = new System.Drawing.Size(192, 27);
             this.txtSearchFood.TabIndex = 4;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(53, 274);
+            this.label1.Location = new System.Drawing.Point(12, 4);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(192, 24);
             this.label1.TabIndex = 5;
@@ -136,92 +144,60 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(53, 427);
+            this.label2.Location = new System.Drawing.Point(111, 102);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 24);
             this.label2.TabIndex = 6;
             this.label2.Text = "Aradığınızı bulamadınız mı? ";
             // 
-            // ıconButton2
+            // btnAddNewFood
             // 
-            this.ıconButton2.FlatAppearance.BorderSize = 0;
-            this.ıconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton2.ForeColor = System.Drawing.Color.Navy;
-            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.Fish;
-            this.ıconButton2.IconColor = System.Drawing.Color.Navy;
-            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.IconSize = 30;
-            this.ıconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton2.Location = new System.Drawing.Point(53, 450);
-            this.ıconButton2.Name = "ıconButton2";
-            this.ıconButton2.Size = new System.Drawing.Size(192, 28);
-            this.ıconButton2.TabIndex = 7;
-            this.ıconButton2.Text = "Yeni Yemek Ekle";
-            this.ıconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ıconButton2.UseVisualStyleBackColor = true;
+            this.btnAddNewFood.FlatAppearance.BorderSize = 0;
+            this.btnAddNewFood.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddNewFood.ForeColor = System.Drawing.Color.Navy;
+            this.btnAddNewFood.IconChar = FontAwesome.Sharp.IconChar.Fish;
+            this.btnAddNewFood.IconColor = System.Drawing.Color.Navy;
+            this.btnAddNewFood.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddNewFood.IconSize = 30;
+            this.btnAddNewFood.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewFood.Location = new System.Drawing.Point(111, 125);
+            this.btnAddNewFood.Name = "btnAddNewFood";
+            this.btnAddNewFood.Size = new System.Drawing.Size(192, 28);
+            this.btnAddNewFood.TabIndex = 7;
+            this.btnAddNewFood.Text = "Yeni Yemek Ekle";
+            this.btnAddNewFood.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddNewFood.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddNewFood.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.txtSearchFood);
-            this.panel2.Controls.Add(this.ıconButton2);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.ıconButton3);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(300, 483);
+            this.panel2.Size = new System.Drawing.Size(416, 483);
             this.panel2.TabIndex = 8;
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.textBox2);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(300, 276);
-            this.panel4.TabIndex = 8;
+            this.panel5.Controls.Add(this.cbOrderByFilter);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Controls.Add(this.label1);
+            this.panel5.Controls.Add(this.btnAddNewFood);
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.txtSearchFood);
+            this.panel5.Controls.Add(this.btnOrder);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(416, 159);
+            this.panel5.TabIndex = 9;
             // 
-            // label4
+            // cbOrderByFilter
             // 
-            this.label4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label4.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(0, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(300, 72);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "KAHVALTI";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox2.Location = new System.Drawing.Point(0, 64);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 212);
-            this.textBox2.TabIndex = 0;
-            // 
-            // ıconButton3
-            // 
-            this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton3.IconColor = System.Drawing.Color.Black;
-            this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(53, 390);
-            this.ıconButton3.Name = "ıconButton3";
-            this.ıconButton3.Size = new System.Drawing.Size(192, 34);
-            this.ıconButton3.TabIndex = 7;
-            this.ıconButton3.Text = "SIRALA";
-            this.ıconButton3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbOrderByFilter.FormattingEnabled = true;
+            this.cbOrderByFilter.Items.AddRange(new object[] {
             "Ketojenik diyet için ideal ( düşük karbonhidrat )",
             "Dukan diyeti için ideal ( yüksek protein )",
             "Kaloriye göre azalan",
@@ -233,84 +209,201 @@
             "Yağa göre azalan",
             "Yağa göre artan",
             ""});
-            this.comboBox1.Location = new System.Drawing.Point(53, 356);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 28);
-            this.comboBox1.TabIndex = 6;
+            this.cbOrderByFilter.Location = new System.Drawing.Point(210, 30);
+            this.cbOrderByFilter.Name = "cbOrderByFilter";
+            this.cbOrderByFilter.Size = new System.Drawing.Size(192, 28);
+            this.cbOrderByFilter.TabIndex = 6;
             // 
-            // ıconButton4
+            // label3
             // 
-            this.ıconButton4.BackColor = System.Drawing.Color.Transparent;
-            this.ıconButton4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ıconButton4.FlatAppearance.BorderSize = 0;
-            this.ıconButton4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
-            this.ıconButton4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(80)))));
-            this.ıconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton4.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.ıconButton4.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ıconButton4.ForeColor = System.Drawing.Color.Black;
-            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
-            this.ıconButton4.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton4.IconSize = 40;
-            this.ıconButton4.Location = new System.Drawing.Point(368, 0);
-            this.ıconButton4.Name = "ıconButton4";
-            this.ıconButton4.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.ıconButton4.Size = new System.Drawing.Size(373, 64);
-            this.ıconButton4.TabIndex = 7;
-            this.ıconButton4.Text = "EKLE";
-            this.ıconButton4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.ıconButton4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.ıconButton4.UseVisualStyleBackColor = false;
+            this.label3.Location = new System.Drawing.Point(210, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(192, 24);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Sıralama Filtresi";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // textBox1
+            // btnOrder
             // 
-            this.textBox1.Location = new System.Drawing.Point(50, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 27);
-            this.textBox1.TabIndex = 9;
+            this.btnOrder.BackColor = System.Drawing.Color.Transparent;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnOrder.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnOrder.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnOrder.IconColor = System.Drawing.Color.Black;
+            this.btnOrder.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnOrder.Location = new System.Drawing.Point(12, 64);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(390, 34);
+            this.btnOrder.TabIndex = 7;
+            this.btnOrder.Text = "SIRALA";
+            this.btnOrder.UseVisualStyleBackColor = false;
             // 
-            // numericUpDown1
+            // panel4
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(213, 12);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            2000,
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.lstDailyMeal);
+            this.panel4.Controls.Add(this.dtpMealDate);
+            this.panel4.Controls.Add(this.lblMealName);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 159);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(416, 324);
+            this.panel4.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnUpdate);
+            this.panel6.Controls.Add(this.btnRemove);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 279);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(416, 45);
+            this.panel6.TabIndex = 4;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Retweet;
+            this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(0, 0);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(204, 45);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Güncelle";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRemove.IconChar = FontAwesome.Sharp.IconChar.Backspace;
+            this.btnRemove.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRemove.IconSize = 45;
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(204, 0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(212, 45);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Sil";
+            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // lstDailyMeal
+            // 
+            this.lstDailyMeal.FormattingEnabled = true;
+            this.lstDailyMeal.ItemHeight = 20;
+            this.lstDailyMeal.Location = new System.Drawing.Point(0, 73);
+            this.lstDailyMeal.Name = "lstDailyMeal";
+            this.lstDailyMeal.Size = new System.Drawing.Size(416, 204);
+            this.lstDailyMeal.TabIndex = 2;
+            // 
+            // dtpMealDate
+            // 
+            this.dtpMealDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpMealDate.Location = new System.Drawing.Point(0, 46);
+            this.dtpMealDate.Name = "dtpMealDate";
+            this.dtpMealDate.Size = new System.Drawing.Size(416, 27);
+            this.dtpMealDate.TabIndex = 1;
+            // 
+            // lblMealName
+            // 
+            this.lblMealName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblMealName.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMealName.Location = new System.Drawing.Point(0, 0);
+            this.lblMealName.Name = "lblMealName";
+            this.lblMealName.Size = new System.Drawing.Size(416, 46);
+            this.lblMealName.TabIndex = 1;
+            this.lblMealName.Text = "KAHVALTI";
+            this.lblMealName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // btnAddMeal
+            // 
+            this.btnAddMeal.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddMeal.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnAddMeal.FlatAppearance.BorderSize = 0;
+            this.btnAddMeal.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(80)))));
+            this.btnAddMeal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
+            this.btnAddMeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddMeal.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnAddMeal.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMeal.ForeColor = System.Drawing.Color.Black;
+            this.btnAddMeal.IconChar = FontAwesome.Sharp.IconChar.AngleDoubleLeft;
+            this.btnAddMeal.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnAddMeal.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddMeal.IconSize = 40;
+            this.btnAddMeal.Location = new System.Drawing.Point(466, 0);
+            this.btnAddMeal.Name = "btnAddMeal";
+            this.btnAddMeal.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
+            this.btnAddMeal.Size = new System.Drawing.Size(159, 66);
+            this.btnAddMeal.TabIndex = 7;
+            this.btnAddMeal.Text = "EKLE";
+            this.btnAddMeal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAddMeal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddMeal.UseVisualStyleBackColor = false;
+            // 
+            // txtFood
+            // 
+            this.txtFood.Location = new System.Drawing.Point(50, 19);
+            this.txtFood.Name = "txtFood";
+            this.txtFood.ReadOnly = true;
+            this.txtFood.Size = new System.Drawing.Size(157, 27);
+            this.txtFood.TabIndex = 9;
+            // 
+            // nudQuantity
+            // 
+            this.nudQuantity.Location = new System.Drawing.Point(213, 19);
+            this.nudQuantity.Maximum = new decimal(new int[] {
+            1000,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.nudQuantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(53, 27);
-            this.numericUpDown1.TabIndex = 10;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1000,
+            this.nudQuantity.Name = "nudQuantity";
+            this.nudQuantity.Size = new System.Drawing.Size(53, 27);
+            this.nudQuantity.TabIndex = 10;
+            this.nudQuantity.Value = new decimal(new int[] {
+            1,
             0,
             0,
             0});
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.numericUpDown1);
-            this.panel3.Controls.Add(this.ıconButton4);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.lblMeasure);
+            this.panel3.Controls.Add(this.nudQuantity);
+            this.panel3.Controls.Add(this.btnAddMeal);
+            this.panel3.Controls.Add(this.txtFood);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(300, 100);
+            this.panel3.Location = new System.Drawing.Point(416, 100);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(741, 64);
+            this.panel3.Size = new System.Drawing.Size(625, 66);
             this.panel3.TabIndex = 9;
             // 
-            // label3
+            // lblMeasure
             // 
-            this.label3.Location = new System.Drawing.Point(272, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(90, 27);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "fincan/kase";
+            this.lblMeasure.Location = new System.Drawing.Point(272, 19);
+            this.lblMeasure.Name = "lblMeasure";
+            this.lblMeasure.Size = new System.Drawing.Size(90, 27);
+            this.lblMeasure.TabIndex = 11;
+            this.lblMeasure.Text = "fincan/kase";
             // 
             // AddMeals
             // 
@@ -324,17 +417,18 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddMeals";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMeals";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -350,17 +444,23 @@
         private TextBox txtSearchFood;
         private Label label1;
         private Label label2;
-        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton btnAddNewFood;
         private Panel panel2;
         private Panel panel4;
-        private Label label4;
-        private TextBox textBox2;
-        private FontAwesome.Sharp.IconButton ıconButton3;
-        private ComboBox comboBox1;
-        private FontAwesome.Sharp.IconButton ıconButton4;
-        private TextBox textBox1;
-        private NumericUpDown numericUpDown1;
+        private Label lblMealName;
+        private FontAwesome.Sharp.IconButton btnOrder;
+        private ComboBox cbOrderByFilter;
+        private FontAwesome.Sharp.IconButton btnAddMeal;
+        private TextBox txtFood;
+        private NumericUpDown nudQuantity;
         private Panel panel3;
+        private Label lblMeasure;
+        private DateTimePicker dtpMealDate;
+        private Panel panel5;
+        private ListBox lstDailyMeal;
         private Label label3;
+        private Panel panel6;
+        private FontAwesome.Sharp.IconButton btnUpdate;
+        private FontAwesome.Sharp.IconButton btnRemove;
     }
 }
