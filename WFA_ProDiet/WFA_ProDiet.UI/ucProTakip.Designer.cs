@@ -225,7 +225,8 @@
             // 
             this.btnAddBreakFast.BackColor = System.Drawing.Color.Transparent;
             this.btnAddBreakFast.FlatAppearance.BorderSize = 0;
-            this.btnAddBreakFast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(171)))));
+            this.btnAddBreakFast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddBreakFast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddBreakFast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddBreakFast.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAddBreakFast.IconColor = System.Drawing.Color.Green;
@@ -338,7 +339,8 @@
             // 
             this.btnAddLunch.BackColor = System.Drawing.Color.Transparent;
             this.btnAddLunch.FlatAppearance.BorderSize = 0;
-            this.btnAddLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(171)))));
+            this.btnAddLunch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddLunch.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAddLunch.IconColor = System.Drawing.Color.Green;
@@ -349,6 +351,7 @@
             this.btnAddLunch.Size = new System.Drawing.Size(285, 63);
             this.btnAddLunch.TabIndex = 0;
             this.btnAddLunch.UseVisualStyleBackColor = false;
+            this.btnAddLunch.Click += new System.EventHandler(this.btnAddLunch_Click);
             // 
             // panel3
             // 
@@ -450,7 +453,8 @@
             // 
             this.btnAddDinner.BackColor = System.Drawing.Color.Transparent;
             this.btnAddDinner.FlatAppearance.BorderSize = 0;
-            this.btnAddDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(171)))));
+            this.btnAddDinner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddDinner.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAddDinner.IconColor = System.Drawing.Color.Green;
@@ -461,6 +465,7 @@
             this.btnAddDinner.Size = new System.Drawing.Size(285, 63);
             this.btnAddDinner.TabIndex = 0;
             this.btnAddDinner.UseVisualStyleBackColor = false;
+            this.btnAddDinner.Click += new System.EventHandler(this.btnAddDinner_Click);
             // 
             // panel4
             // 
@@ -562,7 +567,8 @@
             // 
             this.btnAddExtra.BackColor = System.Drawing.Color.Transparent;
             this.btnAddExtra.FlatAppearance.BorderSize = 0;
-            this.btnAddExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(171)))));
+            this.btnAddExtra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnAddExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddExtra.IconChar = FontAwesome.Sharp.IconChar.Add;
             this.btnAddExtra.IconColor = System.Drawing.Color.Green;
@@ -573,6 +579,7 @@
             this.btnAddExtra.Size = new System.Drawing.Size(285, 63);
             this.btnAddExtra.TabIndex = 0;
             this.btnAddExtra.UseVisualStyleBackColor = false;
+            this.btnAddExtra.Click += new System.EventHandler(this.btnAddExtra_Click);
             // 
             // ucProTakip
             // 

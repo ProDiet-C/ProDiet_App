@@ -62,14 +62,14 @@
             // 
             // btnUser
             // 
-            this.btnUser.BackgroundImage = global::WFA_ProDiet.UI.Properties.Resources.WhatsApp_Image_2023_03_03_at_14_29_51;
             this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUser.FlatAppearance.BorderSize = 0;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnUser.IconColor = System.Drawing.Color.Black;
+            this.btnUser.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUser.IconSize = 50;
             this.btnUser.Location = new System.Drawing.Point(1097, 0);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(80, 75);

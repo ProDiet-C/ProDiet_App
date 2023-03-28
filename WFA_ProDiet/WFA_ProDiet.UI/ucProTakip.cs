@@ -19,6 +19,27 @@ namespace WFA_ProDiet.UI
 
         private void btnAddBreakFast_Click(object sender, EventArgs e)
         {
+            ShowDialogAddMeals();
+        }
+     
+
+        private void btnAddLunch_Click(object sender, EventArgs e)
+        {
+            ShowDialogAddMeals();
+
+        }
+
+        private void btnAddDinner_Click(object sender, EventArgs e)
+        {
+            ShowDialogAddMeals();
+        }
+
+        private void btnAddExtra_Click(object sender, EventArgs e)
+        {
+            ShowDialogAddMeals();
+        }
+        private void ShowDialogAddMeals()
+        {
             AddMeals addMeals = new AddMeals();
             addMeals.ShowDialog();
         }

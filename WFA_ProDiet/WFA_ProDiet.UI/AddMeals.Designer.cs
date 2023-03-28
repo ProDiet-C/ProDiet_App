@@ -37,10 +37,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnAddNewFood = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.cbOrderByFilter = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.btnUpdate = new FontAwesome.Sharp.IconButton();
@@ -48,6 +44,10 @@
             this.lstDailyMeal = new System.Windows.Forms.ListBox();
             this.dtpMealDate = new System.Windows.Forms.DateTimePicker();
             this.lblMealName = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cbOrderByFilter = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnOrder = new FontAwesome.Sharp.IconButton();
             this.btnAddMeal = new FontAwesome.Sharp.IconButton();
             this.txtFood = new System.Windows.Forms.TextBox();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
@@ -56,9 +56,9 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -118,6 +118,7 @@
             // 
             // dgvFoods
             // 
+            this.dgvFoods.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgvFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFoods.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvFoods.Location = new System.Drawing.Point(416, 166);
@@ -171,13 +172,104 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.panel5);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 100);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(416, 483);
             this.panel2.TabIndex = 8;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.lstDailyMeal);
+            this.panel4.Controls.Add(this.dtpMealDate);
+            this.panel4.Controls.Add(this.lblMealName);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 164);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(416, 319);
+            this.panel4.TabIndex = 8;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnUpdate);
+            this.panel6.Controls.Add(this.btnRemove);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel6.Location = new System.Drawing.Point(0, 274);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(416, 45);
+            this.panel6.TabIndex = 4;
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnUpdate.FlatAppearance.BorderSize = 0;
+            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Retweet;
+            this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUpdate.Location = new System.Drawing.Point(0, 0);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(204, 45);
+            this.btnUpdate.TabIndex = 3;
+            this.btnUpdate.Text = "Güncelle";
+            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            // 
+            // btnRemove
+            // 
+            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnRemove.FlatAppearance.BorderSize = 0;
+            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRemove.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRemove.IconChar = FontAwesome.Sharp.IconChar.Backspace;
+            this.btnRemove.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnRemove.IconSize = 45;
+            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnRemove.Location = new System.Drawing.Point(204, 0);
+            this.btnRemove.Name = "btnRemove";
+            this.btnRemove.Size = new System.Drawing.Size(212, 45);
+            this.btnRemove.TabIndex = 3;
+            this.btnRemove.Text = "Sil";
+            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRemove.UseVisualStyleBackColor = true;
+            // 
+            // lstDailyMeal
+            // 
+            this.lstDailyMeal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lstDailyMeal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstDailyMeal.FormattingEnabled = true;
+            this.lstDailyMeal.ItemHeight = 20;
+            this.lstDailyMeal.Location = new System.Drawing.Point(0, 73);
+            this.lstDailyMeal.Name = "lstDailyMeal";
+            this.lstDailyMeal.Size = new System.Drawing.Size(416, 246);
+            this.lstDailyMeal.TabIndex = 2;
+            // 
+            // dtpMealDate
+            // 
+            this.dtpMealDate.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dtpMealDate.Location = new System.Drawing.Point(0, 46);
+            this.dtpMealDate.Name = "dtpMealDate";
+            this.dtpMealDate.Size = new System.Drawing.Size(416, 27);
+            this.dtpMealDate.TabIndex = 1;
+            // 
+            // lblMealName
+            // 
+            this.lblMealName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblMealName.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMealName.Location = new System.Drawing.Point(0, 0);
+            this.lblMealName.Name = "lblMealName";
+            this.lblMealName.Size = new System.Drawing.Size(416, 46);
+            this.lblMealName.TabIndex = 1;
+            this.lblMealName.Text = "KAHVALTI";
+            this.lblMealName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panel5
             // 
@@ -188,10 +280,10 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.txtSearchFood);
             this.panel5.Controls.Add(this.btnOrder);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(416, 159);
+            this.panel5.Size = new System.Drawing.Size(416, 164);
             this.panel5.TabIndex = 9;
             // 
             // cbOrderByFilter
@@ -240,95 +332,6 @@
             this.btnOrder.TabIndex = 7;
             this.btnOrder.Text = "SIRALA";
             this.btnOrder.UseVisualStyleBackColor = false;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Controls.Add(this.lstDailyMeal);
-            this.panel4.Controls.Add(this.dtpMealDate);
-            this.panel4.Controls.Add(this.lblMealName);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 159);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(416, 324);
-            this.panel4.TabIndex = 8;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnUpdate);
-            this.panel6.Controls.Add(this.btnRemove);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel6.Location = new System.Drawing.Point(0, 279);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(416, 45);
-            this.panel6.TabIndex = 4;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnUpdate.FlatAppearance.BorderSize = 0;
-            this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.btnUpdate.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.IconChar = FontAwesome.Sharp.IconChar.Retweet;
-            this.btnUpdate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnUpdate.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUpdate.Location = new System.Drawing.Point(0, 0);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(204, 45);
-            this.btnUpdate.TabIndex = 3;
-            this.btnUpdate.Text = "Güncelle";
-            this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            // 
-            // btnRemove
-            // 
-            this.btnRemove.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnRemove.IconChar = FontAwesome.Sharp.IconChar.Backspace;
-            this.btnRemove.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRemove.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnRemove.IconSize = 45;
-            this.btnRemove.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnRemove.Location = new System.Drawing.Point(204, 0);
-            this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(212, 45);
-            this.btnRemove.TabIndex = 3;
-            this.btnRemove.Text = "Sil";
-            this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnRemove.UseVisualStyleBackColor = true;
-            // 
-            // lstDailyMeal
-            // 
-            this.lstDailyMeal.FormattingEnabled = true;
-            this.lstDailyMeal.ItemHeight = 20;
-            this.lstDailyMeal.Location = new System.Drawing.Point(0, 73);
-            this.lstDailyMeal.Name = "lstDailyMeal";
-            this.lstDailyMeal.Size = new System.Drawing.Size(416, 204);
-            this.lstDailyMeal.TabIndex = 2;
-            // 
-            // dtpMealDate
-            // 
-            this.dtpMealDate.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dtpMealDate.Location = new System.Drawing.Point(0, 46);
-            this.dtpMealDate.Name = "dtpMealDate";
-            this.dtpMealDate.Size = new System.Drawing.Size(416, 27);
-            this.dtpMealDate.TabIndex = 1;
-            // 
-            // lblMealName
-            // 
-            this.lblMealName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMealName.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblMealName.Location = new System.Drawing.Point(0, 0);
-            this.lblMealName.Name = "lblMealName";
-            this.lblMealName.Size = new System.Drawing.Size(416, 46);
-            this.lblMealName.TabIndex = 1;
-            this.lblMealName.Text = "KAHVALTI";
-            this.lblMealName.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAddMeal
             // 
@@ -424,10 +427,10 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
