@@ -14,22 +14,42 @@ namespace WFA_ProDiet.UI
     {
         ucProTakip ucProTakip = new ucProTakip();
         ucProPlan ucProPlan = new ucProPlan();
-
         public HomePage()
         {
             InitializeComponent();
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-            EditUserControl(ucProPlan);       
-            EditUserControl(ucProTakip);
+
         }
 
-        private void EditUserControl(UserControl uc)
+        private void AddUserControl(UserControl uc)
         {
             pnlScreen.Controls.Add(uc);
             uc.Dock= DockStyle.Fill;
-            uc.Visible = false;
+        }
+        private void btnProPlan_Click(object sender, EventArgs e)
+        {
+           
+            RemoveAllUc();
+            AddUserControl(ucProPlan);
+        }
+      
+
+        private void btnProTakip_Click(object sender, EventArgs e)
+        {           
+            RemoveAllUc();
+            AddUserControl(ucProTakip);
+        }
+        private void RemoveAllUc()
+        {
+            foreach (var uc in pnlScreen.Controls)
+            {
+                if (uc is UserControl)
+                {
+                    pnlScreen.Controls.Remove((UserControl)uc);
+                }
+            }
         }
 
 
@@ -46,13 +66,13 @@ namespace WFA_ProDiet.UI
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-            pnlMeals.Visible = pnlMeals.Visible == true ? false : true;
-            panel5.Visible = false;
+            pnlMeals.Visible = !pnlMeals.Visible;
+            pnlReports.Visible = false;
         }
 
         private void ıconButton4_Click(object sender, EventArgs e)
         {
-            panel5.Visible = panel5.Visible == true ? false : true;
+            pnlReports.Visible = !pnlReports.Visible;
             pnlMeals.Visible = false;
 
         }
@@ -71,40 +91,5 @@ namespace WFA_ProDiet.UI
         {
         
         }
-
-        private void btnProPlan_Click(object sender, EventArgs e)
-        {    
-            ChangeVisibleAllUC();
-        }
-
-        private void btnProTakip_Click(object sender, EventArgs e)
-        {
-            ChangeVisibleAllUC();        
-           
-        }
-
-   
-        private void OpenUC(UserControl userControl)
-        {
-            userControl.Visible = true;
-        }
-
-        private void ChangeVisibleAllUC()
-        {
-
-            foreach (var uc in pnlScreen.Controls)
-            {
-                if (uc is UserControl)
-                {
-                    UserControl changeUc = ((UserControl)uc); // görünürlüğü terse döndürür.
-                    //uc.Visible = !changeUc.Visible;
-                    changeUc.Visible = changeUc.Visible ? false : true;
-                }
-             
-            
-            }
-        }
-
-      
     }
 }
