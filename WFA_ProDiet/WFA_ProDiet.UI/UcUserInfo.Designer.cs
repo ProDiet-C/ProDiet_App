@@ -269,6 +269,7 @@
             this.ıconButton2.BackColor = System.Drawing.Color.Transparent;
             this.ıconButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.ıconButton2.FlatAppearance.BorderSize = 0;
+            this.ıconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.ıconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
             this.ıconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ıconButton2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
