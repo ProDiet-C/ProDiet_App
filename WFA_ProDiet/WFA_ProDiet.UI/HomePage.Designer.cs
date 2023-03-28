@@ -292,9 +292,10 @@
             // 
             // pnlScreen
             // 
+            this.pnlScreen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlScreen.Location = new System.Drawing.Point(217, 75);
             this.pnlScreen.Name = "pnlScreen";
-            this.pnlScreen.Size = new System.Drawing.Size(960, 477);
+            this.pnlScreen.Size = new System.Drawing.Size(960, 560);
             this.pnlScreen.TabIndex = 2;
             // 
             // HomePage

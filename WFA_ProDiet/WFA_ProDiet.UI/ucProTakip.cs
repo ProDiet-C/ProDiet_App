@@ -16,5 +16,11 @@ namespace WFA_ProDiet.UI
         {
             InitializeComponent();
         }
+
+        private void btnAddBreakFast_Click(object sender, EventArgs e)
+        {
+            AddMeals addMeals = new AddMeals();
+            addMeals.ShowDialog();
+        }
     }
 }

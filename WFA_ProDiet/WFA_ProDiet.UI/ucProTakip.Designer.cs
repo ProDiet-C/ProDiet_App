@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlCurrentKcal = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flpMeals = new System.Windows.Forms.FlowLayoutPanel();
@@ -68,7 +68,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnAddExtra = new FontAwesome.Sharp.IconButton();
-            this.panel1.SuspendLayout();
+            this.pnlCurrentKcal.SuspendLayout();
             this.flpMeals.SuspendLayout();
             this.pnlBreakFast.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -76,21 +76,22 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlCurrentKcal
             // 
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 117);
-            this.panel1.TabIndex = 0;
+            this.pnlCurrentKcal.Controls.Add(this.label2);
+            this.pnlCurrentKcal.Controls.Add(this.label1);
+            this.pnlCurrentKcal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCurrentKcal.Location = new System.Drawing.Point(0, 0);
+            this.pnlCurrentKcal.Name = "pnlCurrentKcal";
+            this.pnlCurrentKcal.Size = new System.Drawing.Size(960, 560);
+            this.pnlCurrentKcal.TabIndex = 0;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(541, 77);
+            this.label2.Location = new System.Drawing.Point(537, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 20);
             this.label2.TabIndex = 1;
@@ -98,9 +99,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(411, 30);
+            this.label1.Location = new System.Drawing.Point(407, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 67);
             this.label1.TabIndex = 0;
@@ -108,6 +110,9 @@
             // 
             // flpMeals
             // 
+            this.flpMeals.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.flpMeals.AutoScroll = true;
             this.flpMeals.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.flpMeals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -115,10 +120,9 @@
             this.flpMeals.Controls.Add(this.panel2);
             this.flpMeals.Controls.Add(this.panel3);
             this.flpMeals.Controls.Add(this.panel4);
-            this.flpMeals.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.flpMeals.Location = new System.Drawing.Point(0, 123);
+            this.flpMeals.Location = new System.Drawing.Point(0, 82);
             this.flpMeals.Name = "flpMeals";
-            this.flpMeals.Size = new System.Drawing.Size(960, 437);
+            this.flpMeals.Size = new System.Drawing.Size(960, 478);
             this.flpMeals.TabIndex = 1;
             // 
             // pnlBreakFast
@@ -232,6 +236,7 @@
             this.btnAddBreakFast.Size = new System.Drawing.Size(285, 63);
             this.btnAddBreakFast.TabIndex = 0;
             this.btnAddBreakFast.UseVisualStyleBackColor = false;
+            this.btnAddBreakFast.Click += new System.EventHandler(this.btnAddBreakFast_Click);
             // 
             // panel2
             // 
@@ -574,13 +579,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.flpMeals);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlCurrentKcal);
             this.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucProTakip";
             this.Size = new System.Drawing.Size(960, 560);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlCurrentKcal.ResumeLayout(false);
+            this.pnlCurrentKcal.PerformLayout();
             this.flpMeals.ResumeLayout(false);
             this.pnlBreakFast.ResumeLayout(false);
             this.pnlBreakFast.PerformLayout();
@@ -596,7 +601,7 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlCurrentKcal;
         private Label label2;
         private Label label1;
         private FlowLayoutPanel flpMeals;
