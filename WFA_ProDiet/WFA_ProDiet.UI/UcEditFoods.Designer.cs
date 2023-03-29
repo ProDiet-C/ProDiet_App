@@ -31,28 +31,28 @@
             this.btnAdd = new FontAwesome.Sharp.IconButton();
             this.dgvFoods = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtFoodName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.cbMeasure = new System.Windows.Forms.ComboBox();
-            this.nudProteinQ = new System.Windows.Forms.NumericUpDown();
-            this.nudCarbohydrateQ = new System.Windows.Forms.NumericUpDown();
-            this.nudFatQ = new System.Windows.Forms.NumericUpDown();
-            this.nudCalorieQ = new System.Windows.Forms.NumericUpDown();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.cbCategory = new System.Windows.Forms.ComboBox();
+            this.txtQuantity = new System.Windows.Forms.TextBox();
+            this.nudCalorieQ = new System.Windows.Forms.NumericUpDown();
+            this.nudFatQ = new System.Windows.Forms.NumericUpDown();
+            this.nudCarbohydrateQ = new System.Windows.Forms.NumericUpDown();
+            this.nudProteinQ = new System.Windows.Forms.NumericUpDown();
+            this.cbMeasure = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtFoodName = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalorieQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -111,66 +111,78 @@
             this.panel1.Size = new System.Drawing.Size(960, 302);
             this.panel1.TabIndex = 6;
             // 
-            // txtFoodName
+            // cbCategory
             // 
-            this.txtFoodName.Location = new System.Drawing.Point(363, 12);
-            this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(156, 28);
-            this.txtFoodName.TabIndex = 5;
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Items.AddRange(new object[] {
+            "Hepsi",
+            "Av Hayvanları",
+            "Balıklar",
+            "Bitkisel Yağlar",
+            "Çeşniler",
+            "Çorbalar",
+            "Deniz Ürünleri",
+            "Diğer Besinler",
+            "Ekmek vb.",
+            "Et Ürünleri",
+            "Hayvansal Yağlar",
+            "İçecekler",
+            "Kırmızı Etler",
+            "Kurubaklagiller",
+            "Kümes Hayvanları",
+            "Meyveler",
+            "Peynirler",
+            "Sakatatlar",
+            "Sebzeler",
+            "Soslar",
+            "Süt ve Süt Ürünleri",
+            "Şeker ve Şeker Ürünleri",
+            "Tahıl Ürünleri",
+            "Tatlılar",
+            "Yumurtalar"});
+            this.cbCategory.Location = new System.Drawing.Point(363, 250);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(156, 29);
+            this.cbCategory.TabIndex = 10;
             // 
-            // label1
+            // txtQuantity
             // 
-            this.label1.Location = new System.Drawing.Point(191, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ad :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txtQuantity.Location = new System.Drawing.Point(363, 217);
+            this.txtQuantity.Name = "txtQuantity";
+            this.txtQuantity.Size = new System.Drawing.Size(156, 28);
+            this.txtQuantity.TabIndex = 9;
             // 
-            // label2
+            // nudCalorieQ
             // 
-            this.label2.Location = new System.Drawing.Point(191, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Protein Miktarı :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nudCalorieQ.Location = new System.Drawing.Point(363, 148);
+            this.nudCalorieQ.Margin = new System.Windows.Forms.Padding(8, 11, 8, 11);
+            this.nudCalorieQ.Name = "nudCalorieQ";
+            this.nudCalorieQ.Size = new System.Drawing.Size(156, 28);
+            this.nudCalorieQ.TabIndex = 8;
             // 
-            // label3
+            // nudFatQ
             // 
-            this.label3.Location = new System.Drawing.Point(191, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 28);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Karbonhidrat Miktarı :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nudFatQ.Location = new System.Drawing.Point(363, 114);
+            this.nudFatQ.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
+            this.nudFatQ.Name = "nudFatQ";
+            this.nudFatQ.Size = new System.Drawing.Size(156, 28);
+            this.nudFatQ.TabIndex = 8;
             // 
-            // label4
+            // nudCarbohydrateQ
             // 
-            this.label4.Location = new System.Drawing.Point(191, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 28);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Yağ Miktarı :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nudCarbohydrateQ.Location = new System.Drawing.Point(363, 80);
+            this.nudCarbohydrateQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.nudCarbohydrateQ.Name = "nudCarbohydrateQ";
+            this.nudCarbohydrateQ.Size = new System.Drawing.Size(156, 28);
+            this.nudCarbohydrateQ.TabIndex = 8;
             // 
-            // label5
+            // nudProteinQ
             // 
-            this.label5.Location = new System.Drawing.Point(191, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 28);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Kalori Miktarı :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(191, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 28);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ölçü Birimi :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.nudProteinQ.Location = new System.Drawing.Point(363, 46);
+            this.nudProteinQ.Margin = new System.Windows.Forms.Padding(4);
+            this.nudProteinQ.Name = "nudProteinQ";
+            this.nudProteinQ.Size = new System.Drawing.Size(156, 28);
+            this.nudProteinQ.TabIndex = 8;
             // 
             // cbMeasure
             // 
@@ -192,44 +204,14 @@
             this.cbMeasure.Size = new System.Drawing.Size(156, 29);
             this.cbMeasure.TabIndex = 7;
             // 
-            // nudProteinQ
+            // label8
             // 
-            this.nudProteinQ.Location = new System.Drawing.Point(363, 46);
-            this.nudProteinQ.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.nudProteinQ.Name = "nudProteinQ";
-            this.nudProteinQ.Size = new System.Drawing.Size(156, 28);
-            this.nudProteinQ.TabIndex = 8;
-            // 
-            // nudCarbohydrateQ
-            // 
-            this.nudCarbohydrateQ.Location = new System.Drawing.Point(363, 80);
-            this.nudCarbohydrateQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.nudCarbohydrateQ.Name = "nudCarbohydrateQ";
-            this.nudCarbohydrateQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCarbohydrateQ.TabIndex = 8;
-            // 
-            // nudFatQ
-            // 
-            this.nudFatQ.Location = new System.Drawing.Point(363, 114);
-            this.nudFatQ.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.nudFatQ.Name = "nudFatQ";
-            this.nudFatQ.Size = new System.Drawing.Size(156, 28);
-            this.nudFatQ.TabIndex = 8;
-            // 
-            // nudCalorieQ
-            // 
-            this.nudCalorieQ.Location = new System.Drawing.Point(363, 148);
-            this.nudCalorieQ.Margin = new System.Windows.Forms.Padding(8, 11, 8, 11);
-            this.nudCalorieQ.Name = "nudCalorieQ";
-            this.nudCalorieQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCalorieQ.TabIndex = 8;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Location = new System.Drawing.Point(363, 217);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(156, 28);
-            this.txtQuantity.TabIndex = 9;
+            this.label8.Location = new System.Drawing.Point(191, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(166, 29);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Kategori :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
@@ -240,22 +222,66 @@
             this.label7.Text = "Miktar :";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // cbCategory
+            // label6
             // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(363, 251);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(156, 29);
-            this.cbCategory.TabIndex = 10;
+            this.label6.Location = new System.Drawing.Point(191, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 28);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Ölçü Birimi :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label8
+            // label5
             // 
-            this.label8.Location = new System.Drawing.Point(191, 250);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 29);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Kategori :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label5.Location = new System.Drawing.Point(191, 148);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(166, 28);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Kalori Miktarı :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(191, 114);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 28);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Yağ Miktarı :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(191, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(166, 28);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Karbonhidrat Miktarı :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(191, 46);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(166, 28);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Protein Miktarı :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Location = new System.Drawing.Point(191, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 28);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Ad :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtFoodName
+            // 
+            this.txtFoodName.Location = new System.Drawing.Point(363, 12);
+            this.txtFoodName.Name = "txtFoodName";
+            this.txtFoodName.Size = new System.Drawing.Size(156, 28);
+            this.txtFoodName.TabIndex = 5;
             // 
             // UcEditFoods
             // 
@@ -264,16 +290,16 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvFoods);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UcEditFoods";
             this.Size = new System.Drawing.Size(960, 560);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalorieQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).EndInit();
             this.ResumeLayout(false);
 
         }
