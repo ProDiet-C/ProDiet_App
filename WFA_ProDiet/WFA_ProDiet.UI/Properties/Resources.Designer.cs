@@ -113,6 +113,16 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Atakan {
+            get {
+                object obj = ResourceManager.GetObject("Atakan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bira {
             get {
                 object obj = ResourceManager.GetObject("Bira", resourceCulture);
