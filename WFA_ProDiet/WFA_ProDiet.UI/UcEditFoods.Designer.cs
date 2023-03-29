@@ -28,303 +28,269 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdd = new FontAwesome.Sharp.IconButton();
-            this.dgvFoods = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.nudCalorieQ = new System.Windows.Forms.NumericUpDown();
-            this.nudFatQ = new System.Windows.Forms.NumericUpDown();
-            this.nudCarbohydrateQ = new System.Windows.Forms.NumericUpDown();
-            this.nudProteinQ = new System.Windows.Forms.NumericUpDown();
-            this.cbMeasure = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtFoodName = new System.Windows.Forms.TextBox();
-            this.btnAddPict = new System.Windows.Forms.Button();
-            this.pbFood = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCalorieQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).BeginInit();
-            this.SuspendLayout();
+            btnAdd = new FontAwesome.Sharp.IconButton();
+            dgvFoods = new DataGridView();
+            panel1 = new Panel();
+            pbFood = new PictureBox();
+            btnAddPict = new Button();
+            cbCategory = new ComboBox();
+            nudCalorieQ = new NumericUpDown();
+            nudFatQ = new NumericUpDown();
+            nudCarbohydrateQ = new NumericUpDown();
+            nudProteinQ = new NumericUpDown();
+            cbMeasure = new ComboBox();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            txtFoodName = new TextBox();
+            nudQuantity = new NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)dgvFoods).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbFood).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCalorieQ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudFatQ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudCarbohydrateQ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudProteinQ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
+            SuspendLayout();
             // 
             // btnAdd
             // 
-            this.btnAdd.FlatAppearance.BorderSize = 0;
-            this.btnAdd.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.btnAdd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
-            this.btnAdd.Font = new System.Drawing.Font("Segoe MDL2 Assets", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.btnAdd.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
-            this.btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAdd.IconSize = 50;
-            this.btnAdd.Location = new System.Drawing.Point(597, 106);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(270, 73);
-            this.btnAdd.TabIndex = 4;
-            this.btnAdd.Text = "Ekle";
-            this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.FlatAppearance.BorderSize = 0;
+            btnAdd.FlatAppearance.MouseDownBackColor = Color.FromArgb(198, 198, 198);
+            btnAdd.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 128);
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Flip = FontAwesome.Sharp.FlipOrientation.Vertical;
+            btnAdd.Font = new Font("Segoe MDL2 Assets", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAdd.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            btnAdd.IconColor = Color.FromArgb(141, 197, 62);
+            btnAdd.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            btnAdd.IconSize = 50;
+            btnAdd.Location = new Point(597, 106);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(270, 73);
+            btnAdd.TabIndex = 4;
+            btnAdd.Text = "Ekle";
+            btnAdd.TextAlign = ContentAlignment.TopCenter;
+            btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAdd.UseVisualStyleBackColor = true;
             // 
             // dgvFoods
             // 
-            this.dgvFoods.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFoods.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvFoods.Location = new System.Drawing.Point(0, 0);
-            this.dgvFoods.Name = "dgvFoods";
-            this.dgvFoods.RowTemplate.Height = 25;
-            this.dgvFoods.Size = new System.Drawing.Size(960, 560);
-            this.dgvFoods.TabIndex = 5;
+            dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvFoods.Dock = DockStyle.Fill;
+            dgvFoods.Location = new Point(0, 0);
+            dgvFoods.Name = "dgvFoods";
+            dgvFoods.RowTemplate.Height = 25;
+            dgvFoods.Size = new Size(960, 560);
+            dgvFoods.TabIndex = 5;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pbFood);
-            this.panel1.Controls.Add(this.btnAddPict);
-            this.panel1.Controls.Add(this.cbCategory);
-            this.panel1.Controls.Add(this.txtQuantity);
-            this.panel1.Controls.Add(this.nudCalorieQ);
-            this.panel1.Controls.Add(this.nudFatQ);
-            this.panel1.Controls.Add(this.nudCarbohydrateQ);
-            this.panel1.Controls.Add(this.nudProteinQ);
-            this.panel1.Controls.Add(this.cbMeasure);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.txtFoodName);
-            this.panel1.Controls.Add(this.btnAdd);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 258);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(960, 302);
-            this.panel1.TabIndex = 6;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
-            "Hepsi",
-            "Av Hayvanları",
-            "Balıklar",
-            "Bitkisel Yağlar",
-            "Çeşniler",
-            "Çorbalar",
-            "Deniz Ürünleri",
-            "Diğer Besinler",
-            "Ekmek vb.",
-            "Et Ürünleri",
-            "Hayvansal Yağlar",
-            "İçecekler",
-            "Kırmızı Etler",
-            "Kurubaklagiller",
-            "Kümes Hayvanları",
-            "Meyveler",
-            "Peynirler",
-            "Sakatatlar",
-            "Sebzeler",
-            "Soslar",
-            "Süt ve Süt Ürünleri",
-            "Şeker ve Şeker Ürünleri",
-            "Tahıl Ürünleri",
-            "Tatlılar",
-            "Yumurtalar"});
-            this.cbCategory.Location = new System.Drawing.Point(363, 250);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(156, 29);
-            this.cbCategory.TabIndex = 10;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Location = new System.Drawing.Point(363, 217);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(156, 28);
-            this.txtQuantity.TabIndex = 9;
-            // 
-            // nudCalorieQ
-            // 
-            this.nudCalorieQ.Location = new System.Drawing.Point(363, 148);
-            this.nudCalorieQ.Margin = new System.Windows.Forms.Padding(8, 11, 8, 11);
-            this.nudCalorieQ.Name = "nudCalorieQ";
-            this.nudCalorieQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCalorieQ.TabIndex = 8;
-            // 
-            // nudFatQ
-            // 
-            this.nudFatQ.Location = new System.Drawing.Point(363, 114);
-            this.nudFatQ.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
-            this.nudFatQ.Name = "nudFatQ";
-            this.nudFatQ.Size = new System.Drawing.Size(156, 28);
-            this.nudFatQ.TabIndex = 8;
-            // 
-            // nudCarbohydrateQ
-            // 
-            this.nudCarbohydrateQ.Location = new System.Drawing.Point(363, 80);
-            this.nudCarbohydrateQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.nudCarbohydrateQ.Name = "nudCarbohydrateQ";
-            this.nudCarbohydrateQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCarbohydrateQ.TabIndex = 8;
-            // 
-            // nudProteinQ
-            // 
-            this.nudProteinQ.Location = new System.Drawing.Point(363, 46);
-            this.nudProteinQ.Margin = new System.Windows.Forms.Padding(4);
-            this.nudProteinQ.Name = "nudProteinQ";
-            this.nudProteinQ.Size = new System.Drawing.Size(156, 28);
-            this.nudProteinQ.TabIndex = 8;
-            // 
-            // cbMeasure
-            // 
-            this.cbMeasure.FormattingEnabled = true;
-            this.cbMeasure.Items.AddRange(new object[] {
-            "gram",
-            "adet",
-            "dilim",
-            "fincan",
-            "kutu",
-            "kadeh",
-            "porsiyon",
-            "baş",
-            "bütün",
-            "tatlı kaşığı",
-            "bardak"});
-            this.cbMeasure.Location = new System.Drawing.Point(363, 182);
-            this.cbMeasure.Name = "cbMeasure";
-            this.cbMeasure.Size = new System.Drawing.Size(156, 29);
-            this.cbMeasure.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.Location = new System.Drawing.Point(191, 250);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(166, 29);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Kategori :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label7
-            // 
-            this.label7.Location = new System.Drawing.Point(191, 216);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(166, 28);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Miktar :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.Location = new System.Drawing.Point(191, 182);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 28);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Ölçü Birimi :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label5
-            // 
-            this.label5.Location = new System.Drawing.Point(191, 148);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(166, 28);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Kalori Miktarı :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(191, 114);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 28);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Yağ Miktarı :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(191, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 28);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Karbonhidrat Miktarı :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label2
-            // 
-            this.label2.Location = new System.Drawing.Point(191, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(166, 28);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Protein Miktarı :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(191, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 28);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Ad :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // txtFoodName
-            // 
-            this.txtFoodName.Location = new System.Drawing.Point(363, 12);
-            this.txtFoodName.Name = "txtFoodName";
-            this.txtFoodName.Size = new System.Drawing.Size(156, 28);
-            this.txtFoodName.TabIndex = 5;
-            // 
-            // btnAddPict
-            // 
-            this.btnAddPict.Location = new System.Drawing.Point(35, 173);
-            this.btnAddPict.Name = "btnAddPict";
-            this.btnAddPict.Size = new System.Drawing.Size(150, 47);
-            this.btnAddPict.TabIndex = 11;
-            this.btnAddPict.Text = "Resim Ekle";
-            this.btnAddPict.UseVisualStyleBackColor = true;
+            panel1.Controls.Add(pbFood);
+            panel1.Controls.Add(btnAddPict);
+            panel1.Controls.Add(cbCategory);
+            panel1.Controls.Add(nudQuantity);
+            panel1.Controls.Add(nudCalorieQ);
+            panel1.Controls.Add(nudFatQ);
+            panel1.Controls.Add(nudCarbohydrateQ);
+            panel1.Controls.Add(nudProteinQ);
+            panel1.Controls.Add(cbMeasure);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(txtFoodName);
+            panel1.Controls.Add(btnAdd);
+            panel1.Dock = DockStyle.Bottom;
+            panel1.Location = new Point(0, 258);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(960, 302);
+            panel1.TabIndex = 6;
             // 
             // pbFood
             // 
-            this.pbFood.Location = new System.Drawing.Point(35, 12);
-            this.pbFood.Name = "pbFood";
-            this.pbFood.Size = new System.Drawing.Size(150, 150);
-            this.pbFood.TabIndex = 12;
-            this.pbFood.TabStop = false;
+            pbFood.Location = new Point(35, 12);
+            pbFood.Name = "pbFood";
+            pbFood.Size = new Size(150, 150);
+            pbFood.TabIndex = 12;
+            pbFood.TabStop = false;
+            // 
+            // btnAddPict
+            // 
+            btnAddPict.Location = new Point(35, 173);
+            btnAddPict.Name = "btnAddPict";
+            btnAddPict.Size = new Size(150, 47);
+            btnAddPict.TabIndex = 11;
+            btnAddPict.Text = "Resim Ekle";
+            btnAddPict.UseVisualStyleBackColor = true;
+            // 
+            // cbCategory
+            // 
+            cbCategory.FormattingEnabled = true;
+            cbCategory.Items.AddRange(new object[] { "Hepsi", "Av Hayvanları", "Balıklar", "Bitkisel Yağlar", "Çeşniler", "Çorbalar", "Deniz Ürünleri", "Diğer Besinler", "Ekmek vb.", "Et Ürünleri", "Hayvansal Yağlar", "İçecekler", "Kırmızı Etler", "Kurubaklagiller", "Kümes Hayvanları", "Meyveler", "Peynirler", "Sakatatlar", "Sebzeler", "Soslar", "Süt ve Süt Ürünleri", "Şeker ve Şeker Ürünleri", "Tahıl Ürünleri", "Tatlılar", "Yumurtalar" });
+            cbCategory.Location = new Point(363, 250);
+            cbCategory.Name = "cbCategory";
+            cbCategory.Size = new Size(156, 29);
+            cbCategory.TabIndex = 10;
+            // 
+            // nudCalorieQ
+            // 
+            nudCalorieQ.Location = new Point(363, 148);
+            nudCalorieQ.Margin = new Padding(8, 11, 8, 11);
+            nudCalorieQ.Name = "nudCalorieQ";
+            nudCalorieQ.Size = new Size(156, 28);
+            nudCalorieQ.TabIndex = 8;
+            // 
+            // nudFatQ
+            // 
+            nudFatQ.Location = new Point(363, 114);
+            nudFatQ.Margin = new Padding(6, 8, 6, 8);
+            nudFatQ.Name = "nudFatQ";
+            nudFatQ.Size = new Size(156, 28);
+            nudFatQ.TabIndex = 8;
+            // 
+            // nudCarbohydrateQ
+            // 
+            nudCarbohydrateQ.Location = new Point(363, 80);
+            nudCarbohydrateQ.Margin = new Padding(5, 6, 5, 6);
+            nudCarbohydrateQ.Name = "nudCarbohydrateQ";
+            nudCarbohydrateQ.Size = new Size(156, 28);
+            nudCarbohydrateQ.TabIndex = 8;
+            // 
+            // nudProteinQ
+            // 
+            nudProteinQ.Location = new Point(363, 46);
+            nudProteinQ.Margin = new Padding(4);
+            nudProteinQ.Name = "nudProteinQ";
+            nudProteinQ.Size = new Size(156, 28);
+            nudProteinQ.TabIndex = 8;
+            // 
+            // cbMeasure
+            // 
+            cbMeasure.FormattingEnabled = true;
+            cbMeasure.Items.AddRange(new object[] { "gram", "adet", "dilim", "fincan", "kutu", "kadeh", "porsiyon", "baş", "bütün", "tatlı kaşığı", "bardak" });
+            cbMeasure.Location = new Point(363, 182);
+            cbMeasure.Name = "cbMeasure";
+            cbMeasure.Size = new Size(156, 29);
+            cbMeasure.TabIndex = 7;
+            // 
+            // label8
+            // 
+            label8.Location = new Point(191, 250);
+            label8.Name = "label8";
+            label8.Size = new Size(166, 29);
+            label8.TabIndex = 6;
+            label8.Text = "Kategori :";
+            label8.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label7
+            // 
+            label7.Location = new Point(191, 216);
+            label7.Name = "label7";
+            label7.Size = new Size(166, 28);
+            label7.TabIndex = 6;
+            label7.Text = "Miktar :";
+            label7.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            label6.Location = new Point(191, 182);
+            label6.Name = "label6";
+            label6.Size = new Size(166, 28);
+            label6.TabIndex = 6;
+            label6.Text = "Ölçü Birimi :";
+            label6.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label5
+            // 
+            label5.Location = new Point(191, 148);
+            label5.Name = "label5";
+            label5.Size = new Size(166, 28);
+            label5.TabIndex = 6;
+            label5.Text = "Kalori Miktarı :";
+            label5.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label4
+            // 
+            label4.Location = new Point(191, 114);
+            label4.Name = "label4";
+            label4.Size = new Size(166, 28);
+            label4.TabIndex = 6;
+            label4.Text = "Yağ Miktarı :";
+            label4.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label3
+            // 
+            label3.Location = new Point(191, 80);
+            label3.Name = "label3";
+            label3.Size = new Size(166, 28);
+            label3.TabIndex = 6;
+            label3.Text = "Karbonhidrat Miktarı :";
+            label3.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            label2.Location = new Point(191, 46);
+            label2.Name = "label2";
+            label2.Size = new Size(166, 28);
+            label2.TabIndex = 6;
+            label2.Text = "Protein Miktarı :";
+            label2.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(191, 12);
+            label1.Name = "label1";
+            label1.Size = new Size(166, 28);
+            label1.TabIndex = 6;
+            label1.Text = "Ad :";
+            label1.TextAlign = ContentAlignment.MiddleRight;
+            // 
+            // txtFoodName
+            // 
+            txtFoodName.Location = new Point(363, 12);
+            txtFoodName.Name = "txtFoodName";
+            txtFoodName.Size = new Size(156, 28);
+            txtFoodName.TabIndex = 5;
+            // 
+            // nudQuantity
+            // 
+            nudQuantity.Location = new Point(363, 218);
+            nudQuantity.Margin = new Padding(8, 11, 8, 11);
+            nudQuantity.Name = "nudQuantity";
+            nudQuantity.Size = new Size(156, 28);
+            nudQuantity.TabIndex = 8;
             // 
             // UcEditFoods
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dgvFoods);
-            this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UcEditFoods";
-            this.Size = new System.Drawing.Size(960, 560);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCalorieQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(9F, 21F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(panel1);
+            Controls.Add(dgvFoods);
+            Font = new Font("Segoe MDL2 Assets", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
+            Name = "UcEditFoods";
+            Size = new Size(960, 560);
+            ((System.ComponentModel.ISupportInitialize)dgvFoods).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pbFood).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCalorieQ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudFatQ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudCarbohydrateQ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudProteinQ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -341,7 +307,6 @@
         private Label label1;
         private TextBox txtFoodName;
         private ComboBox cbCategory;
-        private TextBox txtQuantity;
         private NumericUpDown nudCalorieQ;
         private NumericUpDown nudFatQ;
         private NumericUpDown nudCarbohydrateQ;
@@ -349,5 +314,6 @@
         private Label label7;
         private PictureBox pbFood;
         private Button btnAddPict;
+        private NumericUpDown nudQuantity;
     }
 }
