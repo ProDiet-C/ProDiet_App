@@ -47,12 +47,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFoodName = new System.Windows.Forms.TextBox();
+            this.btnAddPict = new System.Windows.Forms.Button();
+            this.pbFood = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudCalorieQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -88,6 +91,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pbFood);
+            this.panel1.Controls.Add(this.btnAddPict);
             this.panel1.Controls.Add(this.cbCategory);
             this.panel1.Controls.Add(this.txtQuantity);
             this.panel1.Controls.Add(this.nudCalorieQ);
@@ -283,6 +288,23 @@
             this.txtFoodName.Size = new System.Drawing.Size(156, 28);
             this.txtFoodName.TabIndex = 5;
             // 
+            // btnAddPict
+            // 
+            this.btnAddPict.Location = new System.Drawing.Point(35, 173);
+            this.btnAddPict.Name = "btnAddPict";
+            this.btnAddPict.Size = new System.Drawing.Size(150, 47);
+            this.btnAddPict.TabIndex = 11;
+            this.btnAddPict.Text = "Resim Ekle";
+            this.btnAddPict.UseVisualStyleBackColor = true;
+            // 
+            // pbFood
+            // 
+            this.pbFood.Location = new System.Drawing.Point(35, 12);
+            this.pbFood.Name = "pbFood";
+            this.pbFood.Size = new System.Drawing.Size(150, 150);
+            this.pbFood.TabIndex = 12;
+            this.pbFood.TabStop = false;
+            // 
             // UcEditFoods
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -300,6 +322,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudFatQ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudCarbohydrateQ)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudProteinQ)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFood)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -324,5 +347,7 @@
         private NumericUpDown nudCarbohydrateQ;
         private Label label8;
         private Label label7;
+        private PictureBox pbFood;
+        private Button btnAddPict;
     }
 }
