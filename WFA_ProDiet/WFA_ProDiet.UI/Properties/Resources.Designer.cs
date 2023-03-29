@@ -213,6 +213,16 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tanıtımResmi {
+            get {
+                object obj = ResourceManager.GetObject("tanıtımResmi", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap transparan_prodiet {
             get {
                 object obj = ResourceManager.GetObject("transparan prodiet", resourceCulture);
