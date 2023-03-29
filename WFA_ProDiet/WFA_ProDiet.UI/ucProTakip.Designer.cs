@@ -68,6 +68,7 @@
             this.label29 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.btnAddExtra = new FontAwesome.Sharp.IconButton();
+            this.dtpMealDate = new System.Windows.Forms.DateTimePicker();
             this.pnlCurrentKcal.SuspendLayout();
             this.flpMeals.SuspendLayout();
             this.pnlBreakFast.SuspendLayout();
@@ -78,6 +79,7 @@
             // 
             // pnlCurrentKcal
             // 
+            this.pnlCurrentKcal.Controls.Add(this.dtpMealDate);
             this.pnlCurrentKcal.Controls.Add(this.label2);
             this.pnlCurrentKcal.Controls.Add(this.label1);
             this.pnlCurrentKcal.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -91,6 +93,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(537, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 20);
@@ -102,6 +105,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Green;
             this.label1.Location = new System.Drawing.Point(407, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(141, 67);
@@ -228,7 +232,7 @@
             this.btnAddBreakFast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddBreakFast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddBreakFast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBreakFast.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnAddBreakFast.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
             this.btnAddBreakFast.IconColor = System.Drawing.Color.Green;
             this.btnAddBreakFast.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddBreakFast.IconSize = 70;
@@ -342,7 +346,7 @@
             this.btnAddLunch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLunch.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnAddLunch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
             this.btnAddLunch.IconColor = System.Drawing.Color.Green;
             this.btnAddLunch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddLunch.IconSize = 70;
@@ -446,7 +450,7 @@
             this.lblDinner.Name = "lblDinner";
             this.lblDinner.Size = new System.Drawing.Size(285, 55);
             this.lblDinner.TabIndex = 1;
-            this.lblDinner.Text = "AKSAM YEMEĞİ";
+            this.lblDinner.Text = "AKŞAM YEMEĞİ";
             this.lblDinner.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnAddDinner
@@ -456,7 +460,7 @@
             this.btnAddDinner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDinner.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnAddDinner.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
             this.btnAddDinner.IconColor = System.Drawing.Color.Green;
             this.btnAddDinner.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddDinner.IconSize = 70;
@@ -570,7 +574,7 @@
             this.btnAddExtra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddExtra.IconChar = FontAwesome.Sharp.IconChar.Add;
+            this.btnAddExtra.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
             this.btnAddExtra.IconColor = System.Drawing.Color.Green;
             this.btnAddExtra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddExtra.IconSize = 70;
@@ -580,6 +584,13 @@
             this.btnAddExtra.TabIndex = 0;
             this.btnAddExtra.UseVisualStyleBackColor = false;
             this.btnAddExtra.Click += new System.EventHandler(this.btnAddExtra_Click);
+            // 
+            // dtpMealDate
+            // 
+            this.dtpMealDate.Location = new System.Drawing.Point(12, 52);
+            this.dtpMealDate.Name = "dtpMealDate";
+            this.dtpMealDate.Size = new System.Drawing.Size(246, 27);
+            this.dtpMealDate.TabIndex = 2;
             // 
             // ucProTakip
             // 
@@ -648,5 +659,6 @@
         private Label label29;
         private Label label30;
         private FontAwesome.Sharp.IconButton btnAddExtra;
+        private DateTimePicker dtpMealDate;
     }
 }

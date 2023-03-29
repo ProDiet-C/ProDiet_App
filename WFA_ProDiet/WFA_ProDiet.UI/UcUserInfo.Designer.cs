@@ -48,9 +48,9 @@
             this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.ıconButton2 = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,7 +60,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 194);
+            this.textBox2.Location = new System.Drawing.Point(180, 209);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(230, 27);
@@ -68,7 +68,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(4, 194);
+            this.label2.Location = new System.Drawing.Point(4, 209);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(168, 27);
@@ -78,7 +78,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 159);
+            this.textBox1.Location = new System.Drawing.Point(180, 174);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(230, 27);
@@ -86,7 +86,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(4, 159);
+            this.label1.Location = new System.Drawing.Point(4, 174);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(168, 27);
@@ -97,7 +97,7 @@
             // textBox3
             // 
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(180, 126);
+            this.textBox3.Location = new System.Drawing.Point(180, 141);
             this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
@@ -106,7 +106,7 @@
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(4, 126);
+            this.label3.Location = new System.Drawing.Point(4, 141);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(168, 27);
@@ -116,7 +116,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(4, 226);
+            this.label4.Location = new System.Drawing.Point(4, 241);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(168, 27);
@@ -126,7 +126,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(5, 262);
+            this.label5.Location = new System.Drawing.Point(5, 277);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(168, 27);
@@ -136,7 +136,7 @@
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(4, 334);
+            this.label7.Location = new System.Drawing.Point(4, 349);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(168, 27);
@@ -146,7 +146,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(4, 299);
+            this.label8.Location = new System.Drawing.Point(4, 314);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(168, 27);
@@ -162,7 +162,7 @@
             "Az Aktif (Hafif egzersizler-Günlük işler)",
             "Aktif (Hafta 2-4 gün spor)",
             "Çok Aktif (Haftada 4+ gün spor)"});
-            this.comboBox1.Location = new System.Drawing.Point(181, 261);
+            this.comboBox1.Location = new System.Drawing.Point(181, 276);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(230, 28);
             this.comboBox1.TabIndex = 2;
@@ -170,15 +170,15 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(180, 228);
+            this.dateTimePicker1.Location = new System.Drawing.Point(180, 243);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(230, 27);
             this.dateTimePicker1.TabIndex = 3;
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(180, 299);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDown1.Location = new System.Drawing.Point(180, 314);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Maximum = new decimal(new int[] {
             250,
             0,
@@ -200,8 +200,8 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(180, 334);
-            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.numericUpDown2.Location = new System.Drawing.Point(180, 349);
+            this.numericUpDown2.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown2.Maximum = new decimal(new int[] {
             250,
             0,
@@ -223,7 +223,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(236, 299);
+            this.label6.Location = new System.Drawing.Point(236, 314);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 27);
             this.label6.TabIndex = 5;
@@ -231,7 +231,7 @@
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(236, 334);
+            this.label9.Location = new System.Drawing.Point(236, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 27);
             this.label9.TabIndex = 5;
@@ -242,9 +242,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Image = global::WFA_ProDiet.UI.Properties.Resources.WhatsApp_Image_2023_03_03_at_14_29_51;
-            this.pictureBox1.Location = new System.Drawing.Point(608, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(144, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(121, 99);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -258,7 +258,7 @@
             this.ıconButton1.IconColor = System.Drawing.Color.Black;
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconButton1.IconSize = 35;
-            this.ıconButton1.Location = new System.Drawing.Point(733, 3);
+            this.ıconButton1.Location = new System.Drawing.Point(146, 78);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Size = new System.Drawing.Size(25, 24);
             this.ıconButton1.TabIndex = 7;
@@ -285,9 +285,12 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.Controls.Add(this.radioButton2);
             this.panel1.Controls.Add(this.radioButton1);
+            this.panel1.Controls.Add(this.ıconButton1);
             this.panel1.Controls.Add(this.textBox3);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.ıconButton2);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -310,30 +313,10 @@
             this.panel1.Size = new System.Drawing.Size(414, 560);
             this.panel1.TabIndex = 9;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox2.Location = new System.Drawing.Point(414, 159);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(546, 401);
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(237, 95);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(66, 24);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Erkek";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(309, 95);
+            this.radioButton2.Location = new System.Drawing.Point(252, 384);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(64, 24);
             this.radioButton2.TabIndex = 9;
@@ -341,16 +324,36 @@
             this.radioButton2.Text = "Kadın";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(180, 384);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(66, 24);
+            this.radioButton1.TabIndex = 9;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Erkek";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox2.Image = global::WFA_ProDiet.UI.Properties.Resources.AktiviteDüzey;
+            this.pictureBox2.Location = new System.Drawing.Point(414, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(546, 560);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 10;
+            this.pictureBox2.TabStop = false;
+            // 
             // UcUserInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.ıconButton1);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UcUserInfo";
             this.Size = new System.Drawing.Size(960, 560);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

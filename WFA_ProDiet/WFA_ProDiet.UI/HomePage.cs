@@ -14,13 +14,15 @@ namespace WFA_ProDiet.UI
     {
         ucProTakip ucProTakip = new ucProTakip();
         ucProPlan ucProPlan = new ucProPlan();
+        UcExtraReports ucEkstraReports = new UcExtraReports();
+        UcEditFoods ucEditFoods = new UcEditFoods();
         public HomePage()
         {
             InitializeComponent();
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-
+          
         }
 
         private void AddUserControl(UserControl uc)
@@ -41,6 +43,17 @@ namespace WFA_ProDiet.UI
             RemoveAllUc();
             AddUserControl(ucProTakip);
         }
+        private void btnEditFoods_Click(object sender, EventArgs e)
+        {
+            RemoveAllUc();
+            AddUserControl(ucEditFoods);
+        }
+        private void btnExtraReports_Click(object sender, EventArgs e)
+        {
+            RemoveAllUc();
+            AddUserControl(ucEkstraReports);
+        }
+
         private void RemoveAllUc()
         {
             foreach (var uc in pnlScreen.Controls)
@@ -66,16 +79,44 @@ namespace WFA_ProDiet.UI
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-            pnlMeals.Visible = !pnlMeals.Visible;
-            pnlReports.Visible = false;
+            SetPanelVisibility(pnlMeals);
+            //pnlMeals.Visible = !pnlMeals.Visible;
+            //pnlReports.Visible = false;
+            //pnlFoods.Visible = false;
+        }
+        private void btnFoods_Click(object sender, EventArgs e)
+        {
+            SetPanelVisibility(pnlFoods);
+            //pnlFoods.Visible = !pnlFoods.Visible;
+            //pnlMeals.Visible = false;
+            //pnlReports.Visible = false;
         }
 
         private void ıconButton4_Click(object sender, EventArgs e)
         {
-            pnlReports.Visible = !pnlReports.Visible;
-            pnlMeals.Visible = false;
-
+            SetPanelVisibility(pnlReports);
+            //pnlReports.Visible = !pnlReports.Visible;
+            //pnlMeals.Visible = false;
+            //pnlFoods.Visible = false;
         }
+
+        /// <summary>
+        /// Panellerin açılma kapanma düzenini ayarlar.
+        /// </summary>
+        /// <param name="pnlShow"></param>
+        private void SetPanelVisibility(Panel pnlShow)
+        {
+            pnlShow.Visible = !pnlShow.Visible;
+            var paneller = pnlAllMenu.Controls.OfType<Panel>().Where(x=>x.Tag=="1").ToList();
+            foreach (Panel panel in paneller)
+            {
+                if (panel!=pnlShow)
+                {
+                    panel.Visible = false;
+                }
+            }        
+        }
+
 
         private void ıconButton1_Click_1(object sender, EventArgs e)
         {
@@ -91,5 +132,7 @@ namespace WFA_ProDiet.UI
         {
         
         }
+
+     
     }
 }
