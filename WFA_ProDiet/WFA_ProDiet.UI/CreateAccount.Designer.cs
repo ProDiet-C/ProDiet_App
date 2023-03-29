@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pnlUserInfo = new System.Windows.Forms.Panel();
             this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.btnInfo = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
@@ -61,8 +61,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.tmrWelcome = new System.Windows.Forms.Timer(this.components);
+            this.tmrOpenForm = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.pnlUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
@@ -72,38 +73,39 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.pnlUserInfo);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(545, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 541);
+            this.panel1.Size = new System.Drawing.Size(0, 541);
             this.panel1.TabIndex = 0;
             // 
-            // panel3
+            // pnlUserInfo
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.ıconButton1);
-            this.panel3.Controls.Add(this.btnInfo);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lblInfo);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.pbUser);
-            this.panel3.Controls.Add(this.label8);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.nudWeight);
-            this.panel3.Controls.Add(this.nudHeight);
-            this.panel3.Controls.Add(this.rbFemale);
-            this.panel3.Controls.Add(this.rbMale);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.dtpBirthDate);
-            this.panel3.Controls.Add(this.cbActivityLevel);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(449, 541);
-            this.panel3.TabIndex = 27;
+            this.pnlUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlUserInfo.Controls.Add(this.ıconButton1);
+            this.pnlUserInfo.Controls.Add(this.btnInfo);
+            this.pnlUserInfo.Controls.Add(this.label5);
+            this.pnlUserInfo.Controls.Add(this.lblInfo);
+            this.pnlUserInfo.Controls.Add(this.label7);
+            this.pnlUserInfo.Controls.Add(this.pbUser);
+            this.pnlUserInfo.Controls.Add(this.label8);
+            this.pnlUserInfo.Controls.Add(this.label10);
+            this.pnlUserInfo.Controls.Add(this.nudWeight);
+            this.pnlUserInfo.Controls.Add(this.nudHeight);
+            this.pnlUserInfo.Controls.Add(this.rbFemale);
+            this.pnlUserInfo.Controls.Add(this.rbMale);
+            this.pnlUserInfo.Controls.Add(this.label9);
+            this.pnlUserInfo.Controls.Add(this.label6);
+            this.pnlUserInfo.Controls.Add(this.dtpBirthDate);
+            this.pnlUserInfo.Controls.Add(this.cbActivityLevel);
+            this.pnlUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlUserInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlUserInfo.Name = "pnlUserInfo";
+            this.pnlUserInfo.Size = new System.Drawing.Size(0, 541);
+            this.pnlUserInfo.TabIndex = 27;
+            this.pnlUserInfo.Visible = false;
             // 
             // ıconButton1
             // 
@@ -116,7 +118,7 @@
             this.ıconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconButton1.IconSize = 30;
-            this.ıconButton1.Location = new System.Drawing.Point(186, 4);
+            this.ıconButton1.Location = new System.Drawing.Point(-38, 4);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Size = new System.Drawing.Size(48, 28);
             this.ıconButton1.TabIndex = 4;
@@ -132,7 +134,7 @@
             this.btnInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInfo.IconSize = 25;
-            this.btnInfo.Location = new System.Drawing.Point(367, 189);
+            this.btnInfo.Location = new System.Drawing.Point(143, 189);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(33, 30);
             this.btnInfo.TabIndex = 26;
@@ -143,7 +145,7 @@
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(45, 193);
+            this.label5.Location = new System.Drawing.Point(-179, 193);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 27);
@@ -157,7 +159,7 @@
             this.lblInfo.BackColor = System.Drawing.SystemColors.Info;
             this.lblInfo.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblInfo.Location = new System.Drawing.Point(45, 222);
+            this.lblInfo.Location = new System.Drawing.Point(-179, 222);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(356, 300);
             this.lblInfo.TabIndex = 25;
@@ -167,7 +169,7 @@
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.Location = new System.Drawing.Point(247, 62);
+            this.label7.Location = new System.Drawing.Point(23, 62);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 27);
@@ -181,7 +183,7 @@
             this.pbUser.BackColor = System.Drawing.Color.Transparent;
             this.pbUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbUser.Image = global::WFA_ProDiet.UI.Properties.Resources.Atakan;
-            this.pbUser.Location = new System.Drawing.Point(84, 4);
+            this.pbUser.Location = new System.Drawing.Point(-140, 4);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(150, 150);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -191,7 +193,7 @@
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.Location = new System.Drawing.Point(44, 157);
+            this.label8.Location = new System.Drawing.Point(-180, 157);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 27);
@@ -202,7 +204,7 @@
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.Location = new System.Drawing.Point(247, 27);
+            this.label10.Location = new System.Drawing.Point(23, 27);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 27);
@@ -213,7 +215,7 @@
             // nudWeight
             // 
             this.nudWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudWeight.Location = new System.Drawing.Point(310, 61);
+            this.nudWeight.Location = new System.Drawing.Point(86, 61);
             this.nudWeight.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.nudWeight.Maximum = new decimal(new int[] {
             250,
@@ -237,7 +239,7 @@
             // nudHeight
             // 
             this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudHeight.Location = new System.Drawing.Point(310, 26);
+            this.nudHeight.Location = new System.Drawing.Point(86, 26);
             this.nudHeight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.nudHeight.Maximum = new decimal(new int[] {
             250,
@@ -262,7 +264,7 @@
             // 
             this.rbFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(336, 100);
+            this.rbFemale.Location = new System.Drawing.Point(112, 100);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(65, 25);
             this.rbFemale.TabIndex = 20;
@@ -274,7 +276,7 @@
             // 
             this.rbMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(256, 100);
+            this.rbMale.Location = new System.Drawing.Point(32, 100);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(67, 25);
             this.rbMale.TabIndex = 21;
@@ -285,7 +287,7 @@
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.Location = new System.Drawing.Point(377, 65);
+            this.label9.Location = new System.Drawing.Point(153, 65);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 27);
             this.label9.TabIndex = 18;
@@ -294,7 +296,7 @@
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(377, 30);
+            this.label6.Location = new System.Drawing.Point(153, 30);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 27);
             this.label6.TabIndex = 19;
@@ -304,7 +306,7 @@
             // 
             this.dtpBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthDate.Location = new System.Drawing.Point(169, 157);
+            this.dtpBirthDate.Location = new System.Drawing.Point(-55, 157);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(230, 28);
             this.dtpBirthDate.TabIndex = 15;
@@ -318,7 +320,7 @@
             "Az Aktif (Hafif egzersizler-Günlük işler)",
             "Aktif (Hafta 2-4 gün spor)",
             "Çok Aktif (Haftada 4+ gün spor)"});
-            this.cbActivityLevel.Location = new System.Drawing.Point(170, 190);
+            this.cbActivityLevel.Location = new System.Drawing.Point(-54, 190);
             this.cbActivityLevel.Name = "cbActivityLevel";
             this.cbActivityLevel.Size = new System.Drawing.Size(191, 29);
             this.cbActivityLevel.TabIndex = 14;
@@ -368,6 +370,7 @@
             this.btnContinue.TabIndex = 4;
             this.btnContinue.Text = "Devam Et";
             this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // txtPasswordCheck
             // 
@@ -459,12 +462,17 @@
             // 
             this.tmrWelcome.Tick += new System.EventHandler(this.tmrWelcome_Tick);
             // 
+            // tmrOpenForm
+            // 
+            this.tmrOpenForm.Interval = 10;
+            this.tmrOpenForm.Tick += new System.EventHandler(this.tmrOpenForm_Tick);
+            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(994, 541);
+            this.ClientSize = new System.Drawing.Size(544, 541);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -473,8 +481,8 @@
             this.Text = "CreateAccount";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
+            this.pnlUserInfo.ResumeLayout(false);
+            this.pnlUserInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
@@ -514,9 +522,10 @@
         private FontAwesome.Sharp.IconButton btnInfo;
         private Label lblInfo;
         private Label lblWelcome;
-        private Panel panel3;
+        private Panel pnlUserInfo;
         private Panel panel4;
         private System.Windows.Forms.Timer tmrWelcome;
         private FontAwesome.Sharp.IconButton ıconButton1;
+        private System.Windows.Forms.Timer tmrOpenForm;
     }
 }

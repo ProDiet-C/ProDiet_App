@@ -55,5 +55,23 @@ namespace WFA_ProDiet.UI
                 tmrWelcome.Stop();
             }
         }
+
+        private void tmrOpenForm_Tick(object sender, EventArgs e)
+        {
+            if (Width < 1010)
+            {
+                Width += 5;
+            }
+            else
+            {
+                tmrOpenForm.Stop();
+            }
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            pnlUserInfo.Visible = true;
+            tmrOpenForm.Start();
+        }
     }
 }
