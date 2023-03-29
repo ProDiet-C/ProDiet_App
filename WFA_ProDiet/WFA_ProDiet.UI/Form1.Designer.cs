@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.pnlCommercial = new System.Windows.Forms.Panel();
-            this.lnkCreateAccount = new System.Windows.Forms.LinkLabel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.pbCommercial = new System.Windows.Forms.PictureBox();
-            this.btnShowPassword = new FontAwesome.Sharp.IconButton();
+            this.pnlUserLogin = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.btnLogin = new FontAwesome.Sharp.IconButton();
-            this.pnlUserLogin = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
+            this.btnShowPassword = new FontAwesome.Sharp.IconButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lnkCreateAccount = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.pnlCommercial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCommercial)).BeginInit();
             this.pnlUserLogin.SuspendLayout();
@@ -47,80 +49,37 @@
             // pnlCommercial
             // 
             this.pnlCommercial.AutoScroll = true;
-            this.pnlCommercial.Controls.Add(this.pnlUserLogin);
             this.pnlCommercial.Controls.Add(this.pbCommercial);
-            this.pnlCommercial.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlCommercial.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlCommercial.Location = new System.Drawing.Point(0, 0);
             this.pnlCommercial.Name = "pnlCommercial";
-            this.pnlCommercial.Size = new System.Drawing.Size(1299, 583);
+            this.pnlCommercial.Size = new System.Drawing.Size(772, 583);
             this.pnlCommercial.TabIndex = 0;
-            // 
-            // lnkCreateAccount
-            // 
-            this.lnkCreateAccount.AutoSize = true;
-            this.lnkCreateAccount.LinkColor = System.Drawing.Color.Teal;
-            this.lnkCreateAccount.Location = new System.Drawing.Point(31, 105);
-            this.lnkCreateAccount.Name = "lnkCreateAccount";
-            this.lnkCreateAccount.Size = new System.Drawing.Size(82, 15);
-            this.lnkCreateAccount.TabIndex = 4;
-            this.lnkCreateAccount.TabStop = true;
-            this.lnkCreateAccount.Text = "Hesap Oluştur";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 15);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Şifre :";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 14);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Email :";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(63, 35);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(168, 23);
-            this.txtPassword.TabIndex = 2;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(63, 6);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(168, 23);
-            this.txtEmail.TabIndex = 1;
             // 
             // pbCommercial
             // 
-            this.pbCommercial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbCommercial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbCommercial.Image = global::WFA_ProDiet.UI.Properties.Resources.tanıtımResmi;
             this.pbCommercial.Location = new System.Drawing.Point(0, 0);
             this.pbCommercial.Name = "pbCommercial";
-            this.pbCommercial.Size = new System.Drawing.Size(1200, 1800);
+            this.pbCommercial.Size = new System.Drawing.Size(742, 1800);
             this.pbCommercial.TabIndex = 0;
             this.pbCommercial.TabStop = false;
             // 
-            // btnShowPassword
+            // pnlUserLogin
             // 
-            this.btnShowPassword.FlatAppearance.BorderSize = 0;
-            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnShowPassword.IconChar = FontAwesome.Sharp.IconChar.Lock;
-            this.btnShowPassword.IconColor = System.Drawing.Color.Black;
-            this.btnShowPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnShowPassword.IconSize = 25;
-            this.btnShowPassword.Location = new System.Drawing.Point(237, 34);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(23, 23);
-            this.btnShowPassword.TabIndex = 5;
-            this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.pnlUserLogin.Controls.Add(this.label3);
+            this.pnlUserLogin.Controls.Add(this.btnLogin);
+            this.pnlUserLogin.Controls.Add(this.txtEmail);
+            this.pnlUserLogin.Controls.Add(this.txtPassword);
+            this.pnlUserLogin.Controls.Add(this.btnShowPassword);
+            this.pnlUserLogin.Controls.Add(this.label1);
+            this.pnlUserLogin.Controls.Add(this.lnkCreateAccount);
+            this.pnlUserLogin.Controls.Add(this.label2);
+            this.pnlUserLogin.Location = new System.Drawing.Point(786, 12);
+            this.pnlUserLogin.Name = "pnlUserLogin";
+            this.pnlUserLogin.Size = new System.Drawing.Size(275, 132);
+            this.pnlUserLogin.TabIndex = 8;
             // 
             // label3
             // 
@@ -147,26 +106,92 @@
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
-            // pnlUserLogin
+            // txtEmail
             // 
-            this.pnlUserLogin.Controls.Add(this.label3);
-            this.pnlUserLogin.Controls.Add(this.btnLogin);
-            this.pnlUserLogin.Controls.Add(this.txtEmail);
-            this.pnlUserLogin.Controls.Add(this.txtPassword);
-            this.pnlUserLogin.Controls.Add(this.btnShowPassword);
-            this.pnlUserLogin.Controls.Add(this.label1);
-            this.pnlUserLogin.Controls.Add(this.lnkCreateAccount);
-            this.pnlUserLogin.Controls.Add(this.label2);
-            this.pnlUserLogin.Location = new System.Drawing.Point(925, 3);
-            this.pnlUserLogin.Name = "pnlUserLogin";
-            this.pnlUserLogin.Size = new System.Drawing.Size(275, 132);
-            this.pnlUserLogin.TabIndex = 8;
+            this.txtEmail.Location = new System.Drawing.Point(63, 6);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(168, 23);
+            this.txtEmail.TabIndex = 1;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(63, 35);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(168, 23);
+            this.txtPassword.TabIndex = 2;
+            // 
+            // btnShowPassword
+            // 
+            this.btnShowPassword.FlatAppearance.BorderSize = 0;
+            this.btnShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPassword.IconChar = FontAwesome.Sharp.IconChar.Lock;
+            this.btnShowPassword.IconColor = System.Drawing.Color.Black;
+            this.btnShowPassword.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnShowPassword.IconSize = 25;
+            this.btnShowPassword.Location = new System.Drawing.Point(237, 34);
+            this.btnShowPassword.Name = "btnShowPassword";
+            this.btnShowPassword.Size = new System.Drawing.Size(23, 23);
+            this.btnShowPassword.TabIndex = 5;
+            this.btnShowPassword.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(42, 15);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Email :";
+            // 
+            // lnkCreateAccount
+            // 
+            this.lnkCreateAccount.AutoSize = true;
+            this.lnkCreateAccount.LinkColor = System.Drawing.Color.Teal;
+            this.lnkCreateAccount.Location = new System.Drawing.Point(31, 105);
+            this.lnkCreateAccount.Name = "lnkCreateAccount";
+            this.lnkCreateAccount.Size = new System.Drawing.Size(82, 15);
+            this.lnkCreateAccount.TabIndex = 4;
+            this.lnkCreateAccount.TabStop = true;
+            this.lnkCreateAccount.Text = "Hesap Oluştur";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 15);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "Şifre :";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(786, 238);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(275, 336);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Mert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mustafa Öz" +
+    "can\r\n\r\nMert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mu" +
+    "stafa Özcan\r\n";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(786, 212);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(275, 23);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "TOP 10 Kullanıcı";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1299, 583);
+            this.ClientSize = new System.Drawing.Size(1073, 583);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pnlUserLogin);
             this.Controls.Add(this.pnlCommercial);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -191,5 +216,7 @@
         private Label label3;
         private FontAwesome.Sharp.IconButton btnShowPassword;
         private Panel pnlUserLogin;
+        private Label label4;
+        private Label label5;
     }
 }
