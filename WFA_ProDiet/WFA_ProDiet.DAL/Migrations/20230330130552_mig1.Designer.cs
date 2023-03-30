@@ -12,7 +12,7 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    [Migration("20230330110946_mig1")]
+    [Migration("20230330130552_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -191,6 +191,38 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = 1,
+                            ActivityLevel = 0,
+                            BirthDate = new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "okuzkaan@mail.com",
+                            FirstName = "Oğuz Kağan",
+                            Gender = 0,
+                            Height = 180,
+                            LastName = "Ünal",
+                            TargetCalorie = 1500.0,
+                            TargetDate = new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TargetWeight = 46.0,
+                            Weight = 45.0
+                        },
+                        new
+                        {
+                            UserId = 2,
+                            ActivityLevel = 3,
+                            BirthDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "ikasapoglu@mail.com",
+                            FirstName = "İlkiz",
+                            Gender = 1,
+                            Height = 180,
+                            LastName = "Kasapoğlu",
+                            TargetCalorie = 1500.0,
+                            TargetDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TargetWeight = 46.0,
+                            Weight = 45.0
+                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using WFA_ProDiet.DAL;
+
 
 namespace WFA_ProDiet.MODELS.Models
 {
@@ -100,25 +100,40 @@ namespace WFA_ProDiet.MODELS.Models
 
         protected void SeedData(ModelBuilder modelBuilder)
         {
-
             modelBuilder.Entity<User>().HasData(
-
-           new User
-           {
-               UserId = 1,
-               FirstName = "Oğuz Kağan",
-               LastName = "Ünal",
-               Picture = File.ReadAllBytes(Resource1.HomePage2),
-               Email = "okuzkaan@mail.com",
-               BirthDate = Convert.ToDateTime("2017-01-01"),
-               Gender = Enums.Gender.Man,
-               Height = 180,
-               Weight = 45,
-               ActivityLevel = Enums.ActivityLevel.NoActivitiy,
-               TargetWeight = 46,
-               TargetCalorie = 1500,
+            new User
+            {
+                UserId = 1,
+                FirstName = "Oğuz Kağan",
+                LastName = "Ünal",
+                //Picture = Resource1.
+                Email = "okuzkaan@mail.com",
+                BirthDate = Convert.ToDateTime("2017-01-01"),
+                Gender = Enums.Gender.Man,
+                Height = 180,
+                Weight = 45,
+                ActivityLevel = Enums.ActivityLevel.NoActivitiy,
+                TargetWeight = 46,
+                TargetCalorie = 1500,
                TargetDate = Convert.ToDateTime("2023-02-01")
-           });
+            },
+            new User
+            {
+                UserId = 2,
+                FirstName = "İlkiz",
+                LastName = "Kasapoğlu",
+                //Picture = Resource1.
+                Email = "ikasapoglu@mail.com",
+                BirthDate = Convert.ToDateTime("2000-01-01"),
+                Gender = Enums.Gender.Woman,
+                Height = 180,
+                Weight = 45,
+                ActivityLevel = Enums.ActivityLevel.MoreActive,
+                TargetWeight = 46,
+                TargetCalorie = 1500,
+                TargetDate = Convert.ToDateTime("2023-05-01")
+            }
+            );
 
 
 

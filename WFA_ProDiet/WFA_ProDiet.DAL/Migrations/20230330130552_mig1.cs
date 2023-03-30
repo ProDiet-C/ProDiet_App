@@ -117,6 +117,16 @@ namespace WFA_ProDiet.DAL.Migrations
                         principalColumn: "MealId");
                 });
 
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Picture", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
+                values: new object[] { 1, 0, new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "okuzkaan@mail.com", "Oğuz Kağan", 0, 180, "Ünal", null, 1500.0, new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "UserId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Picture", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
+                values: new object[] { 2, 3, new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ikasapoglu@mail.com", "İlkiz", 1, 180, "Kasapoğlu", null, 1500.0, new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 });
+
             migrationBuilder.CreateIndex(
                 name: "IX_Foods_CategoryId",
                 table: "Foods",
