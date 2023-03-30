@@ -77,7 +77,7 @@ namespace WFA_ProDiet.DAL.Migrations
                 {
                     MealId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<int>(type: "int", maxLength: 50, nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     EatDay = table.Column<DateTime>(type: "datetime2", nullable: false),
                     MealCalorie = table.Column<double>(type: "float", nullable: true),
                     MealCarbohydrate = table.Column<double>(type: "float", nullable: true),
@@ -596,7 +596,7 @@ namespace WFA_ProDiet.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Meals",
                 columns: new[] { "MealId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name", "UserId" },
-                values: new object[] { 1, new DateTime(2023, 3, 31, 0, 15, 8, 899, DateTimeKind.Local).AddTicks(876), 500.0, 200.0, 50.0, 100.0, 0, 1 });
+                values: new object[] { 1, new DateTime(2023, 3, 31, 1, 18, 24, 193, DateTimeKind.Local).AddTicks(1674), 500.0, 200.0, 50.0, 100.0, "Breakfast", 1 });
 
             migrationBuilder.InsertData(
                 table: "MealDetails",

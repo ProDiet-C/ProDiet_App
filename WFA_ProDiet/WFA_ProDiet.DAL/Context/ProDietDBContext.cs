@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using WFA_ProDiet.DAL.Helpers;
 
 namespace WFA_ProDiet.MODELS.Models
 {
@@ -27,7 +27,7 @@ namespace WFA_ProDiet.MODELS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=ProDietAppDB;Trusted_Connection=True;Trust Server Certificate=True");
+                optionsBuilder.UseSqlServer(Helpers.GetConnectionString());
             }
         }
 
@@ -40,8 +40,6 @@ namespace WFA_ProDiet.MODELS.Models
             modelBuilder.Entity<Food>(entity =>
             {
                 entity.Property(f => f.MeasureType).HasColumnType("nvarchar(50)");
-                // entity.Property(f => f.MeasureType).HasColumnType("nvarchar(50)");
-
             });
 
 

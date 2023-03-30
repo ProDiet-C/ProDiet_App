@@ -32,7 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlUserInfo = new System.Windows.Forms.Panel();
-            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnAddPhoto = new FontAwesome.Sharp.IconButton();
             this.btnInfo = new FontAwesome.Sharp.IconButton();
             this.label5 = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
@@ -84,7 +84,7 @@
             // pnlUserInfo
             // 
             this.pnlUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.pnlUserInfo.Controls.Add(this.ıconButton1);
+            this.pnlUserInfo.Controls.Add(this.btnAddPhoto);
             this.pnlUserInfo.Controls.Add(this.btnInfo);
             this.pnlUserInfo.Controls.Add(this.label5);
             this.pnlUserInfo.Controls.Add(this.lblInfo);
@@ -107,22 +107,22 @@
             this.pnlUserInfo.TabIndex = 27;
             this.pnlUserInfo.Visible = false;
             // 
-            // ıconButton1
+            // btnAddPhoto
             // 
-            this.ıconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ıconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.ıconButton1.FlatAppearance.BorderSize = 0;
-            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            this.ıconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
-            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.IconSize = 30;
-            this.ıconButton1.Location = new System.Drawing.Point(-57, 4);
-            this.ıconButton1.Name = "ıconButton1";
-            this.ıconButton1.Size = new System.Drawing.Size(48, 28);
-            this.ıconButton1.TabIndex = 4;
-            this.ıconButton1.UseVisualStyleBackColor = false;
+            this.btnAddPhoto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddPhoto.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddPhoto.FlatAppearance.BorderSize = 0;
+            this.btnAddPhoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddPhoto.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddPhoto.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.btnAddPhoto.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnAddPhoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAddPhoto.IconSize = 30;
+            this.btnAddPhoto.Location = new System.Drawing.Point(-57, 4);
+            this.btnAddPhoto.Name = "btnAddPhoto";
+            this.btnAddPhoto.Size = new System.Drawing.Size(48, 28);
+            this.btnAddPhoto.TabIndex = 4;
+            this.btnAddPhoto.UseVisualStyleBackColor = false;
             // 
             // btnInfo
             // 
@@ -139,6 +139,8 @@
             this.btnInfo.Size = new System.Drawing.Size(33, 30);
             this.btnInfo.TabIndex = 26;
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.MouseEnter += new System.EventHandler(this.btnInfo_MouseEnter);
+            this.btnInfo.MouseLeave += new System.EventHandler(this.btnInfo_MouseLeave);
             // 
             // label5
             // 
@@ -354,7 +356,7 @@
             // btnContinue
             // 
             this.btnContinue.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnContinue.FlatAppearance.BorderSize = 0;
+            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -364,10 +366,11 @@
             this.btnContinue.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnContinue.Location = new System.Drawing.Point(223, 163);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(211, 109);
+            this.btnContinue.Size = new System.Drawing.Size(211, 35);
             this.btnContinue.TabIndex = 4;
             this.btnContinue.Text = "Devam Et";
             this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // txtPasswordCheck
             // 
@@ -455,9 +458,14 @@
             this.lblWelcome.TabIndex = 5;
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tmrWelcome
+            // 
+            this.tmrWelcome.Tick += new System.EventHandler(this.tmrWelcome_Tick);
+            // 
             // tmrOpenForm
             // 
             this.tmrOpenForm.Interval = 10;
+            this.tmrOpenForm.Tick += new System.EventHandler(this.tmrOpenForm_Tick);
             // 
             // CreateAccount
             // 
@@ -518,7 +526,7 @@
         private Panel pnlUserInfo;
         private Panel panel4;
         private System.Windows.Forms.Timer tmrWelcome;
-        private FontAwesome.Sharp.IconButton ıconButton1;
+        private FontAwesome.Sharp.IconButton btnAddPhoto;
         private System.Windows.Forms.Timer tmrOpenForm;
     }
 }

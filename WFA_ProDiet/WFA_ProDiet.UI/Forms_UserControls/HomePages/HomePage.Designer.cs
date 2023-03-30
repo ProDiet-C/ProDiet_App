@@ -265,6 +265,7 @@
             this.btnDailyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDailyReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDailyReport.UseVisualStyleBackColor = true;
+            this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
             // btnReports
             // 
@@ -406,9 +407,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.HomePage_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseDown);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseMove);
-            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.HomePage_MouseUp);
             this.panel1.ResumeLayout(false);
             this.pnlAllMenu.ResumeLayout(false);
             this.pnlFoods.ResumeLayout(false);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
 {
@@ -42,7 +43,7 @@ namespace WFA_ProDiet.UI
         private void CreateAccount_Load(object sender, EventArgs e)
         {
             tmrWelcome.Start();
-            this.TimerOpacity();
+            this.SetOpacityWhenOpen();
         }
 
         private void tmrWelcome_Tick(object sender, EventArgs e)
@@ -75,9 +76,6 @@ namespace WFA_ProDiet.UI
             tmrOpenForm.Start();
         }
 
-        private void CreateAccount_Load_1(object sender, EventArgs e)
-        {
-           
-        }
+    
     }
 }
