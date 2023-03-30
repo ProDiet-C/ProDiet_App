@@ -28,432 +28,462 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
-            panel1 = new Panel();
-            pnlUserInfo = new Panel();
-            ıconButton1 = new FontAwesome.Sharp.IconButton();
-            btnInfo = new FontAwesome.Sharp.IconButton();
-            label5 = new Label();
-            lblInfo = new Label();
-            label7 = new Label();
-            pbUser = new PictureBox();
-            label8 = new Label();
-            label10 = new Label();
-            nudWeight = new NumericUpDown();
-            nudHeight = new NumericUpDown();
-            rbFemale = new RadioButton();
-            rbMale = new RadioButton();
-            label9 = new Label();
-            label6 = new Label();
-            dtpBirthDate = new DateTimePicker();
-            cbActivityLevel = new ComboBox();
-            panel2 = new Panel();
-            panel4 = new Panel();
-            btnContinue = new FontAwesome.Sharp.IconButton();
-            txtPasswordCheck = new MaskedTextBox();
-            txtPassword = new MaskedTextBox();
-            txtEmail = new TextBox();
-            txtName = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label4 = new Label();
-            label1 = new Label();
-            lblWelcome = new Label();
-            tmrWelcome = new System.Windows.Forms.Timer(components);
-            tmrOpenForm = new System.Windows.Forms.Timer(components);
-            panel1.SuspendLayout();
-            pnlUserInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbUser).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlUserInfo = new System.Windows.Forms.Panel();
+            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnInfo = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pbUser = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nudWeight = new System.Windows.Forms.NumericUpDown();
+            this.nudHeight = new System.Windows.Forms.NumericUpDown();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.cbActivityLevel = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.btnContinue = new FontAwesome.Sharp.IconButton();
+            this.txtPasswordCheck = new System.Windows.Forms.MaskedTextBox();
+            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.tmrWelcome = new System.Windows.Forms.Timer(this.components);
+            this.tmrOpenForm = new System.Windows.Forms.Timer(this.components);
+            this.panel1.SuspendLayout();
+            this.pnlUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Controls.Add(pnlUserInfo);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(545, 0);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(0, 541);
-            panel1.TabIndex = 0;
+            this.panel1.Controls.Add(this.pnlUserInfo);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(545, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(0, 541);
+            this.panel1.TabIndex = 0;
             // 
             // pnlUserInfo
             // 
-            pnlUserInfo.BackColor = Color.FromArgb(224, 224, 224);
-            pnlUserInfo.Controls.Add(ıconButton1);
-            pnlUserInfo.Controls.Add(btnInfo);
-            pnlUserInfo.Controls.Add(label5);
-            pnlUserInfo.Controls.Add(lblInfo);
-            pnlUserInfo.Controls.Add(label7);
-            pnlUserInfo.Controls.Add(pbUser);
-            pnlUserInfo.Controls.Add(label8);
-            pnlUserInfo.Controls.Add(label10);
-            pnlUserInfo.Controls.Add(nudWeight);
-            pnlUserInfo.Controls.Add(nudHeight);
-            pnlUserInfo.Controls.Add(rbFemale);
-            pnlUserInfo.Controls.Add(rbMale);
-            pnlUserInfo.Controls.Add(label9);
-            pnlUserInfo.Controls.Add(label6);
-            pnlUserInfo.Controls.Add(dtpBirthDate);
-            pnlUserInfo.Controls.Add(cbActivityLevel);
-            pnlUserInfo.Dock = DockStyle.Fill;
-            pnlUserInfo.Location = new Point(0, 0);
-            pnlUserInfo.Name = "pnlUserInfo";
-            pnlUserInfo.Size = new Size(0, 541);
-            pnlUserInfo.TabIndex = 27;
-            pnlUserInfo.Visible = false;
+            this.pnlUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.pnlUserInfo.Controls.Add(this.ıconButton1);
+            this.pnlUserInfo.Controls.Add(this.btnInfo);
+            this.pnlUserInfo.Controls.Add(this.label5);
+            this.pnlUserInfo.Controls.Add(this.lblInfo);
+            this.pnlUserInfo.Controls.Add(this.label7);
+            this.pnlUserInfo.Controls.Add(this.pbUser);
+            this.pnlUserInfo.Controls.Add(this.label8);
+            this.pnlUserInfo.Controls.Add(this.label10);
+            this.pnlUserInfo.Controls.Add(this.nudWeight);
+            this.pnlUserInfo.Controls.Add(this.nudHeight);
+            this.pnlUserInfo.Controls.Add(this.rbFemale);
+            this.pnlUserInfo.Controls.Add(this.rbMale);
+            this.pnlUserInfo.Controls.Add(this.label9);
+            this.pnlUserInfo.Controls.Add(this.label6);
+            this.pnlUserInfo.Controls.Add(this.dtpBirthDate);
+            this.pnlUserInfo.Controls.Add(this.cbActivityLevel);
+            this.pnlUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlUserInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlUserInfo.Name = "pnlUserInfo";
+            this.pnlUserInfo.Size = new System.Drawing.Size(0, 541);
+            this.pnlUserInfo.TabIndex = 27;
+            this.pnlUserInfo.Visible = false;
             // 
             // ıconButton1
             // 
-            ıconButton1.Anchor = AnchorStyles.None;
-            ıconButton1.BackColor = Color.Transparent;
-            ıconButton1.FlatAppearance.BorderSize = 0;
-            ıconButton1.FlatStyle = FlatStyle.Flat;
-            ıconButton1.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
-            ıconButton1.IconColor = Color.FromArgb(141, 197, 62);
-            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            ıconButton1.IconSize = 30;
-            ıconButton1.Location = new Point(-57, 4);
-            ıconButton1.Name = "ıconButton1";
-            ıconButton1.Size = new Size(48, 28);
-            ıconButton1.TabIndex = 4;
-            ıconButton1.UseVisualStyleBackColor = false;
+            this.ıconButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ıconButton1.BackColor = System.Drawing.Color.Transparent;
+            this.ıconButton1.FlatAppearance.BorderSize = 0;
+            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton1.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
+            this.ıconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton1.IconSize = 30;
+            this.ıconButton1.Location = new System.Drawing.Point(-57, 4);
+            this.ıconButton1.Name = "ıconButton1";
+            this.ıconButton1.Size = new System.Drawing.Size(48, 28);
+            this.ıconButton1.TabIndex = 4;
+            this.ıconButton1.UseVisualStyleBackColor = false;
             // 
             // btnInfo
             // 
-            btnInfo.Anchor = AnchorStyles.None;
-            btnInfo.BackColor = Color.Transparent;
-            btnInfo.FlatAppearance.BorderSize = 0;
-            btnInfo.FlatStyle = FlatStyle.Flat;
-            btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            btnInfo.IconColor = Color.FromArgb(64, 0, 0);
-            btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnInfo.IconSize = 25;
-            btnInfo.Location = new Point(124, 189);
-            btnInfo.Name = "btnInfo";
-            btnInfo.Size = new Size(33, 30);
-            btnInfo.TabIndex = 26;
-            btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnInfo.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInfo.IconSize = 25;
+            this.btnInfo.Location = new System.Drawing.Point(124, 189);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(33, 30);
+            this.btnInfo.TabIndex = 26;
+            this.btnInfo.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.Location = new Point(-198, 193);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(118, 27);
-            label5.TabIndex = 10;
-            label5.Text = "Aktivite Düzeyi :";
-            label5.TextAlign = ContentAlignment.MiddleRight;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Location = new System.Drawing.Point(-198, 193);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 27);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Aktivite Düzeyi :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblInfo
             // 
-            lblInfo.Anchor = AnchorStyles.None;
-            lblInfo.BackColor = SystemColors.Info;
-            lblInfo.Font = new Font("Segoe MDL2 Assets", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInfo.ForeColor = Color.FromArgb(0, 0, 64);
-            lblInfo.Location = new Point(-198, 222);
-            lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(356, 300);
-            lblInfo.TabIndex = 25;
-            lblInfo.Text = resources.GetString("lblInfo.Text");
-            lblInfo.Visible = false;
+            this.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.lblInfo.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblInfo.Location = new System.Drawing.Point(-198, 222);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(356, 300);
+            this.lblInfo.TabIndex = 25;
+            this.lblInfo.Text = resources.GetString("lblInfo.Text");
+            this.lblInfo.Visible = false;
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.Location = new Point(4, 62);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(56, 27);
-            label7.TabIndex = 11;
-            label7.Text = "Kilo :";
-            label7.TextAlign = ContentAlignment.MiddleRight;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Location = new System.Drawing.Point(4, 62);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 27);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Kilo :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // pbUser
             // 
-            pbUser.Anchor = AnchorStyles.None;
-            pbUser.BackColor = Color.Transparent;
-            pbUser.BorderStyle = BorderStyle.Fixed3D;
-            pbUser.Image = Properties.Resources.Atakan;
-            pbUser.Location = new Point(-159, 4);
-            pbUser.Name = "pbUser";
-            pbUser.Size = new Size(150, 150);
-            pbUser.SizeMode = PictureBoxSizeMode.Zoom;
-            pbUser.TabIndex = 24;
-            pbUser.TabStop = false;
+            this.pbUser.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbUser.BackColor = System.Drawing.Color.Transparent;
+            this.pbUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbUser.Image = global::WFA_ProDiet.UI.Properties.Resources.Atakan;
+            this.pbUser.Location = new System.Drawing.Point(-159, 4);
+            this.pbUser.Name = "pbUser";
+            this.pbUser.Size = new System.Drawing.Size(150, 150);
+            this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbUser.TabIndex = 24;
+            this.pbUser.TabStop = false;
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.None;
-            label8.Location = new Point(-199, 157);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(118, 27);
-            label8.TabIndex = 12;
-            label8.Text = "Doğum Tarihi :";
-            label8.TextAlign = ContentAlignment.MiddleRight;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Location = new System.Drawing.Point(-199, 157);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 27);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Doğum Tarihi :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(4, 27);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(56, 27);
-            label10.TabIndex = 13;
-            label10.Text = "Boy :";
-            label10.TextAlign = ContentAlignment.MiddleRight;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Location = new System.Drawing.Point(4, 27);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 27);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Boy :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nudWeight
             // 
-            nudWeight.Anchor = AnchorStyles.None;
-            nudWeight.Location = new Point(67, 61);
-            nudWeight.Margin = new Padding(6, 7, 6, 7);
-            nudWeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudWeight.Minimum = new decimal(new int[] { 40, 0, 0, 0 });
-            nudWeight.Name = "nudWeight";
-            nudWeight.Size = new Size(63, 28);
-            nudWeight.TabIndex = 22;
-            nudWeight.Value = new decimal(new int[] { 40, 0, 0, 0 });
+            this.nudWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudWeight.Location = new System.Drawing.Point(67, 61);
+            this.nudWeight.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.nudWeight.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nudWeight.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.nudWeight.Name = "nudWeight";
+            this.nudWeight.Size = new System.Drawing.Size(63, 28);
+            this.nudWeight.TabIndex = 22;
+            this.nudWeight.Value = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
             // 
             // nudHeight
             // 
-            nudHeight.Anchor = AnchorStyles.None;
-            nudHeight.Location = new Point(67, 26);
-            nudHeight.Margin = new Padding(5, 6, 5, 6);
-            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            nudHeight.Name = "nudHeight";
-            nudHeight.Size = new Size(63, 28);
-            nudHeight.TabIndex = 23;
-            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
+            this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudHeight.Location = new System.Drawing.Point(67, 26);
+            this.nudHeight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.nudHeight.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nudHeight.Minimum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(63, 28);
+            this.nudHeight.TabIndex = 23;
+            this.nudHeight.Value = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
             // 
             // rbFemale
             // 
-            rbFemale.Anchor = AnchorStyles.None;
-            rbFemale.AutoSize = true;
-            rbFemale.Location = new Point(93, 100);
-            rbFemale.Name = "rbFemale";
-            rbFemale.Size = new Size(65, 25);
-            rbFemale.TabIndex = 20;
-            rbFemale.TabStop = true;
-            rbFemale.Text = "Kadın";
-            rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(93, 100);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(65, 25);
+            this.rbFemale.TabIndex = 20;
+            this.rbFemale.TabStop = true;
+            this.rbFemale.Text = "Kadın";
+            this.rbFemale.UseVisualStyleBackColor = true;
             // 
             // rbMale
             // 
-            rbMale.Anchor = AnchorStyles.None;
-            rbMale.AutoSize = true;
-            rbMale.Location = new Point(13, 100);
-            rbMale.Name = "rbMale";
-            rbMale.Size = new Size(67, 25);
-            rbMale.TabIndex = 21;
-            rbMale.TabStop = true;
-            rbMale.Text = "Erkek";
-            rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbMale.AutoSize = true;
+            this.rbMale.Location = new System.Drawing.Point(13, 100);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(67, 25);
+            this.rbMale.TabIndex = 21;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Erkek";
+            this.rbMale.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(134, 65);
-            label9.Name = "label9";
-            label9.Size = new Size(47, 27);
-            label9.TabIndex = 18;
-            label9.Text = "kg";
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Location = new System.Drawing.Point(134, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 27);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "kg";
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.Location = new Point(134, 30);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 27);
-            label6.TabIndex = 19;
-            label6.Text = "cm";
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Location = new System.Drawing.Point(134, 30);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 27);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "cm";
             // 
             // dtpBirthDate
             // 
-            dtpBirthDate.Anchor = AnchorStyles.None;
-            dtpBirthDate.Format = DateTimePickerFormat.Short;
-            dtpBirthDate.Location = new Point(-74, 157);
-            dtpBirthDate.Name = "dtpBirthDate";
-            dtpBirthDate.Size = new Size(230, 28);
-            dtpBirthDate.TabIndex = 15;
+            this.dtpBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthDate.Location = new System.Drawing.Point(-74, 157);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(230, 28);
+            this.dtpBirthDate.TabIndex = 15;
             // 
             // cbActivityLevel
             // 
-            cbActivityLevel.Anchor = AnchorStyles.None;
-            cbActivityLevel.FormattingEnabled = true;
-            cbActivityLevel.Items.AddRange(new object[] { "Aktivite Yok (Masabaşı iş-Hareketsiz)", "Az Aktif (Hafif egzersizler-Günlük işler)", "Aktif (Hafta 2-4 gün spor)", "Çok Aktif (Haftada 4+ gün spor)" });
-            cbActivityLevel.Location = new Point(-73, 190);
-            cbActivityLevel.Name = "cbActivityLevel";
-            cbActivityLevel.Size = new Size(191, 29);
-            cbActivityLevel.TabIndex = 14;
+            this.cbActivityLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbActivityLevel.FormattingEnabled = true;
+            this.cbActivityLevel.Items.AddRange(new object[] {
+            "Aktivite Yok (Masabaşı iş-Hareketsiz)",
+            "Az Aktif (Hafif egzersizler-Günlük işler)",
+            "Aktif (Hafta 2-4 gün spor)",
+            "Çok Aktif (Haftada 4+ gün spor)"});
+            this.cbActivityLevel.Location = new System.Drawing.Point(-73, 190);
+            this.cbActivityLevel.Name = "cbActivityLevel";
+            this.cbActivityLevel.Size = new System.Drawing.Size(191, 29);
+            this.cbActivityLevel.TabIndex = 14;
             // 
             // panel2
             // 
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(lblWelcome);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(545, 541);
-            panel2.TabIndex = 1;
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(545, 541);
+            this.panel2.TabIndex = 1;
             // 
             // panel4
             // 
-            panel4.Controls.Add(btnContinue);
-            panel4.Controls.Add(txtPasswordCheck);
-            panel4.Controls.Add(txtPassword);
-            panel4.Controls.Add(txtEmail);
-            panel4.Controls.Add(txtName);
-            panel4.Controls.Add(label3);
-            panel4.Controls.Add(label2);
-            panel4.Controls.Add(label4);
-            panel4.Controls.Add(label1);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 153);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(545, 388);
-            panel4.TabIndex = 6;
+            this.panel4.Controls.Add(this.btnContinue);
+            this.panel4.Controls.Add(this.txtPasswordCheck);
+            this.panel4.Controls.Add(this.txtPassword);
+            this.panel4.Controls.Add(this.txtEmail);
+            this.panel4.Controls.Add(this.txtName);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 153);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(545, 388);
+            this.panel4.TabIndex = 6;
             // 
             // btnContinue
             // 
-            btnContinue.Anchor = AnchorStyles.None;
-            btnContinue.FlatAppearance.BorderSize = 0;
-            btnContinue.FlatAppearance.MouseDownBackColor = Color.FromArgb(198, 198, 198);
-            btnContinue.FlatAppearance.MouseOverBackColor = Color.FromArgb(141, 197, 62);
-            btnContinue.FlatStyle = FlatStyle.Flat;
-            btnContinue.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnContinue.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnContinue.IconColor = Color.Black;
-            btnContinue.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnContinue.Location = new Point(223, 163);
-            btnContinue.Name = "btnContinue";
-            btnContinue.Size = new Size(211, 109);
-            btnContinue.TabIndex = 4;
-            btnContinue.Text = "Devam Et";
-            btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnContinue.FlatAppearance.BorderSize = 0;
+            this.btnContinue.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnContinue.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnContinue.IconColor = System.Drawing.Color.Black;
+            this.btnContinue.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnContinue.Location = new System.Drawing.Point(223, 163);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(211, 109);
+            this.btnContinue.TabIndex = 4;
+            this.btnContinue.Text = "Devam Et";
+            this.btnContinue.UseVisualStyleBackColor = true;
             // 
             // txtPasswordCheck
             // 
-            txtPasswordCheck.Anchor = AnchorStyles.None;
-            txtPasswordCheck.Location = new Point(223, 129);
-            txtPasswordCheck.Name = "txtPasswordCheck";
-            txtPasswordCheck.Size = new Size(211, 28);
-            txtPasswordCheck.TabIndex = 3;
+            this.txtPasswordCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPasswordCheck.Location = new System.Drawing.Point(223, 129);
+            this.txtPasswordCheck.Name = "txtPasswordCheck";
+            this.txtPasswordCheck.Size = new System.Drawing.Size(211, 28);
+            this.txtPasswordCheck.TabIndex = 3;
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.None;
-            txtPassword.Location = new Point(223, 95);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(211, 28);
-            txtPassword.TabIndex = 2;
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.Location = new System.Drawing.Point(223, 95);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(211, 28);
+            this.txtPassword.TabIndex = 2;
             // 
             // txtEmail
             // 
-            txtEmail.Anchor = AnchorStyles.None;
-            txtEmail.Location = new Point(223, 61);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(211, 28);
-            txtEmail.TabIndex = 1;
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.Location = new System.Drawing.Point(223, 61);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(211, 28);
+            this.txtEmail.TabIndex = 1;
             // 
             // txtName
             // 
-            txtName.Anchor = AnchorStyles.None;
-            txtName.Location = new Point(223, 27);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(211, 28);
-            txtName.TabIndex = 1;
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.Location = new System.Drawing.Point(223, 27);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(211, 28);
+            this.txtName.TabIndex = 1;
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.Location = new Point(44, 129);
-            label3.Name = "label3";
-            label3.Size = new Size(162, 28);
-            label3.TabIndex = 0;
-            label3.Text = "Şifre Tekrar :";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Location = new System.Drawing.Point(44, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(162, 28);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Şifre Tekrar :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.Location = new Point(44, 95);
-            label2.Name = "label2";
-            label2.Size = new Size(162, 28);
-            label2.TabIndex = 0;
-            label2.Text = "Şifre :";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Location = new System.Drawing.Point(44, 95);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(162, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Şifre :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.Location = new Point(44, 61);
-            label4.Name = "label4";
-            label4.Size = new Size(162, 28);
-            label4.TabIndex = 0;
-            label4.Text = "E-mail :";
-            label4.TextAlign = ContentAlignment.MiddleRight;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Location = new System.Drawing.Point(44, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(162, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "E-mail :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.Location = new Point(44, 27);
-            label1.Name = "label1";
-            label1.Size = new Size(162, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Ad :";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Location = new System.Drawing.Point(44, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ad :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblWelcome
             // 
-            lblWelcome.BackColor = Color.FromArgb(141, 197, 62);
-            lblWelcome.Dock = DockStyle.Top;
-            lblWelcome.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblWelcome.ForeColor = Color.Black;
-            lblWelcome.Image = Properties.Resources.PRODİET_TRANSPARAN_DENEME_13;
-            lblWelcome.ImageAlign = ContentAlignment.MiddleLeft;
-            lblWelcome.Location = new Point(0, 0);
-            lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(545, 153);
-            lblWelcome.TabIndex = 5;
-            lblWelcome.TextAlign = ContentAlignment.MiddleRight;
+            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Image = global::WFA_ProDiet.UI.Properties.Resources.PRODİET_TRANSPARAN_DENEME_13;
+            this.lblWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblWelcome.Location = new System.Drawing.Point(0, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(545, 153);
+            this.lblWelcome.TabIndex = 5;
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tmrOpenForm
             // 
-            tmrOpenForm.Interval = 10;
+            this.tmrOpenForm.Interval = 10;
             // 
             // CreateAccount
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(544, 541);
-            Controls.Add(panel1);
-            Controls.Add(panel2);
-            Font = new Font("Segoe MDL2 Assets", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4);
-            Name = "CreateAccount";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "CreateAccount";
-            panel1.ResumeLayout(false);
-            pnlUserInfo.ResumeLayout(false);
-            pnlUserInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbUser).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
-            panel2.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(544, 541);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
+            this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "CreateAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CreateAccount";
+            this.Load += new System.EventHandler(this.CreateAccount_Load);
+            this.panel1.ResumeLayout(false);
+            this.pnlUserInfo.ResumeLayout(false);
+            this.pnlUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

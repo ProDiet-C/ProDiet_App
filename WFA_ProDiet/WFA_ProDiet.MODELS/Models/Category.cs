@@ -7,7 +7,7 @@ namespace WFA_ProDiet.MODELS.Models
     {
         public Category()
         {
-            Foods = new HashSet<Food>();
+            Foods = new List<Food>();
             
         }
 

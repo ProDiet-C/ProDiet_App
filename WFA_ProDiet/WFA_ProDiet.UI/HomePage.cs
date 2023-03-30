@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.MODELS.Enums;
 
 namespace WFA_ProDiet.UI
 {

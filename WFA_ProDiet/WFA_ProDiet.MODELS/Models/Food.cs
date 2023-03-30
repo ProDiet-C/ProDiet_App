@@ -8,17 +8,17 @@ namespace WFA_ProDiet.MODELS.Models
     {
         public Food()
         {
-            MealDetails = new HashSet<MealDetail>();
+            MealDetails = new List<MealDetail>();
             
         }
 
         public int FoodId { get; set; }
         public string Name { get; set; } = null!;
         public byte[]? Picture { get; set; }
-        public double Calorie { get; set; }
-        public double? Carbohydrate { get; set; }
-        public double? Fat { get; set; }
-        public double? Protein { get; set; }
+        public double Calorie { get; set; } = 0;
+        public double? Carbohydrate { get; set; } = 0;
+        public double? Fat { get; set; } = 0;
+        public double? Protein { get; set; } = 0;
         public MeasureType MeasureType { get; set; }
         public int? CategoryId { get; set; }
 

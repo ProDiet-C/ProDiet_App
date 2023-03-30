@@ -8,7 +8,7 @@ namespace WFA_ProDiet.MODELS.Enums
 {
     public enum MealName
     {
-        Breakfast,
+        Breakfast = 0,
         Lunch,
         Dinner,
         Extra

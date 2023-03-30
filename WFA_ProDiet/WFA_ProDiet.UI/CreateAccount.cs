@@ -42,6 +42,7 @@ namespace WFA_ProDiet.UI
         private void CreateAccount_Load(object sender, EventArgs e)
         {
             tmrWelcome.Start();
+            this.TimerOpacity();
         }
 
         private void tmrWelcome_Tick(object sender, EventArgs e)
@@ -72,6 +73,11 @@ namespace WFA_ProDiet.UI
         {
             pnlUserInfo.Visible = true;
             tmrOpenForm.Start();
+        }
+
+        private void CreateAccount_Load_1(object sender, EventArgs e)
+        {
+           
         }
     }
 }
