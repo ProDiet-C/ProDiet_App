@@ -106,7 +106,7 @@ namespace WFA_ProDiet.MODELS.Models
                 UserId = 1,
                 FirstName = "Oğuz Kağan",
                 LastName = "Ünal",
-                //Picture = Resource1.
+                Picture = DAL.MyImage.ball,
                 Email = "okuzkaan@mail.com",
                 BirthDate = Convert.ToDateTime("2017-01-01"),
                 Gender = Enums.Gender.Man,
@@ -115,7 +115,7 @@ namespace WFA_ProDiet.MODELS.Models
                 ActivityLevel = Enums.ActivityLevel.NoActivitiy,
                 TargetWeight = 46,
                 TargetCalorie = 1500,
-               TargetDate = Convert.ToDateTime("2023-02-01")
+                TargetDate = Convert.ToDateTime("2023-02-01")
             },
             new User
             {
@@ -134,12 +134,40 @@ namespace WFA_ProDiet.MODELS.Models
                 TargetDate = Convert.ToDateTime("2023-05-01")
             }
             );
+            modelBuilder.Entity<Category>().HasData(
+            new Category
+            {
+                CategoryId = 1,
+                Name = "Av Hayvanları",
+
+            },
+            new Category
+            {
+                CategoryId = 2,
+                Name = "Balıklar",
+            });
+            modelBuilder.Entity<Meal>().HasData(
+           new Meal
+           {
+               MealId = 1,
+               Name = Enums.MealName.Breakfast,
+               EatDay = DateTime.Now,
+               MealCalorie = 500,
+               MealCarbohydrate = 200,
+               MealProtein = 100,
+               MealFat = 50,
+               UserId = 1,
+               
+           });
+            modelBuilder.Entity<Food>().HasData(
+            new Food
+            {
+                FoodId = 1,
+                Name = "Bıldırcın",
+                Picture=
 
 
-
+            });
         }
-
-
-
     }
 }
