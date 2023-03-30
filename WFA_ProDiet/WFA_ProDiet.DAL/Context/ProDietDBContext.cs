@@ -108,7 +108,7 @@ namespace WFA_ProDiet.MODELS.Models
                UserId = 1,
                FirstName = "Oğuz Kağan",
                LastName = "Ünal",
-               Picture = Resource1.HomePage2,
+               Picture = File.ReadAllBytes(Resource1.HomePage2),
                Email = "okuzkaan@mail.com",
                BirthDate = Convert.ToDateTime("2017-01-01"),
                Gender = Enums.Gender.Man,
