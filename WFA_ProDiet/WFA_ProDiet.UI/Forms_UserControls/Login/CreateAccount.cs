@@ -13,7 +13,7 @@ namespace WFA_ProDiet.UI
 {
     public partial class CreateAccount : Form
     {
-        string welcomeMessage = "ile sağlıklı bir yaşama başlayın.";
+        string welcomeMessage = "ile sağlıklı yaşama başla.";
         int welcomeCounter = 0;
         public CreateAccount()
         {
@@ -75,7 +75,5 @@ namespace WFA_ProDiet.UI
             pnlUserInfo.Visible = true;
             tmrOpenForm.Start();
         }
-
-    
     }
 }

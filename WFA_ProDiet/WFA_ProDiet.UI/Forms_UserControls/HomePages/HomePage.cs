@@ -39,7 +39,7 @@ namespace WFA_ProDiet.UI
             AddUserControl(ucProPlan);
         }     
 
-        private void btnProTakip_Click(object sender, EventArgs e)
+        public void btnProTakip_Click(object sender, EventArgs e)
         {           
             RemoveAllUc();
             AddUserControl(ucProTakip);

@@ -430,11 +430,11 @@
         private FontAwesome.Sharp.IconButton btnProTakip;
         private FontAwesome.Sharp.IconButton btnProPlan;
         private FontAwesome.Sharp.IconButton btnMonthlyReport;
-        private Panel pnlScreen;
         private FontAwesome.Sharp.IconButton btnUser;
         private FontAwesome.Sharp.IconButton btnExtraReports;
         private Panel pnlFoods;
         private FontAwesome.Sharp.IconButton btnEditFoods;
         private FontAwesome.Sharp.IconButton btnFoods;
+        public Panel pnlScreen;
     }
 }

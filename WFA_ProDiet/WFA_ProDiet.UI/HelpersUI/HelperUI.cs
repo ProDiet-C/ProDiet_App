@@ -16,7 +16,7 @@ namespace WFA_ProDiet.UI.HelpersUI
         {
             _form = form;
             _timerOpen = new Timer();
-            _timerOpen.Interval = 15;
+            _timerOpen.Interval = 30;
             _form.Opacity = 0;
             _timerOpen.Tick += Timer_Tick1;
             _timerOpen.Start();

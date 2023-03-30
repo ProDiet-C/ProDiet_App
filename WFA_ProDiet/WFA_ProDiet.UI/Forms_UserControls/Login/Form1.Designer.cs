@@ -203,7 +203,7 @@
             // 
             // tmrFirstOpen
             // 
-            this.tmrFirstOpen.Interval = 15;
+            this.tmrFirstOpen.Interval = 30;
             this.tmrFirstOpen.Tick += new System.EventHandler(this.tmrFirstOpen_Tick);
             // 
             // Form1

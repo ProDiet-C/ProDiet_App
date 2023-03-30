@@ -88,6 +88,7 @@
             this.lnkProTakip.TabStop = true;
             this.lnkProTakip.Text = "ProTakip";
             this.lnkProTakip.Visible = false;
+            this.lnkProTakip.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkProTakip_LinkClicked);
             // 
             // nudCurrentWeight
             // 

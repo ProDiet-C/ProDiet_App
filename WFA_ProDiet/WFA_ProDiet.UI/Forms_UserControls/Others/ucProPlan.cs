@@ -16,5 +16,10 @@ namespace WFA_ProDiet.UI
         {
             InitializeComponent();
         }
+
+        private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           new HomePage().btnProTakip_Click(sender, e);
+        }
     }
 }

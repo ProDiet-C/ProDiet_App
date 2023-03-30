@@ -30,6 +30,11 @@ namespace WFA_ProDiet.MODELS.Models
 
         public virtual ICollection<Meal> Meals { get; set; }
 
+
+        /// <summary>
+        /// gönderilen şifreyi sha256 formatına çevirir ve Password property'sinin içerisine atar.
+        /// </summary>
+        /// <param name="password"></param>
         public void SetPassword(string password)
         {
             using (var sha256 = SHA256.Create())
@@ -39,6 +44,11 @@ namespace WFA_ProDiet.MODELS.Models
             }
         }
 
+        /// <summary>
+        /// gönderilen şifrenin kullanıcı şifresiyle aynı olup olmadığını kontrol eder.
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
         public bool VerifyPassword(string password)
         {
             using (var sha256 = SHA256.Create())
