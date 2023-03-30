@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WFA_ProDiet.MODELS\WFA_ProDiet.MODELS.csproj" />
+  </ItemGroup>
+
 </Project>

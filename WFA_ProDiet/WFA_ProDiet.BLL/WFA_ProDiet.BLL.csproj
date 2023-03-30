@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\WFA_ProDiet.DAL\WFA_ProDiet.DAL.csproj" />
+  </ItemGroup>
+
 </Project>
