@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WFA_ProDiet.DAL.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class MigAtakan : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -596,7 +596,7 @@ namespace WFA_ProDiet.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Meals",
                 columns: new[] { "MealId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name", "UserId" },
-                values: new object[] { 1, new DateTime(2023, 3, 31, 1, 18, 24, 193, DateTimeKind.Local).AddTicks(1674), 500.0, 200.0, 50.0, 100.0, "Breakfast", 1 });
+                values: new object[] { 1, new DateTime(2023, 3, 31, 2, 17, 22, 28, DateTimeKind.Local).AddTicks(779), 500.0, 200.0, 50.0, 100.0, "Breakfast", 1 });
 
             migrationBuilder.InsertData(
                 table: "MealDetails",

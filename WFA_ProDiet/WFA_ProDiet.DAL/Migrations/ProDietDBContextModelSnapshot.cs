@@ -4338,7 +4338,7 @@ namespace WFA_ProDiet.DAL.Migrations
                         new
                         {
                             MealId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 1, 18, 24, 193, DateTimeKind.Local).AddTicks(1674),
+                            EatDay = new DateTime(2023, 3, 31, 2, 17, 22, 28, DateTimeKind.Local).AddTicks(779),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,

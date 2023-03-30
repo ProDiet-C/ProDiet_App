@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using WFA_ProDiet.DAL.Controllers;
 using WFA_ProDiet.DAL.Helpers;
 
 namespace WFA_ProDiet.MODELS.Models
@@ -32,76 +33,11 @@ namespace WFA_ProDiet.MODELS.Models
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Category>(entity =>
-            {
-                entity.Property(e => e.Name).HasMaxLength(50);
-            });
-            modelBuilder.Entity<Food>(entity =>
-            {
-                entity.Property(f => f.MeasureType).HasColumnType("nvarchar(50)");
-            });
-
-
-            modelBuilder.Entity<Meal>(entity =>
-            {
-
-
-                entity.Property(e => e.Name).HasMaxLength(50).HasColumnType("nvarchar(50)");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Meals)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Meals_Users");
-            });
-            //Çoka çok ilişki
-            modelBuilder.Entity<MealDetail>(entity =>
-            {
-                entity.HasKey(e => new { e.MealId, e.FoodId });
-
-                entity.Property(e => e.MealId).HasColumnName("MealID");
-
-                entity.Property(e => e.FoodId).HasColumnName("FoodID");
-
-                entity.HasOne(d => d.Food)
-                    .WithMany(p => p.MealDetails)
-                    .HasForeignKey(d => d.FoodId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_MealDetails_Foods");
-
-                entity.HasOne(d => d.Meal)
-                    .WithMany(p => p.MealDetails)
-                    .HasForeignKey(d => d.MealId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_MealDetails_Meals");
-            });
-
-
-
-            modelBuilder.Entity<User>(entity =>
-            {
-
-                entity.Property(e => e.ActivityLevel).HasColumnType("nvarchar(50)");
-
-                entity.Property(e => e.ActivityLevel).HasMaxLength(50);
-
-                entity.Property(e => e.BirthDate).HasColumnType("date");
-
-                entity.Property(e => e.Email).HasMaxLength(150);
-
-                entity.Property(e => e.FirstName).HasMaxLength(50);
-
-                entity.Property(e => e.Gender).HasColumnType("nvarchar(50)");
-
-                entity.Property(e => e.Gender).HasMaxLength(50);
-
-                entity.Property(e => e.LastName).HasMaxLength(50);
-
-                entity.Property(e => e.Picture).HasColumnType("image");
-
-                entity.Property(e => e.TargetDate).HasColumnType("date");
-            });
+        {            
+            new CategoryControllers().SetModel(modelBuilder);
+            new MealControllers().SetModel(modelBuilder);
+            new MealDetailControllers().SetModel(modelBuilder);
+            new UserControllers().SetModel(modelBuilder);       
             SeedData(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
