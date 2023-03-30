@@ -12,8 +12,8 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    [Migration("20230330205451_mig1")]
-    partial class mig1
+    [Migration("20230330212213_mig2")]
+    partial class mig2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -4322,9 +4322,10 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.Property<double?>("MealProtein")
                         .HasColumnType("float");
 
-                    b.Property<int>("Name")
+                    b.Property<string>("Name")
+                        .IsRequired()
                         .HasMaxLength(50)
-                        .HasColumnType("int");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -4339,12 +4340,12 @@ namespace WFA_ProDiet.DAL.Migrations
                         new
                         {
                             MealId = 1,
-                            EatDay = new DateTime(2023, 3, 30, 23, 54, 51, 355, DateTimeKind.Local).AddTicks(6555),
+                            EatDay = new DateTime(2023, 3, 31, 0, 22, 8, 592, DateTimeKind.Local).AddTicks(5012),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,
                             MealProtein = 100.0,
-                            Name = 0,
+                            Name = "Breakfast",
                             UserId = 1
                         });
                 });

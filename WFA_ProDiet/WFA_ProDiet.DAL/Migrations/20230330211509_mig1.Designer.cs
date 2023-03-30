@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WFA_ProDiet.MODELS.Models;
 
@@ -11,9 +12,10 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    partial class ProDietDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230330211509_mig1")]
+    partial class mig1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -4320,10 +4322,9 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.Property<double?>("MealProtein")
                         .HasColumnType("float");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
+                    b.Property<int>("Name")
                         .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
@@ -4338,12 +4339,12 @@ namespace WFA_ProDiet.DAL.Migrations
                         new
                         {
                             MealId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 0, 22, 8, 592, DateTimeKind.Local).AddTicks(5012),
+                            EatDay = new DateTime(2023, 3, 31, 0, 15, 8, 899, DateTimeKind.Local).AddTicks(876),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,
                             MealProtein = 100.0,
-                            Name = "Breakfast",
+                            Name = 0,
                             UserId = 1
                         });
                 });

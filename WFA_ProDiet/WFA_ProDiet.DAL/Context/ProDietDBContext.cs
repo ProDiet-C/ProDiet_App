@@ -49,7 +49,7 @@ namespace WFA_ProDiet.MODELS.Models
             {
 
 
-                entity.Property(e => e.Name).HasMaxLength(50);
+                entity.Property(e => e.Name).HasMaxLength(50).HasColumnType("nvarchar(50)");
 
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.Meals)
