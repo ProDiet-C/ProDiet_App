@@ -106,7 +106,6 @@ namespace WFA_ProDiet.MODELS.Models
                 UserId = 1,
                 FirstName = "Oğuz Kağan",
                 LastName = "Ünal",
-                Picture = DAL.MyImage.ball,
                 Email = "okuzkaan@mail.com",
                 BirthDate = Convert.ToDateTime("2017-01-01"),
                 Gender = Enums.Gender.Man,
@@ -122,7 +121,6 @@ namespace WFA_ProDiet.MODELS.Models
                 UserId = 2,
                 FirstName = "İlkiz",
                 LastName = "Kasapoğlu",
-                //Picture = Resource1.
                 Email = "ikasapoglu@mail.com",
                 BirthDate = Convert.ToDateTime("2000-01-01"),
                 Gender = Enums.Gender.Woman,
@@ -157,28 +155,27 @@ namespace WFA_ProDiet.MODELS.Models
                MealProtein = 100,
                MealFat = 50,
                UserId = 1
-               
+
            });
             modelBuilder.Entity<Food>().HasData(
             new Food
             {
                 FoodId = 1,
                 Name = "Bıldırcın",
-                Picture = DAL.MyImage.Bıldırcın,
                 Calorie = 200,
                 Carbohydrate = 100,
                 Fat = 15,
-                Protein= 100,   
+                Protein = 100,
                 MeasureType = Enums.MeasureType.Gram,
-                CategoryId = 1,               
-                
+                CategoryId = 1,
+
             });
             modelBuilder.Entity<MealDetail>().HasData(
             new MealDetail
-            {               
+            {
                 MealId = 1,
                 FoodId = 1,
-                Quantity =3
+                Quantity = 3
             });
         }
     }

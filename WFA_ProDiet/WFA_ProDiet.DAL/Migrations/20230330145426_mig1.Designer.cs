@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WFA_ProDiet.MODELS.Models;
 
@@ -11,9 +12,10 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    partial class ProDietDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230330145426_mig1")]
+    partial class mig1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,18 +40,6 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
-
-                    b.HasData(
-                        new
-                        {
-                            CategoryId = 1,
-                            Name = "Av Hayvanları"
-                        },
-                        new
-                        {
-                            CategoryId = 2,
-                            Name = "Balıklar"
-                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>
@@ -90,19 +80,6 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("Foods");
-
-                    b.HasData(
-                        new
-                        {
-                            FoodId = 1,
-                            Calorie = 200.0,
-                            Carbohydrate = 100.0,
-                            CategoryId = 1,
-                            Fat = 15.0,
-                            MeasureType = 0,
-                            Name = "Bıldırcın",
-                            Protein = 100.0
-                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Meal", b =>
@@ -140,19 +117,6 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Meals");
-
-                    b.HasData(
-                        new
-                        {
-                            MealId = 1,
-                            EatDay = new DateTime(2023, 3, 30, 17, 57, 49, 6, DateTimeKind.Local).AddTicks(6444),
-                            MealCalorie = 500.0,
-                            MealCarbohydrate = 200.0,
-                            MealFat = 50.0,
-                            MealProtein = 100.0,
-                            Name = 0,
-                            UserId = 1
-                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.MealDetail", b =>
@@ -173,14 +137,6 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasIndex("FoodId");
 
                     b.ToTable("MealDetails");
-
-                    b.HasData(
-                        new
-                        {
-                            MealId = 1,
-                            FoodId = 1,
-                            Quantity = 3
-                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.User", b =>
@@ -238,38 +194,6 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            ActivityLevel = 0,
-                            BirthDate = new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "okuzkaan@mail.com",
-                            FirstName = "Oğuz Kağan",
-                            Gender = 0,
-                            Height = 180,
-                            LastName = "Ünal",
-                            TargetCalorie = 1500.0,
-                            TargetDate = new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            TargetWeight = 46.0,
-                            Weight = 45.0
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            ActivityLevel = 3,
-                            BirthDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "ikasapoglu@mail.com",
-                            FirstName = "İlkiz",
-                            Gender = 1,
-                            Height = 180,
-                            LastName = "Kasapoğlu",
-                            TargetCalorie = 1500.0,
-                            TargetDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            TargetWeight = 46.0,
-                            Weight = 45.0
-                        });
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>
