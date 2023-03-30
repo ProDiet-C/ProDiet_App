@@ -156,7 +156,7 @@ namespace WFA_ProDiet.MODELS.Models
                MealCarbohydrate = 200,
                MealProtein = 100,
                MealFat = 50,
-               UserId = 1,
+               UserId = 1
                
            });
             modelBuilder.Entity<Food>().HasData(
@@ -164,9 +164,21 @@ namespace WFA_ProDiet.MODELS.Models
             {
                 FoodId = 1,
                 Name = "Bıldırcın",
-                Picture=
-
-
+                Picture = DAL.MyImage.Bıldırcın,
+                Calorie = 200,
+                Carbohydrate = 100,
+                Fat = 15,
+                Protein= 100,   
+                MeasureType = Enums.MeasureType.Gram,
+                CategoryId = 1,               
+                
+            });
+            modelBuilder.Entity<MealDetail>().HasData(
+            new MealDetail
+            {               
+                MealId = 1,
+                FoodId = 1,
+                Quantity =3
             });
         }
     }
