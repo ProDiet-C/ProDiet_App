@@ -103,16 +103,6 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Armut {
-            get {
-                object obj = ResourceManager.GetObject("Armut", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Atakan {
             get {
                 object obj = ResourceManager.GetObject("Atakan", resourceCulture);
@@ -133,9 +123,29 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap HomePage2 {
+            get {
+                object obj = ResourceManager.GetObject("HomePage2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap HomePageBanner {
             get {
                 object obj = ResourceManager.GetObject("HomePageBanner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap HomePageWelcome {
+            get {
+                object obj = ResourceManager.GetObject("HomePageWelcome", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

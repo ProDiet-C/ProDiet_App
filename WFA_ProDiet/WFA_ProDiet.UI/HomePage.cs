@@ -22,7 +22,7 @@ namespace WFA_ProDiet.UI
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-          
+           
         }
 
         private void AddUserControl(UserControl uc)

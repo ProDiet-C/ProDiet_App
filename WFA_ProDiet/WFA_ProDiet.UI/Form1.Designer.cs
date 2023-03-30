@@ -41,9 +41,11 @@
             label2 = new Label();
             label4 = new Label();
             label5 = new Label();
+            panel1 = new Panel();
             pnlCommercial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbCommercial).BeginInit();
             pnlUserLogin.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pnlCommercial
@@ -53,16 +55,17 @@
             pnlCommercial.Dock = DockStyle.Left;
             pnlCommercial.Location = new Point(0, 0);
             pnlCommercial.Name = "pnlCommercial";
-            pnlCommercial.Size = new Size(772, 583);
+            pnlCommercial.Size = new Size(415, 583);
             pnlCommercial.TabIndex = 0;
             // 
             // pbCommercial
             // 
             pbCommercial.BackgroundImageLayout = ImageLayout.Stretch;
-            pbCommercial.Image = Properties.Resources.tanıtımResmi;
-            pbCommercial.Location = new Point(0, 0);
+            pbCommercial.Image = Properties.Resources.HomePage2;
+            pbCommercial.Location = new Point(3, 0);
             pbCommercial.Name = "pbCommercial";
-            pbCommercial.Size = new Size(742, 1800);
+            pbCommercial.Size = new Size(394, 1602);
+            pbCommercial.SizeMode = PictureBoxSizeMode.CenterImage;
             pbCommercial.TabIndex = 0;
             pbCommercial.TabStop = false;
             // 
@@ -76,7 +79,7 @@
             pnlUserLogin.Controls.Add(label1);
             pnlUserLogin.Controls.Add(lnkCreateAccount);
             pnlUserLogin.Controls.Add(label2);
-            pnlUserLogin.Location = new Point(786, 12);
+            pnlUserLogin.Location = new Point(17, 30);
             pnlUserLogin.Name = "pnlUserLogin";
             pnlUserLogin.Size = new Size(275, 132);
             pnlUserLogin.TabIndex = 8;
@@ -165,7 +168,7 @@
             // 
             // label4
             // 
-            label4.Location = new Point(786, 238);
+            label4.Location = new Point(17, 230);
             label4.Name = "label4";
             label4.Size = new Size(275, 336);
             label4.TabIndex = 9;
@@ -175,21 +178,30 @@
             // label5
             // 
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(786, 212);
+            label5.Location = new Point(17, 204);
             label5.Name = "label5";
             label5.Size = new Size(275, 23);
             label5.TabIndex = 10;
             label5.Text = "TOP 10 Kullanıcı";
             label5.TextAlign = ContentAlignment.TopCenter;
             // 
+            // panel1
+            // 
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(pnlUserLogin);
+            panel1.Dock = DockStyle.Right;
+            panel1.Location = new Point(415, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(315, 583);
+            panel1.TabIndex = 11;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1073, 583);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(pnlUserLogin);
+            ClientSize = new Size(730, 583);
+            Controls.Add(panel1);
             Controls.Add(pnlCommercial);
             Name = "Form1";
             Text = "Form1";
@@ -197,6 +209,7 @@
             ((System.ComponentModel.ISupportInitialize)pbCommercial).EndInit();
             pnlUserLogin.ResumeLayout(false);
             pnlUserLogin.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -215,5 +228,6 @@
         private Panel pnlUserLogin;
         private Label label4;
         private Label label5;
+        private Panel panel1;
     }
 }

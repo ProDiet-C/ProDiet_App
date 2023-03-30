@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using WFA_ProDiet.DAL;
 
 namespace WFA_ProDiet.MODELS.Models
 {
@@ -26,7 +27,7 @@ namespace WFA_ProDiet.MODELS.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=ProDietDB;Trusted_Connection=True;Trust Server Certificate=True");
+                optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=ProDietAppDB;Trusted_Connection=True;Trust Server Certificate=True");
             }
         }
 
@@ -34,7 +35,6 @@ namespace WFA_ProDiet.MODELS.Models
         {
             modelBuilder.Entity<Category>(entity =>
             {
-
                 entity.Property(e => e.Name).HasMaxLength(50);
             });
 
@@ -51,7 +51,7 @@ namespace WFA_ProDiet.MODELS.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_Meals_Users");
             });
-
+            //Çoka çok ilişki
             modelBuilder.Entity<MealDetail>(entity =>
             {
                 entity.HasKey(e => new { e.MealId, e.FoodId });
@@ -73,7 +73,7 @@ namespace WFA_ProDiet.MODELS.Models
                     .HasConstraintName("FK_MealDetails_Meals");
             });
 
-           
+
 
             modelBuilder.Entity<User>(entity =>
             {
@@ -88,17 +88,43 @@ namespace WFA_ProDiet.MODELS.Models
 
                 entity.Property(e => e.Gender).HasMaxLength(50);
 
-                entity.Property(e => e.LastName)
-                    .HasMaxLength(10)
-                    .IsFixedLength();
+                entity.Property(e => e.LastName).HasMaxLength(50);
 
                 entity.Property(e => e.Picture).HasColumnType("image");
 
                 entity.Property(e => e.TargetDate).HasColumnType("date");
             });
-
-          
+            SeedData(modelBuilder);
+            base.OnModelCreating(modelBuilder);
         }
+
+        protected void SeedData(ModelBuilder modelBuilder)
+        {
+
+            modelBuilder.Entity<User>().HasData(
+
+           new User
+           {
+               UserId = 1,
+               FirstName = "Oğuz Kağan",
+               LastName = "Ünal",
+               Picture = Resource1.HomePage2,
+               Email = "okuzkaan@mail.com",
+               BirthDate = Convert.ToDateTime("2017-01-01"),
+               Gender = Enums.Gender.Man,
+               Height = 180,
+               Weight = 45,
+               ActivityLevel = Enums.ActivityLevel.NoActivitiy,
+               TargetWeight = 46,
+               TargetCalorie = 1500,
+               TargetDate = Convert.ToDateTime("2023-02-01")
+           });
+
+
+
+        }
+
+
 
     }
 }
