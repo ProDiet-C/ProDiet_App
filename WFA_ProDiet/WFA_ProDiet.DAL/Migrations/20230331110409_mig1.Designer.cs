@@ -12,7 +12,7 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    [Migration("20230331094526_mig1")]
+    [Migration("20230331110409_mig1")]
     partial class mig1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -4431,7 +4431,7 @@ namespace WFA_ProDiet.DAL.Migrations
                         {
                             MealId = 1,
                             CustomerId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 12, 45, 25, 534, DateTimeKind.Local).AddTicks(9879),
+                            EatDay = new DateTime(2023, 3, 31, 14, 4, 9, 18, DateTimeKind.Local).AddTicks(6004),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,

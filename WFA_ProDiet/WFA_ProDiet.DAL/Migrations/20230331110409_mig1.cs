@@ -596,7 +596,7 @@ namespace WFA_ProDiet.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Meals",
                 columns: new[] { "MealId", "CustomerId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name" },
-                values: new object[] { 1, 1, new DateTime(2023, 3, 31, 12, 45, 25, 534, DateTimeKind.Local).AddTicks(9879), 500.0, 200.0, 50.0, 100.0, "Breakfast" });
+                values: new object[] { 1, 1, new DateTime(2023, 3, 31, 14, 4, 9, 18, DateTimeKind.Local).AddTicks(6004), 500.0, 200.0, 50.0, 100.0, "Breakfast" });
 
             migrationBuilder.InsertData(
                 table: "MealDetails",

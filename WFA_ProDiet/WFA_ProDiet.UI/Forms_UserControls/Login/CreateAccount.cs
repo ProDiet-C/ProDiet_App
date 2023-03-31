@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.BLL;
+using WFA_ProDiet.MODELS.Enums;
+using WFA_ProDiet.MODELS.Models;
 using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
@@ -72,6 +75,19 @@ namespace WFA_ProDiet.UI
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
+            var customer = new Customer()
+            {
+                FirstName = "Mehmet Mustafa",
+                LastName = "Özcan",
+                Email = "mehmet@gmail.com",
+                Gender = Gender.Woman,
+            };
+            customer.SetPassword("123456");
+
+            CrudProcess.Add(customer);
+
+
+
             pnlUserInfo.Visible = true;
             tmrOpenForm.Start();
         }

@@ -357,6 +357,7 @@
             this.btnAddMeal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddMeal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddMeal.UseVisualStyleBackColor = false;
+            this.btnAddMeal.Click += new System.EventHandler(this.btnAddMeal_Click);
             // 
             // txtFood
             // 

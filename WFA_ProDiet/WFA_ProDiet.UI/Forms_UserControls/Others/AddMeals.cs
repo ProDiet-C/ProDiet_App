@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.BLL;
+using WFA_ProDiet.MODELS.Models;
 
 namespace WFA_ProDiet.UI
 {
@@ -20,6 +22,11 @@ namespace WFA_ProDiet.UI
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnAddMeal_Click(object sender, EventArgs e)
+        {
+            dgvFoods.DataSource = CrudProcess.GetAll<Customer>();
         }
     }
 }

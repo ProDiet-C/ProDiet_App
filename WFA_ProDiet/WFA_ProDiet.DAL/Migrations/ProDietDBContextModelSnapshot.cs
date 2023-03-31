@@ -4429,7 +4429,7 @@ namespace WFA_ProDiet.DAL.Migrations
                         {
                             MealId = 1,
                             CustomerId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 12, 45, 25, 534, DateTimeKind.Local).AddTicks(9879),
+                            EatDay = new DateTime(2023, 3, 31, 14, 4, 9, 18, DateTimeKind.Local).AddTicks(6004),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,
