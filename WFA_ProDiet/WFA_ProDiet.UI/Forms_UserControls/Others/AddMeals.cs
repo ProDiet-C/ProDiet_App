@@ -8,7 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFA_ProDiet.BLL;
+using WFA_ProDiet.MODELS.Enums;
 using WFA_ProDiet.MODELS.Models;
+using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
 {
@@ -26,7 +28,26 @@ namespace WFA_ProDiet.UI
 
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
-            dgvFoods.DataSource = CrudProcess.GetAll<Customer>();
+            Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
+            double quantity = (double)nudQuantity.Value;
+            Meal meal = new()
+            {
+                Customer = Current.Customer,
+                EatDay = dtpMealDate.Value,
+                MealCalorie = (food.Calorie * quantity),
+                MealCarbohydrate = (food.Carbohydrate * quantity),
+                MealProtein = (food.Protein*quantity),
+                MealFat = (food.Fat*quantity)
+            };            
+
+            if (lblMealName.Text == "KAHVALTI")
+                meal.Name = MealName.Breakfast;
+            else if (lblMealName.Text == "ÖĞLE YEMEĞİ")
+                meal.Name = MealName.Lunch;
+            else if (lblMealName.Text == "AKŞAM YEMEĞİ ")
+                meal.Name = MealName.Dinner;
+            else if (lblMealName.Text == "EXTRA")
+                meal.Name = MealName.Extra;
         }
     }
 }

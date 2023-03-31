@@ -10,6 +10,5 @@ namespace WFA_ProDiet.UI.HelpersUI
     public static class Current
     {
         public static Customer Customer { get; set; }
-
     }
 }
