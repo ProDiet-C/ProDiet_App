@@ -138,26 +138,46 @@ namespace WFA_ProDiet.UI
 
             if (txtName.Text.Length<2)
             {
+                lblNameInfo.Visible = true;
                 lblNameInfo.Text = "Ad en az 2 karakterden oluşmalıdır.";
             }
             else if (!txtName.Text.All(char.IsLetter))
             {
+                lblNameInfo.Visible = true;
                 lblNameInfo.Text = "Ad sadece harf içerebilir.";
             }
-        }
-
-        
+        }        
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
             lblLastNameInfo.Visible = false;
 
             if (txtLastName.Text.Length < 2)
             {
+                lblLastNameInfo.Visible = true;
                 lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
             }
-            else if (!lblLastNameInfo.Text.All(char.IsLetter))
+            else if (lblLastNameInfo.Text.Any(char.IsPunctuation) || lblLastNameInfo.Text.Any(char.IsDigit))
             {
-                lblNameInfo.Text = "Soyad sadece harf içerebilir.";
+                lblLastNameInfo.Visible = true;
+                lblLastNameInfo.Text = "Soyad sadece harf içerebilir.";
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            string email = lblEmailInfo.Text;
+            lblEmailInfo.Visible = false;
+
+            
+            if (!(email.Length>8 && email.Contains("@") && email.Contains("."))) // email 8 harften büyük mü ve "@." içeriyor mu kontrolü.
+            {
+                lblEmailInfo.Visible = true;
+                lblLastNameInfo.Text = "Email uygun formatta değil";
+            }
+            else if (CrudProcess.GetAll<Customer>().Any(cus=>cus.Email==email)) // bu emailde bir customer var mı kontrolü
+            {
+                lblEmailInfo.Visible = true;
+                lblNameInfo.Text = "Bu email adresi zaten mevcut.";
             }
         }
     }
