@@ -39,7 +39,6 @@ namespace WFA_ProDiet.UI
             food.MeasureType = (MeasureType)(cbMeasure.SelectedIndex);
 
             CrudProcess.Add(food);
-
         }
     }
 }

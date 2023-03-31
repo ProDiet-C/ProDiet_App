@@ -34,6 +34,7 @@
             pbFood = new PictureBox();
             btnAddPict = new Button();
             cbCategory = new ComboBox();
+            nudQuantity = new NumericUpDown();
             nudCalorieQ = new NumericUpDown();
             nudFatQ = new NumericUpDown();
             nudCarbohydrateQ = new NumericUpDown();
@@ -48,15 +49,14 @@
             label2 = new Label();
             label1 = new Label();
             txtFoodName = new TextBox();
-            nudQuantity = new NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)dgvFoods).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbFood).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudCalorieQ).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudFatQ).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudCarbohydrateQ).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudProteinQ).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudQuantity).BeginInit();
             SuspendLayout();
             // 
             // btnAdd
@@ -79,6 +79,7 @@
             btnAdd.TextAlign = ContentAlignment.TopCenter;
             btnAdd.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdd.UseVisualStyleBackColor = true;
+            btnAdd.Click += btnAdd_Click;
             // 
             // dgvFoods
             // 
@@ -142,6 +143,14 @@
             cbCategory.Name = "cbCategory";
             cbCategory.Size = new Size(156, 29);
             cbCategory.TabIndex = 10;
+            // 
+            // nudQuantity
+            // 
+            nudQuantity.Location = new Point(363, 218);
+            nudQuantity.Margin = new Padding(8, 11, 8, 11);
+            nudQuantity.Name = "nudQuantity";
+            nudQuantity.Size = new Size(156, 28);
+            nudQuantity.TabIndex = 8;
             // 
             // nudCalorieQ
             // 
@@ -263,14 +272,6 @@
             txtFoodName.Size = new Size(156, 28);
             txtFoodName.TabIndex = 5;
             // 
-            // nudQuantity
-            // 
-            nudQuantity.Location = new Point(363, 218);
-            nudQuantity.Margin = new Padding(8, 11, 8, 11);
-            nudQuantity.Name = "nudQuantity";
-            nudQuantity.Size = new Size(156, 28);
-            nudQuantity.TabIndex = 8;
-            // 
             // UcEditFoods
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
@@ -285,11 +286,11 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbFood).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudCalorieQ).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudFatQ).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudCarbohydrateQ).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudProteinQ).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudQuantity).EndInit();
             ResumeLayout(false);
         }
 
