@@ -14,7 +14,7 @@ namespace WFA_ProDiet.MODELS.Models
 
         public int FoodId { get; set; }
         public string Name { get; set; } = null!;
-        public byte[]? Picture { get; set; }
+        public string? PicturePath { get; set; }
         public double Calorie { get; set; } = 0;
         public double? Carbohydrate { get; set; } = 0;
         public double? Fat { get; set; } = 0;

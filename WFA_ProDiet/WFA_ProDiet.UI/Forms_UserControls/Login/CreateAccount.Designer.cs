@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlMainInfo = new System.Windows.Forms.Panel();
             this.pnlUserInfo = new System.Windows.Forms.Panel();
             this.btnAddPhoto = new FontAwesome.Sharp.IconButton();
             this.lblInfo = new System.Windows.Forms.Label();
@@ -70,7 +70,7 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.tmrWelcome = new System.Windows.Forms.Timer(this.components);
             this.tmrOpenForm = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
+            this.pnlMainInfo.SuspendLayout();
             this.pnlUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
@@ -79,15 +79,15 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlMainInfo
             // 
-            this.panel1.Controls.Add(this.pnlUserInfo);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(669, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(0, 568);
-            this.panel1.TabIndex = 0;
+            this.pnlMainInfo.Controls.Add(this.pnlUserInfo);
+            this.pnlMainInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainInfo.Location = new System.Drawing.Point(669, 0);
+            this.pnlMainInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlMainInfo.Name = "pnlMainInfo";
+            this.pnlMainInfo.Size = new System.Drawing.Size(470, 568);
+            this.pnlMainInfo.TabIndex = 0;
             // 
             // pnlUserInfo
             // 
@@ -114,7 +114,7 @@
             this.pnlUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlUserInfo.Location = new System.Drawing.Point(0, 0);
             this.pnlUserInfo.Name = "pnlUserInfo";
-            this.pnlUserInfo.Size = new System.Drawing.Size(0, 568);
+            this.pnlUserInfo.Size = new System.Drawing.Size(470, 568);
             this.pnlUserInfo.TabIndex = 27;
             this.pnlUserInfo.Visible = false;
             // 
@@ -129,7 +129,7 @@
             this.btnAddPhoto.IconColor = System.Drawing.Color.Green;
             this.btnAddPhoto.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddPhoto.IconSize = 30;
-            this.btnAddPhoto.Location = new System.Drawing.Point(-38, 8);
+            this.btnAddPhoto.Location = new System.Drawing.Point(197, 8);
             this.btnAddPhoto.Name = "btnAddPhoto";
             this.btnAddPhoto.Size = new System.Drawing.Size(27, 27);
             this.btnAddPhoto.TabIndex = 4;
@@ -141,7 +141,7 @@
             this.lblInfo.BackColor = System.Drawing.SystemColors.Info;
             this.lblInfo.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblInfo.Location = new System.Drawing.Point(-177, 230);
+            this.lblInfo.Location = new System.Drawing.Point(58, 230);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(356, 304);
             this.lblInfo.TabIndex = 25;
@@ -158,7 +158,7 @@
             this.btnInfo.IconColor = System.Drawing.Color.DimGray;
             this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInfo.IconSize = 25;
-            this.btnInfo.Location = new System.Drawing.Point(122, 193);
+            this.btnInfo.Location = new System.Drawing.Point(357, 193);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(33, 30);
             this.btnInfo.TabIndex = 26;
@@ -169,7 +169,7 @@
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.Location = new System.Drawing.Point(-200, 193);
+            this.label5.Location = new System.Drawing.Point(35, 193);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(118, 27);
@@ -180,7 +180,7 @@
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.Location = new System.Drawing.Point(2, 66);
+            this.label7.Location = new System.Drawing.Point(237, 66);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(56, 27);
@@ -194,7 +194,7 @@
             this.pbUser.BackColor = System.Drawing.Color.Transparent;
             this.pbUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbUser.Image = global::WFA_ProDiet.UI.Properties.Resources.Atakan;
-            this.pbUser.Location = new System.Drawing.Point(-161, 8);
+            this.pbUser.Location = new System.Drawing.Point(74, 8);
             this.pbUser.Name = "pbUser";
             this.pbUser.Size = new System.Drawing.Size(150, 150);
             this.pbUser.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -204,7 +204,7 @@
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.Location = new System.Drawing.Point(-201, 161);
+            this.label8.Location = new System.Drawing.Point(34, 161);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(118, 27);
@@ -215,7 +215,7 @@
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label10.Location = new System.Drawing.Point(2, 31);
+            this.label10.Location = new System.Drawing.Point(237, 31);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 27);
@@ -226,7 +226,7 @@
             // nudWeight
             // 
             this.nudWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudWeight.Location = new System.Drawing.Point(65, 65);
+            this.nudWeight.Location = new System.Drawing.Point(300, 65);
             this.nudWeight.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.nudWeight.Maximum = new decimal(new int[] {
             250,
@@ -250,7 +250,7 @@
             // nudHeight
             // 
             this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudHeight.Location = new System.Drawing.Point(65, 30);
+            this.nudHeight.Location = new System.Drawing.Point(300, 30);
             this.nudHeight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.nudHeight.Maximum = new decimal(new int[] {
             250,
@@ -275,7 +275,7 @@
             // 
             this.rbFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(91, 104);
+            this.rbFemale.Location = new System.Drawing.Point(326, 104);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(65, 25);
             this.rbFemale.TabIndex = 20;
@@ -287,7 +287,7 @@
             this.rbMale.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.rbMale.AutoSize = true;
             this.rbMale.Checked = true;
-            this.rbMale.Location = new System.Drawing.Point(11, 104);
+            this.rbMale.Location = new System.Drawing.Point(246, 104);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(67, 25);
             this.rbMale.TabIndex = 21;
@@ -298,7 +298,7 @@
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.Location = new System.Drawing.Point(132, 69);
+            this.label9.Location = new System.Drawing.Point(367, 69);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(47, 27);
             this.label9.TabIndex = 18;
@@ -307,7 +307,7 @@
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.Location = new System.Drawing.Point(132, 34);
+            this.label6.Location = new System.Drawing.Point(367, 34);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 27);
             this.label6.TabIndex = 19;
@@ -317,7 +317,7 @@
             // 
             this.dtpBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthDate.Location = new System.Drawing.Point(-76, 161);
+            this.dtpBirthDate.Location = new System.Drawing.Point(159, 161);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(230, 28);
             this.dtpBirthDate.TabIndex = 15;
@@ -332,7 +332,7 @@
             "Az Aktif",
             "Aktif",
             "Çok Aktif"});
-            this.cbActivityLevel.Location = new System.Drawing.Point(-75, 194);
+            this.cbActivityLevel.Location = new System.Drawing.Point(160, 194);
             this.cbActivityLevel.Name = "cbActivityLevel";
             this.cbActivityLevel.Size = new System.Drawing.Size(191, 29);
             this.cbActivityLevel.TabIndex = 14;
@@ -388,7 +388,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(669, 410);
             this.panel4.TabIndex = 6;
-            this.panel4.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // lblPasswordCheckInfo
             // 
@@ -484,6 +483,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(211, 28);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtEmail
             // 
@@ -590,8 +590,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(669, 568);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1139, 568);
+            this.Controls.Add(this.pnlMainInfo);
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -599,7 +599,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
             this.Load += new System.EventHandler(this.CreateAccount_Load);
-            this.panel1.ResumeLayout(false);
+            this.pnlMainInfo.ResumeLayout(false);
             this.pnlUserInfo.ResumeLayout(false);
             this.pnlUserInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).EndInit();
@@ -614,7 +614,7 @@
 
         #endregion
 
-        private Panel panel1;
+        private Panel pnlMainInfo;
         private Panel panel2;
         private FontAwesome.Sharp.IconButton btnSignUp;
         private MaskedTextBox txtPasswordCheck;

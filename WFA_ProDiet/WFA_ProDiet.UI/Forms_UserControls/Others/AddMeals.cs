@@ -50,11 +50,12 @@ namespace WFA_ProDiet.UI
             else if (lblMealName.Text == "EXTRA")
                 meal.Name = MealName.Extra;
         }
-
+   
         private void AddMeals_Load(object sender, EventArgs e)
         {
-            dgvFoods.DataSource = ProDietDb._context.Foods.ToList();
+            dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             DataGridViewSelectedColumnCollection selectedColumns = dgvFoods.SelectedColumns;
+            //dgvFoods.CellFormatting += DgvFoods_CellFormatting;
 
             // Her bir seçili sütunun index'ini değiştir
             foreach (DataGridViewColumn column in selectedColumns)
@@ -63,6 +64,24 @@ namespace WFA_ProDiet.UI
             }
 
         }
+
+        //DOSYA YOLUNU RESME DÖNÜŞTÜRÜR (DGVFOODS İÇİN)
+        //private void DgvFoods_CellFormatting(object? sender, DataGridViewCellFormattingEventArgs e)
+        //{
+        //    // PicturePath sütunu (3. sütun) işleniyor
+        //    if (dgvFoods.Columns[e.ColumnIndex].Name == "PicturePath")
+        //    {
+        //        // Hücredeki değeri al
+        //        string picturePath = e.Value.ToString();
+
+        //        // Dosya yolundan bir görüntü oluştur
+        //        Image picture = Image.FromFile(picturePath);
+
+        //        // Görüntüyü hücrede göster
+        //        e.Value = picture;
+        //        e.FormattingApplied = true;
+        //    }
+        //}
 
         private void txtSearchFood_TextChanged(object sender, EventArgs e)
         {
@@ -74,23 +93,23 @@ namespace WFA_ProDiet.UI
         {
             if (cbOrderByFilter.SelectedIndex == 0)
             {
-                dgvFoods.DataSource = ProDietDb._context.Foods.OrderBy(x => x.Carbohydrate).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Carbohydrate).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 1)
             {
-                dgvFoods.DataSource = ProDietDb._context.Foods.OrderBy(x => x.Protein).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Protein).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 2)
             {
-                dgvFoods.DataSource = ProDietDb._context.Foods.OrderBy(x => x.Calorie).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Calorie).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 3)
             {
-                dgvFoods.DataSource = ProDietDb._context.Foods.OrderByDescending(x => x.Calorie).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Calorie).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 4)
             {
-                dgvFoods.DataSource = ProDietDb._context.Foods.OrderBy(x => x.Protein).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Protein).ToList();
             }
             /*
                 Ketojenik diyet için ideal(düşük karbonhidrat)0

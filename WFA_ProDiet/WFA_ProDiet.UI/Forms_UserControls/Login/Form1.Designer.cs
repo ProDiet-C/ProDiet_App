@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.pnlCommercial = new System.Windows.Forms.Panel();
             this.pbCommercial = new System.Windows.Forms.PictureBox();
             this.pnlUserLogin = new System.Windows.Forms.Panel();
@@ -43,7 +42,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tmrFirstOpen = new System.Windows.Forms.Timer(this.components);
             this.pnlCommercial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCommercial)).BeginInit();
             this.pnlUserLogin.SuspendLayout();
@@ -208,11 +206,6 @@
             this.panel1.Size = new System.Drawing.Size(315, 583);
             this.panel1.TabIndex = 11;
             // 
-            // tmrFirstOpen
-            // 
-            this.tmrFirstOpen.Interval = 30;
-            this.tmrFirstOpen.Tick += new System.EventHandler(this.tmrFirstOpen_Tick);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -249,6 +242,5 @@
         private Label label4;
         private Label label5;
         private Panel panel1;
-        private System.Windows.Forms.Timer tmrFirstOpen;
     }
 }

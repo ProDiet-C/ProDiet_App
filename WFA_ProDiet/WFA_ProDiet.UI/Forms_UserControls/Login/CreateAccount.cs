@@ -17,12 +17,15 @@ namespace WFA_ProDiet.UI
     public partial class CreateAccount : Form
     {
         Customer customer;
+        List<Customer> customerList = CrudProcess.GetAll<Customer>();
         string welcomeMessage = "ile sağlıklı yaşama başla.";
         int welcomeCounter = 0;
+        
         public CreateAccount()
         {
-            InitializeComponent();
+            InitializeComponent();         
         }
+
 
         /// <summary>
         /// Mouse ile butondan çıkıldığında info açılır.
@@ -156,7 +159,7 @@ namespace WFA_ProDiet.UI
                 lblLastNameInfo.Visible = true;
                 lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
             }
-            else if (lblLastNameInfo.Text.Any(char.IsPunctuation) || lblLastNameInfo.Text.Any(char.IsDigit))
+            else if (!txtLastName.Text.All(char.IsLetter))
             {
                 lblLastNameInfo.Visible = true;
                 lblLastNameInfo.Text = "Soyad sadece harf içerebilir.";
@@ -165,19 +168,42 @@ namespace WFA_ProDiet.UI
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            string email = lblEmailInfo.Text;
+            string email = txtEmail.Text;
             lblEmailInfo.Visible = false;
 
             
             if (!(email.Length>8 && email.Contains("@") && email.Contains("."))) // email 8 harften büyük mü ve "@." içeriyor mu kontrolü.
             {
                 lblEmailInfo.Visible = true;
-                lblLastNameInfo.Text = "Email uygun formatta değil";
+                lblEmailInfo.Text = "Email uygun formatta değil";
             }
-            else if (CrudProcess.GetAll<Customer>().Any(cus=>cus.Email==email)) // bu emailde bir customer var mı kontrolü
+            else if (customerList.Any(cus=>cus.Email==email)) // bu emailde bir customer var mı kontrolü
             {
                 lblEmailInfo.Visible = true;
-                lblNameInfo.Text = "Bu email adresi zaten mevcut.";
+                lblEmailInfo.Text = "Bu email adresi zaten mevcut.";
+            }
+        }
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            string password = txtPassword.Text;
+
+            if (password.Length>11 && password.Any(char.IsDigit) && password.Any(char.IsPunctuation) && password.Any(char.IsUpper) && password.Any(char.IsLower)) 
+            {
+                lblPasswordInfo.Visible = true;
+                lblPasswordInfo.Text = "Yüksek Güvenlik";
+                lblPasswordInfo.ForeColor = Color.DarkGreen;
+            }
+            else if (password.Length>11)
+            {
+                lblPasswordInfo.Visible = true;
+                lblPasswordInfo.Text = "Orta Güvenlik";
+                lblPasswordInfo.ForeColor = Color.FromArgb(150,170,60);
+            }
+            else
+            {
+                lblPasswordInfo.Visible = true;
+                lblPasswordInfo.Text = "Güvenlik Yok";
+                lblPasswordInfo.ForeColor = Color.Red;
             }
         }
     }

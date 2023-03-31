@@ -31,7 +31,7 @@ namespace WFA_ProDiet.DAL.Controllers
 
                 entity.Property(e => e.LastName).HasMaxLength(50);
 
-                entity.Property(e => e.Picture).HasColumnType("image");
+                entity.Property(e => e.PicturePath).HasColumnType("nvarchar(MAX)");
 
                 entity.Property(e => e.TargetDate).HasColumnType("date");
             });

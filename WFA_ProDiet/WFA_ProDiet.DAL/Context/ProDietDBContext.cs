@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Resources;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.Graph.Models;
 using WFA_ProDiet.DAL.Controllers;
 using WFA_ProDiet.DAL.Helpers;
 
@@ -43,29 +45,34 @@ namespace WFA_ProDiet.MODELS.Models
         }
 
         protected void SeedData(ModelBuilder modelBuilder)
-        {
+        {           
+          
+
             modelBuilder.Entity<Customer>().HasData(
             new Customer
             {
                 CustomerId = 1,
                 FirstName = "Oğuz Kağan",
                 LastName = "Ünal",
-                Email = "okuzkaan@mail.com",
+                Email = "aaa",
+                Password = "aaa",
                 BirthDate = Convert.ToDateTime("2017-01-01"),
-                Gender = Enums.Gender.Man,
+                Gender = Enums.Gender.Man,                
                 Height = 180,
                 Weight = 45,
                 ActivityLevel = Enums.ActivityLevel.NoActivitiy,
                 TargetWeight = 46,
                 TargetCalorie = 1500,
                 TargetDate = Convert.ToDateTime("2023-02-01")
+                
             },
             new Customer
             {
                 CustomerId = 2,
                 FirstName = "İlkiz",
-                LastName = "Kasapoğlu",
+                LastName = "Kasapoğlu", 
                 Email = "ikasapoglu@mail.com",
+                Password = "bbb",
                 BirthDate = Convert.ToDateTime("2000-01-01"),
                 Gender = Enums.Gender.Woman,
                 Height = 180,

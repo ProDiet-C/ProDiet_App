@@ -24,12 +24,13 @@ namespace WFA_ProDiet.UI.HelpersUI
         }
         private static void Timer_Tick1(object? sender, EventArgs e)
         {
-            if (_form.Opacity < 1)
+            if (_form.Opacity < 0.94)
             {
                 _form.Opacity += 0.05;
             }
             else
             {
+                _form.Opacity = 1;
                 _timerOpen.Stop();
             }
         }

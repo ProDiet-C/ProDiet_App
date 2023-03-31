@@ -200,8 +200,12 @@ namespace WFA_ProDiet.DAL.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<byte[]>("Picture")
-                        .HasColumnType("image");
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PicturePath")
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<double?>("TargetCalorie")
                         .HasColumnType("float");
@@ -225,11 +229,12 @@ namespace WFA_ProDiet.DAL.Migrations
                             CustomerId = 1,
                             ActivityLevel = "NoActivitiy",
                             BirthDate = new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "okuzkaan@mail.com",
+                            Email = "aaa",
                             FirstName = "Oğuz Kağan",
                             Gender = "Man",
                             Height = 180,
                             LastName = "Ünal",
+                            Password = "aaa",
                             TargetCalorie = 1500.0,
                             TargetDate = new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TargetWeight = 46.0,
@@ -245,6 +250,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Gender = "Woman",
                             Height = 180,
                             LastName = "Kasapoğlu",
+                            Password = "bbb",
                             TargetCalorie = 1500.0,
                             TargetDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             TargetWeight = 46.0,
@@ -280,8 +286,8 @@ namespace WFA_ProDiet.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<byte[]>("Picture")
-                        .HasColumnType("varbinary(max)");
+                    b.Property<string>("PicturePath")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<double?>("Protein")
                         .HasColumnType("float");
@@ -4429,7 +4435,7 @@ namespace WFA_ProDiet.DAL.Migrations
                         {
                             MealId = 1,
                             CustomerId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 14, 4, 9, 18, DateTimeKind.Local).AddTicks(6004),
+                            EatDay = new DateTime(2023, 3, 31, 20, 27, 11, 401, DateTimeKind.Local).AddTicks(5742),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,

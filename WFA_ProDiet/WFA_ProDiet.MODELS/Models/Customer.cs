@@ -16,9 +16,9 @@ namespace WFA_ProDiet.MODELS.Models
         public int CustomerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
-        public byte[]? Picture { get; set; } // buraya default profil resmi atanacak
+        public string? PicturePath { get; set; } // buraya default profil resmi atanacak
         public string Email { get; set; } = null!;
-        private string Password { get; set; } = null!;
+        public string Password { get; set; } = null!;
         public DateTime? BirthDate { get; set; } = Convert.ToDateTime("1995-01.01");
         public Gender Gender { get; set; } = Gender.Man;
         public int? Height { get; set; } = 170;    

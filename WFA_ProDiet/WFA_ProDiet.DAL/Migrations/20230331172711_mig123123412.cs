@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WFA_ProDiet.DAL.Migrations
 {
-    public partial class mig1 : Migration
+    public partial class mig123123412 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,8 +30,9 @@ namespace WFA_ProDiet.DAL.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Picture = table.Column<byte[]>(type: "image", nullable: true),
+                    PicturePath = table.Column<string>(type: "nvarchar(MAX)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     BirthDate = table.Column<DateTime>(type: "date", nullable: true),
                     Gender = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Height = table.Column<int>(type: "int", nullable: true),
@@ -53,7 +54,7 @@ namespace WFA_ProDiet.DAL.Migrations
                     FoodId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Picture = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
+                    PicturePath = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Calorie = table.Column<double>(type: "float", nullable: false),
                     Carbohydrate = table.Column<double>(type: "float", nullable: true),
                     Fat = table.Column<double>(type: "float", nullable: true),
@@ -151,16 +152,16 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Customers",
-                columns: new[] { "CustomerId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Picture", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
+                columns: new[] { "CustomerId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Password", "PicturePath", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
                 values: new object[,]
                 {
-                    { 1, "NoActivitiy", new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "okuzkaan@mail.com", "Oğuz Kağan", "Man", 180, "Ünal", null, 1500.0, new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 },
-                    { 2, "MoreActive", new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ikasapoglu@mail.com", "İlkiz", "Woman", 180, "Kasapoğlu", null, 1500.0, new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 }
+                    { 1, "NoActivitiy", new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "aaa", "Oğuz Kağan", "Man", 180, "Ünal", "aaa", null, 1500.0, new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 },
+                    { 2, "MoreActive", new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ikasapoglu@mail.com", "İlkiz", "Woman", 180, "Kasapoğlu", "bbb", null, 1500.0, new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 }
                 });
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 1, 192.0, 0.0, 1, 12.1, "Gram", "Bıldırcın", null, 19.600000000000001 },
@@ -209,7 +210,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 43, 54.0, 13.1, 4, 0.10000000000000001, "Gram", "Kuş üzümü", null, 1.7 },
@@ -258,7 +259,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 85, 369.0, 75.200000000000003, 8, 1.2, "Gram", "Makarna", null, 12.5 },
@@ -307,7 +308,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 127, 223.0, 0.0, 12, 16.0, "Gram", "Yağlı dana eti", null, 18.5 },
@@ -356,7 +357,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 169, 52.0, 13.6, 15, 0.20000000000000001, "Gram", "Ananas", null, 0.40000000000000002 },
@@ -405,7 +406,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 211, 403.0, 1.3, 16, 33.100000000000001, "Gram", "Cheddar", null, 24.899999999999999 },
@@ -454,7 +455,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 253, 26.0, 6.5, 18, 0.10000000000000001, "Gram", "Kabak (Kış)", null, 1.0 },
@@ -503,7 +504,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 295, 467.0, 10.199999999999999, 19, 48.299999999999997, "Gram", "İtalyan salata sosu", null, 0.69999999999999996 },
@@ -552,7 +553,7 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Foods",
-                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "Picture", "Protein" },
+                columns: new[] { "FoodId", "Calorie", "Carbohydrate", "CategoryId", "Fat", "MeasureType", "Name", "PicturePath", "Protein" },
                 values: new object[,]
                 {
                     { 337, 350.0, 74.799999999999997, 22, 1.7, "Gram", "Çavdar Unu", null, 3.1000000000000001 },
@@ -596,7 +597,7 @@ namespace WFA_ProDiet.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "Meals",
                 columns: new[] { "MealId", "CustomerId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name" },
-                values: new object[] { 1, 1, new DateTime(2023, 3, 31, 14, 4, 9, 18, DateTimeKind.Local).AddTicks(6004), 500.0, 200.0, 50.0, 100.0, "Breakfast" });
+                values: new object[] { 1, 1, new DateTime(2023, 3, 31, 20, 27, 11, 401, DateTimeKind.Local).AddTicks(5742), 500.0, 200.0, 50.0, 100.0, "Breakfast" });
 
             migrationBuilder.InsertData(
                 table: "MealDetails",
