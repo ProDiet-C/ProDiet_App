@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.BLL;
 using WFA_ProDiet.MODELS.Enums;
+using WFA_ProDiet.MODELS.Models;
 
 namespace WFA_ProDiet.UI
 {
@@ -24,7 +27,11 @@ namespace WFA_ProDiet.UI
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-           
+            new User() 
+            {
+                FirstName=
+            }
+          
         }
 
         private void AddUserControl(UserControl uc)
