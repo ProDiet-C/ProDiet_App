@@ -124,6 +124,7 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(168, 23);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnShowPassword
             // 
@@ -138,6 +139,7 @@
             this.btnShowPassword.Size = new System.Drawing.Size(23, 23);
             this.btnShowPassword.TabIndex = 5;
             this.btnShowPassword.UseVisualStyleBackColor = true;
+            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // label1
             // 

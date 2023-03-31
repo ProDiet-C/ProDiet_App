@@ -54,13 +54,14 @@ namespace WFA_ProDiet.UI.HelpersUI
         /// <param name="e"></param>
         private static void _timerClose_Tick(object? sender, EventArgs e)
         {
-            if (_form.Opacity >= 0)
+            if (_form.Opacity > 0.05)
             {
                 _form.Opacity -= 0.05;
             }
             else
             {
                 _timerClose.Stop();
+                _form.Close();
             }
         }
     }

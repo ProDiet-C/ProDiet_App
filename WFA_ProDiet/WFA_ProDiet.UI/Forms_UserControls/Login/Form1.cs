@@ -32,5 +32,10 @@ namespace WFA_ProDiet.UI
         {
 
         }
+
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+            txtPassword
+        }
     }
 }
