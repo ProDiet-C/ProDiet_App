@@ -51,6 +51,10 @@
             this.btnContinue = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblPasswordCheckInfo = new System.Windows.Forms.Label();
+            this.lblPasswordInfo = new System.Windows.Forms.Label();
+            this.lblEmailInfo = new System.Windows.Forms.Label();
+            this.lblLastNameInfo = new System.Windows.Forms.Label();
             this.lblNameInfo = new System.Windows.Forms.Label();
             this.btnSignUp = new FontAwesome.Sharp.IconButton();
             this.txtPasswordCheck = new System.Windows.Forms.MaskedTextBox();
@@ -66,10 +70,6 @@
             this.lblWelcome = new System.Windows.Forms.Label();
             this.tmrWelcome = new System.Windows.Forms.Timer(this.components);
             this.tmrOpenForm = new System.Windows.Forms.Timer(this.components);
-            this.lblLastNameInfo = new System.Windows.Forms.Label();
-            this.lblEmailInfo = new System.Windows.Forms.Label();
-            this.lblPasswordInfo = new System.Windows.Forms.Label();
-            this.lblPasswordCheckInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlUserInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbUser)).BeginInit();
@@ -390,6 +390,54 @@
             this.panel4.TabIndex = 6;
             this.panel4.Click += new System.EventHandler(this.btnContinue_Click);
             // 
+            // lblPasswordCheckInfo
+            // 
+            this.lblPasswordCheckInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPasswordCheckInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPasswordCheckInfo.Location = new System.Drawing.Point(360, 174);
+            this.lblPasswordCheckInfo.Name = "lblPasswordCheckInfo";
+            this.lblPasswordCheckInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblPasswordCheckInfo.TabIndex = 5;
+            this.lblPasswordCheckInfo.Text = "Şifreler aynı değil.";
+            this.lblPasswordCheckInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPasswordCheckInfo.Visible = false;
+            // 
+            // lblPasswordInfo
+            // 
+            this.lblPasswordInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPasswordInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPasswordInfo.Location = new System.Drawing.Point(360, 140);
+            this.lblPasswordInfo.Name = "lblPasswordInfo";
+            this.lblPasswordInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblPasswordInfo.TabIndex = 5;
+            this.lblPasswordInfo.Text = "Düşük Güvenlik";
+            this.lblPasswordInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPasswordInfo.Visible = false;
+            // 
+            // lblEmailInfo
+            // 
+            this.lblEmailInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEmailInfo.Location = new System.Drawing.Point(360, 106);
+            this.lblEmailInfo.Name = "lblEmailInfo";
+            this.lblEmailInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblEmailInfo.TabIndex = 5;
+            this.lblEmailInfo.Text = "Email formatı uygun değil.";
+            this.lblEmailInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmailInfo.Visible = false;
+            // 
+            // lblLastNameInfo
+            // 
+            this.lblLastNameInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLastNameInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblLastNameInfo.Location = new System.Drawing.Point(360, 72);
+            this.lblLastNameInfo.Name = "lblLastNameInfo";
+            this.lblLastNameInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblLastNameInfo.TabIndex = 5;
+            this.lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
+            this.lblLastNameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLastNameInfo.Visible = false;
+            // 
             // lblNameInfo
             // 
             this.lblNameInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -444,6 +492,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(211, 28);
             this.txtEmail.TabIndex = 1;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtLastName
             // 
@@ -535,54 +584,6 @@
             // 
             this.tmrOpenForm.Interval = 10;
             this.tmrOpenForm.Tick += new System.EventHandler(this.tmrOpenForm_Tick);
-            // 
-            // lblLastNameInfo
-            // 
-            this.lblLastNameInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLastNameInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblLastNameInfo.Location = new System.Drawing.Point(360, 72);
-            this.lblLastNameInfo.Name = "lblLastNameInfo";
-            this.lblLastNameInfo.Size = new System.Drawing.Size(297, 28);
-            this.lblLastNameInfo.TabIndex = 5;
-            this.lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
-            this.lblLastNameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblLastNameInfo.Visible = false;
-            // 
-            // lblEmailInfo
-            // 
-            this.lblEmailInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblEmailInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblEmailInfo.Location = new System.Drawing.Point(360, 106);
-            this.lblEmailInfo.Name = "lblEmailInfo";
-            this.lblEmailInfo.Size = new System.Drawing.Size(297, 28);
-            this.lblEmailInfo.TabIndex = 5;
-            this.lblEmailInfo.Text = "Email formatı uygun değil.";
-            this.lblEmailInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblEmailInfo.Visible = false;
-            // 
-            // lblPasswordInfo
-            // 
-            this.lblPasswordInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPasswordInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPasswordInfo.Location = new System.Drawing.Point(360, 140);
-            this.lblPasswordInfo.Name = "lblPasswordInfo";
-            this.lblPasswordInfo.Size = new System.Drawing.Size(297, 28);
-            this.lblPasswordInfo.TabIndex = 5;
-            this.lblPasswordInfo.Text = "Düşük Güvenlik";
-            this.lblPasswordInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPasswordInfo.Visible = false;
-            // 
-            // lblPasswordCheckInfo
-            // 
-            this.lblPasswordCheckInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblPasswordCheckInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPasswordCheckInfo.Location = new System.Drawing.Point(360, 174);
-            this.lblPasswordCheckInfo.Name = "lblPasswordCheckInfo";
-            this.lblPasswordCheckInfo.Size = new System.Drawing.Size(297, 28);
-            this.lblPasswordCheckInfo.TabIndex = 5;
-            this.lblPasswordCheckInfo.Text = "Şifreler aynı değil.";
-            this.lblPasswordCheckInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblPasswordCheckInfo.Visible = false;
             // 
             // CreateAccount
             // 
