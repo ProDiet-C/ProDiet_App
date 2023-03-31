@@ -162,6 +162,96 @@ namespace WFA_ProDiet.DAL.Migrations
                         });
                 });
 
+            modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Customer", b =>
+                {
+                    b.Property<int>("CustomerId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CustomerId"), 1L, 1);
+
+                    b.Property<string>("ActivityLevel")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime?>("BirthDate")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<int?>("Height")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<byte[]>("Picture")
+                        .HasColumnType("image");
+
+                    b.Property<double?>("TargetCalorie")
+                        .HasColumnType("float");
+
+                    b.Property<DateTime?>("TargetDate")
+                        .HasColumnType("date");
+
+                    b.Property<double?>("TargetWeight")
+                        .HasColumnType("float");
+
+                    b.Property<double?>("Weight")
+                        .HasColumnType("float");
+
+                    b.HasKey("CustomerId");
+
+                    b.ToTable("Customers");
+
+                    b.HasData(
+                        new
+                        {
+                            CustomerId = 1,
+                            ActivityLevel = "NoActivitiy",
+                            BirthDate = new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "okuzkaan@mail.com",
+                            FirstName = "Oğuz Kağan",
+                            Gender = "Man",
+                            Height = 180,
+                            LastName = "Ünal",
+                            TargetCalorie = 1500.0,
+                            TargetDate = new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TargetWeight = 46.0,
+                            Weight = 45.0
+                        },
+                        new
+                        {
+                            CustomerId = 2,
+                            ActivityLevel = "MoreActive",
+                            BirthDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Email = "ikasapoglu@mail.com",
+                            FirstName = "İlkiz",
+                            Gender = "Woman",
+                            Height = 180,
+                            LastName = "Kasapoğlu",
+                            TargetCalorie = 1500.0,
+                            TargetDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            TargetWeight = 46.0,
+                            Weight = 45.0
+                        });
+                });
+
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>
                 {
                     b.Property<int>("FoodId")
@@ -4305,6 +4395,9 @@ namespace WFA_ProDiet.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MealId"), 1L, 1);
 
+                    b.Property<int>("CustomerId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("EatDay")
                         .HasColumnType("datetime2");
 
@@ -4325,12 +4418,9 @@ namespace WFA_ProDiet.DAL.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("MealId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("CustomerId");
 
                     b.ToTable("Meals");
 
@@ -4338,13 +4428,13 @@ namespace WFA_ProDiet.DAL.Migrations
                         new
                         {
                             MealId = 1,
-                            EatDay = new DateTime(2023, 3, 31, 2, 17, 22, 28, DateTimeKind.Local).AddTicks(779),
+                            CustomerId = 1,
+                            EatDay = new DateTime(2023, 3, 31, 12, 45, 25, 534, DateTimeKind.Local).AddTicks(9879),
                             MealCalorie = 500.0,
                             MealCarbohydrate = 200.0,
                             MealFat = 50.0,
                             MealProtein = 100.0,
-                            Name = "Breakfast",
-                            UserId = 1
+                            Name = "Breakfast"
                         });
                 });
 
@@ -4376,96 +4466,6 @@ namespace WFA_ProDiet.DAL.Migrations
                         });
                 });
 
-            modelBuilder.Entity("WFA_ProDiet.MODELS.Models.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
-
-                    b.Property<string>("ActivityLevel")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<DateTime?>("BirthDate")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(150)
-                        .HasColumnType("nvarchar(150)");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int?>("Height")
-                        .HasColumnType("int");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<byte[]>("Picture")
-                        .HasColumnType("image");
-
-                    b.Property<double?>("TargetCalorie")
-                        .HasColumnType("float");
-
-                    b.Property<DateTime?>("TargetDate")
-                        .HasColumnType("date");
-
-                    b.Property<double?>("TargetWeight")
-                        .HasColumnType("float");
-
-                    b.Property<double?>("Weight")
-                        .HasColumnType("float");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("Users");
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            ActivityLevel = "NoActivitiy",
-                            BirthDate = new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "okuzkaan@mail.com",
-                            FirstName = "Oğuz Kağan",
-                            Gender = "Man",
-                            Height = 180,
-                            LastName = "Ünal",
-                            TargetCalorie = 1500.0,
-                            TargetDate = new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            TargetWeight = 46.0,
-                            Weight = 45.0
-                        },
-                        new
-                        {
-                            UserId = 2,
-                            ActivityLevel = "MoreActive",
-                            BirthDate = new DateTime(2000, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "ikasapoglu@mail.com",
-                            FirstName = "İlkiz",
-                            Gender = "Woman",
-                            Height = 180,
-                            LastName = "Kasapoğlu",
-                            TargetCalorie = 1500.0,
-                            TargetDate = new DateTime(2023, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            TargetWeight = 46.0,
-                            Weight = 45.0
-                        });
-                });
-
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>
                 {
                     b.HasOne("WFA_ProDiet.MODELS.Models.Category", "Category")
@@ -4477,13 +4477,13 @@ namespace WFA_ProDiet.DAL.Migrations
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Meal", b =>
                 {
-                    b.HasOne("WFA_ProDiet.MODELS.Models.User", "User")
+                    b.HasOne("WFA_ProDiet.MODELS.Models.Customer", "Customer")
                         .WithMany("Meals")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("CustomerId")
                         .IsRequired()
-                        .HasConstraintName("FK_Meals_Users");
+                        .HasConstraintName("FK_Meals_Customers");
 
-                    b.Navigation("User");
+                    b.Navigation("Customer");
                 });
 
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.MealDetail", b =>
@@ -4510,6 +4510,11 @@ namespace WFA_ProDiet.DAL.Migrations
                     b.Navigation("Foods");
                 });
 
+            modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Customer", b =>
+                {
+                    b.Navigation("Meals");
+                });
+
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Food", b =>
                 {
                     b.Navigation("MealDetails");
@@ -4518,11 +4523,6 @@ namespace WFA_ProDiet.DAL.Migrations
             modelBuilder.Entity("WFA_ProDiet.MODELS.Models.Meal", b =>
                 {
                     b.Navigation("MealDetails");
-                });
-
-            modelBuilder.Entity("WFA_ProDiet.MODELS.Models.User", b =>
-                {
-                    b.Navigation("Meals");
                 });
 #pragma warning restore 612, 618
         }

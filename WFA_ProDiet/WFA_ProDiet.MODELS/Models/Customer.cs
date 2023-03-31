@@ -6,14 +6,14 @@ using WFA_ProDiet.MODELS.Enums;
 
 namespace WFA_ProDiet.MODELS.Models
 {
-    public class User
+    public class Customer
     {
-        public User()
+        public Customer()
         {
             Meals = new List<Meal>();
         }
 
-        public int UserId { get; set; }
+        public int CustomerId { get; set; }
         public string FirstName { get; set; } = null!;
         public string LastName { get; set; } = null!;
         public byte[]? Picture { get; set; } // buraya default profil resmi atanacak

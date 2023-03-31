@@ -22,7 +22,7 @@ namespace WFA_ProDiet.MODELS.Models
         public virtual DbSet<Food> Foods { get; set; } = null!;
         public virtual DbSet<Meal> Meals { get; set; } = null!;
         public virtual DbSet<MealDetail> MealDetails { get; set; } = null!;
-        public virtual DbSet<User> Users { get; set; } = null!;
+        public virtual DbSet<Customer> Customers { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -37,17 +37,17 @@ namespace WFA_ProDiet.MODELS.Models
             new CategoryControllers().SetModel(modelBuilder);
             new MealControllers().SetModel(modelBuilder);
             new MealDetailControllers().SetModel(modelBuilder);
-            new UserControllers().SetModel(modelBuilder);       
+            new CustomerControllers().SetModel(modelBuilder);       
             SeedData(modelBuilder);
             base.OnModelCreating(modelBuilder);
         }
 
         protected void SeedData(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>().HasData(
-            new User
+            modelBuilder.Entity<Customer>().HasData(
+            new Customer
             {
-                UserId = 1,
+                CustomerId = 1,
                 FirstName = "Oğuz Kağan",
                 LastName = "Ünal",
                 Email = "okuzkaan@mail.com",
@@ -60,9 +60,9 @@ namespace WFA_ProDiet.MODELS.Models
                 TargetCalorie = 1500,
                 TargetDate = Convert.ToDateTime("2023-02-01")
             },
-            new User
+            new Customer
             {
-                UserId = 2,
+                CustomerId = 2,
                 FirstName = "İlkiz",
                 LastName = "Kasapoğlu",
                 Email = "ikasapoglu@mail.com",
@@ -117,7 +117,7 @@ namespace WFA_ProDiet.MODELS.Models
                MealCarbohydrate = 200,
                MealProtein = 100,
                MealFat = 50,
-               UserId = 1
+               CustomerId = 1
 
            });
             modelBuilder.Entity<Food>().HasData(

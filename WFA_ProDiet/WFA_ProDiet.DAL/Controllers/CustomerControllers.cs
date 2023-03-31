@@ -8,11 +8,11 @@ using WFA_ProDiet.MODELS.Models;
 
 namespace WFA_ProDiet.DAL.Controllers
 {
-    public class UserControllers : ISettable
+    public class CustomerControllers : ISettable
     {
         public void SetModel(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<User>(entity =>
+            modelBuilder.Entity<Customer>(entity =>
             {
 
                 entity.Property(e => e.ActivityLevel).HasColumnType("nvarchar(50)");

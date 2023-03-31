@@ -19,9 +19,9 @@ namespace WFA_ProDiet.MODELS.Models
         public double? MealCarbohydrate { get; set; } = 0;
         public double? MealProtein { get; set; } = 0;
         public double? MealFat { get; set; } = 0;
-        public int UserId { get; set; }
+        public int CustomerId { get; set; }
 
-        public virtual User User { get; set; } = null!;
+        public virtual Customer Customer { get; set; } = null!;
         public virtual ICollection<MealDetail> MealDetails { get; set; }
     }
 }

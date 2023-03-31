@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WFA_ProDiet.DAL.Migrations
 {
-    public partial class MigAtakan : Migration
+    public partial class mig1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,10 +23,10 @@ namespace WFA_ProDiet.DAL.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Users",
+                name: "Customers",
                 columns: table => new
                 {
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
@@ -43,7 +43,7 @@ namespace WFA_ProDiet.DAL.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Users", x => x.UserId);
+                    table.PrimaryKey("PK_Customers", x => x.CustomerId);
                 });
 
             migrationBuilder.CreateTable(
@@ -83,16 +83,16 @@ namespace WFA_ProDiet.DAL.Migrations
                     MealCarbohydrate = table.Column<double>(type: "float", nullable: true),
                     MealProtein = table.Column<double>(type: "float", nullable: true),
                     MealFat = table.Column<double>(type: "float", nullable: true),
-                    UserId = table.Column<int>(type: "int", nullable: false)
+                    CustomerId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Meals", x => x.MealId);
                     table.ForeignKey(
-                        name: "FK_Meals_Users",
-                        column: x => x.UserId,
-                        principalTable: "Users",
-                        principalColumn: "UserId");
+                        name: "FK_Meals_Customers",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "CustomerId");
                 });
 
             migrationBuilder.CreateTable(
@@ -150,8 +150,8 @@ namespace WFA_ProDiet.DAL.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Users",
-                columns: new[] { "UserId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Picture", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
+                table: "Customers",
+                columns: new[] { "CustomerId", "ActivityLevel", "BirthDate", "Email", "FirstName", "Gender", "Height", "LastName", "Picture", "TargetCalorie", "TargetDate", "TargetWeight", "Weight" },
                 values: new object[,]
                 {
                     { 1, "NoActivitiy", new DateTime(2017, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "okuzkaan@mail.com", "Oğuz Kağan", "Man", 180, "Ünal", null, 1500.0, new DateTime(2023, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), 46.0, 45.0 },
@@ -595,8 +595,8 @@ namespace WFA_ProDiet.DAL.Migrations
 
             migrationBuilder.InsertData(
                 table: "Meals",
-                columns: new[] { "MealId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name", "UserId" },
-                values: new object[] { 1, new DateTime(2023, 3, 31, 2, 17, 22, 28, DateTimeKind.Local).AddTicks(779), 500.0, 200.0, 50.0, 100.0, "Breakfast", 1 });
+                columns: new[] { "MealId", "CustomerId", "EatDay", "MealCalorie", "MealCarbohydrate", "MealFat", "MealProtein", "Name" },
+                values: new object[] { 1, 1, new DateTime(2023, 3, 31, 12, 45, 25, 534, DateTimeKind.Local).AddTicks(9879), 500.0, 200.0, 50.0, 100.0, "Breakfast" });
 
             migrationBuilder.InsertData(
                 table: "MealDetails",
@@ -614,9 +614,9 @@ namespace WFA_ProDiet.DAL.Migrations
                 column: "FoodID");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Meals_UserId",
+                name: "IX_Meals_CustomerId",
                 table: "Meals",
-                column: "UserId");
+                column: "CustomerId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -634,7 +634,7 @@ namespace WFA_ProDiet.DAL.Migrations
                 name: "Categories");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "Customers");
         }
     }
 }

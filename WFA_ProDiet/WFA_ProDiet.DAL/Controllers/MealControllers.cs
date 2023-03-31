@@ -16,11 +16,11 @@ namespace WFA_ProDiet.DAL.Controllers
             {
                 entity.Property(e => e.Name).HasMaxLength(50).HasColumnType("nvarchar(50)");
 
-                entity.HasOne(d => d.User)
+                entity.HasOne(d => d.Customer)
                     .WithMany(p => p.Meals)
-                    .HasForeignKey(d => d.UserId)
+                    .HasForeignKey(d => d.CustomerId)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_Meals_Users");
+                    .HasConstraintName("FK_Meals_Customers");
             });
         }
     }

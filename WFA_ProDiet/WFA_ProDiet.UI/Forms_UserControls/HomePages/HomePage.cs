@@ -27,10 +27,7 @@ namespace WFA_ProDiet.UI
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-            new User() 
-            {
-                FirstName=
-            }
+           
           
         }
 
