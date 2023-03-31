@@ -173,6 +173,16 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mavidenYesileBelliBelrsizBirGecis {
+            get {
+                object obj = ResourceManager.GetObject("mavidenYesileBelliBelrsizBirGecis", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PRODİET_TRANSPARAN_DENEME_13 {
             get {
                 object obj = ResourceManager.GetObject("PRODİET TRANSPARAN DENEME 13", resourceCulture);

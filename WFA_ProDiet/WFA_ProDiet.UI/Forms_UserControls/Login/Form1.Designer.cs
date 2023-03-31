@@ -98,18 +98,21 @@
             // 
             this.btnLogin.BackColor = System.Drawing.Color.Transparent;
             this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnLogin.IconChar = FontAwesome.Sharp.IconChar.RightToBracket;
             this.btnLogin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
             this.btnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnLogin.IconSize = 30;
-            this.btnLogin.Location = new System.Drawing.Point(156, 64);
+            this.btnLogin.Location = new System.Drawing.Point(150, 63);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(75, 60);
+            this.btnLogin.Size = new System.Drawing.Size(94, 60);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Giris";
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtEmail
             // 
@@ -152,6 +155,8 @@
             // 
             // lnkCreateAccount
             // 
+            this.lnkCreateAccount.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.lnkCreateAccount.AutoEllipsis = true;
             this.lnkCreateAccount.AutoSize = true;
             this.lnkCreateAccount.LinkColor = System.Drawing.Color.Teal;
             this.lnkCreateAccount.Location = new System.Drawing.Point(31, 105);
@@ -216,6 +221,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCommercial);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.pnlCommercial.ResumeLayout(false);

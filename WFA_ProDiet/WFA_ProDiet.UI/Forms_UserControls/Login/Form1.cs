@@ -1,8 +1,13 @@
+using WFA_ProDiet.BLL;
+using WFA_ProDiet.MODELS.Models;
+using WFA_ProDiet.UI.HelpersUI;
+
 namespace WFA_ProDiet.UI
 {
     public partial class Form1 : Form
     {
         CreateAccount create;
+        HomePage homePage;
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +40,36 @@ namespace WFA_ProDiet.UI
 
         private void btnShowPassword_Click(object sender, EventArgs e)
         {
-            txtPassword
+            
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar; // þifre gözüküyorsa maskeler, maskeli ise gösterir.
+            btnShowPassword.IconChar = txtPassword.UseSystemPasswordChar ? FontAwesome.Sharp.IconChar.Lock : FontAwesome.Sharp.IconChar.LockOpen; // þifre iconu þartlara göre gösterilir.
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var allCustomer = CrudProcess.GetAll<Customer>();
+            var customer = allCustomer.Where(cus=>cus.Email==txtEmail.Text).FirstOrDefault();
+
+            if (customer!=null)
+            {
+                if (customer.VerifyPassword(txtPassword.Text))
+                {
+                    Current.Customer= customer;
+                    homePage = new HomePage();
+                    homePage.Show();
+                    HelperUI.SetOpacityWhenOpen(homePage);
+                    Hide();
+                }
+                else
+                {
+                    MessageBox.Show("Þifreniz hatalýdýr.");
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Kullanýcý adý bulunamadý.");
+            }
+           
         }
     }
 }

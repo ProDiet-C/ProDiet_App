@@ -64,5 +64,9 @@ namespace WFA_ProDiet.UI.HelpersUI
                 _form.Close();
             }
         }
+        private static void CheckLoginName(TextBox txt)
+        {
+
+        }
     }
 }

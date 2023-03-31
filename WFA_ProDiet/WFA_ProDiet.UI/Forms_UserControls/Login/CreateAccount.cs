@@ -64,7 +64,7 @@ namespace WFA_ProDiet.UI
 
         private void tmrOpenForm_Tick(object sender, EventArgs e)
         {
-            if (Width < 1010)
+            if (Width < 1100)
             {
                 Width += 5;
             }
@@ -132,6 +132,33 @@ namespace WFA_ProDiet.UI
             HelperUI.SetOpacityWhenClose(this);
         }
 
-  
+        private void txtName_TextChanged(object sender, EventArgs e)
+        {
+            lblNameInfo.Visible = false;
+
+            if (txtName.Text.Length<2)
+            {
+                lblNameInfo.Text = "Ad en az 2 karakterden oluşmalıdır.";
+            }
+            else if (!txtName.Text.All(char.IsLetter))
+            {
+                lblNameInfo.Text = "Ad sadece harf içerebilir.";
+            }
+        }
+
+        
+        private void txtLastName_TextChanged(object sender, EventArgs e)
+        {
+            lblLastNameInfo.Visible = false;
+
+            if (txtLastName.Text.Length < 2)
+            {
+                lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
+            }
+            else if (!lblLastNameInfo.Text.All(char.IsLetter))
+            {
+                lblNameInfo.Text = "Soyad sadece harf içerebilir.";
+            }
+        }
     }
 }
