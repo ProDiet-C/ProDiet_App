@@ -84,11 +84,11 @@
             // dgvFoods
             // 
             dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvFoods.Dock = DockStyle.Fill;
+            dgvFoods.Dock = DockStyle.Top;
             dgvFoods.Location = new Point(0, 0);
             dgvFoods.Name = "dgvFoods";
             dgvFoods.RowTemplate.Height = 25;
-            dgvFoods.Size = new Size(960, 560);
+            dgvFoods.Size = new Size(960, 264);
             dgvFoods.TabIndex = 5;
             // 
             // panel1
@@ -117,6 +117,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(960, 302);
             panel1.TabIndex = 6;
+            panel1.Paint += panel1_Paint;
             // 
             // pbFood
             // 

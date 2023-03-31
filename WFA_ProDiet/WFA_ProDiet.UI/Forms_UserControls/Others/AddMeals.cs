@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OxyPlot;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -54,14 +55,24 @@ namespace WFA_ProDiet.UI
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
-            DataGridViewSelectedColumnCollection selectedColumns = dgvFoods.SelectedColumns;
-            //dgvFoods.CellFormatting += DgvFoods_CellFormatting;
 
-            // Her bir seçili sütunun index'ini değiştir
-            foreach (DataGridViewColumn column in selectedColumns)
-            {
-                column.DisplayIndex = 3; // index'i 1 ile değiştir
-            }
+          //  lstDailyMeal.DataSource = CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString());
+
+            //int currentRow = dgvFoods.CurrentCell.RowIndex;
+            //int currentColumn = dgvFoods.CurrentCell.ColumnIndex;
+
+            //// Sonra başka bir sütuna geçiş yapabiliriz
+            //int newColumnIndex = 3; // yeni sütunun indeksi
+           
+
+            //DataGridViewSelectedColumnCollection selectedColumns = dgvFoods.SelectedColumns;
+            ////dgvFoods.CellFormatting += DgvFoods_CellFormatting;
+
+            //// Her bir seçili sütunun index'ini değiştir
+            //foreach (DataGridViewColumn column in selectedColumns)
+            //{
+            //    column.DisplayIndex = 5; // index'i 1 ile değiştir
+            //}
 
         }
 
@@ -101,16 +112,37 @@ namespace WFA_ProDiet.UI
             }
             else if (cbOrderByFilter.SelectedIndex == 2)
             {
-                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Calorie).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Calorie).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 3)
             {
-                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Calorie).ToList();
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Calorie).ToList();
             }
             else if (cbOrderByFilter.SelectedIndex == 4)
             {
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Protein).ToList();
+            }
+            else if (cbOrderByFilter.SelectedIndex == 5)
+            {
                 dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Protein).ToList();
             }
+            else if (cbOrderByFilter.SelectedIndex == 6)
+            {
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Carbohydrate).ToList();
+            }
+            else if (cbOrderByFilter.SelectedIndex == 7)
+            {
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Carbohydrate).ToList();
+            }
+            else if (cbOrderByFilter.SelectedIndex == 8)
+            {
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderByDescending(x => x.Fat).ToList();
+            }
+            else if (cbOrderByFilter.SelectedIndex == 9)
+            {
+                dgvFoods.DataSource = CrudProcess.GetAll<Food>().OrderBy(x => x.Fat).ToList();
+            }
+
             /*
                 Ketojenik diyet için ideal(düşük karbonhidrat)0
             Dukan diyeti için ideal(yüksek protein)1
@@ -119,15 +151,22 @@ namespace WFA_ProDiet.UI
                 Proteine göre azalan4
                 Proteine göre artan5
             Karbonhidrata göre azalan6
-                Karbonhidrata göre artan
-                Yağa göre azalan
-                    Yağa göre artan*/
+                Karbonhidrata göre artan7
+                Yağa göre azalan8
+                    Yağa göre artan9*/
         }
 
         private void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
+            dgvFoods.CurrentCell = dgvFoods.Rows[5].Cells[2];
             
-            lstDailyMeal.DataSource = CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString());
+            Meal meal=CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString()&&x.Name==MealName.Breakfast).FirstOrDefault();
+
+            var foodNames = meal.MealDetails.Select(x => x.Food.Name).ToList();
+            lstDailyMeal.Items.AddRange(foodNames.ToArray());
+
+          
+
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

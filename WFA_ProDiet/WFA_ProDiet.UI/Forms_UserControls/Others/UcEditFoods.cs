@@ -18,6 +18,7 @@ namespace WFA_ProDiet.UI
         public UcEditFoods()
         {
             InitializeComponent();
+            dgvFoods.DataSource = CrudProcess.GetAll<Food>();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -39,6 +40,13 @@ namespace WFA_ProDiet.UI
             food.MeasureType = (MeasureType)(cbMeasure.SelectedIndex);
 
             CrudProcess.Add(food);
+            MessageBox.Show($"{food.Name} Eklendi");
+            dgvFoods.DataSource = CrudProcess.GetAll<Food>();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

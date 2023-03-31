@@ -24,5 +24,10 @@ namespace WFA_ProDiet.MODELS.Models
 
         public virtual Category? Category { get; set; }
         public virtual ICollection<MealDetail> MealDetails { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} ";
+        }
     }
 }
