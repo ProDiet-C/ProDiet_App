@@ -172,7 +172,7 @@ namespace WFA_ProDiet.UI
             lblEmailInfo.Visible = false;
 
             
-            if (!(email.Length>8 && email.Contains("@") && email.Contains("."))) // email 8 harften büyük mü ve "@." içeriyor mu kontrolü.
+            if (!(email.Length>8 && email.Contains("@") && email.Contains(".") && email.All(char.IsLower))) // email 8 harften büyük mü ve "@." içeriyor mu ve hepsi küçük harf mi kontrolü.
             {
                 lblEmailInfo.Visible = true;
                 lblEmailInfo.Text = "Email uygun formatta değil";
