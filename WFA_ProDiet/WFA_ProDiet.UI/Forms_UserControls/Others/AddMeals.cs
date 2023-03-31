@@ -17,9 +17,11 @@ namespace WFA_ProDiet.UI
 {
     public partial class AddMeals : Form
     {
-        public AddMeals()
+        public AddMeals(string mealName,DateTime dateTime)
         {
             InitializeComponent();
+            lblMealName.Text = mealName;
+            dtpMealDate.Value = dateTime;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -55,6 +57,7 @@ namespace WFA_ProDiet.UI
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
+            
 
           //  lstDailyMeal.DataSource = CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString());
 
@@ -158,14 +161,14 @@ namespace WFA_ProDiet.UI
 
         private void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
-            dgvFoods.CurrentCell = dgvFoods.Rows[5].Cells[2];
-            
-            Meal meal=CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString()&&x.Name==MealName.Breakfast).FirstOrDefault();
+            // dgvFoods.CurrentCell = dgvFoods.Rows[5].Cells[2];
 
-            var foodNames = meal.MealDetails.Select(x => x.Food.Name).ToList();
-            lstDailyMeal.Items.AddRange(foodNames.ToArray());
+            Meal meal = CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString() && x.Name == MealName.Breakfast).FirstOrDefault();
 
-          
+            //var foodNames = meal.MealDetails.Select(x => x.Food.Name).ToList();
+            //lstDailyMeal.Items.AddRange(foodNames.ToArray());
+
+
 
         }
 

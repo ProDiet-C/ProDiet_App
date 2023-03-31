@@ -16,31 +16,26 @@ namespace WFA_ProDiet.UI
         {
             InitializeComponent();
         }
-
         private void btnAddBreakFast_Click(object sender, EventArgs e)
         {
-            ShowDialogAddMeals();
+            ShowDialogAddMeals(lblBreakfast.Text,dtpMealDate.Value);
         }
-     
-
         private void btnAddLunch_Click(object sender, EventArgs e)
         {
-            ShowDialogAddMeals();
+            ShowDialogAddMeals(lblLunch.Text, dtpMealDate.Value);
 
         }
-
         private void btnAddDinner_Click(object sender, EventArgs e)
         {
-            ShowDialogAddMeals();
+            ShowDialogAddMeals(lblDinner.Text, dtpMealDate.Value);
         }
-
         private void btnAddExtra_Click(object sender, EventArgs e)
         {
-            ShowDialogAddMeals();
+            ShowDialogAddMeals(lblExtra.Text, dtpMealDate.Value);
         }
-        private void ShowDialogAddMeals()
+        private void ShowDialogAddMeals(string mealName,DateTime date)
         {
-            AddMeals addMeals = new AddMeals();
+            AddMeals addMeals = new AddMeals(mealName,date);
             addMeals.ShowDialog();
         }
     }
