@@ -278,6 +278,7 @@
             lblMealName.TabIndex = 1;
             lblMealName.Text = "KAHVALTI";
             lblMealName.TextAlign = ContentAlignment.TopCenter;
+            lblMealName.Click += lblMealName_Click;
             // 
             // panel5
             // 

@@ -584,7 +584,6 @@
         private Label lblTargetCalorie;
         private FlowLayoutPanel flpMeals;
         private Panel pnlBreakFast;
-        private Label lblCurrentKcalBF;
         private Label lblTargetKcalBF;
         private Label label5;
         private Label label4;
@@ -617,5 +616,6 @@
         private Label lblExtra;
         private FontAwesome.Sharp.IconButton btnAddExtra;
         private DateTimePicker dtpMealDate;
+        public Label lblCurrentKcalBF;
     }
 }
