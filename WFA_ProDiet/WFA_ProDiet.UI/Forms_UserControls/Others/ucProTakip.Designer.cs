@@ -84,6 +84,7 @@
             pnlCurrentKcal.Name = "pnlCurrentKcal";
             pnlCurrentKcal.Size = new Size(960, 560);
             pnlCurrentKcal.TabIndex = 0;
+            pnlCurrentKcal.Paint += pnlCurrentKcal_Paint;
             // 
             // dtpMealDate
             // 

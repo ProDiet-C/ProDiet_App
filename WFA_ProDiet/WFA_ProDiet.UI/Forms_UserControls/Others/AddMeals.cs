@@ -168,7 +168,7 @@ namespace WFA_ProDiet.UI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            Meal meal =CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
 
             Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
