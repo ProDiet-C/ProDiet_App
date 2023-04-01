@@ -9,7 +9,6 @@ namespace WFA_ProDiet.MODELS.Models
         public Food()
         {
             MealDetails = new List<MealDetail>();
-            
         }
 
         public int FoodId { get; set; }

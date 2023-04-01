@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace WFA_ProDiet.MODELS.Enums
 {
-    public enum ActivityLevel
+    public enum ActivityLevel // bazal metobilizma hızı katsayıları Enumlar verildi.
     {
-        NoActivitiy,
-        LessActive,
-        Active,
-        MoreActive
+        NoActivitiy = 100,
+        LessActive = 115,
+        Active = 130,
+        MoreActive = 145
     }
 }

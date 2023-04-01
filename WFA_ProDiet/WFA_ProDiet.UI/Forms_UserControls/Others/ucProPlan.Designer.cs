@@ -76,6 +76,7 @@
             this.btnCreatePlan.TabIndex = 12;
             this.btnCreatePlan.Text = "Plan Oluştur";
             this.btnCreatePlan.UseVisualStyleBackColor = false;
+            this.btnCreatePlan.Click += new System.EventHandler(this.btnCreatePlan_Click);
             // 
             // lnkProTakip
             // 
