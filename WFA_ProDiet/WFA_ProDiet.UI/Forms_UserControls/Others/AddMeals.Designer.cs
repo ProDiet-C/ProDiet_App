@@ -128,6 +128,7 @@
             dgvFoods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFoods.Size = new Size(625, 417);
             dgvFoods.TabIndex = 3;
+            dgvFoods.CellContentClick += dgvFoods_CellContentClick;
             dgvFoods.SelectionChanged += dgvFoods_SelectionChanged;
             // 
             // txtSearchFood
@@ -364,6 +365,7 @@
             txtFood.ReadOnly = true;
             txtFood.Size = new Size(157, 27);
             txtFood.TabIndex = 9;
+            txtFood.TextChanged += txtFood_TextChanged;
             // 
             // nudQuantity
             // 

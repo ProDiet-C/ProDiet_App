@@ -27,8 +27,8 @@ namespace WFA_ProDiet.UI
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
-
-
+            txtFood.Text = "";
+           // dgvFoods.CurrentCell = dgvFoods.Rows[0].Cells[5];
             //  lstDailyMeal.DataSource = CrudProcess.Search<Meal>(x => x.EatDay.ToShortDateString() == dtpMealDate.Value.ToShortDateString());
 
             //int currentRow = dgvFoods.CurrentCell.RowIndex;
@@ -89,6 +89,7 @@ namespace WFA_ProDiet.UI
             MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = meal, MealId = meal.MealId, Quantity = (int)quantity };
 
             CrudProcess.Add(mealDetail);
+            lstMealRefresh();
         }
 
         //DOSYA YOLUNU RESME DÖNÜŞTÜRÜR (DGVFOODS İÇİN)
@@ -162,39 +163,39 @@ namespace WFA_ProDiet.UI
 
         private void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
-            // dgvFoods.CurrentCell = dgvFoods.Rows[5].Cells[2];
-
-            lstDailyMeal.Items.Clear();
-            /*CrudProcess.Search<Meal>*/
-            Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
-
-            var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
-
-            if (meal != null && mealDetail != null)
-            {
-                var foods = mealDetail.Select(f => f.Food);
-                lstDailyMeal.Items.AddRange(foods.ToArray());
-            }
-
-
+            lstMealRefresh();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
-
             Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
 
-            //meal.MealCalorie += (food.Calorie * quantity);
-            //meal.MealCarbohydrate += (food.Carbohydrate * quantity);
-            //meal.MealProtein += (food.Protein * quantity);
-            //meal.MealFat += (food.Fat * quantity);
+            Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
+            Food removeFood = (Food)lstDailyMeal.SelectedItem;
 
-        }
-        private void lstMealRefresh()
-        {
+            MealDetail updateFoodFromMeal = ProDietDb._context.MealDetails.Where(x => x.Food == removeFood).FirstOrDefault();
 
+            if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
+            {
+                CrudProcess.Delete(updateFoodFromMeal);
+
+                updateFoodFromMeal.FoodId = newFood.FoodId;
+                updateFoodFromMeal.Food = newFood;
+                //calori güncelleme
+                meal.MealCalorie += (newFood.Calorie * (double)nudQuantity.Value) - (removeFood.Calorie * updateFoodFromMeal.Quantity);
+                meal.MealCarbohydrate += (newFood.Carbohydrate * (double)nudQuantity.Value) - (removeFood.Carbohydrate * updateFoodFromMeal.Quantity);
+                meal.MealProtein += (newFood.Protein * (double)nudQuantity.Value) - (removeFood.Protein * updateFoodFromMeal.Quantity);
+                meal.MealFat += (newFood.Fat * (double)nudQuantity.Value) - (removeFood.Fat * updateFoodFromMeal.Quantity);
+
+                updateFoodFromMeal.Quantity = (int)nudQuantity.Value;
+
+                CrudProcess.Add(updateFoodFromMeal);
+
+
+            }
+            lstMealRefresh();
         }
+
 
         private void lstDailyMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -205,8 +206,10 @@ namespace WFA_ProDiet.UI
             {
                 if ((int)row.Cells["FoodId"].Value == foodID)
                 {
-                    row.Selected = true;
                     dgvFoods.CurrentCell = row.Cells[0];
+                    row.Selected = true;
+                    txtFood.Text = row.Cells["Name"].Value.ToString();
+                    lblMeasure.Text = row.Cells["MeasureType"].Value.ToString();
                     break;
                 }
             }
@@ -216,15 +219,15 @@ namespace WFA_ProDiet.UI
         }
         private void dgvFoods_SelectionChanged(object sender, EventArgs e)
         {
-            txtFood.Text = dgvFoods.CurrentRow.Cells[1].Value.ToString();
-            lblMeasure.Text = dgvFoods.CurrentRow.Cells[7].Value.ToString();
+                txtFood.Text = dgvFoods.CurrentRow.Cells[1].Value.ToString();
+                lblMeasure.Text = dgvFoods.CurrentRow.Cells[7].Value.ToString();
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
             Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             Food food = ((Food)lstDailyMeal.SelectedItem);
             MealDetail removefood = ProDietDb._context.MealDetails.Where(x => x.Food == food).FirstOrDefault();
-            if (food != null && meal != null&&meal.MealDetails.Count>1)
+            if (food != null && meal != null && meal.MealDetails.Count > 1)//bu dehşet oldu usta dokunmayın, food remove olunca sadece cross tablodan silinir, sonuçta ben yemek silmiyorum öğündeki yememği siliyorum...
             {
                 meal.MealCalorie -= (food.Calorie * removefood.Quantity);
                 meal.MealCarbohydrate -= (food.Carbohydrate * removefood.Quantity);
@@ -234,13 +237,13 @@ namespace WFA_ProDiet.UI
                 CrudProcess.Delete(removefood);
                 CrudProcess.Edit(meal);
             }
-            else if(food != null && meal != null)
+            else if (food != null && meal != null)
             {
                 MessageBox.Show($"{food.Name} silindi.Öğünde yemek kalmadı!");
                 CrudProcess.Delete(removefood);
                 CrudProcess.Delete(meal);
             }
-            
+            lstMealRefresh();
         }
         private MealName GetMealName()
         {
@@ -258,6 +261,30 @@ namespace WFA_ProDiet.UI
             return mealName;
         }
 
+        private void lstMealRefresh()
+        {
+            lstDailyMeal.Items.Clear();
+            /*CrudProcess.Search<Meal>*/
+            Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
 
+            var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
+
+            if (meal != null && mealDetail != null)
+            {
+                var foods = mealDetail.Select(f => f.Food);
+                lstDailyMeal.Items.AddRange(foods.ToArray());
+            }
+
+        }
+
+        private void txtFood_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvFoods_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
