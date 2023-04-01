@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.MODELS.Enums;
+using WFA_ProDiet.MODELS.Models;
 
 namespace WFA_ProDiet.UI
 {
@@ -26,7 +28,9 @@ namespace WFA_ProDiet.UI
             InitializeComponent();
         }
 
-        double bmr;
+        double bmr; // günlük yakılan kalori
+        double alinmasiGerekenKcal; // günlük alınması gereken kalori
+        Customer customer;
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new HomePage().btnProTakip_Click(sender, e);
@@ -34,17 +38,24 @@ namespace WFA_ProDiet.UI
 
         private void btnCreatePlan_Click(object sender, EventArgs e)
         {
-
+            CalculateNeedKcal(customer);
         }
-        private void CalculateBmr(double weight, int height, int age,bool isMan)
+
+        private void CalculateNeedKcal(Customer customer)
         {
-            if (isMan) // kullanıcı erkekse
+
+
+            TimeSpan diffDate = customer.TargetDate.Date - DateTime.Now.Date;
+
+            customer.TargetCalorie = customer.Bmr + ((customer.TargetWeight - customer.Weight) * 7000) / (diffDate.Days);
+
+            if (customer.TargetCalorie < 1200)
             {
-                bmr = (10 * weight) + (6.25 * height) - (5 * age) + 5; 
+                customer.TargetCalorie = 1200;
             }
-            else // kullanıcı kadınsa
+            else if (customer.TargetCalorie > 2500)
             {
-                bmr = (10 * weight) + (6.25 * height) - (5 * age) - 161;
+                customer.TargetCalorie = 2500;
             }
 
 

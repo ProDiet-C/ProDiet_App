@@ -19,14 +19,30 @@ namespace WFA_ProDiet.MODELS.Models
         public string? PicturePath { get; set; } // buraya default profil resmi atanacak
         public string Email { get; set; } = null!;
         public string Password { get; set; } = null!;
-        public DateTime? BirthDate { get; set; } = Convert.ToDateTime("1995-01.01");
+        public DateTime BirthDate { get; set; } = Convert.ToDateTime("1995-01.01");
         public Gender Gender { get; set; } = Gender.Man;
-        public int? Height { get; set; } = 170;    
-        public double? Weight { get; set; } = 80;
-        public ActivityLevel? ActivityLevel { get; set; } = Enums.ActivityLevel.LessActive;
-        public double? TargetWeight { get; set; } = 70;
-        public DateTime? TargetDate { get; set; } = DateTime.Now.AddDays(365) ;
-        public double? TargetCalorie { get; set; } = 1500;
+        public int Height { get; set; } = 170;    
+        public double Weight { get; set; } = 80;
+        public ActivityLevel ActivityLevel { get; set; } = Enums.ActivityLevel.LessActive;
+        public double TargetWeight { get; set; } = 70;
+        public DateTime TargetDate { get; set; } = DateTime.Now.AddDays(365) ;
+        public double TargetCalorie { get; set; } = 1500;
+        private double _bmr;
+        public double Bmr
+        {
+            get { return _bmr; }
+            set
+            {
+                if (Gender == Gender.Man)
+                {
+                    _bmr = (10 * Weight) + (6.25 * Height) - (5 * (DateTime.Now.Year - BirthDate.Year)) + 5;
+                }
+                else
+                {
+                    _bmr = (10 * Weight) + (6.25 * Height) - (5 * (DateTime.Now.Year - BirthDate.Year)) - 161;
+                };
+            }
+        }
 
         public virtual ICollection<Meal> Meals { get; set; }
 

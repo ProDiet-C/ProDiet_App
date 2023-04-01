@@ -562,6 +562,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "ucProTakip";
             Size = new Size(960, 560);
+            TabIndexChanged += ucProTakip_TabIndexChanged;
             pnlCurrentKcal.ResumeLayout(false);
             pnlCurrentKcal.PerformLayout();
             flpMeals.ResumeLayout(false);

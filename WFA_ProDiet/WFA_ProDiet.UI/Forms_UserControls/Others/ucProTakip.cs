@@ -21,16 +21,24 @@ namespace WFA_ProDiet.UI
             lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
             lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
             lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
-            Meal calorie = CrudProcess.Search<Meal>(x => x.EatDay == dtpMealDate.Value.Date && x.Name == MealName.Breakfast).FirstOrDefault();
+            lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);
+            lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
+            lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);
+            lblCurrentKcalExtra.Text = GetCurrentKcal(MealName.Extra);
+        }
+
+        private string GetCurrentKcal(MealName mealName)
+        {
+            Meal calorie = CrudProcess.Search<Meal>(x => x.EatDay == dtpMealDate.Value.Date && x.Name == mealName).FirstOrDefault();
             if (calorie != null)
             {
-                lblCurrentKcalBF.Text = calorie.MealCalorie.ToString();
+                return calorie.MealCalorie.ToString();
             }
-            else
-            {
-                lblBreakfast.Text = "0";
-            }
+
+            return "0";
+
         }
+
         private void btnAddBreakFast_Click(object sender, EventArgs e)
         {
             ShowDialogAddMeals(lblBreakfast.Text, dtpMealDate.Value);
@@ -56,6 +64,14 @@ namespace WFA_ProDiet.UI
         private void pnlCurrentKcal_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ucProTakip_TabIndexChanged(object sender, EventArgs e)
+        {
+            lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);
+            lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
+            lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);
+            lblCurrentKcalExtra.Text = GetCurrentKcal(MealName.Extra);
         }
     }
 }
