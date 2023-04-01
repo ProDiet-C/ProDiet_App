@@ -127,7 +127,7 @@ namespace WFA_ProDiet.UI
             customer.Gender = rbMale.Checked ? Gender.Man : Gender.Woman;
             customer.Height = (int)nudHeight.Value;
             customer.Weight = (double)nudWeight.Value;
-
+            
             if (cbActivityLevel.SelectedIndex == 0) // aktivite yok
             {
                 customer.ActivityLevel = ActivityLevel.NoActivitiy;
@@ -236,6 +236,7 @@ namespace WFA_ProDiet.UI
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
             string password = txtPassword.Text;
+
 
             if (password.Length > 11 && password.Any(char.IsDigit) && password.Any(char.IsPunctuation) && password.Any(char.IsUpper) && password.Any(char.IsLower))
             {

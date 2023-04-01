@@ -20,7 +20,7 @@ namespace WFA_ProDiet.UI
         }
 
         private void lnkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+        {      
             create = new CreateAccount();
             create.ShowDialog();
         }
