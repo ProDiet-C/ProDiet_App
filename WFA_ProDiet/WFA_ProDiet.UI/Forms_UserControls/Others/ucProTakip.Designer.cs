@@ -31,7 +31,7 @@
             pnlCurrentKcal = new Panel();
             dtpMealDate = new DateTimePicker();
             label2 = new Label();
-            label1 = new Label();
+            lblTargetCalorie = new Label();
             flpMeals = new FlowLayoutPanel();
             pnlBreakFast = new Panel();
             lblCurrentKcalBF = new Label();
@@ -63,10 +63,7 @@
             panel4 = new Panel();
             lblCurrentKcalExtra = new Label();
             label25 = new Label();
-            label26 = new Label();
-            lblTargetKcalExtra = new Label();
             label28 = new Label();
-            label29 = new Label();
             lblExtra = new Label();
             btnAddExtra = new FontAwesome.Sharp.IconButton();
             pnlCurrentKcal.SuspendLayout();
@@ -81,7 +78,7 @@
             // 
             pnlCurrentKcal.Controls.Add(dtpMealDate);
             pnlCurrentKcal.Controls.Add(label2);
-            pnlCurrentKcal.Controls.Add(label1);
+            pnlCurrentKcal.Controls.Add(lblTargetCalorie);
             pnlCurrentKcal.Dock = DockStyle.Fill;
             pnlCurrentKcal.Location = new Point(0, 0);
             pnlCurrentKcal.Name = "pnlCurrentKcal";
@@ -107,17 +104,17 @@
             label2.TabIndex = 1;
             label2.Text = "kcal";
             // 
-            // label1
+            // lblTargetCalorie
             // 
-            label1.Anchor = AnchorStyles.Top;
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe MDL2 Assets", 50.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.Green;
-            label1.Location = new Point(407, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(141, 67);
-            label1.TabIndex = 0;
-            label1.Text = "1180";
+            lblTargetCalorie.Anchor = AnchorStyles.Top;
+            lblTargetCalorie.AutoSize = true;
+            lblTargetCalorie.Font = new Font("Segoe MDL2 Assets", 50.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTargetCalorie.ForeColor = Color.Green;
+            lblTargetCalorie.Location = new Point(407, 0);
+            lblTargetCalorie.Name = "lblTargetCalorie";
+            lblTargetCalorie.Size = new Size(141, 67);
+            lblTargetCalorie.TabIndex = 0;
+            lblTargetCalorie.Text = "1180";
             // 
             // flpMeals
             // 
@@ -483,10 +480,7 @@
             panel4.BorderStyle = BorderStyle.Fixed3D;
             panel4.Controls.Add(lblCurrentKcalExtra);
             panel4.Controls.Add(label25);
-            panel4.Controls.Add(label26);
-            panel4.Controls.Add(lblTargetKcalExtra);
             panel4.Controls.Add(label28);
-            panel4.Controls.Add(label29);
             panel4.Controls.Add(lblExtra);
             panel4.Controls.Add(btnAddExtra);
             panel4.Location = new Point(488, 219);
@@ -517,28 +511,6 @@
             label25.Text = "kcal";
             label25.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // label26
-            // 
-            label26.BackColor = Color.Transparent;
-            label26.Font = new Font("Segoe MDL2 Assets", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label26.Location = new Point(206, 140);
-            label26.Name = "label26";
-            label26.Size = new Size(53, 20);
-            label26.TabIndex = 3;
-            label26.Text = "kcal";
-            label26.TextAlign = ContentAlignment.MiddleLeft;
-            // 
-            // lblTargetKcalExtra
-            // 
-            lblTargetKcalExtra.BackColor = Color.Transparent;
-            lblTargetKcalExtra.Font = new Font("Segoe MDL2 Assets", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            lblTargetKcalExtra.Location = new Point(150, 140);
-            lblTargetKcalExtra.Name = "lblTargetKcalExtra";
-            lblTargetKcalExtra.Size = new Size(53, 20);
-            lblTargetKcalExtra.TabIndex = 3;
-            lblTargetKcalExtra.Text = "355";
-            lblTargetKcalExtra.TextAlign = ContentAlignment.MiddleRight;
-            // 
             // label28
             // 
             label28.AutoSize = true;
@@ -549,17 +521,6 @@
             label28.Size = new Size(100, 20);
             label28.TabIndex = 2;
             label28.Text = "Alınan Kalori :";
-            // 
-            // label29
-            // 
-            label29.AutoSize = true;
-            label29.BackColor = Color.Transparent;
-            label29.Font = new Font("Segoe MDL2 Assets", 15F, FontStyle.Regular, GraphicsUnit.Point);
-            label29.Location = new Point(51, 140);
-            label29.Name = "label29";
-            label29.Size = new Size(100, 20);
-            label29.TabIndex = 2;
-            label29.Text = "Hedef Kalori :";
             // 
             // lblExtra
             // 
@@ -618,7 +579,7 @@
 
         private Panel pnlCurrentKcal;
         private Label label2;
-        private Label label1;
+        private Label lblTargetCalorie;
         private FlowLayoutPanel flpMeals;
         private Panel pnlBreakFast;
         private Label lblCurrentKcalBF;
@@ -650,10 +611,7 @@
         private Panel panel4;
         private Label lblCurrentKcalExtra;
         private Label label25;
-        private Label label26;
-        private Label lblTargetKcalExtra;
         private Label label28;
-        private Label label29;
         private Label lblExtra;
         private FontAwesome.Sharp.IconButton btnAddExtra;
         private DateTimePicker dtpMealDate;

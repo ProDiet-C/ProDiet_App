@@ -15,10 +15,14 @@ namespace WFA_ProDiet.UI
         public ucProTakip()
         {
             InitializeComponent();
+            lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
+            lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
+            lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
+
         }
         private void btnAddBreakFast_Click(object sender, EventArgs e)
         {
-            ShowDialogAddMeals(lblBreakfast.Text,dtpMealDate.Value);
+            ShowDialogAddMeals(lblBreakfast.Text, dtpMealDate.Value);
         }
         private void btnAddLunch_Click(object sender, EventArgs e)
         {
@@ -33,9 +37,9 @@ namespace WFA_ProDiet.UI
         {
             ShowDialogAddMeals(lblExtra.Text, dtpMealDate.Value);
         }
-        private void ShowDialogAddMeals(string mealName,DateTime date)
+        private void ShowDialogAddMeals(string mealName, DateTime date)
         {
-            AddMeals addMeals = new AddMeals(mealName,date);
+            AddMeals addMeals = new AddMeals(mealName, date);
             addMeals.ShowDialog();
         }
     }

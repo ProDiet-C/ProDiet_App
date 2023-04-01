@@ -118,7 +118,7 @@ namespace WFA_ProDiet.UI
             }
 
 
-            
+
         }
 
         private void btnContinue_Click(object sender, EventArgs e)
@@ -186,13 +186,13 @@ namespace WFA_ProDiet.UI
             else // isim uygun ise
             {
                 lblNameInfo.Visible = false; // hata gösterme
-                isNameValid= true; // isim uygun
+                isNameValid = true; // isim uygun
 
             }
         }
         private void txtLastName_TextChanged(object sender, EventArgs e)
         {
-            isLastNameValid= false;
+            isLastNameValid = false;
 
             if (txtLastName.Text.Length < 2) //  isim 2 harften kısa ise ..
             {
@@ -206,7 +206,7 @@ namespace WFA_ProDiet.UI
             }
             else // isim uygun ise
             {
-                isLastNameValid= true;
+                isLastNameValid = true;
                 lblLastNameInfo.Visible = false;
             }
         }
@@ -229,7 +229,7 @@ namespace WFA_ProDiet.UI
             }
             else // email uygun
             {
-                isEmailValid= true;
+                isEmailValid = true;
                 lblEmailInfo.Visible = false;
             }
         }

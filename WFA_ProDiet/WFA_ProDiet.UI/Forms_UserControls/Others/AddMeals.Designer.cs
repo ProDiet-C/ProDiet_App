@@ -122,10 +122,13 @@
             dgvFoods.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvFoods.Dock = DockStyle.Fill;
             dgvFoods.Location = new Point(416, 166);
+            dgvFoods.MultiSelect = false;
             dgvFoods.Name = "dgvFoods";
             dgvFoods.RowTemplate.Height = 25;
+            dgvFoods.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvFoods.Size = new Size(625, 417);
             dgvFoods.TabIndex = 3;
+            dgvFoods.SelectionChanged += dgvFoods_SelectionChanged;
             // 
             // txtSearchFood
             // 
@@ -242,6 +245,7 @@
             btnRemove.Text = "Sil";
             btnRemove.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnRemove_Click;
             // 
             // lstDailyMeal
             // 
