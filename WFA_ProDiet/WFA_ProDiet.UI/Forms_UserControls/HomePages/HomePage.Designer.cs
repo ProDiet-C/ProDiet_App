@@ -99,6 +99,7 @@
             this.btnUser.Size = new System.Drawing.Size(45, 75);
             this.btnUser.TabIndex = 0;
             this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // pnlAllMenu
             // 

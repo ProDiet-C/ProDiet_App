@@ -59,6 +59,10 @@ namespace WFA_ProDiet.UI.HelpersUI
                 Customer.TargetCalorie = 2500;
                 MessageBox.Show("Hedef kiloya ulaşmak için bu süre sağlığınız için uygun değildir. Sizin için en yakın tarihi biz seçtik!");
             }
+            else
+            {
+                MessageBox.Show("Seçtiğiniz tarih uygun.");
+            }
 
             if (Customer.TargetCalorie != Customer.Bmr) // hedef kilosunda ise
             {
