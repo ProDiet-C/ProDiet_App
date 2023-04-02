@@ -68,7 +68,7 @@ namespace WFA_ProDiet.UI
 
         }
 
-        private void dtpMealDate_ValueChanged(object sender, EventArgs e)
+        public void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
             lblTargetCalorie.Text = Current.Customer.TargetCalorie.ToString();
             lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);

@@ -132,7 +132,7 @@ namespace WFA_ProDiet.UI
 
         private void HomePage_Activated(object sender, EventArgs e)
         {
-
+            ucProTakip.dtpMealDate_ValueChanged(sender, e);
         }
     }
 }
