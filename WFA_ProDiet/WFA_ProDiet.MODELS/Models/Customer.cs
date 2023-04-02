@@ -27,23 +27,7 @@ namespace WFA_ProDiet.MODELS.Models
         public double TargetWeight { get; set; } = 70;
         public DateTime TargetDate { get; set; } = DateTime.Now.AddDays(365) ;
         public double TargetCalorie { get; set; } = 1500;
-        private double _bmr;
-        public double Bmr
-        {
-            get { return _bmr; }
-            set
-            {
-                if (Gender == Gender.Man)
-                {
-                    _bmr = (10 * Weight) + (6.25 * Height) - (5 * (DateTime.Now.Year - BirthDate.Year)) + 5;
-                }
-                else
-                {
-                    _bmr = (10 * Weight) + (6.25 * Height) - (5 * (DateTime.Now.Year - BirthDate.Year)) - 161;
-                };
-            }
-        }
-
+        public double Bmr { get; set; } = 1700;
         public virtual ICollection<Meal> Meals { get; set; }
 
 

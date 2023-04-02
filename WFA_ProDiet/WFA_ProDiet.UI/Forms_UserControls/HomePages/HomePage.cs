@@ -27,24 +27,24 @@ namespace WFA_ProDiet.UI
         }
         private void HomePage_Load(object sender, EventArgs e)
         {
-           
-          
+
+
         }
 
         private void AddUserControl(UserControl uc)
         {
             pnlScreen.Controls.Add(uc);
-            uc.Dock= DockStyle.Fill;
+            uc.Dock = DockStyle.Fill;
         }
         private void btnProPlan_Click(object sender, EventArgs e)
         {
-           
+
             RemoveAllUc();
             AddUserControl(ucProPlan);
-        }     
+        }
 
         public void btnProTakip_Click(object sender, EventArgs e)
-        {           
+        {
             RemoveAllUc();
             AddUserControl(ucProTakip);
         }
@@ -80,16 +80,16 @@ namespace WFA_ProDiet.UI
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-            SetPanelVisibility(pnlMeals);        
+            SetPanelVisibility(pnlMeals);
         }
         private void btnFoods_Click(object sender, EventArgs e)
         {
-            SetPanelVisibility(pnlFoods);     
+            SetPanelVisibility(pnlFoods);
         }
 
         private void ıconButton4_Click(object sender, EventArgs e)
         {
-            SetPanelVisibility(pnlReports);        
+            SetPanelVisibility(pnlReports);
         }
 
         /// <summary>
@@ -99,16 +99,16 @@ namespace WFA_ProDiet.UI
         private void SetPanelVisibility(Panel pnlShow)
         {
             pnlShow.Visible = !pnlShow.Visible;
-            var paneller = pnlAllMenu.Controls.OfType<Panel>().Where(x=>x.Tag=="1").ToList();
+            var paneller = pnlAllMenu.Controls.OfType<Panel>().Where(x => x.Tag == "1").ToList();
             foreach (Panel panel in paneller)
             {
-                if (panel!=pnlShow)
+                if (panel != pnlShow)
                 {
                     panel.Visible = false;
                 }
-            }        
-        }    
+            }
+        }
 
-   
+       
     }
 }

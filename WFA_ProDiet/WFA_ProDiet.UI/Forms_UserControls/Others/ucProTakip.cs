@@ -59,7 +59,7 @@ namespace WFA_ProDiet.UI
         {
             AddMeals addMeals = new AddMeals(mealName, date);
             addMeals.ShowDialog();
-           
+
         }
 
         private void pnlCurrentKcal_Paint(object sender, PaintEventArgs e)
@@ -67,12 +67,15 @@ namespace WFA_ProDiet.UI
 
         }
 
-        private void ucProTakip_TabIndexChanged(object sender, EventArgs e)
+        private void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
             lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);
             lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
             lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);
             lblCurrentKcalExtra.Text = GetCurrentKcal(MealName.Extra);
+
         }
+
+       
     }
 }

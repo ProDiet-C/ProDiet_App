@@ -24,11 +24,12 @@ namespace WFA_ProDiet.UI
             lblMealName.Text = mealName;
             dtpMealDate.Value = dateTime;
         }
+        Meal meal = null;
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             txtFood.Text = "";
-            
+            meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
 
         }
 
@@ -37,20 +38,20 @@ namespace WFA_ProDiet.UI
             Close();
 
         }
-
+        
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
             Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
-            Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
-            MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == food && x.Meal == ml).FirstOrDefault();
+           // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
             if (md == null)//bu öğün aynı yemekten ieriyor mu?
             {
                 double quantity = (double)nudQuantity.Value;
-                Meal meal = null;
+               Meal addmeal = null;
                 var control = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).ToList();
                 if (control.Count == 0)
                 {
-                    meal = new()
+                    addmeal = new()
                     {
                         Customer = Current.Customer,
                         CustomerId = Current.Customer.CustomerId,
@@ -62,16 +63,16 @@ namespace WFA_ProDiet.UI
 
                     };
                     meal.Name = GetMealName();
-                    CrudProcess.Add(meal);
+                    CrudProcess.Add(addmeal);
                 }
                 else
                 {
-                    meal = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).FirstOrDefault();
-                    meal.MealCalorie += (food.Calorie * quantity);
-                    meal.MealCarbohydrate += (food.Carbohydrate * quantity);
-                    meal.MealProtein += (food.Protein * quantity);
-                    meal.MealFat += (food.Fat * quantity);
-                    CrudProcess.Edit(meal);
+                    addmeal = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).FirstOrDefault();
+                    addmeal.MealCalorie += (food.Calorie * quantity);
+                   addmeal.MealCarbohydrate += (food.Carbohydrate * quantity);
+                   addmeal.MealProtein += (food.Protein * quantity);
+                    addmeal.MealFat += (food.Fat * quantity);
+                    CrudProcess.Edit(addmeal);
                 }
 
                 MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = meal, MealId = meal.MealId, Quantity = (int)quantity };
@@ -162,7 +163,7 @@ namespace WFA_ProDiet.UI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            Meal meal = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            //meal = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
 
             Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
@@ -193,7 +194,9 @@ namespace WFA_ProDiet.UI
 
         private void lstDailyMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            nudQuantity.Value = ((Food)lstDailyMeal.SelectedItem).MealDetails.Select(x => x.Quantity).FirstOrDefault();
+            Food selectedFood = (Food)lstDailyMeal.SelectedItem;
+            nudQuantity.Value = (selectedFood.MealDetails.Where(x => x.Food == selectedFood&&x.Meal==meal).FirstOrDefault().Quantity);
+
             int foodID = ProDietDb._context.Foods.Where(x => x.FoodId == ((Food)lstDailyMeal.SelectedItem).FoodId).FirstOrDefault().FoodId;
 
             foreach (DataGridViewRow row in dgvFoods.Rows)//row seçme
@@ -258,22 +261,21 @@ namespace WFA_ProDiet.UI
         private void lstMealRefresh()
         {
             lstDailyMeal.Items.Clear();
-            /*CrudProcess.Search<Meal>*/
-            Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            /*CrudProcess.Search<Meal>
+            //Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+           // var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
+            */
 
-            var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
-
-            if (meal != null && mealDetail != null)
+            if (meal != null /*&& mealDetail != null*/)
             {
-                var foods = mealDetail.Select(f => f.Food);
+                var foods = meal.MealDetails.Select(f => f.Food);
                 lstDailyMeal.Items.AddRange(foods.ToArray());
             }
 
         }
 
-        private void lblMealName_Click(object sender, EventArgs e)
+        private void Addmeals_FormClosed(object sender, FormClosedEventArgs e)
         {
-
         }
     }
 }

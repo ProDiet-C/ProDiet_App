@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WFA_ProDiet.UI.HelpersUI;
+using WFA_ProDiet.MODELS.Enums;
 
 namespace WFA_ProDiet.UI
 {
@@ -15,6 +17,15 @@ namespace WFA_ProDiet.UI
         public UcUserInfo()
         {
             InitializeComponent();
+        }
+
+        private void ıconButton2_Click(object sender, EventArgs e)
+        {
+            Current.Customer.FirstName = txtFirstName.Text;
+            Current.Customer.LastName = txtLastName.Text;
+            Current.Customer.BirthDate = dtpBirthDate.Value.Date;
+            Current.Customer.ActivityLevel =(ActivityLevel)cbAktivite.SelectedIndex;
+            Current.Customer.Height = (int)nudHeight.Value;
         }
     }
 }
