@@ -42,7 +42,7 @@ namespace WFA_ProDiet.UI
         {
             
             // Pro Takip butonunu tıklamak için HomePage formuna erişiyoruz
-            var homePage = this.ParentForm as HomePage;
+            var homePage = ParentForm as HomePage;
 
             // HomePage formunda Pro Takip user control'ünü buluyoruz
             var proTakipControl = homePage.Controls.Find("ucProTakip", true).FirstOrDefault() as ucProTakip;
