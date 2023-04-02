@@ -129,5 +129,10 @@ namespace WFA_ProDiet.UI
                 this.Close();
             }         
         }
+
+        private void HomePage_Activated(object sender, EventArgs e)
+        {
+
+        }
     }
 }

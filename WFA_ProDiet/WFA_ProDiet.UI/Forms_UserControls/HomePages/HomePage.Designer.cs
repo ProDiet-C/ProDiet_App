@@ -426,6 +426,7 @@
             this.Name = "HomePage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomePage";
+            this.Activated += new System.EventHandler(this.HomePage_Activated);
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.panel1.ResumeLayout(false);
             this.pnlAllMenu.ResumeLayout(false);
