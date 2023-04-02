@@ -24,7 +24,7 @@ namespace WFA_ProDiet.UI
             lblMealName.Text = mealName;
             dtpMealDate.Value = dateTime;
         }
-        Meal meal ;//günün öğünü birçok yerde kullanılmıştır.
+        Meal meal;//günün öğünü birçok yerde kullanılmıştır.
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
@@ -39,16 +39,17 @@ namespace WFA_ProDiet.UI
             Close();
 
         }
-        
+
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
             Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
-           // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
             if (md == null)//bu öğün aynı yemekten içeriyor mu?
             {
-                double quantity = (double)nudQuantity.Value;
-               Meal addmeal = null;
+                double quantity = food.MeasureType == MeasureType.Gram ? ((double)nudQuantity.Value / 100) : (double)nudQuantity.Value;
+
+                Meal addmeal = null;
                 var control = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).ToList();
                 if (control.Count == 0)
                 {
@@ -70,8 +71,8 @@ namespace WFA_ProDiet.UI
                 {
                     addmeal = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).FirstOrDefault();
                     addmeal.MealCalorie += (food.Calorie * quantity);
-                   addmeal.MealCarbohydrate += (food.Carbohydrate * quantity);
-                   addmeal.MealProtein += (food.Protein * quantity);
+                    addmeal.MealCarbohydrate += (food.Carbohydrate * quantity);
+                    addmeal.MealProtein += (food.Protein * quantity);
                     addmeal.MealFat += (food.Fat * quantity);
                     CrudProcess.Edit(addmeal);
                 }
@@ -169,19 +170,19 @@ namespace WFA_ProDiet.UI
             Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
             MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//aynı yemek kontrolü
-            
+
             MealDetail updateFoodFromMeal = ProDietDb._context.MealDetails.Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//???
 
             if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
             {
                 CrudProcess.Delete(updateFoodFromMeal);
-                int newQuantity = md==null ? ((int)nudQuantity.Value):((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
+                int newQuantity = md == null ? ((int)nudQuantity.Value) : ((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
                 if (md != null)
                 {
                     meal.MealCalorie += ((newFood.Calorie * newQuantity));
                     meal.MealCarbohydrate += (newFood.Carbohydrate * newQuantity);
                     meal.MealProtein += (newFood.Protein * newQuantity);
-                    meal.MealFat += (newFood.Fat * newQuantity) ;
+                    meal.MealFat += (newFood.Fat * newQuantity);
 
                 }
                 else
@@ -208,7 +209,7 @@ namespace WFA_ProDiet.UI
 
         private void lstDailyMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lstDailyMeal.SelectedIndex!=-1)
+            if (lstDailyMeal.SelectedIndex != -1)
             {
                 Food selectedFood = (Food)lstDailyMeal.SelectedItem;
                 nudQuantity.Value = (selectedFood.MealDetails.Where(x => x.Food == selectedFood && x.Meal == meal).FirstOrDefault().Quantity);
@@ -227,7 +228,7 @@ namespace WFA_ProDiet.UI
                     }
                 }
             }
-           
+
             //dgvFoods.CurrentCell = dgvFoods.SelectedCells
             //dgvFoods.CurrentCell = dgvFoods.Rows[((Food)lstDailyMeal.SelectedItem).FoodId - 1].Cells[1];
 
@@ -239,7 +240,7 @@ namespace WFA_ProDiet.UI
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-           // Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            // Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             Food food = ((Food)lstDailyMeal.SelectedItem);
             MealDetail removefood = ProDietDb._context.MealDetails.Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
             if (food != null && meal != null && meal.MealDetails.Count > 1)//bu dehşet oldu usta dokunmayın, food remove olunca sadece cross tablodan silinir, sonuçta ben yemek silmiyorum öğündeki yememği siliyorum...

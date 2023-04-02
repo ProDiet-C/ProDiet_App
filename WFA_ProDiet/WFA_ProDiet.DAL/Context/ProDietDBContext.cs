@@ -48,41 +48,7 @@ namespace WFA_ProDiet.MODELS.Models
         {           
           
 
-            modelBuilder.Entity<Customer>().HasData(
-            new Customer
-            {
-                CustomerId = 1,
-                FirstName = "Oğuz Kağan",
-                LastName = "Ünal",
-                Email = "aaa",
-                Password = "aaa",
-                BirthDate = Convert.ToDateTime("2017-01-01"),
-                Gender = Enums.Gender.Man,                
-                Height = 180,
-                Weight = 45,
-                ActivityLevel = Enums.ActivityLevel.NoActivitiy,
-                TargetWeight = 46,
-                TargetCalorie = 1500,
-                TargetDate = Convert.ToDateTime("2023-02-01")
-                
-            },
-            new Customer
-            {
-                CustomerId = 2,
-                FirstName = "İlkiz",
-                LastName = "Kasapoğlu", 
-                Email = "ikasapoglu@mail.com",
-                Password = "bbb",
-                BirthDate = Convert.ToDateTime("2000-01-01"),
-                Gender = Enums.Gender.Woman,
-                Height = 180,
-                Weight = 45,
-                ActivityLevel = Enums.ActivityLevel.MoreActive,
-                TargetWeight = 46,
-                TargetCalorie = 1500,
-                TargetDate = Convert.ToDateTime("2023-05-01")
-            }
-            );
+           
             modelBuilder.Entity<Category>().HasData(
 
 
@@ -114,19 +80,7 @@ namespace WFA_ProDiet.MODELS.Models
 
 
             );
-            modelBuilder.Entity<Meal>().HasData(
-           new Meal
-           {
-               MealId = 1,
-               Name = Enums.MealName.Breakfast,
-               EatDay = DateTime.Now,
-               MealCalorie = 500,
-               MealCarbohydrate = 200,
-               MealProtein = 100,
-               MealFat = 50,
-               CustomerId = 1
-
-           });
+          
             modelBuilder.Entity<Food>().HasData(
             new Food() { FoodId = 1, Name = "Bıldırcın", MeasureType = Enums.MeasureType.Gram, Protein = 19.6, Carbohydrate = 0, Fat = 12.1, Calorie = 192, CategoryId = 1 },
             new Food() { FoodId = 2, Name = "Güvercin", MeasureType = Enums.MeasureType.Gram, Protein = 18.5, Carbohydrate = 0, Fat = 23.8, Calorie = 294, CategoryId = 1 },
@@ -503,13 +457,7 @@ namespace WFA_ProDiet.MODELS.Models
 
 
             );
-            modelBuilder.Entity<MealDetail>().HasData(
-            new MealDetail
-            {
-                MealId = 1,
-                FoodId = 1,
-                Quantity = 3
-            });
+         
         }
     }
 }
