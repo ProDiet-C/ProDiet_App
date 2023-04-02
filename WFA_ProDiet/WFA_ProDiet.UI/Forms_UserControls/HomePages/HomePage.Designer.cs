@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReturnLogin = new FontAwesome.Sharp.IconButton();
             this.btnUser = new FontAwesome.Sharp.IconButton();
             this.pnlAllMenu = new System.Windows.Forms.Panel();
             this.pnlFoods = new System.Windows.Forms.Panel();
@@ -58,12 +59,30 @@
             this.panel1.BackColor = System.Drawing.Color.Transparent;
             this.panel1.BackgroundImage = global::WFA_ProDiet.UI.Properties.Resources.HomePageBanner;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel1.Controls.Add(this.btnReturnLogin);
             this.panel1.Controls.Add(this.btnUser);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1177, 75);
             this.panel1.TabIndex = 0;
+            // 
+            // btnReturnLogin
+            // 
+            this.btnReturnLogin.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnReturnLogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btnReturnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReturnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnReturnLogin.IconChar = FontAwesome.Sharp.IconChar.ReplyAll;
+            this.btnReturnLogin.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
+            this.btnReturnLogin.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnReturnLogin.IconSize = 45;
+            this.btnReturnLogin.Location = new System.Drawing.Point(1074, 0);
+            this.btnReturnLogin.Name = "btnReturnLogin";
+            this.btnReturnLogin.Size = new System.Drawing.Size(58, 75);
+            this.btnReturnLogin.TabIndex = 1;
+            this.btnReturnLogin.UseVisualStyleBackColor = true;
+            this.btnReturnLogin.Click += new System.EventHandler(this.btnReturnLogin_Click);
             // 
             // btnUser
             // 
@@ -72,12 +91,12 @@
             this.btnUser.FlatAppearance.BorderSize = 0;
             this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUser.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
-            this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnUser.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
             this.btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUser.IconSize = 70;
-            this.btnUser.Location = new System.Drawing.Point(1097, 0);
+            this.btnUser.IconSize = 45;
+            this.btnUser.Location = new System.Drawing.Point(1132, 0);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(80, 75);
+            this.btnUser.Size = new System.Drawing.Size(45, 75);
             this.btnUser.TabIndex = 0;
             this.btnUser.UseVisualStyleBackColor = true;
             // 
@@ -437,5 +456,6 @@
         private FontAwesome.Sharp.IconButton btnFoods;
         public Panel pnlScreen;
         public FontAwesome.Sharp.IconButton btnProTakip;
+        private FontAwesome.Sharp.IconButton btnReturnLogin;
     }
 }

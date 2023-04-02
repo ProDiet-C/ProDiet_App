@@ -120,6 +120,14 @@ namespace WFA_ProDiet.UI
             AddUserControl(userInfo);
         }
 
-     
+        private void btnReturnLogin_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (dialogResult == DialogResult.Yes)
+            {
+                new Form1().Show();
+                this.Close();
+            }         
+        }
     }
 }

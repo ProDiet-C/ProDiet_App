@@ -37,20 +37,19 @@ namespace WFA_ProDiet.UI
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
-
         }
 
         private void btnAddMeal_Click(object sender, EventArgs e)
         {
             Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
             // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
-            MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
+            MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.FoodId == food.FoodId && x.MealId == meal.MealId).FirstOrDefault();
             if (md == null)//bu öğün aynı yemekten içeriyor mu?
             {
                 double quantity = food.MeasureType == MeasureType.Gram ? ((double)nudQuantity.Value / 100) : (double)nudQuantity.Value;
 
-                Meal addmeal = null;
-                var control = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName()).ToList();
+                Meal addmeal;
+                var control = ProDietDb._context.Meals.Where(x => x.EatDay == dtpMealDate.Value.Date && x.Name == GetMealName() && x.CustomerId == Current.Customer.CustomerId).ToList();
                 if (control.Count == 0)
                 {
                     addmeal = new()
