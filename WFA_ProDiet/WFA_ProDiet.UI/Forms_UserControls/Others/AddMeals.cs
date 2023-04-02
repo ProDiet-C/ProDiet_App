@@ -29,7 +29,7 @@ namespace WFA_ProDiet.UI
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             txtFood.Text = "";
-            getDayMeal();
+            GetDayMeal();
             lstMealRefresh();
 
         }
@@ -43,6 +43,7 @@ namespace WFA_ProDiet.UI
         {
             Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
             // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+
             MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.FoodId == food.FoodId && x.MealId == meal.MealId).FirstOrDefault();
             if (md == null)//bu öğün aynı yemekten içeriyor mu?
             {
@@ -282,7 +283,7 @@ namespace WFA_ProDiet.UI
             /*CrudProcess.Search<Meal>
             //Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             */
-            getDayMeal();
+            GetDayMeal();
 
             var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
 
@@ -293,9 +294,11 @@ namespace WFA_ProDiet.UI
             }
 
         }
-        private void getDayMeal()
+        private Meal  GetDayMeal()
         {
-            meal = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+           Meal meal = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+
+            return meal;
         }
         private void Addmeals_FormClosed(object sender, FormClosedEventArgs e)
         {
