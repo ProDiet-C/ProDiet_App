@@ -12,48 +12,64 @@ namespace WFA_ProDiet.UI.HelpersUI
     {
         public static Customer Customer { get; set; }
 
-        public static void CustomerCalculateBmr(Customer customer)
+        public static void CustomerCalculateBmr()
         {
-            if (customer.Gender == Gender.Man)
+            if (Customer.Gender == Gender.Man)
             {
-                customer.Bmr = (10 * customer.Weight) + (6.25 * customer.Height) - (5 * (DateTime.Now.Year - customer.BirthDate.Year)) + 5;
+                Customer.Bmr = (10 * Customer.Weight) + (6.25 * Customer.Height) - (5 * (DateTime.Now.Year - Customer.BirthDate.Year)) + 5;
             }
             else
             {
-                customer.Bmr = (10 * customer.Weight) + (6.25 * customer.Height) - (5 * (DateTime.Now.Year - customer.BirthDate.Year)) - 161;
+                Customer.Bmr = (10 * Customer.Weight) + (6.25 * Customer.Height) - (5 * (DateTime.Now.Year - Customer.BirthDate.Year)) - 161;
             };
+            if (Customer.ActivityLevel == ActivityLevel.NoActivitiy)
+            {
+                Customer.Bmr *= 1;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.LessActive)
+            {
+                Customer.Bmr *= 1.15;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.Active)
+            {
+                Customer.Bmr *= 1.30;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.MoreActive)
+            {
+                Customer.Bmr *= 1.40;
+            }
         }
-        public static void CustomerCalculateNeedKcal(Customer customer)
+        public static void CustomerCalculateNeedKcal()
         {
-            TimeSpan diffDate = customer.TargetDate.Date - DateTime.Now.Date; // gerekli gün sayısı
+            TimeSpan diffDate = Customer.TargetDate.Date - DateTime.Now.Date; // gerekli gün sayısı
             int difDay = diffDate.Days;
 
-            customer.TargetCalorie = customer.Bmr + ((customer.TargetWeight - customer.Weight) * 7000) / (difDay); // günde harcaması gereken kalori
+            Customer.TargetCalorie = Customer.Bmr + ((Customer.TargetWeight - Customer.Weight) * 7000) / (difDay); // günde harcaması gereken kalori
 
-            if (customer.TargetCalorie < 1200)
+            if (Customer.TargetCalorie < 1200)
             {
-                customer.TargetCalorie = 1200;
+                Customer.TargetCalorie = 1200;
                 MessageBox.Show("Hedef kiloya ulaşmak için bu süre sağlığınız için uygun değildir. Sizin için en yakın tarihi biz seçtik!");
             }
-            else if (customer.TargetCalorie > 2500)
+            else if (Customer.TargetCalorie > 2500)
             {
-                customer.TargetCalorie = 2500;
+                Customer.TargetCalorie = 2500;
                 MessageBox.Show("Hedef kiloya ulaşmak için bu süre sağlığınız için uygun değildir. Sizin için en yakın tarihi biz seçtik!");
             }
 
-            if (customer.TargetCalorie != customer.Bmr) // hedef kilosunda ise
+            if (Customer.TargetCalorie != Customer.Bmr) // hedef kilosunda ise
             {
-                difDay = (int)(((customer.TargetWeight - customer.Weight) * 7000) / (customer.TargetCalorie - customer.Bmr)) + 1; // gereken gün hesaplandı 
+                difDay = (int)(((Customer.TargetWeight - Customer.Weight) * 7000) / (Customer.TargetCalorie - Customer.Bmr)) + 1; // gereken gün hesaplandı 
             }
-            customer.TargetDate = DateTime.Now.AddDays(difDay); // datetimepickerda seçildi.
+            Customer.TargetDate = DateTime.Now.AddDays(difDay); // datetimepickerda seçildi.
         }
 
-        public static void CustomerCreatePlan(int height, double currentWeight, double targetWeight, DateTime targetDate, Customer customer)
+        public static void CustomerCreatePlan(int height, double currentWeight, double targetWeight, DateTime targetDate)
         {
-            customer.Height = height;
-            customer.Weight = currentWeight;
-            customer.TargetWeight = targetWeight;
-            customer.TargetDate = targetDate;
+            Customer.Height = height;
+            Customer.Weight = currentWeight;
+            Customer.TargetWeight = targetWeight;
+            Customer.TargetDate = targetDate;
         }
     }
 }

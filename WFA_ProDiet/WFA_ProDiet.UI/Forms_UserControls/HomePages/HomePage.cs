@@ -111,10 +111,12 @@ namespace WFA_ProDiet.UI
         }
         private void btnUser_Click(object sender, EventArgs e)
         {
-
             RemoveAllUc();
             AddUserControl(userInfo);
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0df98cab6e6179a62f99fba83f967c1541fe517e
     }
 }

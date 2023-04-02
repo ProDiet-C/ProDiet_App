@@ -23,7 +23,7 @@ namespace WFA_ProDiet.UI
            ( bazal metobolizma hızı )
            BMR * aktiflik düzeyi katsayısı yaparak günlük yaktığı kalori miktarı bulunur.
          */
-        Customer customer = Current.Customer;
+       
         string messagePlan;
         int messageCounter = 0;
         public ucProPlan()
@@ -32,10 +32,10 @@ namespace WFA_ProDiet.UI
         }
         private void ucProPlan_Load(object sender, EventArgs e)
         {
-            nudHeight.Value = customer.Height;
-            nudCurrentWeight.Value = (decimal)customer.Weight;
-            nudTargetWeight.Value = (decimal)customer.TargetWeight;
-            dtpTargetDate.Value = customer.TargetDate;
+            nudHeight.Value = Current.Customer.Height;
+            nudCurrentWeight.Value = (decimal)Current.Customer.Weight;
+            nudTargetWeight.Value = (decimal)Current.Customer.TargetWeight;
+            dtpTargetDate.Value = Current.Customer.TargetDate;
 
         }
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -58,17 +58,17 @@ namespace WFA_ProDiet.UI
 
             messagePlan = "Planınız oluşturuldu ! \n Ulaşmak istediğiniz kilo için kalorisi düşük ürünler tercih etmelisiniz. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
 
-            Current.CustomerCreatePlan((int)nudHeight.Value, (double)nudCurrentWeight.Value, (double)nudTargetWeight.Value, dtpTargetDate.Value, customer);
-            Current.CustomerCalculateBmr(customer);
-            Current.CustomerCalculateNeedKcal(customer);
-            CrudProcess.Edit(customer);
-            dtpTargetDate.Value = customer.TargetDate;
+            Current.CustomerCreatePlan((int)nudHeight.Value, (double)nudCurrentWeight.Value, (double)nudTargetWeight.Value, dtpTargetDate.Value);
+            Current.CustomerCalculateBmr();
+            Current.CustomerCalculateNeedKcal();
+            CrudProcess.Edit(Current.Customer);
+            dtpTargetDate.Value = Current.Customer.TargetDate;
             lblGainWeigth.Visible = true;
-            if (customer.Weight < customer.TargetWeight) // hedef kilonun üstünde ise
+            if (Current.Customer.Weight < Current.Customer.TargetWeight) // hedef kilonun üstünde ise
             {
                 messagePlan = "Planınız oluşturuldu ! \n Ulaşmak istediğiniz kilo için kalorisi yüksek ürünler tercih etmelisiniz. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
             }
-            else if (customer.Weight == customer.TargetWeight) // hedef kiloda ise
+            else if (Current.Customer.Weight == Current.Customer.TargetWeight) // hedef kiloda ise
             {
                 messagePlan = "Planınız oluşturuldu ! \n Tam olarak hedef kilodasınız tebrikler. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
             }
