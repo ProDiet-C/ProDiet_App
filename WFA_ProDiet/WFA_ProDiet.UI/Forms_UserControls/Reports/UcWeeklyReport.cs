@@ -34,7 +34,6 @@ namespace WFA_ProDiet.UI
         List<Customer> customers = CrudProcess.GetAll<Customer>();
         private void btnCompareByCalorie_Click(object sender, EventArgs e)
         {
-
             DrawAndShowGraph();
         }
 
