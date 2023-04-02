@@ -175,7 +175,7 @@ namespace WFA_ProDiet.UI
             if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
             {
                 CrudProcess.Delete(updateFoodFromMeal);
-                lint newQuantity = md==null ? ((int)nudQuantity.Value):((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
+                int newQuantity = md==null ? ((int)nudQuantity.Value):((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
                 if (md == null)
                 {
                     meal.MealCalorie += ((newFood.Calorie * newQuantity));
