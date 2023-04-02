@@ -246,6 +246,7 @@
             this.btnAddBreakFast.Size = new System.Drawing.Size(285, 63);
             this.btnAddBreakFast.TabIndex = 0;
             this.btnAddBreakFast.UseVisualStyleBackColor = false;
+            this.btnAddBreakFast.Click += new System.EventHandler(this.btnAddBreakFast_Click);
             // 
             // panel2
             // 
@@ -473,6 +474,7 @@
             this.btnAddDinner.Size = new System.Drawing.Size(285, 63);
             this.btnAddDinner.TabIndex = 0;
             this.btnAddDinner.UseVisualStyleBackColor = false;
+            this.btnAddDinner.Click += new System.EventHandler(this.btnAddDinner_Click);
             // 
             // panel4
             // 
@@ -550,6 +552,7 @@
             this.btnAddExtra.Size = new System.Drawing.Size(285, 63);
             this.btnAddExtra.TabIndex = 0;
             this.btnAddExtra.UseVisualStyleBackColor = false;
+            this.btnAddExtra.Click += new System.EventHandler(this.btnAddExtra_Click);
             // 
             // ucProTakip
             // 

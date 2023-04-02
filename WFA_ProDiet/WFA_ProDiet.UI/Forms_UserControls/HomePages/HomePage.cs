@@ -64,6 +64,11 @@ namespace WFA_ProDiet.UI
             RemoveAllUc();
             AddUserControl(ucDailyReport);
         }
+        private void btnWeeklyReport_Click(object sender, EventArgs e)
+        {
+            RemoveAllUc();
+            AddUserControl(new UcWeeklyReport());
+        }
 
         /// <summary>
         /// pnlScreen'in controllerinden tüm UserControlleri siler.
@@ -115,5 +120,6 @@ namespace WFA_ProDiet.UI
             AddUserControl(userInfo);
         }
 
+     
     }
 }

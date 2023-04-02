@@ -67,7 +67,6 @@
             // 
             // btnUser
             // 
-
             this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUser.FlatAppearance.BorderSize = 0;
@@ -81,22 +80,6 @@
             this.btnUser.Size = new System.Drawing.Size(80, 75);
             this.btnUser.TabIndex = 0;
             this.btnUser.UseVisualStyleBackColor = true;
-
-            btnUser.BackgroundImageLayout = ImageLayout.Zoom;
-            btnUser.Dock = DockStyle.Right;
-            btnUser.FlatAppearance.BorderSize = 0;
-            btnUser.FlatStyle = FlatStyle.Flat;
-            btnUser.IconChar = FontAwesome.Sharp.IconChar.CircleUser;
-            btnUser.IconColor = Color.FromArgb(141, 197, 62);
-            btnUser.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnUser.IconSize = 70;
-            btnUser.Location = new Point(1097, 0);
-            btnUser.Name = "btnUser";
-            btnUser.Size = new Size(80, 75);
-            btnUser.TabIndex = 0;
-            btnUser.UseVisualStyleBackColor = true;
-            btnUser.Click += btnUser_Click;
-
             // 
             // pnlAllMenu
             // 
@@ -259,6 +242,7 @@
             this.btnWeeklyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnWeeklyReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnWeeklyReport.UseVisualStyleBackColor = true;
+            this.btnWeeklyReport.Click += new System.EventHandler(this.btnWeeklyReport_Click);
             // 
             // btnDailyReport
             // 
