@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media.Media3D;
+using WFA_ProDiet.BLL;
 using WFA_ProDiet.MODELS.Enums;
 using WFA_ProDiet.MODELS.Models;
 using WFA_ProDiet.UI.HelpersUI;
@@ -15,53 +17,72 @@ namespace WFA_ProDiet.UI
 {
     public partial class ucProPlan : UserControl
     {
-        /*
-         *  Mifflin-St. Jeor formülü 
-
+        /* Mifflin-St. Jeor formülü 
            Erkekler için: BMR = 10 x ağırlık(kg) + 6.25 x boy(cm) - 5 x yaş(yıl) + 5
            Kadınlar için: BMR = 10 x ağırlık(kg) + 6.25 x boy(cm) - 5 x yaş(yıl) - 161
            ( bazal metobolizma hızı )
-
            BMR * aktiflik düzeyi katsayısı yaparak günlük yaktığı kalori miktarı bulunur.
          */
+        Customer customer = Current.Customer;
+        string messagePlan;
+        int messageCounter = 0;
         public ucProPlan()
         {
             InitializeComponent();
         }
-
-        double bmr; // günlük yakılan kalori
-        double alinmasiGerekenKcal; // günlük alınması gereken kalori
-        Customer customer = Current.Customer;
-        private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void ucProPlan_Load(object sender, EventArgs e)
         {
-            new HomePage().btnProTakip_Click(sender, e);
+            nudHeight.Value = customer.Height;
+            nudCurrentWeight.Value = (decimal)customer.Weight;
+            nudTargetWeight.Value = (decimal)customer.TargetWeight;
+            dtpTargetDate.Value = customer.TargetDate;
+
         }
+        private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {           
+            ucProTakip ucProTakip = new ucProTakip();
+            ucProTakip.Visible = true;
+            ucProTakip.BringToFront();
+        }
+
 
         private void btnCreatePlan_Click(object sender, EventArgs e)
         {
-            CalculateNeedKcal();
+
+            messagePlan = "Planınız oluşturuldu ! \n Ulaşmak istediğiniz kilo için kalorisi düşük ürünler tercih etmelisiniz. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
+
+            Current.CustomerCreatePlan((int)nudHeight.Value, (double)nudCurrentWeight.Value, (double)nudTargetWeight.Value, dtpTargetDate.Value, customer);
+            Current.CustomerCalculateBmr(customer);
+            Current.CustomerCalculateNeedKcal(customer);
+            CrudProcess.Edit(customer);
+            dtpTargetDate.Value = customer.TargetDate;
+            lblGainWeigth.Visible = true;
+            if (customer.Weight < customer.TargetWeight) // hedef kilonun üstünde ise
+            {
+                messagePlan = "Planınız oluşturuldu ! \n Ulaşmak istediğiniz kilo için kalorisi yüksek ürünler tercih etmelisiniz. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
+            }
+            else if (customer.Weight == customer.TargetWeight) // hedef kiloda ise
+            {
+                messagePlan = "Planınız oluşturuldu ! \n Tam olarak hedef kilodasınız tebrikler. \n Pro Takip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
+            }
+
+            messageCounter = 0;
+            lnkProTakip.Visible = false;
+            lblGainWeigth.Text = string.Empty;
+            tmrWriteMessage.Start();
+
         }
 
-        private void CalculateNeedKcal()
+        private void tmrWriteMessage_Tick(object sender, EventArgs e)
         {
-
-
-            TimeSpan diffDate = customer.TargetDate.Date - DateTime.Now.Date; // gerekli gün sayısı
-            int difDay = diffDate.Days;
-
-            customer.TargetCalorie = customer.Bmr + ((customer.TargetWeight - customer.Weight) * 7000) / (difDay); // günde harcaması gereken kalori
-
-            if (customer.TargetCalorie < 1200)
+            lblGainWeigth.Text += messagePlan[messageCounter++];
+            if (messageCounter >= messagePlan.Length)
             {
-                customer.TargetCalorie = 1200;
+                lnkProTakip.Visible = true;
+                tmrWriteMessage.Stop();
             }
-            else if (customer.TargetCalorie > 2500)
-            {
-                customer.TargetCalorie = 2500;
-            }
-
-            difDay = (int)(((customer.TargetWeight - customer.Weight) * 7000) / (customer.TargetCalorie - customer.Bmr)) + 1; // gereken gün hesaplandı 
-            dtpTargetDate.Value = DateTime.Now.AddDays(difDay); // datetimepickerda seçildi.
         }
+
+      
     }
 }

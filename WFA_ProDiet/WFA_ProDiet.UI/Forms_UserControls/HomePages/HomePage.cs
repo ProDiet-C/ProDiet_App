@@ -108,7 +108,5 @@ namespace WFA_ProDiet.UI
                 }
             }
         }
-
-       
     }
 }

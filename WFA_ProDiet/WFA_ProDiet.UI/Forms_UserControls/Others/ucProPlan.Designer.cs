@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblInfo = new System.Windows.Forms.Label();
             this.btnCreatePlan = new FontAwesome.Sharp.IconButton();
             this.lnkProTakip = new System.Windows.Forms.LinkLabel();
@@ -40,6 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.tmrWriteMessage = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentWeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTargetWeight)).BeginInit();
@@ -70,7 +72,7 @@
             this.btnCreatePlan.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnCreatePlan.IconColor = System.Drawing.Color.Black;
             this.btnCreatePlan.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnCreatePlan.Location = new System.Drawing.Point(356, 216);
+            this.btnCreatePlan.Location = new System.Drawing.Point(357, 183);
             this.btnCreatePlan.Name = "btnCreatePlan";
             this.btnCreatePlan.Size = new System.Drawing.Size(248, 65);
             this.btnCreatePlan.TabIndex = 12;
@@ -95,7 +97,7 @@
             // 
             this.nudCurrentWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudCurrentWeight.DecimalPlaces = 1;
-            this.nudCurrentWeight.Location = new System.Drawing.Point(494, 103);
+            this.nudCurrentWeight.Location = new System.Drawing.Point(495, 70);
             this.nudCurrentWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.nudCurrentWeight.Maximum = new decimal(new int[] {
             300,
@@ -119,7 +121,7 @@
             // nudHeight
             // 
             this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.nudHeight.Location = new System.Drawing.Point(495, 65);
+            this.nudHeight.Location = new System.Drawing.Point(496, 32);
             this.nudHeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nudHeight.Maximum = new decimal(new int[] {
             250,
@@ -144,7 +146,7 @@
             // 
             this.dtpTargetDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTargetDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpTargetDate.Location = new System.Drawing.Point(494, 175);
+            this.dtpTargetDate.Location = new System.Drawing.Point(495, 142);
             this.dtpTargetDate.Name = "dtpTargetDate";
             this.dtpTargetDate.Size = new System.Drawing.Size(102, 27);
             this.dtpTargetDate.TabIndex = 19;
@@ -153,7 +155,7 @@
             // 
             this.nudTargetWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudTargetWeight.DecimalPlaces = 1;
-            this.nudTargetWeight.Location = new System.Drawing.Point(494, 140);
+            this.nudTargetWeight.Location = new System.Drawing.Point(495, 107);
             this.nudTargetWeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.nudTargetWeight.Maximum = new decimal(new int[] {
             300,
@@ -177,7 +179,7 @@
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Location = new System.Drawing.Point(334, 103);
+            this.label1.Location = new System.Drawing.Point(335, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 27);
             this.label1.TabIndex = 13;
@@ -187,18 +189,17 @@
             // lblGainWeigth
             // 
             this.lblGainWeigth.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblGainWeigth.Location = new System.Drawing.Point(84, 325);
+            this.lblGainWeigth.Location = new System.Drawing.Point(3, 284);
             this.lblGainWeigth.Name = "lblGainWeigth";
-            this.lblGainWeigth.Size = new System.Drawing.Size(813, 20);
+            this.lblGainWeigth.Size = new System.Drawing.Size(954, 69);
             this.lblGainWeigth.TabIndex = 18;
-            this.lblGainWeigth.Text = "Ulaşmak istediğiniz kilo için kalorisi yüksek ürünler tercih etmelisiniz. Pro Tak" +
-    "ip  linkine tıklayarak sürecinizi yönetebilirsiniz.";
+            this.lblGainWeigth.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblGainWeigth.Visible = false;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Location = new System.Drawing.Point(337, 140);
+            this.label3.Location = new System.Drawing.Point(338, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(140, 27);
             this.label3.TabIndex = 14;
@@ -208,7 +209,7 @@
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.Location = new System.Drawing.Point(337, 65);
+            this.label2.Location = new System.Drawing.Point(338, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 27);
             this.label2.TabIndex = 15;
@@ -218,12 +219,17 @@
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.Location = new System.Drawing.Point(377, 175);
+            this.label4.Location = new System.Drawing.Point(378, 142);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 27);
             this.label4.TabIndex = 16;
             this.label4.Text = "Hedef Tarihi :";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // tmrWriteMessage
+            // 
+            this.tmrWriteMessage.Interval = 30;
+            this.tmrWriteMessage.Tick += new System.EventHandler(this.tmrWriteMessage_Tick);
             // 
             // ucProPlan
             // 
@@ -246,6 +252,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucProPlan";
             this.Size = new System.Drawing.Size(960, 560);
+            this.Load += new System.EventHandler(this.ucProPlan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCurrentWeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTargetWeight)).EndInit();
@@ -266,5 +273,6 @@
         private Label label3;
         private Label label2;
         private Label label4;
+        private System.Windows.Forms.Timer tmrWriteMessage;
     }
 }
