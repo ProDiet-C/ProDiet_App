@@ -97,18 +97,48 @@
             this.nudCurrentWeight.DecimalPlaces = 1;
             this.nudCurrentWeight.Location = new System.Drawing.Point(494, 103);
             this.nudCurrentWeight.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.nudCurrentWeight.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudCurrentWeight.Minimum = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
             this.nudCurrentWeight.Name = "nudCurrentWeight";
             this.nudCurrentWeight.Size = new System.Drawing.Size(102, 27);
             this.nudCurrentWeight.TabIndex = 9;
+            this.nudCurrentWeight.Value = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
             // 
             // nudHeight
             // 
             this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.nudHeight.Location = new System.Drawing.Point(495, 65);
             this.nudHeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.nudHeight.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nudHeight.Minimum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
             this.nudHeight.Name = "nudHeight";
             this.nudHeight.Size = new System.Drawing.Size(101, 27);
             this.nudHeight.TabIndex = 10;
+            this.nudHeight.Value = new decimal(new int[] {
+            170,
+            0,
+            0,
+            0});
             // 
             // dtpTargetDate
             // 
@@ -125,9 +155,24 @@
             this.nudTargetWeight.DecimalPlaces = 1;
             this.nudTargetWeight.Location = new System.Drawing.Point(494, 140);
             this.nudTargetWeight.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
+            this.nudTargetWeight.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudTargetWeight.Minimum = new decimal(new int[] {
+            35,
+            0,
+            0,
+            0});
             this.nudTargetWeight.Name = "nudTargetWeight";
             this.nudTargetWeight.Size = new System.Drawing.Size(102, 27);
             this.nudTargetWeight.TabIndex = 11;
+            this.nudTargetWeight.Value = new decimal(new int[] {
+            70,
+            0,
+            0,
+            0});
             // 
             // label1
             // 
