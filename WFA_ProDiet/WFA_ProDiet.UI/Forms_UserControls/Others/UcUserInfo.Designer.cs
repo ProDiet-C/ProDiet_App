@@ -32,7 +32,7 @@
             label2 = new Label();
             txtFirstName = new TextBox();
             label1 = new Label();
-            textBox3 = new TextBox();
+            txtEmail = new TextBox();
             label3 = new Label();
             label4 = new Label();
             label5 = new Label();
@@ -44,7 +44,7 @@
             nudWeight = new NumericUpDown();
             label6 = new Label();
             label9 = new Label();
-            pictureBox1 = new PictureBox();
+            pbUserPic = new PictureBox();
             ıconButton1 = new FontAwesome.Sharp.IconButton();
             ıconButton2 = new FontAwesome.Sharp.IconButton();
             panel1 = new Panel();
@@ -53,7 +53,7 @@
             pictureBox2 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
             ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbUserPic).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -94,15 +94,15 @@
             label1.Text = "Ad :";
             label1.TextAlign = ContentAlignment.MiddleRight;
             // 
-            // textBox3
+            // txtEmail
             // 
-            textBox3.Enabled = false;
-            textBox3.Location = new Point(180, 141);
-            textBox3.Margin = new Padding(4);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(230, 27);
-            textBox3.TabIndex = 0;
+            txtEmail.Enabled = false;
+            txtEmail.Location = new Point(180, 141);
+            txtEmail.Margin = new Padding(4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
+            txtEmail.Size = new Size(230, 27);
+            txtEmail.TabIndex = 0;
             // 
             // label3
             // 
@@ -209,17 +209,17 @@
             label9.TabIndex = 5;
             label9.Text = "kg";
             // 
-            // pictureBox1
+            // pbUserPic
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBox1.Image = Properties.Resources.WhatsApp_Image_2023_03_03_at_14_29_51;
-            pictureBox1.Location = new Point(144, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(121, 99);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 6;
-            pictureBox1.TabStop = false;
+            pbUserPic.BackColor = Color.Transparent;
+            pbUserPic.BorderStyle = BorderStyle.Fixed3D;
+            pbUserPic.Image = Properties.Resources.WhatsApp_Image_2023_03_03_at_14_29_51;
+            pbUserPic.Location = new Point(144, 3);
+            pbUserPic.Name = "pbUserPic";
+            pbUserPic.Size = new Size(121, 99);
+            pbUserPic.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbUserPic.TabIndex = 6;
+            pbUserPic.TabStop = false;
             // 
             // ıconButton1
             // 
@@ -235,6 +235,7 @@
             ıconButton1.Size = new Size(25, 24);
             ıconButton1.TabIndex = 7;
             ıconButton1.UseVisualStyleBackColor = false;
+            ıconButton1.Click += ıconButton1_Click;
             // 
             // ıconButton2
             // 
@@ -262,8 +263,8 @@
             panel1.Controls.Add(rbFemale);
             panel1.Controls.Add(rbMale);
             panel1.Controls.Add(ıconButton1);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(pbUserPic);
             panel1.Controls.Add(ıconButton2);
             panel1.Controls.Add(txtLastName);
             panel1.Controls.Add(txtFirstName);
@@ -331,7 +332,7 @@
             Size = new Size(960, 560);
             ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
             ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbUserPic).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -344,7 +345,7 @@
         private Label label2;
         private TextBox txtFirstName;
         private Label label1;
-        private TextBox textBox3;
+        private TextBox txtEmail;
         private Label label3;
         private Label label4;
         private Label label5;
@@ -356,7 +357,7 @@
         private NumericUpDown nudWeight;
         private Label label6;
         private Label label9;
-        private PictureBox pictureBox1;
+        private PictureBox pbUserPic;
         private FontAwesome.Sharp.IconButton ıconButton1;
         private FontAwesome.Sharp.IconButton ıconButton2;
         private Panel panel1;

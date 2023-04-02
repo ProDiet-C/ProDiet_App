@@ -21,6 +21,7 @@ namespace WFA_ProDiet.UI
         UcExtraReports ucEkstraReports = new UcExtraReports();
         UcEditFoods ucEditFoods = new UcEditFoods();
         UcDailyReport ucDailyReport = new UcDailyReport();
+        UcUserInfo userInfo=new UcUserInfo();
         public HomePage()
         {
             InitializeComponent();
@@ -108,5 +109,15 @@ namespace WFA_ProDiet.UI
                 }
             }
         }
+<<<<<<< Updated upstream
+=======
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+            RemoveAllUc();
+            AddUserControl(userInfo);
+        }
+>>>>>>> Stashed changes
     }
 }
