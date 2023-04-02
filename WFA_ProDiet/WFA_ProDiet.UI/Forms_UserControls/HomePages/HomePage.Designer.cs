@@ -67,7 +67,7 @@
             // 
             // btnUser
             // 
-<<<<<<< Updated upstream
+
             this.btnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUser.FlatAppearance.BorderSize = 0;
@@ -81,7 +81,7 @@
             this.btnUser.Size = new System.Drawing.Size(80, 75);
             this.btnUser.TabIndex = 0;
             this.btnUser.UseVisualStyleBackColor = true;
-=======
+
             btnUser.BackgroundImageLayout = ImageLayout.Zoom;
             btnUser.Dock = DockStyle.Right;
             btnUser.FlatAppearance.BorderSize = 0;
@@ -96,7 +96,7 @@
             btnUser.TabIndex = 0;
             btnUser.UseVisualStyleBackColor = true;
             btnUser.Click += btnUser_Click;
->>>>>>> Stashed changes
+
             // 
             // pnlAllMenu
             // 

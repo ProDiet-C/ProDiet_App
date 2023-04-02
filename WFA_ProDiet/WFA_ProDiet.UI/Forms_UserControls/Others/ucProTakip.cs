@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WFA_ProDiet.BLL;
 using WFA_ProDiet.MODELS.Enums;
 using WFA_ProDiet.MODELS.Models;
+using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
 {
@@ -18,6 +19,7 @@ namespace WFA_ProDiet.UI
         public ucProTakip()
         {
             InitializeComponent();
+            lblTargetCalorie.Text = Current.Customer.TargetCalorie.ToString();
             lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
             lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
             lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();

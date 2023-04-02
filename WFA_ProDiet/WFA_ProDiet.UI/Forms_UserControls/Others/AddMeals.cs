@@ -62,7 +62,7 @@ namespace WFA_ProDiet.UI
                         MealFat = (food.Fat * quantity)
 
                     };
-                    meal.Name = GetMealName();
+                    addmeal.Name = GetMealName();
                     CrudProcess.Add(addmeal);
                 }
                 else
@@ -75,7 +75,7 @@ namespace WFA_ProDiet.UI
                     CrudProcess.Edit(addmeal);
                 }
 
-                MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = meal, MealId = meal.MealId, Quantity = (int)quantity };
+                MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = addmeal, MealId = meal.MealId, Quantity = (int)quantity };
 
                 CrudProcess.Add(mealDetail);
             }
@@ -221,7 +221,7 @@ namespace WFA_ProDiet.UI
         }
         private void btnRemove_Click(object sender, EventArgs e)
         {
-            Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+           // Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             Food food = ((Food)lstDailyMeal.SelectedItem);
             MealDetail removefood = ProDietDb._context.MealDetails.Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
             if (food != null && meal != null && meal.MealDetails.Count > 1)//bu dehşet oldu usta dokunmayın, food remove olunca sadece cross tablodan silinir, sonuçta ben yemek silmiyorum öğündeki yememği siliyorum...
@@ -263,10 +263,10 @@ namespace WFA_ProDiet.UI
             lstDailyMeal.Items.Clear();
             /*CrudProcess.Search<Meal>
             //Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
-           // var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
             */
+            var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
 
-            if (meal != null /*&& mealDetail != null*/)
+            if (meal != null && mealDetail != null)
             {
                 var foods = meal.MealDetails.Select(f => f.Food);
                 lstDailyMeal.Items.AddRange(foods.ToArray());
