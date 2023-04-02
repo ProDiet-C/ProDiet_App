@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WFA_ProDiet.MODELS.Enums;
 using WFA_ProDiet.MODELS.Models;
+using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
 {
@@ -30,7 +31,7 @@ namespace WFA_ProDiet.UI
 
         double bmr; // günlük yakılan kalori
         double alinmasiGerekenKcal; // günlük alınması gereken kalori
-        Customer customer;
+        Customer customer = Current.Customer;
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             new HomePage().btnProTakip_Click(sender, e);
@@ -38,10 +39,10 @@ namespace WFA_ProDiet.UI
 
         private void btnCreatePlan_Click(object sender, EventArgs e)
         {
-            CalculateNeedKcal(customer);
+            CalculateNeedKcal();
         }
 
-        private void CalculateNeedKcal(Customer customer)
+        private void CalculateNeedKcal()
         {
 
 
