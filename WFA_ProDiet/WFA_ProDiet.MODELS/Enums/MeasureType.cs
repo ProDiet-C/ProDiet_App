@@ -8,7 +8,7 @@ namespace WFA_ProDiet.MODELS.Enums
 {
     public enum MeasureType
     {
-        Gram,
+        GramX100,
         Piece,
         Slice,
         Cup,
