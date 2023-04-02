@@ -114,9 +114,6 @@ namespace WFA_ProDiet.UI
             RemoveAllUc();
             AddUserControl(userInfo);
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> 0df98cab6e6179a62f99fba83f967c1541fe517e
     }
 }

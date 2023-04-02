@@ -61,7 +61,6 @@ namespace WFA_ProDiet.UI
         {
             AddMeals addMeals = new AddMeals(mealName, date);
             addMeals.ShowDialog();
-
         }
 
         private void pnlCurrentKcal_Paint(object sender, PaintEventArgs e)
