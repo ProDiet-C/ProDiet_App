@@ -45,9 +45,10 @@ namespace WFA_ProDiet.UI
         {
 
 
-            TimeSpan diffDate = customer.TargetDate.Date - DateTime.Now.Date;
+            TimeSpan diffDate = customer.TargetDate.Date - DateTime.Now.Date; // gerekli gün sayısı
+            int difDay = diffDate.Days;
 
-            customer.TargetCalorie = customer.Bmr + ((customer.TargetWeight - customer.Weight) * 7000) / (diffDate.Days);
+            customer.TargetCalorie = customer.Bmr + ((customer.TargetWeight - customer.Weight) * 7000) / (difDay); // günde harcaması gereken kalori
 
             if (customer.TargetCalorie < 1200)
             {
@@ -58,7 +59,8 @@ namespace WFA_ProDiet.UI
                 customer.TargetCalorie = 2500;
             }
 
-
+            difDay = (int)(((customer.TargetWeight - customer.Weight) * 7000) / (customer.TargetCalorie - customer.Bmr)) + 1; // gereken gün hesaplandı 
+            dtpTargetDate.Value = DateTime.Now.AddDays(difDay); // datetimepickerda seçildi.
         }
     }
 }
