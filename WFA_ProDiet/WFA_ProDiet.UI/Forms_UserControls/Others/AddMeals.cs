@@ -24,13 +24,13 @@ namespace WFA_ProDiet.UI
             lblMealName.Text = mealName;
             dtpMealDate.Value = dateTime;
         }
-        Meal meal = null;
+        Meal meal ;
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             txtFood.Text = "";
-            lstMealRefresh();
             meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            lstMealRefresh();
 
         }
 

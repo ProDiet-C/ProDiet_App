@@ -25,6 +25,7 @@ namespace WFA_ProDiet.UI
             txtLastName.Text = Current.Customer.LastName;
             dtpBirthDate.Value = Current.Customer.BirthDate;
             nudHeight.Value = Current.Customer.Height;
+            cbAktivite.SelectedIndex = (int)Current.Customer.ActivityLevel;
             nudWeight.Value = (decimal)Current.Customer.Weight;
             try
             {pbUserPic.Image = Image.FromFile(Current.Customer.PicturePath); }
