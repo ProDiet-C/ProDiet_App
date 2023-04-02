@@ -147,6 +147,7 @@
             this.dtpTargetDate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpTargetDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpTargetDate.Location = new System.Drawing.Point(495, 142);
+            this.dtpTargetDate.MinDate = new System.DateTime(2023, 4, 2, 0, 0, 0, 0);
             this.dtpTargetDate.Name = "dtpTargetDate";
             this.dtpTargetDate.Size = new System.Drawing.Size(102, 27);
             this.dtpTargetDate.TabIndex = 19;

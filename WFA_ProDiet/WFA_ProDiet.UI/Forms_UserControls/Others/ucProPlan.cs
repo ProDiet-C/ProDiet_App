@@ -37,6 +37,10 @@ namespace WFA_ProDiet.UI
             nudTargetWeight.Value = (decimal)Current.Customer.TargetWeight;
             dtpTargetDate.Value = Current.Customer.TargetDate;
 
+            dtpTargetDate.MinDate = DateTime.Today.AddDays(1);
+            // DateTimePicker kontrolünün MinDate özelliğini bugünün tarihi olarak ayarlayın
+
+
         }
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -21,22 +21,23 @@ namespace WFA_ProDiet.UI.HelpersUI
             else
             {
                 Customer.Bmr = (10 * Customer.Weight) + (6.25 * Customer.Height) - (5 * (DateTime.Now.Year - Customer.BirthDate.Year)) - 161;
-            };
+            }
+
             if (Customer.ActivityLevel == ActivityLevel.NoActivitiy)
             {
-                Customer.Bmr *= 1;
+                Customer.Bmr += 0;
             }
             else if (Customer.ActivityLevel == ActivityLevel.LessActive)
             {
-                Customer.Bmr *= 1.15;
+                Customer.Bmr += 100;
             }
             else if (Customer.ActivityLevel == ActivityLevel.Active)
             {
-                Customer.Bmr *= 1.30;
+                Customer.Bmr += 200;
             }
             else if (Customer.ActivityLevel == ActivityLevel.MoreActive)
             {
-                Customer.Bmr *= 1.40;
+                Customer.Bmr += 400;
             }
         }
         public static void CustomerCalculateNeedKcal()
@@ -45,6 +46,8 @@ namespace WFA_ProDiet.UI.HelpersUI
             int difDay = diffDate.Days;
 
             Customer.TargetCalorie = Customer.Bmr + ((Customer.TargetWeight - Customer.Weight) * 7000) / (difDay); // günde harcaması gereken kalori
+
+          
 
             if (Customer.TargetCalorie < 1200)
             {
@@ -59,7 +62,7 @@ namespace WFA_ProDiet.UI.HelpersUI
 
             if (Customer.TargetCalorie != Customer.Bmr) // hedef kilosunda ise
             {
-                difDay = (int)(((Customer.TargetWeight - Customer.Weight) * 7000) / (Customer.TargetCalorie - Customer.Bmr)) + 1; // gereken gün hesaplandı 
+                difDay = (int)(((Customer.TargetWeight - Customer.Weight) * 7000) / (Customer.TargetCalorie - Customer.Bmr)); // gereken gün hesaplandı 
             }
             Customer.TargetDate = DateTime.Now.AddDays(difDay); // datetimepickerda seçildi.
         }
