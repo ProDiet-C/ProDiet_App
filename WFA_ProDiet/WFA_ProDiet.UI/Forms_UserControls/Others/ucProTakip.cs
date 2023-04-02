@@ -31,7 +31,7 @@ namespace WFA_ProDiet.UI
 
         private string GetCurrentKcal(MealName mealName)
         {
-            Meal calorie = CrudProcess.Search<Meal>(x => x.EatDay == dtpMealDate.Value.Date && x.Name == mealName).FirstOrDefault();
+            Meal calorie = CrudProcess.Search<Meal>(x => x.EatDay == dtpMealDate.Value.Date && x.Name == mealName && x.CustomerId == Current.Customer.CustomerId).FirstOrDefault();
             if (calorie != null)
             {
                 return calorie.MealCalorie.ToString();

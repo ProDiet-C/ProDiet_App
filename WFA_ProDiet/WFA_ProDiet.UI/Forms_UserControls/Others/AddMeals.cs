@@ -24,12 +24,12 @@ namespace WFA_ProDiet.UI
             lblMealName.Text = mealName;
             dtpMealDate.Value = dateTime;
         }
-        Meal meal ;
+        Meal meal ;//günün öğünü birçok yerde kullanılmıştır.
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             txtFood.Text = "";
-            meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+            getDayMeal();
             lstMealRefresh();
 
         }
@@ -168,20 +168,33 @@ namespace WFA_ProDiet.UI
 
             Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
-
+            MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//aynı yemek kontrolü
+            
             MealDetail updateFoodFromMeal = ProDietDb._context.MealDetails.Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//???
 
             if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
             {
                 CrudProcess.Delete(updateFoodFromMeal);
+                lint newQuantity = md==null ? ((int)nudQuantity.Value):((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
+                if (md == null)
+                {
+                    meal.MealCalorie += ((newFood.Calorie * newQuantity));
+                    meal.MealCarbohydrate += (newFood.Carbohydrate * newQuantity);
+                    meal.MealProtein += (newFood.Protein * newQuantity);
+                    meal.MealFat += (newFood.Fat * newQuantity) ;
 
-                updateFoodFromMeal.FoodId = newFood.FoodId;
-                updateFoodFromMeal.Food = newFood;
-                //calori güncelleme
-                meal.MealCalorie += ((newFood.Calorie * (double)nudQuantity.Value) - (removeFood.Calorie * updateFoodFromMeal.Quantity));
-                meal.MealCarbohydrate += ((newFood.Carbohydrate * (double)nudQuantity.Value) - (removeFood.Carbohydrate * updateFoodFromMeal.Quantity));
-                meal.MealProtein += ((newFood.Protein * (double)nudQuantity.Value) - (removeFood.Protein * updateFoodFromMeal.Quantity));
-                meal.MealFat += ((newFood.Fat * (double)nudQuantity.Value) - (removeFood.Fat * updateFoodFromMeal.Quantity));
+                }
+                else
+                {
+                    updateFoodFromMeal.FoodId = newFood.FoodId;
+                    updateFoodFromMeal.Food = newFood;
+                    //calori güncelleme
+                    meal.MealCalorie += ((newFood.Calorie * newQuantity) - (removeFood.Calorie * updateFoodFromMeal.Quantity));
+                    meal.MealCarbohydrate += ((newFood.Carbohydrate * newQuantity) - (removeFood.Carbohydrate * updateFoodFromMeal.Quantity));
+                    meal.MealProtein += ((newFood.Protein * newQuantity) - (removeFood.Protein * updateFoodFromMeal.Quantity));
+                    meal.MealFat += ((newFood.Fat * newQuantity) - (removeFood.Fat * updateFoodFromMeal.Quantity));
+
+                }
 
                 updateFoodFromMeal.Quantity = (int)nudQuantity.Value;
 
@@ -195,22 +208,26 @@ namespace WFA_ProDiet.UI
 
         private void lstDailyMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Food selectedFood = (Food)lstDailyMeal.SelectedItem;
-            nudQuantity.Value = (selectedFood.MealDetails.Where(x => x.Food == selectedFood&&x.Meal==meal).FirstOrDefault().Quantity);
-
-            int foodID = ProDietDb._context.Foods.Where(x => x.FoodId == ((Food)lstDailyMeal.SelectedItem).FoodId).FirstOrDefault().FoodId;
-
-            foreach (DataGridViewRow row in dgvFoods.Rows)//row seçme
+            if (lstDailyMeal.SelectedIndex!=-1)
             {
-                if ((int)row.Cells["FoodId"].Value == foodID)
+                Food selectedFood = (Food)lstDailyMeal.SelectedItem;
+                nudQuantity.Value = (selectedFood.MealDetails.Where(x => x.Food == selectedFood && x.Meal == meal).FirstOrDefault().Quantity);
+
+                int foodID = ProDietDb._context.Foods.Where(x => x.FoodId == ((Food)lstDailyMeal.SelectedItem).FoodId).FirstOrDefault().FoodId;
+
+                foreach (DataGridViewRow row in dgvFoods.Rows)//row seçme
                 {
-                    dgvFoods.CurrentCell = row.Cells[0];
-                    row.Selected = true;
-                    txtFood.Text = row.Cells["Name"].Value.ToString();
-                    lblMeasure.Text = row.Cells["MeasureType"].Value.ToString();
-                    break;
+                    if ((int)row.Cells["FoodId"].Value == foodID)
+                    {
+                        dgvFoods.CurrentCell = row.Cells[0];
+                        row.Selected = true;
+                        txtFood.Text = row.Cells["Name"].Value.ToString();
+                        lblMeasure.Text = row.Cells["MeasureType"].Value.ToString();
+                        break;
+                    }
                 }
             }
+           
             //dgvFoods.CurrentCell = dgvFoods.SelectedCells
             //dgvFoods.CurrentCell = dgvFoods.Rows[((Food)lstDailyMeal.SelectedItem).FoodId - 1].Cells[1];
 
@@ -265,6 +282,8 @@ namespace WFA_ProDiet.UI
             /*CrudProcess.Search<Meal>
             //Meal meal = ProDietDb._context.Meals.Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             */
+            getDayMeal();
+
             var mealDetail = CrudProcess.Search<MealDetail>(x => x.Meal == meal);
 
             if (meal != null && mealDetail != null)
@@ -274,7 +293,10 @@ namespace WFA_ProDiet.UI
             }
 
         }
-
+        private void getDayMeal()
+        {
+            meal = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
+        }
         private void Addmeals_FormClosed(object sender, FormClosedEventArgs e)
         {
         }
