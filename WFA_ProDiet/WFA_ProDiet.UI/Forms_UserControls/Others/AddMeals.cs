@@ -44,7 +44,7 @@ namespace WFA_ProDiet.UI
             Food food = (Food)dgvFoods.CurrentRow.DataBoundItem;
            // Meal ml = CrudProcess.GetAll<Meal>().Where(x => x.EatDay.Date == dtpMealDate.Value.Date && x.Name == GetMealName() && x.Customer == Current.Customer).FirstOrDefault();
             MealDetail md = CrudProcess.GetAll<MealDetail>().Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
-            if (md == null)//bu öğün aynı yemekten ieriyor mu?
+            if (md == null)//bu öğün aynı yemekten içeriyor mu?
             {
                 double quantity = (double)nudQuantity.Value;
                Meal addmeal = null;
@@ -75,7 +75,7 @@ namespace WFA_ProDiet.UI
                     CrudProcess.Edit(addmeal);
                 }
 
-                MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = addmeal, MealId = meal.MealId, Quantity = (int)quantity };
+                MealDetail mealDetail = new() { Food = food, FoodId = food.FoodId, Meal = addmeal, MealId = addmeal.MealId, Quantity = (int)quantity };
 
                 CrudProcess.Add(mealDetail);
             }
