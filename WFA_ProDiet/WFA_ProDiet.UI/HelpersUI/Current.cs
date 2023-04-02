@@ -22,6 +22,22 @@ namespace WFA_ProDiet.UI.HelpersUI
             {
                 Customer.Bmr = (10 * Customer.Weight) + (6.25 * Customer.Height) - (5 * (DateTime.Now.Year - Customer.BirthDate.Year)) - 161;
             };
+            if (Customer.ActivityLevel == ActivityLevel.NoActivitiy)
+            {
+                Customer.Bmr *= 1;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.LessActive)
+            {
+                Customer.Bmr *= 1.15;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.Active)
+            {
+                Customer.Bmr *= 1.30;
+            }
+            else if (Customer.ActivityLevel == ActivityLevel.MoreActive)
+            {
+                Customer.Bmr *= 1.40;
+            }
         }
         public static void CustomerCalculateNeedKcal()
         {
