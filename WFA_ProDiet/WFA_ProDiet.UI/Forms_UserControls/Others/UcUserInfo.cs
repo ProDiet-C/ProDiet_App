@@ -24,7 +24,6 @@ namespace WFA_ProDiet.UI
             txtFirstName.Text = Current.Customer.FirstName;
             txtLastName.Text = Current.Customer.LastName;
             dtpBirthDate.Value = Current.Customer.BirthDate;
-            cbAktivite.SelectedIndex =(int) Current.Customer.ActivityLevel;
             nudHeight.Value = Current.Customer.Height;
             nudWeight.Value = (decimal)Current.Customer.Weight;
             try

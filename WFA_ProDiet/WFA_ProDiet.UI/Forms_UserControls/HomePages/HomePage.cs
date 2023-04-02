@@ -109,15 +109,10 @@ namespace WFA_ProDiet.UI
                 }
             }
         }
-<<<<<<< Updated upstream
-=======
-
         private void btnUser_Click(object sender, EventArgs e)
         {
-
             RemoveAllUc();
             AddUserControl(userInfo);
         }
->>>>>>> Stashed changes
     }
 }
