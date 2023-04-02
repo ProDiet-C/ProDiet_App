@@ -39,10 +39,17 @@ namespace WFA_ProDiet.UI
 
         }
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {           
-            ucProTakip ucProTakip = new ucProTakip();
-            ucProTakip.Visible = true;
-            ucProTakip.BringToFront();
+        {
+            
+            // Pro Takip butonunu tıklamak için HomePage formuna erişiyoruz
+            var homePage = this.ParentForm as HomePage;
+
+            // HomePage formunda Pro Takip user control'ünü buluyoruz
+            var proTakipControl = homePage.Controls.Find("ucProTakip", true).FirstOrDefault() as ucProTakip;
+
+            // Pro Takip user control'ünün butonunu tıklıyoruz
+            homePage.btnProTakip_Click(proTakipControl, EventArgs.Empty);
+
         }
 
 
