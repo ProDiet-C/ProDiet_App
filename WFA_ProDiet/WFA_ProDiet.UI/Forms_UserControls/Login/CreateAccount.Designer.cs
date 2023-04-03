@@ -50,6 +50,7 @@
             this.cbActivityLevel = new System.Windows.Forms.ComboBox();
             this.btnContinue = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblText = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblPasswordCheckInfo = new System.Windows.Forms.Label();
             this.lblPasswordInfo = new System.Windows.Forms.Label();
@@ -356,6 +357,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblText);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.lblWelcome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -364,6 +366,15 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(669, 571);
             this.panel2.TabIndex = 1;
+            // 
+            // lblText
+            // 
+            this.lblText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.lblText.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblText.Location = new System.Drawing.Point(287, 65);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(370, 40);
+            this.lblText.TabIndex = 6;
             // 
             // panel4
             // 
@@ -591,7 +602,6 @@
             // 
             // tmrWelcome
             // 
-            this.tmrWelcome.Interval = 50;
             this.tmrWelcome.Tick += new System.EventHandler(this.tmrWelcome_Tick);
             // 
             // tmrOpenForm
@@ -668,5 +678,6 @@
         private Label lblPasswordInfo;
         private Label lblEmailInfo;
         private Label lblLastNameInfo;
+        private Label lblText;
     }
 }

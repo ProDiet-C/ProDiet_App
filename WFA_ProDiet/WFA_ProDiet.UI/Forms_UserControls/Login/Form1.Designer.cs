@@ -39,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lnkCreateAccount = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlCommercial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCommercial)).BeginInit();
@@ -55,7 +53,7 @@
             this.pnlCommercial.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlCommercial.Location = new System.Drawing.Point(0, 0);
             this.pnlCommercial.Name = "pnlCommercial";
-            this.pnlCommercial.Size = new System.Drawing.Size(415, 583);
+            this.pnlCommercial.Size = new System.Drawing.Size(415, 455);
             this.pnlCommercial.TabIndex = 0;
             // 
             // pbCommercial
@@ -79,7 +77,7 @@
             this.pnlUserLogin.Controls.Add(this.label1);
             this.pnlUserLogin.Controls.Add(this.lnkCreateAccount);
             this.pnlUserLogin.Controls.Add(this.label2);
-            this.pnlUserLogin.Location = new System.Drawing.Point(17, 30);
+            this.pnlUserLogin.Location = new System.Drawing.Point(19, 155);
             this.pnlUserLogin.Name = "pnlUserLogin";
             this.pnlUserLogin.Size = new System.Drawing.Size(275, 132);
             this.pnlUserLogin.TabIndex = 0;
@@ -174,43 +172,20 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Şifre :";
             // 
-            // label4
-            // 
-            this.label4.Location = new System.Drawing.Point(17, 230);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(275, 336);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Mert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mustafa Öz" +
-    "can\r\n\r\nMert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mu" +
-    "stafa Özcan\r\n";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(17, 204);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(275, 23);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "TOP 10 Kullanıcı";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.pnlUserLogin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(415, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 583);
+            this.panel1.Size = new System.Drawing.Size(315, 455);
             this.panel1.TabIndex = 11;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 583);
+            this.ClientSize = new System.Drawing.Size(730, 455);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlCommercial);
             this.Name = "Form1";
@@ -239,8 +214,6 @@
         private Label label3;
         private FontAwesome.Sharp.IconButton btnShowPassword;
         private Panel pnlUserLogin;
-        private Label label4;
-        private Label label5;
         private Panel panel1;
     }
 }

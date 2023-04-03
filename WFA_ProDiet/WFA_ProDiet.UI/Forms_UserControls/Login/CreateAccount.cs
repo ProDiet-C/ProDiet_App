@@ -60,7 +60,7 @@ namespace WFA_ProDiet.UI
         {
             if (welcomeCounter < welcomeMessage.Length)
             {
-                lblWelcome.Text += welcomeMessage[welcomeCounter++];
+                lblText.Text += welcomeMessage[welcomeCounter++];
             }
             else
             {

@@ -20,7 +20,6 @@ namespace WFA_ProDiet.UI
         ucProPlan ucProPlan = new ucProPlan();
         UcExtraReports ucEkstraReports = new UcExtraReports();
         UcEditFoods ucEditFoods = new UcEditFoods();
-        UcDailyReport ucDailyReport = new UcDailyReport();
         UcUserInfo userInfo=new UcUserInfo();
 
         public HomePage()
@@ -60,11 +59,7 @@ namespace WFA_ProDiet.UI
             RemoveAllUc();
             AddUserControl(ucEkstraReports);
         }
-        private void btnDailyReport_Click(object sender, EventArgs e)
-        {
-            RemoveAllUc();
-            AddUserControl(ucDailyReport);
-        }
+
         private void btnWeeklyReport_Click(object sender, EventArgs e)
         {
             RemoveAllUc();

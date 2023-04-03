@@ -39,7 +39,6 @@
             this.btnExtraReports = new FontAwesome.Sharp.IconButton();
             this.btnMonthlyReport = new FontAwesome.Sharp.IconButton();
             this.btnWeeklyReport = new FontAwesome.Sharp.IconButton();
-            this.btnDailyReport = new FontAwesome.Sharp.IconButton();
             this.btnReports = new FontAwesome.Sharp.IconButton();
             this.pnlMeals = new System.Windows.Forms.Panel();
             this.btnProTakip = new FontAwesome.Sharp.IconButton();
@@ -184,7 +183,6 @@
             this.pnlReports.Controls.Add(this.btnExtraReports);
             this.pnlReports.Controls.Add(this.btnMonthlyReport);
             this.pnlReports.Controls.Add(this.btnWeeklyReport);
-            this.pnlReports.Controls.Add(this.btnDailyReport);
             this.pnlReports.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlReports.Location = new System.Drawing.Point(0, 311);
             this.pnlReports.Name = "pnlReports";
@@ -207,7 +205,7 @@
             this.btnExtraReports.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnExtraReports.IconSize = 30;
             this.btnExtraReports.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExtraReports.Location = new System.Drawing.Point(0, 120);
+            this.btnExtraReports.Location = new System.Drawing.Point(0, 80);
             this.btnExtraReports.Name = "btnExtraReports";
             this.btnExtraReports.Size = new System.Drawing.Size(200, 40);
             this.btnExtraReports.TabIndex = 8;
@@ -231,7 +229,7 @@
             this.btnMonthlyReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMonthlyReport.IconSize = 30;
             this.btnMonthlyReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMonthlyReport.Location = new System.Drawing.Point(0, 80);
+            this.btnMonthlyReport.Location = new System.Drawing.Point(0, 40);
             this.btnMonthlyReport.Name = "btnMonthlyReport";
             this.btnMonthlyReport.Size = new System.Drawing.Size(200, 40);
             this.btnMonthlyReport.TabIndex = 7;
@@ -255,7 +253,7 @@
             this.btnWeeklyReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnWeeklyReport.IconSize = 30;
             this.btnWeeklyReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnWeeklyReport.Location = new System.Drawing.Point(0, 40);
+            this.btnWeeklyReport.Location = new System.Drawing.Point(0, 0);
             this.btnWeeklyReport.Name = "btnWeeklyReport";
             this.btnWeeklyReport.Size = new System.Drawing.Size(200, 40);
             this.btnWeeklyReport.TabIndex = 6;
@@ -264,30 +262,6 @@
             this.btnWeeklyReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnWeeklyReport.UseVisualStyleBackColor = true;
             this.btnWeeklyReport.Click += new System.EventHandler(this.btnWeeklyReport_Click);
-            // 
-            // btnDailyReport
-            // 
-            this.btnDailyReport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDailyReport.FlatAppearance.BorderSize = 0;
-            this.btnDailyReport.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btnDailyReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(235)))), ((int)(((byte)(171)))));
-            this.btnDailyReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDailyReport.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnDailyReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
-            this.btnDailyReport.IconChar = FontAwesome.Sharp.IconChar.Superpowers;
-            this.btnDailyReport.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(38)))), ((int)(((byte)(31)))));
-            this.btnDailyReport.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnDailyReport.IconSize = 30;
-            this.btnDailyReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDailyReport.Location = new System.Drawing.Point(0, 0);
-            this.btnDailyReport.Name = "btnDailyReport";
-            this.btnDailyReport.Size = new System.Drawing.Size(200, 40);
-            this.btnDailyReport.TabIndex = 5;
-            this.btnDailyReport.Text = "Günlük Rapor";
-            this.btnDailyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDailyReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDailyReport.UseVisualStyleBackColor = true;
-            this.btnDailyReport.Click += new System.EventHandler(this.btnDailyReport_Click);
             // 
             // btnReports
             // 
@@ -447,7 +421,6 @@
         private FontAwesome.Sharp.IconButton btnTakip;
         private Panel pnlReports;
         private FontAwesome.Sharp.IconButton btnWeeklyReport;
-        private FontAwesome.Sharp.IconButton btnDailyReport;
         private FontAwesome.Sharp.IconButton btnReports;
         private Panel pnlMeals;
         private FontAwesome.Sharp.IconButton btnProPlan;
