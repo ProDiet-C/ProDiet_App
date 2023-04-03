@@ -46,46 +46,37 @@ namespace WFA_ProDiet.UI
         private void DrawAndShowGraph()
         {
             SetGraphTittle();
-            FindCategoryOrCategories();
             FindMeals();
-
-            if (category != null) // categori seçildi ise
+            if (rbAll.Checked) // öğün seçmezse
             {
-                if (rbAll.Checked) // öğün seçmezse
-                {
-                    KategoriSeçiliOgünNull();
-                }
-                else // öğün seçili ise
-                {
-
-                }
+                MealsAll();
             }
-            else // categori seçilmedi ise
+            else // öğün seçtiyse
             {
-                if (rbAll.Checked) // öğün seçmezse
-                {
-                    CategoryVeOgunNull();
-                }
-                else // öğün seçtiyse
-                {
-                    for (int i = 6; i > 0; i--)
-                    {
-                        userCalories[i] = Convert.ToDouble(Current.Customer.Meals.Where(m => m.Name == resultMeals[0].Name && m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).Sum(m => m.MealCalorie));
-
-                        var meals = CrudProcess.GetAll<Meal>().Where(m => m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).ToList();
-                        var customerMeals = meals.GroupBy(m => m.CustomerId).Select(g => new
-                        {
-                            CustomerId = g.Key,
-                            TotalCalories = g.Sum(m => m.MealCalorie)
-                        }).ToList();
-
-                        avgCalories[i] = Convert.ToDouble(customerMeals.Average(cmeal => cmeal.TotalCalories));
-                    }
-                }
-            }
+                SelectedMeal();
+            }          
             DrawGraph();
         }
-        private void CategoryVeOgunNull()
+
+ 
+        private void SelectedMeal()
+        {
+            for (int i = 6; i >= 0; i--)
+            {
+                userCalories[i] = Convert.ToDouble(Current.Customer.Meals.Where(m => m.Name == resultMeals[0].Name && m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).Sum(m => m.MealCalorie));
+
+                var allMeals = CrudProcess.GetAll<Meal>().Where(m => m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0)) && m.Name == resultMeals[0].Name).ToList();
+
+                var customerMeals = allMeals.GroupBy(m => m.CustomerId).Select(g => new
+                {
+                    CustomerId = g.Key,
+                    TotalCalories = g.Sum(m => m.MealCalorie)
+                }).ToList();
+
+                avgCalories[i] = Convert.ToDouble(customerMeals.Average(cmeal => cmeal.TotalCalories));
+            }
+        }
+        private void MealsAll()
         {
             for (int i = 6; i >= 0; i--)
             {
@@ -102,36 +93,13 @@ namespace WFA_ProDiet.UI
             }
         }
 
-        private void KategoriSeçiliOgünNull()
-        {
-            for (int i = 0; i < 7; i++)
-            {
-
-                var mealDetails = CrudProcess.GetAll<MealDetail>();
-
-                userCalories[i] = Convert.ToDouble(mealDetails.Where(md => md.Food.Category == category && md.Meal.Customer == Current.Customer && md.Meal.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).Sum(md => md.Meal.MealCalorie));
-
-
-                var meals = mealDetails.Where(md => md.Food.Category == category && md.Meal.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).ToList();
-
-                var customerMeals = meals.GroupBy(m => m.Meal.CustomerId).Select(g => new
-                {
-                    CustomerId = g.Key,
-                    TotalKcal = g.Sum(md => md.Meal.MealCalorie)
-                });
-
-                avgCalories[i] = Convert.ToDouble(customerMeals.Average(m => m.TotalKcal));
-            }
-        }
-
         private void FindMeals()
         {
-            
-            if (rbAll.Checked) // meal için hepsi seçerse
+            if (rbAll.Checked) //  tüm öğünleri seçerse
             {
                 meal = null;
             }
-            else // meal seçerse
+            else // tek öğün seçerse
             {
                 if (rbBreakFast.Checked)
                 {
@@ -149,31 +117,15 @@ namespace WFA_ProDiet.UI
                 {
                     resultMeals = _meals.Where(m => m.Name == MealName.Extra).ToList();
                 }
-
             }
         }
 
- 
-
-        private void FindCategoryOrCategories()
-        {
-            _categories.Clear();
-            category = null;
-            if (cbCategory.SelectedIndex == 0 || cbCategory.SelectedIndex == -1)
-            {
-                _categories = CrudProcess.GetAll<Category>(); // tüm kategoriler
-            }
-            else
-            {
-                category = CrudProcess.GetByID<Category>(cbCategory.SelectedIndex); // sadece seçilen kategori
-            }
-        }
         private void DrawGraph()
         {
             for (int i = 0; i < userCalories.Length; i++)
             {
-                userSeries.Points.Add(new DataPoint(i , userCalories[i]));
-                avgSeries.Points.Add(new DataPoint(i , avgCalories[i]));
+                userSeries.Points.Add(new DataPoint(i, userCalories[i]));
+                avgSeries.Points.Add(new DataPoint(i, avgCalories[i]));
             }
 
             plotModel.Series.Add(userSeries);

@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.btnCompareByCalorie = new FontAwesome.Sharp.IconButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.rbBreakFast = new System.Windows.Forms.RadioButton();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.rbAll = new System.Windows.Forms.RadioButton();
             this.rbExtra = new System.Windows.Forms.RadioButton();
             this.rbLaunch = new System.Windows.Forms.RadioButton();
@@ -45,37 +43,27 @@
             // 
             // btnCompareByCalorie
             // 
-            this.btnCompareByCalorie.BackColor = System.Drawing.Color.Green;
+            this.btnCompareByCalorie.BackColor = System.Drawing.Color.Chocolate;
             this.btnCompareByCalorie.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
             this.btnCompareByCalorie.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnCompareByCalorie.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnCompareByCalorie.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompareByCalorie.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnCompareByCalorie.ForeColor = System.Drawing.Color.White;
-            this.btnCompareByCalorie.IconChar = FontAwesome.Sharp.IconChar.PaperPlane;
+            this.btnCompareByCalorie.IconChar = FontAwesome.Sharp.IconChar.LineChart;
             this.btnCompareByCalorie.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCompareByCalorie.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCompareByCalorie.IconSize = 40;
             this.btnCompareByCalorie.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCompareByCalorie.Location = new System.Drawing.Point(665, 66);
+            this.btnCompareByCalorie.Location = new System.Drawing.Point(604, 44);
             this.btnCompareByCalorie.Name = "btnCompareByCalorie";
-            this.btnCompareByCalorie.Size = new System.Drawing.Size(281, 50);
+            this.btnCompareByCalorie.Size = new System.Drawing.Size(341, 69);
             this.btnCompareByCalorie.TabIndex = 1;
             this.btnCompareByCalorie.Text = "KALORİ KIYASLA";
             this.btnCompareByCalorie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompareByCalorie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCompareByCalorie.UseVisualStyleBackColor = false;
             this.btnCompareByCalorie.Click += new System.EventHandler(this.btnCompareByCalorie_Click);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(665, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(281, 21);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "KATEGORİ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // rbBreakFast
             // 
@@ -91,40 +79,6 @@
             this.rbBreakFast.TabIndex = 1;
             this.rbBreakFast.Text = "Kahvaltı";
             this.rbBreakFast.UseVisualStyleBackColor = true;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Items.AddRange(new object[] {
-            "Hepsi",
-            "Av Hayvanları",
-            "Balıklar",
-            "Bitkisel Yağlar",
-            "Çeşniler",
-            "Çorbalar",
-            "Deniz Ürünleri",
-            "Diğer Besinler",
-            "Ekmek vb.",
-            "Et Ürünleri",
-            "Hayvansal Yağlar",
-            "İçecekler",
-            "Kırmızı Etler",
-            "Kurubaklagiller",
-            "Kümes Hayvanları",
-            "Meyveler",
-            "Peynirler",
-            "Sakatatlar",
-            "Sebzeler",
-            "Soslar",
-            "Süt ve Süt Ürünleri",
-            "Şeker ve Şeker Ürünleri",
-            "Tahıl Ürünleri",
-            "Tatlılar",
-            "Yumurtalar"});
-            this.cbCategory.Location = new System.Drawing.Point(665, 31);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(281, 29);
-            this.cbCategory.TabIndex = 0;
             // 
             // rbAll
             // 
@@ -192,8 +146,6 @@
             // 
             this.panel1.Controls.Add(this.cbMeals);
             this.panel1.Controls.Add(this.btnCompareByCalorie);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.cbCategory);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -250,9 +202,7 @@
         #endregion
 
         private FontAwesome.Sharp.IconButton btnCompareByCalorie;
-        private Label label1;
         private RadioButton rbBreakFast;
-        private ComboBox cbCategory;
         private RadioButton rbAll;
         private RadioButton rbExtra;
         private RadioButton rbLaunch;

@@ -114,6 +114,7 @@
             this.btnClose.Text = "GERİ DÖN";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // dgvFoods
             // 
@@ -127,6 +128,7 @@
             this.dgvFoods.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvFoods.Size = new System.Drawing.Size(625, 417);
             this.dgvFoods.TabIndex = 3;
+            this.dgvFoods.SelectionChanged += new System.EventHandler(this.dgvFoods_SelectionChanged);
             // 
             // txtSearchFood
             // 
@@ -134,6 +136,7 @@
             this.txtSearchFood.Name = "txtSearchFood";
             this.txtSearchFood.Size = new System.Drawing.Size(192, 27);
             this.txtSearchFood.TabIndex = 1;
+            this.txtSearchFood.TextChanged += new System.EventHandler(this.txtSearchFood_TextChanged);
             // 
             // label1
             // 
@@ -220,6 +223,7 @@
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnRemove
             // 
@@ -241,6 +245,7 @@
             this.btnRemove.Text = "Sil";
             this.btnRemove.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // lstDailyMeal
             // 
@@ -252,6 +257,7 @@
             this.lstDailyMeal.Name = "lstDailyMeal";
             this.lstDailyMeal.Size = new System.Drawing.Size(416, 246);
             this.lstDailyMeal.TabIndex = 1;
+            this.lstDailyMeal.SelectedIndexChanged += new System.EventHandler(this.lstDailyMeal_SelectedIndexChanged);
             // 
             // dtpMealDate
             // 
@@ -260,6 +266,7 @@
             this.dtpMealDate.Name = "dtpMealDate";
             this.dtpMealDate.Size = new System.Drawing.Size(416, 27);
             this.dtpMealDate.TabIndex = 0;
+            this.dtpMealDate.ValueChanged += new System.EventHandler(this.dtpMealDate_ValueChanged);
             // 
             // lblMealName
             // 
@@ -306,6 +313,7 @@
             this.cbOrderByFilter.Name = "cbOrderByFilter";
             this.cbOrderByFilter.Size = new System.Drawing.Size(192, 28);
             this.cbOrderByFilter.TabIndex = 2;
+            this.cbOrderByFilter.SelectedIndexChanged += new System.EventHandler(this.cbOrderByFilter_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -358,6 +366,7 @@
             this.btnAddMeal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAddMeal.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAddMeal.UseVisualStyleBackColor = false;
+            this.btnAddMeal.Click += new System.EventHandler(this.btnAddMeal_Click);
             // 
             // txtFood
             // 
@@ -425,6 +434,7 @@
             this.Name = "AddMeals";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMeals";
+            this.Load += new System.EventHandler(this.AddMeals_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFoods)).EndInit();
             this.panel2.ResumeLayout(false);

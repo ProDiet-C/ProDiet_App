@@ -239,6 +239,7 @@
             this.btnMonthlyReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMonthlyReport.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMonthlyReport.UseVisualStyleBackColor = true;
+            this.btnMonthlyReport.Click += new System.EventHandler(this.btnMonthlyReport_Click);
             // 
             // btnWeeklyReport
             // 

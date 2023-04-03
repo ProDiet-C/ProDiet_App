@@ -22,6 +22,7 @@ namespace WFA_ProDiet.UI
         UcEditFoods ucEditFoods = new UcEditFoods();
         UcDailyReport ucDailyReport = new UcDailyReport();
         UcUserInfo userInfo=new UcUserInfo();
+
         public HomePage()
         {
             InitializeComponent();
@@ -68,6 +69,11 @@ namespace WFA_ProDiet.UI
         {
             RemoveAllUc();
             AddUserControl(new UcWeeklyReport());
+        }
+        private void btnMonthlyReport_Click(object sender, EventArgs e)
+        {
+            RemoveAllUc();
+            AddUserControl(new UcMonthlyReport());
         }
 
         /// <summary>
@@ -134,5 +140,7 @@ namespace WFA_ProDiet.UI
         {
             ucProTakip.dtpMealDate_ValueChanged(sender, e);
         }
+
+
     }
 }
