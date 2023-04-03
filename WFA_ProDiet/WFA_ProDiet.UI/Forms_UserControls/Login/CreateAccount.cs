@@ -31,7 +31,7 @@ namespace WFA_ProDiet.UI
 
 
         /// <summary>
-        /// Mouse ile butondan çıkıldığında info açılır.
+        /// Mousee ile butondan çıkıldığında info açılır.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
