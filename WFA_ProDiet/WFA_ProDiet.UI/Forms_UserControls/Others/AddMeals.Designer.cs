@@ -77,23 +77,22 @@
             // 
             // btnClose
             // 
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btnClose.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(120)))), ((int)(((byte)(80)))));
             this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.Check;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnClose.IconColor = System.Drawing.Color.Black;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnClose.IconSize = 60;
-            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnClose.IconSize = 50;
             this.btnClose.Location = new System.Drawing.Point(0, 583);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(1041, 67);
             this.btnClose.TabIndex = 4;
-            this.btnClose.Text = "GERİ DÖN";
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -192,6 +191,7 @@
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.Color.White;
             this.btnUpdate.Dock = System.Windows.Forms.DockStyle.Left;
             this.btnUpdate.FlatAppearance.BorderSize = 0;
             this.btnUpdate.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
@@ -206,7 +206,7 @@
             this.btnUpdate.TabIndex = 0;
             this.btnUpdate.Text = "Güncelle";
             this.btnUpdate.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnRemove
@@ -335,16 +335,16 @@
             this.btnAddMeal.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(61)))));
             this.btnAddMeal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddMeal.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
-            this.btnAddMeal.Font = new System.Drawing.Font("Segoe MDL2 Assets", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAddMeal.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAddMeal.ForeColor = System.Drawing.Color.Black;
             this.btnAddMeal.IconChar = FontAwesome.Sharp.IconChar.Utensils;
             this.btnAddMeal.IconColor = System.Drawing.Color.DarkGreen;
             this.btnAddMeal.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddMeal.IconSize = 40;
-            this.btnAddMeal.Location = new System.Drawing.Point(164, 65);
+            this.btnAddMeal.Location = new System.Drawing.Point(189, 98);
             this.btnAddMeal.Name = "btnAddMeal";
             this.btnAddMeal.Padding = new System.Windows.Forms.Padding(0, 6, 0, 0);
-            this.btnAddMeal.Size = new System.Drawing.Size(318, 100);
+            this.btnAddMeal.Size = new System.Drawing.Size(400, 63);
             this.btnAddMeal.TabIndex = 0;
             this.btnAddMeal.Text = "EKLE";
             this.btnAddMeal.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -354,15 +354,17 @@
             // 
             // txtFood
             // 
-            this.txtFood.Location = new System.Drawing.Point(164, 31);
+            this.txtFood.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtFood.Location = new System.Drawing.Point(189, 5);
             this.txtFood.Name = "txtFood";
             this.txtFood.ReadOnly = true;
-            this.txtFood.Size = new System.Drawing.Size(157, 27);
+            this.txtFood.Size = new System.Drawing.Size(400, 34);
             this.txtFood.TabIndex = 1;
             // 
             // nudQuantity
             // 
-            this.nudQuantity.Location = new System.Drawing.Point(327, 31);
+            this.nudQuantity.Font = new System.Drawing.Font("Segoe MDL2 Assets", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nudQuantity.Location = new System.Drawing.Point(248, 54);
             this.nudQuantity.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -374,7 +376,7 @@
             0,
             0});
             this.nudQuantity.Name = "nudQuantity";
-            this.nudQuantity.Size = new System.Drawing.Size(53, 27);
+            this.nudQuantity.Size = new System.Drawing.Size(131, 34);
             this.nudQuantity.TabIndex = 2;
             this.nudQuantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudQuantity.Value = new decimal(new int[] {
@@ -410,9 +412,10 @@
             // 
             // lblMeasure
             // 
-            this.lblMeasure.Location = new System.Drawing.Point(386, 31);
+            this.lblMeasure.Font = new System.Drawing.Font("Segoe MDL2 Assets", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblMeasure.Location = new System.Drawing.Point(385, 54);
             this.lblMeasure.Name = "lblMeasure";
-            this.lblMeasure.Size = new System.Drawing.Size(90, 27);
+            this.lblMeasure.Size = new System.Drawing.Size(204, 34);
             this.lblMeasure.TabIndex = 3;
             this.lblMeasure.Text = "fincan/kase";
             // 

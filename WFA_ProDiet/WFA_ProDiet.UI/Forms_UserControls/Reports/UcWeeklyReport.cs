@@ -40,7 +40,9 @@ namespace WFA_ProDiet.UI
         double[] avgCalories = new double[7];
         private void btnCompareByCalorie_Click(object sender, EventArgs e)
         {
-            DrawAndShowGraph();
+            try{DrawAndShowGraph();}
+            catch { MessageBox.Show("Test"); }
+
         }
         ProDietDBContext _pro = new ProDietDBContext();
         private void DrawAndShowGraph()
@@ -54,11 +56,11 @@ namespace WFA_ProDiet.UI
             else // öğün seçtiyse
             {
                 SelectedMeal();
-            }          
+            }
             DrawGraph();
         }
 
- 
+
         private void SelectedMeal()
         {
             for (int i = 6; i >= 0; i--)
