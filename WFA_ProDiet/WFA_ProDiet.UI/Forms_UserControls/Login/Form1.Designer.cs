@@ -40,10 +40,12 @@
             this.lnkCreateAccount = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlCommercial.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCommercial)).BeginInit();
             this.pnlUserLogin.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCommercial
@@ -174,12 +176,23 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.pnlUserLogin);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(415, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(315, 455);
             this.panel1.TabIndex = 11;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(90, 26);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(138, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -197,6 +210,7 @@
             this.pnlUserLogin.ResumeLayout(false);
             this.pnlUserLogin.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +229,6 @@
         private FontAwesome.Sharp.IconButton btnShowPassword;
         private Panel pnlUserLogin;
         private Panel panel1;
+        private PictureBox pictureBox1;
     }
 }

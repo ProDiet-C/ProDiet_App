@@ -237,7 +237,7 @@
             this.btnAddBreakFast.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddBreakFast.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddBreakFast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddBreakFast.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
+            this.btnAddBreakFast.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddBreakFast.IconColor = System.Drawing.Color.Green;
             this.btnAddBreakFast.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddBreakFast.IconSize = 70;
@@ -351,7 +351,7 @@
             this.btnAddLunch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddLunch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddLunch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddLunch.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
+            this.btnAddLunch.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddLunch.IconColor = System.Drawing.Color.Green;
             this.btnAddLunch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddLunch.IconSize = 70;
@@ -465,7 +465,7 @@
             this.btnAddDinner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddDinner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.btnAddDinner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddDinner.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
+            this.btnAddDinner.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddDinner.IconColor = System.Drawing.Color.Green;
             this.btnAddDinner.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddDinner.IconSize = 70;
@@ -543,7 +543,7 @@
             this.btnAddExtra.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btnAddExtra.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnAddExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddExtra.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlassPlus;
+            this.btnAddExtra.IconChar = FontAwesome.Sharp.IconChar.PlusCircle;
             this.btnAddExtra.IconColor = System.Drawing.Color.Green;
             this.btnAddExtra.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAddExtra.IconSize = 70;

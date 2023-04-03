@@ -4,7 +4,7 @@
 
 namespace WFA_ProDiet.DAL.Migrations
 {
-    public partial class mıstafamıstıkatakankıstıkkaganafıstık : Migration
+    public partial class migvOguz : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

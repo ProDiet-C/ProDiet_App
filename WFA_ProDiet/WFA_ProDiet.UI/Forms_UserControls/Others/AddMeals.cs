@@ -93,7 +93,7 @@ namespace WFA_ProDiet.UI
         private void txtSearchFood_TextChanged(object sender, EventArgs e)
         {
             //Yemek Arama-ok
-            dgvFoods.DataSource = CrudProcess.Search<Food>(x => x.Name.Contains(txtSearchFood.Text));
+            dgvFoods.DataSource = CrudProcess.Search<Food>(x => x.Name.ToLower().Contains(txtSearchFood.Text.ToLower()));
         }
 
         private void cbOrderByFilter_SelectedIndexChanged(object sender, EventArgs e)
@@ -289,10 +289,28 @@ namespace WFA_ProDiet.UI
             //path = path.ToString();
             if (path != "")
             {
-                pbFoods.Image = Image.FromFile(path.ToString());
+                try
+                {
+                    pbFoods.Image = Image.FromFile(path.ToString());
+
+                }
+                catch (Exception ahata)
+                {
+                    MessageBox.Show(ahata.Message);
+                }
             }
             else
             { pbFoods.Image = Properties.Resources.basephoto; }
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbFoods_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

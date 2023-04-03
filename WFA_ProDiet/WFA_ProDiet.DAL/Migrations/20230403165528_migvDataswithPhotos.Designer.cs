@@ -12,8 +12,8 @@ using WFA_ProDiet.MODELS.Models;
 namespace WFA_ProDiet.DAL.Migrations
 {
     [DbContext(typeof(ProDietDBContext))]
-    [Migration("20230402212131_mıstafamıstıkatakankıstıkkaganafıstık")]
-    partial class mıstafamıstıkatakankıstıkkaganafıstık
+    [Migration("20230403165528_migvDataswithPhotos")]
+    partial class migvDataswithPhotos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -280,6 +280,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 12.1,
                             MeasureType = "GramX100",
                             Name = "Bıldırcın",
+                            PicturePath = "..\\..\\..\\Resources\\Bıldırcın.png",
                             Protein = 19.600000000000001
                         },
                         new
@@ -291,6 +292,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 23.800000000000001,
                             MeasureType = "GramX100",
                             Name = "Güvercin",
+                            PicturePath = "..\\..\\..\\Resources\\Güvercin.png",
                             Protein = 18.5
                         },
                         new
@@ -302,6 +304,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 9.3000000000000007,
                             MeasureType = "GramX100",
                             Name = "Sülün",
+                            PicturePath = "..\\..\\..\\Resources\\Sülün.png",
                             Protein = 22.699999999999999
                         },
                         new
@@ -313,6 +316,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.0,
                             MeasureType = "GramX100",
                             Name = "Tavşan",
+                            PicturePath = "..\\..\\..\\Resources\\Tavşan.png",
                             Protein = 21.0
                         },
                         new
@@ -324,6 +328,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 9.0,
                             MeasureType = "GramX100",
                             Name = "Alabalık",
+                            PicturePath = "..\\..\\..\\Resources\\Alabalık.png",
                             Protein = 18.300000000000001
                         },
                         new
@@ -335,6 +340,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Balık Unu",
+                            PicturePath = "..\\..\\..\\Resources\\Balık Unu.png",
                             Protein = 78.0
                         },
                         new
@@ -346,6 +352,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 14.4,
                             MeasureType = "GramX100",
                             Name = "Kalkan",
+                            PicturePath = "..\\..\\..\\Resources\\Kalkan.png",
                             Protein = 148.0
                         },
                         new
@@ -357,6 +364,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Kılıç",
+                            PicturePath = "..\\..\\..\\Resources\\Kılıç.png",
                             Protein = 26.300000000000001
                         },
                         new
@@ -368,6 +376,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.2,
                             MeasureType = "GramX100",
                             Name = "Levrek",
+                            PicturePath = "..\\..\\..\\Resources\\Levrek.png",
                             Protein = 19.199999999999999
                         },
                         new
@@ -379,6 +388,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Mersin",
+                            PicturePath = "..\\..\\..\\Resources\\Mersin.png",
                             Protein = 17.699999999999999
                         },
                         new
@@ -390,6 +400,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Palamut",
+                            PicturePath = "..\\..\\..\\Resources\\Palamut.png",
                             Protein = 24.0
                         },
                         new
@@ -401,6 +412,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Sardalya",
+                            PicturePath = "..\\..\\..\\Resources\\Sardalya.png",
                             Protein = 19.199999999999999
                         },
                         new
@@ -412,6 +424,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.0,
                             MeasureType = "GramX100",
                             Name = "Sardalya (konserve)",
+                            PicturePath = "..\\..\\..\\Resources\\Sardalya (konserve).png",
                             Protein = 24.0
                         },
                         new
@@ -423,6 +436,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.1999999999999993,
                             MeasureType = "GramX100",
                             Name = "Somon",
+                            PicturePath = "..\\..\\..\\Resources\\Somon.png",
                             Protein = 20.300000000000001
                         },
                         new
@@ -434,6 +448,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 22.0,
                             MeasureType = "GramX100",
                             Name = "Ton",
+                            PicturePath = "..\\..\\..\\Resources\\Ton.png",
                             Protein = 22.800000000000001
                         },
                         new
@@ -445,6 +460,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 25.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Tuzlu Balık",
+                            PicturePath = "..\\..\\..\\Resources\\Tuzlu Balık.png",
                             Protein = 18.5
                         },
                         new
@@ -456,6 +472,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Uskumru",
+                            PicturePath = "..\\..\\..\\Resources\\Uskumru.png",
                             Protein = 21.899999999999999
                         },
                         new
@@ -467,6 +484,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Ayçiçeği Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Ayçiçeği Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -478,6 +496,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Fındık Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Fındık Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -489,6 +508,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Haşhaş Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Haşhaş Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -500,6 +520,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Keten tohumu yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Keten tohumu yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -511,6 +532,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 80.5,
                             MeasureType = "GramX100",
                             Name = "Margarin (kahvaltılık)",
+                            PicturePath = "..\\..\\..\\Resources\\Margarin (kahvaltılık).png",
                             Protein = 0.0
                         },
                         new
@@ -522,6 +544,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 82.0,
                             MeasureType = "GramX100",
                             Name = "Margarin (kahvaltılık)",
+                            PicturePath = "..\\..\\..\\Resources\\Margarin (kahvaltılık).png",
                             Protein = 0.0
                         },
                         new
@@ -533,6 +556,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Mısırözü Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Mısırözü Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -544,6 +568,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Nebati Yağ",
+                            PicturePath = "..\\..\\..\\Resources\\Nebati Yağ.png",
                             Protein = 0.0
                         },
                         new
@@ -555,6 +580,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Palmiye Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Palmiye Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -566,6 +592,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Pamuk Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Pamuk Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -577,6 +604,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Soya Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Soya Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -588,6 +616,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Susam Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Susam Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -599,6 +628,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Yerfıstığı Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Yerfıstığı Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -610,6 +640,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Zeytin Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Zeytin Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -621,6 +652,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Defne Yaprağı",
+                            PicturePath = "..\\..\\..\\Resources\\Defne Yaprağı.png",
                             Protein = 7.5999999999999996
                         },
                         new
@@ -632,6 +664,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Dere Otu (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Dere Otu (Kuru).png",
                             Protein = 20.0
                         },
                         new
@@ -643,6 +676,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 29.0,
                             MeasureType = "GramX100",
                             Name = "Hardal (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Hardal (Toz).png",
                             Protein = 25.0
                         },
                         new
@@ -654,6 +688,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 45.0,
                             MeasureType = "GramX100",
                             Name = "Haşhaş Tohumu",
+                            PicturePath = "..\\..\\..\\Resources\\Haşhaş Tohumu.png",
                             Protein = 18.0
                         },
                         new
@@ -665,6 +700,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 36.299999999999997,
                             MeasureType = "GramX100",
                             Name = "Hindistan cevizi (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Hindistan cevizi (Toz).png",
                             Protein = 6.4000000000000004
                         },
                         new
@@ -676,6 +712,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "DessertSpoon",
                             Name = "Kabartma tozu",
+                            PicturePath = "..\\..\\..\\Resources\\Kabartma tozu.png",
                             Protein = 0.0
                         },
                         new
@@ -687,6 +724,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Karabiber",
+                            PicturePath = "..\\..\\..\\Resources\\Karabiber.png",
                             Protein = 11.0
                         },
                         new
@@ -698,6 +736,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 20.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Karanfil",
+                            PicturePath = "..\\..\\..\\Resources\\Karanfil.png",
                             Protein = 6.0
                         },
                         new
@@ -709,6 +748,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Kekik",
+                            PicturePath = "..\\..\\..\\Resources\\Kekik.png",
                             Protein = 9.0999999999999996
                         },
                         new
@@ -720,6 +760,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 17.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Kırmızıbiber (toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Kırmızıbiber (toz).png",
                             Protein = 12.0
                         },
                         new
@@ -731,6 +772,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 22.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Kimyon (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Kimyon (Toz).png",
                             Protein = 18.0
                         },
                         new
@@ -742,6 +784,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kuş üzümü",
+                            PicturePath = "..\\..\\..\\Resources\\Kuş üzümü.png",
                             Protein = 1.7
                         },
                         new
@@ -753,6 +796,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Maydonoz (kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Maydonoz (kuru).png",
                             Protein = 22.399999999999999
                         },
                         new
@@ -764,6 +808,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.9000000000000004,
                             MeasureType = "GramX100",
                             Name = "Nane (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Nane (Kuru).png",
                             Protein = 15.1
                         },
                         new
@@ -775,6 +820,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 6.5,
                             MeasureType = "GramX100",
                             Name = "Safran",
+                            PicturePath = "..\\..\\..\\Resources\\Safran.png",
                             Protein = 11.4
                         },
                         new
@@ -786,6 +832,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Sofra Tuzu",
+                            PicturePath = "..\\..\\..\\Resources\\Sofra Tuzu.png",
                             Protein = 0.0
                         },
                         new
@@ -797,6 +844,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.2000000000000002,
                             MeasureType = "GramX100",
                             Name = "Tarçın (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Tarçın (Toz).png",
                             Protein = 3.8999999999999999
                         },
                         new
@@ -808,6 +856,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 6.0,
                             MeasureType = "GramX100",
                             Name = "Zencefil",
+                            PicturePath = "..\\..\\..\\Resources\\Zencefil.png",
                             Protein = 9.0999999999999996
                         },
                         new
@@ -819,6 +868,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 10.1,
                             MeasureType = "GramX100",
                             Name = "Zerdecal",
+                            PicturePath = "..\\..\\..\\Resources\\Zerdecal.png",
                             Protein = 8.1999999999999993
                         },
                         new
@@ -830,6 +880,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.2,
                             MeasureType = "GramX100",
                             Name = "Bezelye",
+                            PicturePath = "..\\..\\..\\Resources\\Bezelye.png",
                             Protein = 21.0
                         },
                         new
@@ -841,6 +892,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Domates",
+                            PicturePath = "..\\..\\..\\Resources\\Domates.png",
                             Protein = 7.0
                         },
                         new
@@ -852,6 +904,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3999999999999999,
                             MeasureType = "GramX100",
                             Name = "Ezogelin",
+                            PicturePath = "..\\..\\..\\Resources\\Ezogelin.png",
                             Protein = 14.0
                         },
                         new
@@ -863,6 +916,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 6.0,
                             MeasureType = "GramX100",
                             Name = "İşkembe",
+                            PicturePath = "..\\..\\..\\Resources\\İşkembe.png",
                             Protein = 20.0
                         },
                         new
@@ -874,6 +928,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Mercimek",
+                            PicturePath = "..\\..\\..\\Resources\\Mercimek.png",
                             Protein = 19.0
                         },
                         new
@@ -885,6 +940,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Sebze",
+                            PicturePath = "..\\..\\..\\Resources\\Sebze.png",
                             Protein = 11.0
                         },
                         new
@@ -896,6 +952,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.5,
                             MeasureType = "GramX100",
                             Name = "Tarhana (Acı)",
+                            PicturePath = "..\\..\\..\\Resources\\Tarhana (Acı).png",
                             Protein = 12.0
                         },
                         new
@@ -907,6 +964,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Tarhana (tatlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Tarhana (tatlı).png",
                             Protein = 8.0
                         },
                         new
@@ -918,6 +976,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3,
                             MeasureType = "GramX100",
                             Name = "Yayla",
+                            PicturePath = "..\\..\\..\\Resources\\Yayla.png",
                             Protein = 8.0
                         },
                         new
@@ -929,6 +988,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.0,
                             MeasureType = "GramX100",
                             Name = "Yulaf çorbası",
+                            PicturePath = "..\\..\\..\\Resources\\Yulaf çorbası.png",
                             Protein = 6.2999999999999998
                         },
                         new
@@ -940,6 +1000,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 15.0,
                             MeasureType = "GramX100",
                             Name = "Havyar",
+                            PicturePath = "..\\..\\..\\Resources\\Havyar.png",
                             Protein = 26.899999999999999
                         },
                         new
@@ -951,6 +1012,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.8999999999999999,
                             MeasureType = "GramX100",
                             Name = "İstakoz",
+                            PicturePath = "..\\..\\..\\Resources\\İstakoz.png",
                             Protein = 16.899999999999999
                         },
                         new
@@ -962,6 +1024,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.0,
                             MeasureType = "Piece",
                             Name = "İstiridye",
+                            PicturePath = "..\\..\\..\\Resources\\İstiridye.png",
                             Protein = 5.0
                         },
                         new
@@ -973,6 +1036,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Karides",
+                            PicturePath = "..\\..\\..\\Resources\\Karides.png",
                             Protein = 18.100000000000001
                         },
                         new
@@ -984,6 +1048,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Midye",
+                            PicturePath = "..\\..\\..\\Resources\\Midye.png",
                             Protein = 14.1
                         },
                         new
@@ -995,6 +1060,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.2000000000000002,
                             MeasureType = "GramX100",
                             Name = "Yengeç (haşlanmış)",
+                            PicturePath = "..\\..\\..\\Resources\\Yengeç (haşlanmış).png",
                             Protein = 20.100000000000001
                         },
                         new
@@ -1006,6 +1072,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Jelatin",
+                            PicturePath = "..\\..\\..\\Resources\\Jelatin.png",
                             Protein = 86.0
                         },
                         new
@@ -1017,6 +1084,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 24.0,
                             MeasureType = "GramX100",
                             Name = "Kakao",
+                            PicturePath = "..\\..\\..\\Resources\\Kakao.png",
                             Protein = 17.0
                         },
                         new
@@ -1028,6 +1096,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.6000000000000001,
                             MeasureType = "GramX100",
                             Name = "Maya (kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Maya (kuru).png",
                             Protein = 36.899999999999999
                         },
                         new
@@ -1039,6 +1108,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Maya (Yaş)",
+                            PicturePath = "..\\..\\..\\Resources\\Maya (Yaş).png",
                             Protein = 12.0
                         },
                         new
@@ -1050,6 +1120,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Sirke",
+                            PicturePath = "..\\..\\..\\Resources\\Sirke.png",
                             Protein = 0.0
                         },
                         new
@@ -1061,6 +1132,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 53.799999999999997,
                             MeasureType = "GramX100",
                             Name = "Tahin",
+                            PicturePath = "..\\..\\..\\Resources\\Tahin.png",
                             Protein = 17.0
                         },
                         new
@@ -1072,6 +1144,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Turşu (Salatalık)",
+                            PicturePath = "..\\..\\..\\Resources\\Turşu (Salatalık).png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -1083,6 +1156,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.0,
                             MeasureType = "GramX100",
                             Name = "Zeytin (Siyah)",
+                            PicturePath = "..\\..\\..\\Resources\\Zeytin (Siyah).png",
                             Protein = 1.8
                         },
                         new
@@ -1094,6 +1168,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 13.5,
                             MeasureType = "GramX100",
                             Name = "Zeytin (Yeşil)",
+                            PicturePath = "..\\..\\..\\Resources\\Zeytin (Yeşil).png",
                             Protein = 1.5
                         },
                         new
@@ -1105,6 +1180,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Ekmek (buğday)",
+                            PicturePath = "..\\..\\..\\Resources\\Ekmek (buğday).png",
                             Protein = 9.0999999999999996
                         },
                         new
@@ -1116,6 +1192,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Ekmek (çavdar)",
+                            PicturePath = "..\\..\\..\\Resources\\Ekmek (çavdar).png",
                             Protein = 9.0999999999999996
                         },
                         new
@@ -1127,6 +1204,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Slice",
                             Name = "Ekmek (kepek)",
+                            PicturePath = "..\\..\\..\\Resources\\Ekmek (kepek).png",
                             Protein = 0.0
                         },
                         new
@@ -1138,6 +1216,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Galeta Unu",
+                            PicturePath = "..\\..\\..\\Resources\\Galeta Unu.png",
                             Protein = 12.6
                         },
                         new
@@ -1149,6 +1228,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 13.9,
                             MeasureType = "GramX100",
                             Name = "Gramissini",
+                            PicturePath = "..\\..\\..\\Resources\\Grissini.png",
                             Protein = 12.300000000000001
                         },
                         new
@@ -1160,6 +1240,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.90000000000000002,
                             MeasureType = "GramX100",
                             Name = "İrmik",
+                            PicturePath = "..\\..\\..\\Resources\\İrmik.png",
                             Protein = 11.4
                         },
                         new
@@ -1171,6 +1252,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Kraker (Peynirli)",
+                            PicturePath = "..\\..\\..\\Resources\\Kraker (Peynirli).png",
                             Protein = 11.199999999999999
                         },
                         new
@@ -1182,6 +1264,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 9.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Kraker (Sade)",
+                            PicturePath = "..\\..\\..\\Resources\\Kraker (Sade).png",
                             Protein = 8.0
                         },
                         new
@@ -1193,6 +1276,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 12.0,
                             MeasureType = "GramX100",
                             Name = "Kraker (tuzlu)",
+                            PicturePath = "..\\..\\..\\Resources\\Kraker (Tuzlu).png",
                             Protein = 9.8000000000000007
                         },
                         new
@@ -1204,6 +1288,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.2,
                             MeasureType = "GramX100",
                             Name = "Makarna",
+                            PicturePath = "..\\..\\..\\Resources\\Makarna.png",
                             Protein = 12.5
                         },
                         new
@@ -1215,6 +1300,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Sandviç ekmeği",
+                            PicturePath = "..\\..\\..\\Resources\\Sandviç ekmeği.png",
                             Protein = 8.1999999999999993
                         },
                         new
@@ -1226,6 +1312,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Yufka",
+                            PicturePath = "..\\..\\..\\Resources\\Yufka.png",
                             Protein = 8.9000000000000004
                         },
                         new
@@ -1237,6 +1324,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Yufka (Böreklik)",
+                            PicturePath = "..\\..\\..\\Resources\\Yufka (Böreklik).png",
                             Protein = 3.1000000000000001
                         },
                         new
@@ -1248,6 +1336,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 10.6,
                             MeasureType = "GramX100",
                             Name = "Jambon",
+                            PicturePath = "..\\..\\..\\Resources\\Jambon.png",
                             Protein = 17.600000000000001
                         },
                         new
@@ -1259,6 +1348,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 65.5,
                             MeasureType = "GramX100",
                             Name = "Kavurma",
+                            PicturePath = "..\\..\\..\\Resources\\Kavurma.png",
                             Protein = 20.0
                         },
                         new
@@ -1270,6 +1360,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 13.9,
                             MeasureType = "GramX100",
                             Name = "Pastırma (çemenli)",
+                            PicturePath = "..\\..\\..\\Resources\\Pastırma (çemenli).png",
                             Protein = 29.5
                         },
                         new
@@ -1281,6 +1372,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 14.9,
                             MeasureType = "GramX100",
                             Name = "Pastırma (çemensiz)",
+                            PicturePath = "..\\..\\..\\Resources\\Pastırma (çemensiz).png",
                             Protein = 32.700000000000003
                         },
                         new
@@ -1292,6 +1384,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 38.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Salam",
+                            PicturePath = "..\\..\\..\\Resources\\Salam.png",
                             Protein = 23.800000000000001
                         },
                         new
@@ -1303,6 +1396,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 29.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Sosis",
+                            PicturePath = "..\\..\\..\\Resources\\Sosis.png",
                             Protein = 11.300000000000001
                         },
                         new
@@ -1314,6 +1408,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 40.799999999999997,
                             MeasureType = "GramX100",
                             Name = "Sucuk",
+                            PicturePath = "..\\..\\..\\Resources\\Sucuk.png",
                             Protein = 21.399999999999999
                         },
                         new
@@ -1325,6 +1420,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Balık Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Balık Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -1336,6 +1432,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 81.799999999999997,
                             MeasureType = "GramX100",
                             Name = "İçyağı",
+                            PicturePath = "..\\..\\..\\Resources\\içyağı.png",
                             Protein = 4.0999999999999996
                         },
                         new
@@ -1347,6 +1444,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 100.0,
                             MeasureType = "GramX100",
                             Name = "Kuyruk Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Kuyruk Yağı.png",
                             Protein = 0.0
                         },
                         new
@@ -1358,6 +1456,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 98.700000000000003,
                             MeasureType = "GramX100",
                             Name = "Sade Yağ (erimiş)",
+                            PicturePath = "..\\..\\..\\Resources\\Sade Yağ.png",
                             Protein = 0.29999999999999999
                         },
                         new
@@ -1369,6 +1468,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.0,
                             MeasureType = "DessertSpoon",
                             Name = "Tereyağı",
+                            PicturePath = "..\\..\\..\\Resources\\Tereyağı.png",
                             Protein = 0.0
                         },
                         new
@@ -1380,6 +1480,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 12.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Adaçayı",
+                            PicturePath = "..\\..\\..\\Resources\\Adaçayı.png",
                             Protein = 10.6
                         },
                         new
@@ -1391,6 +1492,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.0,
                             MeasureType = "Goblet",
                             Name = "Beyaz şarap",
+                            PicturePath = "..\\..\\..\\Resources\\Beyaz Şarap.png",
                             Protein = 8.0
                         },
                         new
@@ -1402,6 +1504,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Piece",
                             Name = "Bira",
+                            PicturePath = "..\\..\\..\\Resources\\Bira.png",
                             Protein = 1.0
                         },
                         new
@@ -1413,6 +1516,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Cin",
+                            PicturePath = "..\\..\\..\\Resources\\Cin tonic.png",
                             Protein = 0.0
                         },
                         new
@@ -1424,6 +1528,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Bottle",
                             Name = "Cola (diyet)",
+                            PicturePath = "..\\..\\..\\Resources\\Cola (diyet).png",
                             Protein = 0.0
                         },
                         new
@@ -1435,6 +1540,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Bottle",
                             Name = "Cola (normal)",
+                            PicturePath = "..\\..\\..\\Resources\\Cola (Normal).png",
                             Protein = 0.0
                         },
                         new
@@ -1446,6 +1552,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Domates suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Domates Suyu.png",
                             Protein = 0.69999999999999996
                         },
                         new
@@ -1457,6 +1564,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Gazoz",
+                            PicturePath = "..\\..\\..\\Resources\\Gazoz.png",
                             Protein = 0.0
                         },
                         new
@@ -1468,6 +1576,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3999999999999999,
                             MeasureType = "GramX100",
                             Name = "Ihlamur",
+                            PicturePath = "..\\..\\..\\Resources\\Ihlamur.png",
                             Protein = 0.40000000000000002
                         },
                         new
@@ -1479,6 +1588,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Cup",
                             Name = "Kahve (instant)",
+                            PicturePath = "..\\..\\..\\Resources\\Kahve.png",
                             Protein = 0.0
                         },
                         new
@@ -1490,6 +1600,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.0,
                             MeasureType = "Goblet",
                             Name = "Kırmızı şarap",
+                            PicturePath = "..\\..\\..\\Resources\\Kırmızı Şarap.png",
                             Protein = 0.0
                         },
                         new
@@ -1501,6 +1612,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Limonata",
+                            PicturePath = "..\\..\\..\\Resources\\Limonata.png",
                             Protein = 0.0
                         },
                         new
@@ -1512,6 +1624,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Meyve suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Meyve Syuyu.png",
                             Protein = 0.0
                         },
                         new
@@ -1523,6 +1636,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Portakal Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Portakal Suyu.png",
                             Protein = 0.69999999999999996
                         },
                         new
@@ -1534,6 +1648,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Rose (şarap)",
+                            PicturePath = "..\\..\\..\\Resources\\Rose (şarap).png",
                             Protein = 0.10000000000000001
                         },
                         new
@@ -1545,6 +1660,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Viski",
+                            PicturePath = "..\\..\\..\\Resources\\Viski.png",
                             Protein = 0.0
                         },
                         new
@@ -1556,6 +1672,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Votka",
+                            PicturePath = "..\\..\\..\\Resources\\Votka.png",
                             Protein = 0.0
                         },
                         new
@@ -1567,6 +1684,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.0,
                             MeasureType = "GramX100",
                             Name = "Az yağlı dana eti",
+                            PicturePath = "..\\..\\..\\Resources\\Az yağlı dana eti.png",
                             Protein = 19.699999999999999
                         },
                         new
@@ -1578,6 +1696,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 47.0,
                             MeasureType = "GramX100",
                             Name = "Az yağlı domuz eti",
+                            PicturePath = "..\\..\\..\\Resources\\Az yağlı Domuz eti.png",
                             Protein = 11.199999999999999
                         },
                         new
@@ -1589,6 +1708,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 19.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Az yağlı koyun eti",
+                            PicturePath = "..\\..\\..\\Resources\\az yağlı koyun eti.png",
                             Protein = 16.800000000000001
                         },
                         new
@@ -1600,6 +1720,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 15.800000000000001,
                             MeasureType = "GramX100",
                             Name = "Az yağlı sığır eti",
+                            PicturePath = "..\\..\\..\\Resources\\Az yağlı sığır eti.png",
                             Protein = 19.399999999999999
                         },
                         new
@@ -1611,6 +1732,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 9.0,
                             MeasureType = "GramX100",
                             Name = "Keçi eti",
+                            PicturePath = "..\\..\\..\\Resources\\Keçi Eti.png",
                             Protein = 16.0
                         },
                         new
@@ -1622,6 +1744,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 12.0,
                             MeasureType = "GramX100",
                             Name = "Orta yağlı dana eti",
+                            PicturePath = "..\\..\\..\\Resources\\Orta yağlı dana eti.png",
                             Protein = 19.100000000000001
                         },
                         new
@@ -1633,6 +1756,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 52.0,
                             MeasureType = "GramX100",
                             Name = "Orta yağlı domuz eti",
+                            PicturePath = "..\\..\\..\\Resources\\Orta yağlı domuz eti.png",
                             Protein = 10.199999999999999
                         },
                         new
@@ -1644,6 +1768,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Orta yağlı koyun eti",
+                            PicturePath = "..\\..\\..\\Resources\\Orta yağlı koyun eti.png",
                             Protein = 16.5
                         },
                         new
@@ -1655,6 +1780,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 20.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Orta yağlı sığır eti",
+                            PicturePath = "..\\..\\..\\Resources\\Orta yağlı sığır eti.png",
                             Protein = 18.5
                         },
                         new
@@ -1666,6 +1792,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 16.0,
                             MeasureType = "GramX100",
                             Name = "Yağlı dana eti",
+                            PicturePath = "..\\..\\..\\Resources\\Yağlı Dana Eti.png",
                             Protein = 18.5
                         },
                         new
@@ -1677,6 +1804,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 57.0,
                             MeasureType = "GramX100",
                             Name = "Yağlı domuz eti",
+                            PicturePath = "..\\..\\..\\Resources\\Yağlı Domuz eti.png",
                             Protein = 9.0999999999999996
                         },
                         new
@@ -1688,6 +1816,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 27.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Yağlı koyun eti",
+                            PicturePath = "..\\..\\..\\Resources\\Yağlı Koyun eti.png",
                             Protein = 15.4
                         },
                         new
@@ -1699,6 +1828,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 25.0,
                             MeasureType = "GramX100",
                             Name = "Yağlı sığır eti",
+                            PicturePath = "..\\..\\..\\Resources\\Yağlı Sığır eti.png",
                             Protein = 17.399999999999999
                         },
                         new
@@ -1710,6 +1840,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 47.299999999999997,
                             MeasureType = "GramX100",
                             Name = "Ay çekirdeği",
+                            PicturePath = "..\\..\\..\\Resources\\Ay Çekirdeği.png",
                             Protein = 24.0
                         },
                         new
@@ -1721,6 +1852,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 54.200000000000003,
                             MeasureType = "GramX100",
                             Name = "Badem",
+                            PicturePath = "..\\..\\..\\Resources\\Badem.png",
                             Protein = 18.600000000000001
                         },
                         new
@@ -1732,6 +1864,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.7,
                             MeasureType = "GramX100",
                             Name = "Bakla (İç)",
+                            PicturePath = "..\\..\\..\\Resources\\Bakla (iç).png",
                             Protein = 25.100000000000001
                         },
                         new
@@ -1743,6 +1876,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.2,
                             MeasureType = "GramX100",
                             Name = "Barbunya",
+                            PicturePath = "..\\..\\..\\Resources\\Barbunya.png",
                             Protein = 22.899999999999999
                         },
                         new
@@ -1754,6 +1888,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Bezelye",
+                            PicturePath = "..\\..\\..\\Resources\\Bezelye (iç).png",
                             Protein = 24.199999999999999
                         },
                         new
@@ -1765,6 +1900,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.5,
                             MeasureType = "GramX100",
                             Name = "Börülce",
+                            PicturePath = "..\\..\\..\\Resources\\Börülce.png",
                             Protein = 22.800000000000001
                         },
                         new
@@ -1776,6 +1912,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 64.0,
                             MeasureType = "GramX100",
                             Name = "Ceviz",
+                            PicturePath = "..\\..\\..\\Resources\\Ceviz.png",
                             Protein = 14.800000000000001
                         },
                         new
@@ -1787,6 +1924,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 60.5,
                             MeasureType = "GramX100",
                             Name = "Çam Fıstığı",
+                            PicturePath = "..\\..\\..\\Resources\\Çam fıstığı.png",
                             Protein = 13.0
                         },
                         new
@@ -1798,6 +1936,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 62.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Fındık",
+                            PicturePath = "..\\..\\..\\Resources\\Fındık.png",
                             Protein = 12.0
                         },
                         new
@@ -1809,6 +1948,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Fıstık",
+                            PicturePath = "..\\..\\..\\Resources\\Fıstık.png",
                             Protein = 0.0
                         },
                         new
@@ -1820,6 +1960,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.6000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kuru Fasulye (beyaz)",
+                            PicturePath = "..\\..\\..\\Resources\\Kuru fasulye (beyaz).png",
                             Protein = 22.300000000000001
                         },
                         new
@@ -1831,6 +1972,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 50.0,
                             MeasureType = "GramX100",
                             Name = "Kabak Çekirdeği",
+                            PicturePath = "..\\..\\..\\Resources\\Kabak Çekirdeği.png",
                             Protein = 30.0
                         },
                         new
@@ -1842,6 +1984,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 45.0,
                             MeasureType = "GramX100",
                             Name = "Kavun,Karpuz Çekirdeği",
+                            PicturePath = "..\\..\\..\\Resources\\Kavun Karpuz çekirdeği.png",
                             Protein = 25.0
                         },
                         new
@@ -1853,6 +1996,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.5,
                             MeasureType = "GramX100",
                             Name = "Kestane",
+                            PicturePath = "..\\..\\..\\Resources\\Kestane.png",
                             Protein = 2.8999999999999999
                         },
                         new
@@ -1864,6 +2008,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.5,
                             MeasureType = "GramX100",
                             Name = "Kestane Haşlanmış",
+                            PicturePath = "..\\..\\..\\Resources\\kestane haşlanmış.png",
                             Protein = 2.0
                         },
                         new
@@ -1875,6 +2020,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2000000000000002,
                             MeasureType = "GramX100",
                             Name = "Kestane Kavrulmuş",
+                            PicturePath = "..\\..\\..\\Resources\\Kestane kavrulmuş.png",
                             Protein = 3.2000000000000002
                         },
                         new
@@ -1886,6 +2032,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Mercimek",
+                            PicturePath = "..\\..\\..\\Resources\\Mercimek.png",
                             Protein = 24.699999999999999
                         },
                         new
@@ -1897,6 +2044,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.7999999999999998,
                             MeasureType = "GramX100",
                             Name = "Nohut",
+                            PicturePath = "..\\..\\..\\Resources\\Nohut.png",
                             Protein = 20.5
                         },
                         new
@@ -1908,6 +2056,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.6000000000000001,
                             MeasureType = "GramX100",
                             Name = "Palamut Çekirdeği",
+                            PicturePath = "..\\..\\..\\Resources\\Palamut çekirdeği.png",
                             Protein = 3.0
                         },
                         new
@@ -1919,6 +2068,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 17.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Soya Fasulyesi",
+                            PicturePath = "..\\..\\..\\Resources\\Soya fasulyesi.png",
                             Protein = 34.100000000000001
                         },
                         new
@@ -1930,6 +2080,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 6.7000000000000002,
                             MeasureType = "GramX100",
                             Name = "Soya Unu (az yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\soya unu az yağlı.png",
                             Protein = 43.399999999999999
                         },
                         new
@@ -1941,6 +2092,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.90000000000000002,
                             MeasureType = "GramX100",
                             Name = "Soya Unu (yağsız)",
+                            PicturePath = "..\\..\\..\\Resources\\soya unu yağsız.png",
                             Protein = 47.0
                         },
                         new
@@ -1952,6 +2104,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 53.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Susam",
+                            PicturePath = "..\\..\\..\\Resources\\Susam.png",
                             Protein = 18.199999999999999
                         },
                         new
@@ -1963,6 +2116,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 53.700000000000003,
                             MeasureType = "GramX100",
                             Name = "Şam Fıstığı",
+                            PicturePath = "..\\..\\..\\Resources\\Şam Fıstığı.png",
                             Protein = 19.300000000000001
                         },
                         new
@@ -1974,6 +2128,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 48.700000000000003,
                             MeasureType = "GramX100",
                             Name = "Yer Fıstığı",
+                            PicturePath = "..\\..\\..\\Resources\\Yer Fıstığı.png",
                             Protein = 26.199999999999999
                         },
                         new
@@ -1985,6 +2140,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.0,
                             MeasureType = "GramX100",
                             Name = "Hindi, et ve deri",
+                            PicturePath = "..\\..\\..\\Resources\\hindi et ve deri.png",
                             Protein = 20.399999999999999
                         },
                         new
@@ -1996,6 +2152,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 33.600000000000001,
                             MeasureType = "GramX100",
                             Name = "Kaz",
+                            PicturePath = "..\\..\\..\\Resources\\Kaz.png",
                             Protein = 15.9
                         },
                         new
@@ -2007,6 +2164,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 39.299999999999997,
                             MeasureType = "GramX100",
                             Name = "Ördek",
+                            PicturePath = "..\\..\\..\\Resources\\Ördek Pişmiş.png",
                             Protein = 11.5
                         },
                         new
@@ -2018,6 +2176,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.0,
                             MeasureType = "Portion",
                             Name = "Şehr. tavuk çorbası",
+                            PicturePath = "..\\..\\..\\Resources\\Şehr tavuk çorbası.png",
                             Protein = 4.0
                         },
                         new
@@ -2029,6 +2188,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 15.1,
                             MeasureType = "GramX100",
                             Name = "Tavuk Whole",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk Bütün.png",
                             Protein = 18.600000000000001
                         },
                         new
@@ -2040,6 +2200,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.1,
                             MeasureType = "GramX100",
                             Name = "Tavuk beyaz et (derili)",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk beyaz et (derili).png",
                             Protein = 20.300000000000001
                         },
                         new
@@ -2051,6 +2212,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.7,
                             MeasureType = "GramX100",
                             Name = "Tavuk beyaz et (derisiz)",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk beyaz et (derisiz).png",
                             Protein = 23.199999999999999
                         },
                         new
@@ -2062,6 +2224,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 18.0,
                             MeasureType = "Portion",
                             Name = "Tavuk göğüs kızarmış",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk göğüs kızarmış.png",
                             Protein = 35.0
                         },
                         new
@@ -2073,6 +2236,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Tavuk siyah et derisiz",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk siyah et derisiz.png",
                             Protein = 20.100000000000001
                         },
                         new
@@ -2084,6 +2248,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 32.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Tavuk, deri",
+                            PicturePath = "..\\..\\..\\Resources\\tavuk deri.png",
                             Protein = 13.300000000000001
                         },
                         new
@@ -2095,6 +2260,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 18.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Tavuk, siyah et (derili)",
+                            PicturePath = "..\\..\\..\\Resources\\tavuk siyah et derili.png",
                             Protein = 16.699999999999999
                         },
                         new
@@ -2106,6 +2272,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Ahududu (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Ahududu kırmızı.png",
                             Protein = 1.2
                         },
                         new
@@ -2117,6 +2284,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3999999999999999,
                             MeasureType = "GramX100",
                             Name = "Ahududu (Siyah)",
+                            PicturePath = "..\\..\\..\\Resources\\Ahududu Siyah.png",
                             Protein = 1.5
                         },
                         new
@@ -2128,6 +2296,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Ananas",
+                            PicturePath = "..\\..\\..\\Resources\\Ananas.png",
                             Protein = 0.40000000000000002
                         },
                         new
@@ -2139,6 +2308,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Armut",
+                            PicturePath = "..\\..\\..\\Resources\\Armut.png",
                             Protein = 0.69999999999999996
                         },
                         new
@@ -2150,6 +2320,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 16.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Avokado",
+                            PicturePath = "..\\..\\..\\Resources\\Avokado.png",
                             Protein = 2.1000000000000001
                         },
                         new
@@ -2161,6 +2332,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Ayva",
+                            PicturePath = "..\\..\\..\\Resources\\Ayva.png",
                             Protein = 0.40000000000000002
                         },
                         new
@@ -2172,6 +2344,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.90000000000000002,
                             MeasureType = "GramX100",
                             Name = "Böğürtlen",
+                            PicturePath = "..\\..\\..\\Resources\\Böğürtlen.png",
                             Protein = 1.2
                         },
                         new
@@ -2183,6 +2356,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Çilek",
+                            PicturePath = "..\\..\\..\\Resources\\Çilek.png",
                             Protein = 0.69999999999999996
                         },
                         new
@@ -2194,6 +2368,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Dut",
+                            PicturePath = "..\\..\\..\\Resources\\Dut.png",
                             Protein = 0.90000000000000002
                         },
                         new
@@ -2205,6 +2380,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Elma",
+                            PicturePath = "..\\..\\..\\Resources\\Elma.png",
                             Protein = 0.20000000000000001
                         },
                         new
@@ -2216,6 +2392,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Elma Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Elma.png",
                             Protein = 0.10000000000000001
                         },
                         new
@@ -2227,6 +2404,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Erik (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Erik kırmızı.png",
                             Protein = 0.5
                         },
                         new
@@ -2238,6 +2416,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Erik (Mürdüm)",
+                            PicturePath = "..\\..\\..\\Resources\\Erik mürdüm.png",
                             Protein = 0.80000000000000004
                         },
                         new
@@ -2249,6 +2428,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Erik Mürdüm (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Erik mürdüm kuru.png",
                             Protein = 2.1000000000000001
                         },
                         new
@@ -2260,6 +2440,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Erik Pestil",
+                            PicturePath = "..\\..\\..\\Resources\\Erik pestik.png",
                             Protein = 3.2999999999999998
                         },
                         new
@@ -2271,6 +2452,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Grameyfurt",
+                            PicturePath = "..\\..\\..\\Resources\\Greyfut.png",
                             Protein = 0.5
                         },
                         new
@@ -2282,6 +2464,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Grameyfurt Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\greyfurt suyu.png",
                             Protein = 0.5
                         },
                         new
@@ -2293,6 +2476,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Hurma",
+                            PicturePath = "..\\..\\..\\Resources\\Hurma.png",
                             Protein = 2.2000000000000002
                         },
                         new
@@ -2304,6 +2488,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Piece",
                             Name = "Hurma",
+                            PicturePath = "..\\..\\..\\Resources\\Hurma.png",
                             Protein = 0.0
                         },
                         new
@@ -2315,6 +2500,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3,
                             MeasureType = "GramX100",
                             Name = "İncir (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\İncir Kuru.png",
                             Protein = 4.2999999999999998
                         },
                         new
@@ -2326,6 +2512,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "İncir (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\İncir taze.png",
                             Protein = 1.2
                         },
                         new
@@ -2337,6 +2524,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Karpuz",
+                            PicturePath = "..\\..\\..\\Resources\\Meyve Syuyu.png",
                             Protein = 0.5
                         },
                         new
@@ -2348,6 +2536,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Kavun",
+                            PicturePath = "..\\..\\..\\Resources\\Meyve Syuyu.png",
                             Protein = 0.80000000000000004
                         },
                         new
@@ -2359,6 +2548,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.5,
                             MeasureType = "GramX100",
                             Name = "Kayısı (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Kayısı Pestil.png",
                             Protein = 5.0
                         },
                         new
@@ -2370,6 +2560,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "Piece",
                             Name = "Kayısı (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Kayısı Pestil.png",
                             Protein = 0.29999999999999999
                         },
                         new
@@ -2381,6 +2572,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Kayısı Pestil",
+                            PicturePath = "..\\..\\..\\Resources\\Kayısı Pestil.png",
                             Protein = 5.5999999999999996
                         },
                         new
@@ -2392,6 +2584,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "Piece",
                             Name = "Kiraz",
+                            PicturePath = "..\\..\\..\\Resources\\Kiraz.png",
                             Protein = 0.10000000000000001
                         },
                         new
@@ -2403,6 +2596,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kivi",
+                            PicturePath = "..\\..\\..\\Resources\\Kivi.png",
                             Protein = 0.29999999999999999
                         },
                         new
@@ -2414,6 +2608,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Limon",
+                            PicturePath = "..\\..\\..\\Resources\\Limon.png",
                             Protein = 1.1000000000000001
                         },
                         new
@@ -2425,6 +2620,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Limon Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Limon Suyu.png",
                             Protein = 0.5
                         },
                         new
@@ -2436,6 +2632,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Mandalina",
+                            PicturePath = "..\\..\\..\\Resources\\Mandalina.png",
                             Protein = 0.80000000000000004
                         },
                         new
@@ -2447,6 +2644,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Mandalina Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Mandalina suyu.png",
                             Protein = 0.5
                         },
                         new
@@ -2458,6 +2656,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Muz",
+                            PicturePath = "..\\..\\..\\Resources\\Muz.png",
                             Protein = 1.0
                         },
                         new
@@ -2469,6 +2668,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Nar",
+                            PicturePath = "..\\..\\..\\Resources\\Nar.png",
                             Protein = 0.5
                         },
                         new
@@ -2480,6 +2680,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Portakal",
+                            PicturePath = "..\\..\\..\\Resources\\Portakal.png",
                             Protein = 1.0
                         },
                         new
@@ -2491,6 +2692,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Şeftali",
+                            PicturePath = "..\\..\\..\\Resources\\Şeftali.png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -2502,6 +2704,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Üzüm (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Üzüm Kuru.png",
                             Protein = 2.5
                         },
                         new
@@ -2513,6 +2716,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Üzüm (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Üzüm Taze.png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -2524,6 +2728,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Üzüm Suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Üzüm Suyu.png",
                             Protein = 0.20000000000000001
                         },
                         new
@@ -2535,6 +2740,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Vişne",
+                            PicturePath = "..\\..\\..\\Resources\\Vişne.png",
                             Protein = 1.2
                         },
                         new
@@ -2546,6 +2752,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 18.199999999999999,
                             MeasureType = "GramX100",
                             Name = "Bey. peynir (Edirne)",
+                            PicturePath = "..\\..\\..\\Resources\\Bey peynir yağlı.png",
                             Protein = 15.4
                         },
                         new
@@ -2557,6 +2764,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 26.5,
                             MeasureType = "GramX100",
                             Name = "Bey. peynir (Urfa)",
+                            PicturePath = "..\\..\\..\\Resources\\Bey peynir Urfa.png",
                             Protein = 15.199999999999999
                         },
                         new
@@ -2568,6 +2776,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.600000000000001,
                             MeasureType = "GramX100",
                             Name = "Bey. peynir (yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Bey Peynir yağlı.png",
                             Protein = 22.5
                         },
                         new
@@ -2579,6 +2788,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.69999999999999996,
                             MeasureType = "GramX100",
                             Name = "Bey.peynir (yağsız)",
+                            PicturePath = "..\\..\\..\\Resources\\Bey Peynir Yağsız.png",
                             Protein = 19.0
                         },
                         new
@@ -2590,6 +2800,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 33.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Cheddar",
+                            PicturePath = "..\\..\\..\\Resources\\Cheddar.png",
                             Protein = 24.899999999999999
                         },
                         new
@@ -2601,6 +2812,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Çökelek (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Çökelek (kuru).png",
                             Protein = 54.899999999999999
                         },
                         new
@@ -2612,6 +2824,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Çökelek (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Çökelek (taze).png",
                             Protein = 35.0
                         },
                         new
@@ -2623,6 +2836,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 32.299999999999997,
                             MeasureType = "GramX100",
                             Name = "Gramavyer (%8 Tuzlu)",
+                            PicturePath = "..\\..\\..\\Resources\\Gravyer (%8 Tuzlu).png",
                             Protein = 29.800000000000001
                         },
                         new
@@ -2634,6 +2848,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 27.800000000000001,
                             MeasureType = "GramX100",
                             Name = "Kars Tipi",
+                            PicturePath = "..\\..\\..\\Resources\\Kars Tipş.png",
                             Protein = 25.0
                         },
                         new
@@ -2645,6 +2860,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 31.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Kaşar Peyniri",
+                            PicturePath = "..\\..\\..\\Resources\\Kaşar Peyniri.png",
                             Protein = 27.0
                         },
                         new
@@ -2656,6 +2872,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 34.899999999999999,
                             MeasureType = "GramX100",
                             Name = "Krem Peynir (Sade)",
+                            PicturePath = "..\\..\\..\\Resources\\Krem Peynir.png",
                             Protein = 7.5999999999999996
                         },
                         new
@@ -2667,6 +2884,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Lor peyniri (%1 yağ)",
+                            PicturePath = "..\\..\\..\\Resources\\Lor peyniri (%1 yağ).png",
                             Protein = 12.4
                         },
                         new
@@ -2678,6 +2896,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.8999999999999999,
                             MeasureType = "GramX100",
                             Name = "Lor peyniri (%2 yağ)",
+                            PicturePath = "..\\..\\..\\Resources\\Lor peyniri(%2 yağ).png",
                             Protein = 13.699999999999999
                         },
                         new
@@ -2689,6 +2908,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Lor peyniri (yağsız)",
+                            PicturePath = "..\\..\\..\\Resources\\Lor peyniri (yağsız).png",
                             Protein = 17.300000000000001
                         },
                         new
@@ -2700,6 +2920,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 27.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Otlu Peynir",
+                            PicturePath = "..\\..\\..\\Resources\\Otlu Peynir.png",
                             Protein = 20.100000000000001
                         },
                         new
@@ -2711,6 +2932,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 30.600000000000001,
                             MeasureType = "GramX100",
                             Name = "Rokfor",
+                            PicturePath = "..\\..\\..\\Resources\\Rokfor.png",
                             Protein = 21.5
                         },
                         new
@@ -2722,6 +2944,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.7999999999999998,
                             MeasureType = "GramX100",
                             Name = "Akciğer (dana)",
+                            PicturePath = "..\\..\\..\\Resources\\Akciğer Dana.png",
                             Protein = 16.800000000000001
                         },
                         new
@@ -2733,6 +2956,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 8.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Beyin",
+                            PicturePath = "..\\..\\..\\Resources\\Beyin.png",
                             Protein = 10.4
                         },
                         new
@@ -2744,6 +2968,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Böbrek (kuzu)",
+                            PicturePath = "..\\..\\..\\Resources\\böbrek Kuzu.png",
                             Protein = 16.800000000000001
                         },
                         new
@@ -2755,6 +2980,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.0,
                             MeasureType = "GramX100",
                             Name = "Dalak (sığır, dana)",
+                            PicturePath = "..\\..\\..\\Resources\\Dalak sığır dana.png",
                             Protein = 18.100000000000001
                         },
                         new
@@ -2766,6 +2992,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Dil (dana)",
+                            PicturePath = "..\\..\\..\\Resources\\Dana Dil.png",
                             Protein = 18.5
                         },
                         new
@@ -2777,6 +3004,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.0,
                             MeasureType = "GramX100",
                             Name = "İşkembe (sığır)",
+                            PicturePath = "..\\..\\..\\Resources\\İşkembe Sığır.png",
                             Protein = 19.100000000000001
                         },
                         new
@@ -2788,6 +3016,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.7000000000000002,
                             MeasureType = "GramX100",
                             Name = "Karaciğer (dana)",
+                            PicturePath = "..\\..\\..\\Resources\\Karaciğer dana.png",
                             Protein = 19.199999999999999
                         },
                         new
@@ -2799,6 +3028,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.7000000000000002,
                             MeasureType = "GramX100",
                             Name = "Karaciğer (tavuk)",
+                            PicturePath = "..\\..\\..\\Resources\\Karaciğer Tavuk.png",
                             Protein = 19.699999999999999
                         },
                         new
@@ -2810,6 +3040,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.9000000000000004,
                             MeasureType = "GramX100",
                             Name = "Yürek (dana)",
+                            PicturePath = "..\\..\\..\\Resources\\Yürek Dana.png",
                             Protein = 15.0
                         },
                         new
@@ -2821,6 +3052,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Asma Yaprağı",
+                            PicturePath = "..\\..\\..\\Resources\\Asma yaprağı.png",
                             Protein = 3.7999999999999998
                         },
                         new
@@ -2832,6 +3064,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2000000000000002,
                             MeasureType = "GramX100",
                             Name = "Bamya (Kurutulmuş)",
+                            PicturePath = "..\\..\\..\\Resources\\bamya (kurutulmuş).png",
                             Protein = 17.399999999999999
                         },
                         new
@@ -2843,6 +3076,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Bamya (taze)",
+                            PicturePath = "..\\..\\..\\Resources\\bamya (taze).png",
                             Protein = 2.3999999999999999
                         },
                         new
@@ -2854,6 +3088,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Bezelye (İç)",
+                            PicturePath = "..\\..\\..\\Resources\\Bezelye (iç).png",
                             Protein = 6.2999999999999998
                         },
                         new
@@ -2865,6 +3100,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Bezelye (Konserve)",
+                            PicturePath = "..\\..\\..\\Resources\\Bezelye (kONSERVE).png",
                             Protein = 4.7000000000000002
                         },
                         new
@@ -2876,6 +3112,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.6000000000000001,
                             MeasureType = "GramX100",
                             Name = "Biber (Kurutulmuş)",
+                            PicturePath = "..\\..\\..\\Resources\\Kırmızı Biber.png",
                             Protein = 16.0
                         },
                         new
@@ -2887,6 +3124,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Biber (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Biber Taze,.png",
                             Protein = 1.2
                         },
                         new
@@ -2898,6 +3136,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Börülce (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Börülce.png",
                             Protein = 9.0
                         },
                         new
@@ -2909,6 +3148,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "Head",
                             Name = "Brokoli",
+                            PicturePath = "..\\..\\..\\Resources\\brokoli.png",
                             Protein = 4.0
                         },
                         new
@@ -2920,6 +3160,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Domates (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Domates (kırmızı).png",
                             Protein = 1.0
                         },
                         new
@@ -2931,6 +3172,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Domates (Yeşil)",
+                            PicturePath = "..\\..\\..\\Resources\\Domates (yeşil).png",
                             Protein = 1.2
                         },
                         new
@@ -2942,6 +3184,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Domates suyu",
+                            PicturePath = "..\\..\\..\\Resources\\Domates Suyu.png",
                             Protein = 0.80000000000000004
                         },
                         new
@@ -2953,6 +3196,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Ebegümeci",
+                            PicturePath = "..\\..\\..\\Resources\\Ebegümeci.png",
                             Protein = 4.4000000000000004
                         },
                         new
@@ -2964,6 +3208,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Enginar",
+                            PicturePath = "..\\..\\..\\Resources\\Enginar.png",
                             Protein = 3.0
                         },
                         new
@@ -2975,6 +3220,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.7,
                             MeasureType = "GramX100",
                             Name = "Fasulye (Kurutulmuş)",
+                            PicturePath = "..\\..\\..\\Resources\\Fasulye (kurutulmuş).png",
                             Protein = 8.5999999999999996
                         },
                         new
@@ -2986,6 +3232,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Fasulye (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\fasulye (taze).png",
                             Protein = 1.8999999999999999
                         },
                         new
@@ -2997,6 +3244,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Havuç",
+                            PicturePath = "..\\..\\..\\Resources\\Havuç.png",
                             Protein = 1.1000000000000001
                         },
                         new
@@ -3008,6 +3256,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Hıyar (Soyulmamış)",
+                            PicturePath = "..\\..\\..\\Resources\\Hıyar (soyulmamış).png",
                             Protein = 0.90000000000000002
                         },
                         new
@@ -3019,6 +3268,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Hıyar (soyulmuş)",
+                            PicturePath = "..\\..\\..\\Resources\\Hıyar (soyulmuş).png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -3030,6 +3280,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.69999999999999996,
                             MeasureType = "GramX100",
                             Name = "Hindibağ Otu",
+                            PicturePath = "..\\..\\..\\Resources\\Hindibağ otu.png",
                             Protein = 2.7000000000000002
                         },
                         new
@@ -3041,6 +3292,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Ispanak",
+                            PicturePath = "..\\..\\..\\Resources\\Ispanak.png",
                             Protein = 3.2000000000000002
                         },
                         new
@@ -3052,6 +3304,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kabak (Kış)",
+                            PicturePath = "..\\..\\..\\Resources\\Kabak (kış).png",
                             Protein = 1.0
                         },
                         new
@@ -3063,6 +3316,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kabak (Yaz)",
+                            PicturePath = "..\\..\\..\\Resources\\Kabak (yaz).png",
                             Protein = 11.0
                         },
                         new
@@ -3074,6 +3328,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Karnıbahar",
+                            PicturePath = "..\\..\\..\\Resources\\Karnıbahar.png",
                             Protein = 2.7000000000000002
                         },
                         new
@@ -3085,6 +3340,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Kereviz",
+                            PicturePath = "..\\..\\..\\Resources\\Kereviz.png",
                             Protein = 1.8
                         },
                         new
@@ -3096,6 +3352,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Kırmızı Biber (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Kırmızı Biber.png",
                             Protein = 3.7000000000000002
                         },
                         new
@@ -3107,6 +3364,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kıvırcık",
+                            PicturePath = "..\\..\\..\\Resources\\Kıvırcık.png",
                             Protein = 1.7
                         },
                         new
@@ -3118,6 +3376,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Konserve fasulye",
+                            PicturePath = "..\\..\\..\\Resources\\Konserve Fasulye.png",
                             Protein = 1.3999999999999999
                         },
                         new
@@ -3129,6 +3388,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Kuşkonmaz",
+                            PicturePath = "..\\..\\..\\Resources\\Kuşkonmaz.png",
                             Protein = 2.5
                         },
                         new
@@ -3140,6 +3400,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Lahana (Beyaz)",
+                            PicturePath = "..\\..\\..\\Resources\\lahana.png",
                             Protein = 1.3
                         },
                         new
@@ -3151,6 +3412,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Lahana (Brüksel)",
+                            PicturePath = "..\\..\\..\\Resources\\lahana brüksel.png",
                             Protein = 5.2000000000000002
                         },
                         new
@@ -3162,6 +3424,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Lahana (Kara)",
+                            PicturePath = "..\\..\\..\\Resources\\Kara Lahana.png",
                             Protein = 4.0
                         },
                         new
@@ -3173,6 +3436,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Lahana (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Lahana Kırmızı.png",
                             Protein = 2.0
                         },
                         new
@@ -3184,6 +3448,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Madımak",
+                            PicturePath = "..\\..\\..\\Resources\\madımak.png",
                             Protein = 2.3999999999999999
                         },
                         new
@@ -3195,6 +3460,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Mantar",
+                            PicturePath = "..\\..\\..\\Resources\\mantar.png",
                             Protein = 2.7000000000000002
                         },
                         new
@@ -3206,6 +3472,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Marul",
+                            PicturePath = "..\\..\\..\\Resources\\Marul.png",
                             Protein = 1.2
                         },
                         new
@@ -3217,6 +3484,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Maydonoz",
+                            PicturePath = "..\\..\\..\\Resources\\Maydonoz.png",
                             Protein = 3.6000000000000001
                         },
                         new
@@ -3228,6 +3496,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Mısır (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Mısır (taze).png",
                             Protein = 3.5
                         },
                         new
@@ -3239,6 +3508,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3,
                             MeasureType = "GramX100",
                             Name = "Nane (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\nane (taze).png",
                             Protein = 4.0
                         },
                         new
@@ -3250,6 +3520,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Pancar (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Pancar Kırmızı.png",
                             Protein = 1.6000000000000001
                         },
                         new
@@ -3261,6 +3532,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Pancar (Yaprak)",
+                            PicturePath = "..\\..\\..\\Resources\\Pancar Yaprak.png",
                             Protein = 2.2000000000000002
                         },
                         new
@@ -3272,6 +3544,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Patates",
+                            PicturePath = "..\\..\\..\\Resources\\Patates.png",
                             Protein = 2.1000000000000001
                         },
                         new
@@ -3283,6 +3556,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Patates unu",
+                            PicturePath = "..\\..\\..\\Resources\\patates unu.png",
                             Protein = 8.0
                         },
                         new
@@ -3294,6 +3568,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "Patlıcan (kurutul.)",
+                            PicturePath = "..\\..\\..\\Resources\\Patlıcan Kurutulmuş.png",
                             Protein = 13.699999999999999
                         },
                         new
@@ -3305,6 +3580,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Patlıcan (Taze)",
+                            PicturePath = "..\\..\\..\\Resources\\Patlıcan.png",
                             Protein = 1.2
                         },
                         new
@@ -3316,6 +3592,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Pazı",
+                            PicturePath = "..\\..\\..\\Resources\\Pazı.png",
                             Protein = 2.0
                         },
                         new
@@ -3327,6 +3604,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Pırasa",
+                            PicturePath = "..\\..\\..\\Resources\\Pırasa.png",
                             Protein = 2.2000000000000002
                         },
                         new
@@ -3338,6 +3616,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Roka",
+                            PicturePath = "..\\..\\..\\Resources\\Roka.png",
                             Protein = 3.0
                         },
                         new
@@ -3349,6 +3628,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Sarmısak (Head)",
+                            PicturePath = "..\\..\\..\\Resources\\Sarmısak Baş.png",
                             Protein = 6.2000000000000002
                         },
                         new
@@ -3360,6 +3640,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Sarmısak (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Sarmısak Toz.png",
                             Protein = 16.800000000000001
                         },
                         new
@@ -3371,6 +3652,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Semiz Otu",
+                            PicturePath = "..\\..\\..\\Resources\\Semizotu.png",
                             Protein = 2.0
                         },
                         new
@@ -3382,6 +3664,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Soğan (Kuru)",
+                            PicturePath = "..\\..\\..\\Resources\\Kuru Soğan.png",
                             Protein = 1.5
                         },
                         new
@@ -3393,6 +3676,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Soğan (Toz)",
+                            PicturePath = "..\\..\\..\\Resources\\Soğan toz.png",
                             Protein = 10.1
                         },
                         new
@@ -3404,6 +3688,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Soğan (Yeşil)",
+                            PicturePath = "..\\..\\..\\Resources\\Soğan Yeşil.png",
                             Protein = 1.5
                         },
                         new
@@ -3415,6 +3700,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Şalgam",
+                            PicturePath = "..\\..\\..\\Resources\\Şalgam.png",
                             Protein = 1.0
                         },
                         new
@@ -3426,6 +3712,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Taze Bakla",
+                            PicturePath = "..\\..\\..\\Resources\\Taze Bakla.png",
                             Protein = 5.2000000000000002
                         },
                         new
@@ -3437,6 +3724,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Tere",
+                            PicturePath = "..\\..\\..\\Resources\\Tere.png",
                             Protein = 3.0
                         },
                         new
@@ -3448,6 +3736,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Turp (Kırmızı)",
+                            PicturePath = "..\\..\\..\\Resources\\Turp.png",
                             Protein = 0.90000000000000002
                         },
                         new
@@ -3459,6 +3748,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "Turp (Siyah)",
+                            PicturePath = "..\\..\\..\\Resources\\Turp.png",
                             Protein = 1.0
                         },
                         new
@@ -3470,6 +3760,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Yer Elması",
+                            PicturePath = "..\\..\\..\\Resources\\Yer Elması.png",
                             Protein = 2.2999999999999998
                         },
                         new
@@ -3481,6 +3772,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.59999999999999998,
                             MeasureType = "GramX100",
                             Name = "Yonca",
+                            PicturePath = "..\\..\\..\\Resources\\Yonca.png",
                             Protein = 1.0
                         },
                         new
@@ -3492,6 +3784,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 35.700000000000003,
                             MeasureType = "GramX100",
                             Name = "Bin Ada Yağı",
+                            PicturePath = "..\\..\\..\\Resources\\Bin ada yağı.png",
                             Protein = 0.90000000000000002
                         },
                         new
@@ -3503,6 +3796,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 41.0,
                             MeasureType = "GramX100",
                             Name = "Fransız salata sosu",
+                            PicturePath = "..\\..\\..\\Resources\\Fransız Salata Sosu.png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -3514,6 +3808,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 48.299999999999997,
                             MeasureType = "GramX100",
                             Name = "İtalyan salata sosu",
+                            PicturePath = "..\\..\\..\\Resources\\İtalyan salata sosu.png",
                             Protein = 0.69999999999999996
                         },
                         new
@@ -3525,6 +3820,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Ketçap",
+                            PicturePath = "..\\..\\..\\Resources\\Ketçap.png",
                             Protein = 2.0
                         },
                         new
@@ -3536,6 +3832,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 16.0,
                             MeasureType = "Glass",
                             Name = "Kıymalı Chili",
+                            PicturePath = "..\\..\\..\\Resources\\Kıymalı Chili.png",
                             Protein = 19.0
                         },
                         new
@@ -3547,6 +3844,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Krema (%50 yağ, süt)",
+                            PicturePath = "..\\..\\..\\Resources\\Krema (yarım yağ, süt).png",
                             Protein = 3.2000000000000002
                         },
                         new
@@ -3558,6 +3856,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 33.399999999999999,
                             MeasureType = "GramX100",
                             Name = "Mayonez",
+                            PicturePath = "..\\..\\..\\Resources\\Mayonez.png",
                             Protein = 0.90000000000000002
                         },
                         new
@@ -3569,6 +3868,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 50.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Salata sosu (yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Salata Sosu (Yağlı).png",
                             Protein = 0.0
                         },
                         new
@@ -3580,6 +3880,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Salça",
+                            PicturePath = "..\\..\\..\\Resources\\Salça.png",
                             Protein = 2.7000000000000002
                         },
                         new
@@ -3591,6 +3892,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.3,
                             MeasureType = "GramX100",
                             Name = "Soya Sosu",
+                            PicturePath = "..\\..\\..\\Resources\\Soya Sosu.png",
                             Protein = 5.5999999999999996
                         },
                         new
@@ -3602,6 +3904,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Anne sütü",
+                            PicturePath = "..\\..\\..\\Resources\\Manda Sütü.png",
                             Protein = 1.0
                         },
                         new
@@ -3613,6 +3916,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.8999999999999999,
                             MeasureType = "GramX100",
                             Name = "İnek (1/2 yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\İnek (yarım yağlı).png",
                             Protein = 3.2999999999999998
                         },
                         new
@@ -3624,6 +3928,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.2999999999999998,
                             MeasureType = "GramX100",
                             Name = "İnek (Yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\İnek Yağlı.png",
                             Protein = 3.2999999999999998
                         },
                         new
@@ -3635,6 +3940,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.20000000000000001,
                             MeasureType = "GramX100",
                             Name = "İnek (yağsız)",
+                            PicturePath = "..\\..\\..\\Resources\\İnek Yağsız.png",
                             Protein = 3.3999999999999999
                         },
                         new
@@ -3646,6 +3952,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.0999999999999996,
                             MeasureType = "GramX100",
                             Name = "Keçi sütü",
+                            PicturePath = "..\\..\\..\\Resources\\Keçi sütü.png",
                             Protein = 3.6000000000000001
                         },
                         new
@@ -3657,6 +3964,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.0,
                             MeasureType = "GramX100",
                             Name = "Koyun",
+                            PicturePath = "..\\..\\..\\Resources\\Koyun Süt.png",
                             Protein = 6.0
                         },
                         new
@@ -3668,6 +3976,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 6.9000000000000004,
                             MeasureType = "GramX100",
                             Name = "Manda sütü",
+                            PicturePath = "..\\..\\..\\Resources\\Manda Sütü.png",
                             Protein = 3.7999999999999998
                         },
                         new
@@ -3679,6 +3988,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.5,
                             MeasureType = "GramX100",
                             Name = "Soya",
+                            PicturePath = "..\\..\\..\\Resources\\Soya Sütü.png",
                             Protein = 3.3999999999999999
                         },
                         new
@@ -3690,6 +4000,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 26.699999999999999,
                             MeasureType = "GramX100",
                             Name = "Süt Tozu (Yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Süt tozu.png",
                             Protein = 26.300000000000001
                         },
                         new
@@ -3701,6 +4012,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Süt Tozu (Yağsız)",
+                            PicturePath = "..\\..\\..\\Resources\\Süt tozu yağsız.png",
                             Protein = 36.200000000000003
                         },
                         new
@@ -3712,6 +4024,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.7,
                             MeasureType = "GramX100",
                             Name = "Yoğurt (1/2 yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Yoğurt Yarım Yağlı.png",
                             Protein = 3.3999999999999999
                         },
                         new
@@ -3723,6 +4036,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.3999999999999999,
                             MeasureType = "GramX100",
                             Name = "Yoğurt (Yağlı)",
+                            PicturePath = "..\\..\\..\\Resources\\Yoğurt (Yağlı).png",
                             Protein = 3.0
                         },
                         new
@@ -3734,6 +4048,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Akide şekeri",
+                            PicturePath = "..\\..\\..\\Resources\\Akide şekeri.png",
                             Protein = 0.0
                         },
                         new
@@ -3745,6 +4060,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Bal",
+                            PicturePath = "..\\..\\..\\Resources\\Bal.png",
                             Protein = 0.29999999999999999
                         },
                         new
@@ -3756,6 +4072,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.9000000000000004,
                             MeasureType = "GramX100",
                             Name = "Bisküvi",
+                            PicturePath = "..\\..\\..\\Resources\\Biskuvi.png",
                             Protein = 6.5999999999999996
                         },
                         new
@@ -3767,6 +4084,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 16.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Bisküvi (pasta)",
+                            PicturePath = "..\\..\\..\\Resources\\Biskuvi pasta.png",
                             Protein = 5.4000000000000004
                         },
                         new
@@ -3778,6 +4096,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 35.600000000000001,
                             MeasureType = "GramX100",
                             Name = "Çikolata (Bademli)",
+                            PicturePath = "..\\..\\..\\Resources\\Çikolata Bademli.png",
                             Protein = 9.3000000000000007
                         },
                         new
@@ -3789,6 +4108,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 38.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Çikolata (Fıstıklı)",
+                            PicturePath = "..\\..\\..\\Resources\\Çikolata Fıstıklı.png",
                             Protein = 14.1
                         },
                         new
@@ -3800,6 +4120,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 35.100000000000001,
                             MeasureType = "GramX100",
                             Name = "Çikolata (Şekerli)",
+                            PicturePath = "..\\..\\..\\Resources\\Çikolata.png",
                             Protein = 4.4000000000000004
                         },
                         new
@@ -3811,6 +4132,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 39.700000000000003,
                             MeasureType = "GramX100",
                             Name = "Çikolata (Şekersiz)",
+                            PicturePath = "..\\..\\..\\Resources\\Çikolata.png",
                             Protein = 7.9000000000000004
                         },
                         new
@@ -3822,6 +4144,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 10.6,
                             MeasureType = "GramX100",
                             Name = "Dondurma (Sütlü)",
+                            PicturePath = "..\\..\\..\\Resources\\Sütlü Dondurma.png",
                             Protein = 4.5
                         },
                         new
@@ -3833,6 +4156,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 10.199999999999999,
                             MeasureType = "GramX100",
                             Name = "Karamela",
+                            PicturePath = "..\\..\\..\\Resources\\Karemela.png",
                             Protein = 4.0
                         },
                         new
@@ -3844,6 +4168,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Lokum",
+                            PicturePath = "..\\..\\..\\Resources\\Lokum.png",
                             Protein = 0.0
                         },
                         new
@@ -3855,6 +4180,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Marmelat",
+                            PicturePath = "..\\..\\..\\Resources\\Marmelat.png",
                             Protein = 0.5
                         },
                         new
@@ -3866,6 +4192,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.29999999999999999,
                             MeasureType = "GramX100",
                             Name = "Meyva şekerleme",
+                            PicturePath = "..\\..\\..\\Resources\\Meyva şekerleme.png",
                             Protein = 0.40000000000000002
                         },
                         new
@@ -3877,6 +4204,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Pekmez (Üzüm)",
+                            PicturePath = "..\\..\\..\\Resources\\Pekmez.png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -3888,6 +4216,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.10000000000000001,
                             MeasureType = "GramX100",
                             Name = "Reçel",
+                            PicturePath = "..\\..\\..\\Resources\\Reçel.png",
                             Protein = 0.59999999999999998
                         },
                         new
@@ -3899,6 +4228,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Şeker",
+                            PicturePath = "..\\..\\..\\Resources\\Şeker.png",
                             Protein = 0.0
                         },
                         new
@@ -3910,6 +4240,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 28.0,
                             MeasureType = "GramX100",
                             Name = "Tahin helvası",
+                            PicturePath = "..\\..\\..\\Resources\\Tahin Helvası.png",
                             Protein = 10.5
                         },
                         new
@@ -3921,6 +4252,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Arpa",
+                            PicturePath = "..\\..\\..\\Resources\\Arpa.png",
                             Protein = 8.1999999999999993
                         },
                         new
@@ -3932,6 +4264,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.5,
                             MeasureType = "GramX100",
                             Name = "Buğday (aşurelik)",
+                            PicturePath = "..\\..\\..\\Resources\\Buğday.png",
                             Protein = 11.0
                         },
                         new
@@ -3943,6 +4276,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.5,
                             MeasureType = "GramX100",
                             Name = "Buğday (durum)",
+                            PicturePath = "..\\..\\..\\Resources\\Buğday (durum).png",
                             Protein = 12.699999999999999
                         },
                         new
@@ -3954,6 +4288,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.2,
                             MeasureType = "GramX100",
                             Name = "Bulgur",
+                            PicturePath = "..\\..\\..\\Resources\\Bulgur.png",
                             Protein = 10.1
                         },
                         new
@@ -3965,6 +4300,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Corn Flakes",
+                            PicturePath = "..\\..\\..\\Resources\\Cornflakes.png",
                             Protein = 7.9000000000000004
                         },
                         new
@@ -3976,6 +4312,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.7,
                             MeasureType = "GramX100",
                             Name = "Çavdar Unu",
+                            PicturePath = "..\\..\\..\\Resources\\Çavdar Unu.png",
                             Protein = 3.1000000000000001
                         },
                         new
@@ -3987,6 +4324,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "Slice",
                             Name = "Ekmek (beyaz)",
+                            PicturePath = "..\\..\\..\\Resources\\Ekmek Beyaz.png",
                             Protein = 0.0
                         },
                         new
@@ -3998,6 +4336,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.1000000000000001,
                             MeasureType = "GramX100",
                             Name = "Ekmeklik",
+                            PicturePath = "..\\..\\..\\Resources\\Ekmek Beyaz.png",
                             Protein = 11.800000000000001
                         },
                         new
@@ -4009,6 +4348,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Kepek",
+                            PicturePath = "..\\..\\..\\Resources\\Kepek.png",
                             Protein = 16.0
                         },
                         new
@@ -4020,6 +4360,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 1.0,
                             MeasureType = "GramX100",
                             Name = "Mısır (haşlan.)",
+                            PicturePath = "..\\..\\..\\Resources\\Haşlanmış mısır.png",
                             Protein = 3.2999999999999998
                         },
                         new
@@ -4031,6 +4372,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.6000000000000001,
                             MeasureType = "GramX100",
                             Name = "Mısır unu",
+                            PicturePath = "..\\..\\..\\Resources\\Mısır Unu.png",
                             Protein = 7.7999999999999998
                         },
                         new
@@ -4042,6 +4384,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.7000000000000002,
                             MeasureType = "GramX100",
                             Name = "Mısır, tane",
+                            PicturePath = "..\\..\\..\\Resources\\Mısır tane.png",
                             Protein = 11.9
                         },
                         new
@@ -4053,6 +4396,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Nişasta",
+                            PicturePath = "..\\..\\..\\Resources\\Mısır Nişasta.png",
                             Protein = 0.29999999999999999
                         },
                         new
@@ -4064,6 +4408,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.800000000000001,
                             MeasureType = "GramX100",
                             Name = "Patlamış mısır",
+                            PicturePath = "..\\..\\..\\Resources\\Patlamış Mısır.png",
                             Protein = 9.8000000000000007
                         },
                         new
@@ -4075,6 +4420,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.40000000000000002,
                             MeasureType = "GramX100",
                             Name = "Pirinç",
+                            PicturePath = "..\\..\\..\\Resources\\Pirinç.png",
                             Protein = 6.7000000000000002
                         },
                         new
@@ -4086,6 +4432,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Şehriye",
+                            PicturePath = "..\\..\\..\\Resources\\Şehriye.png",
                             Protein = 12.800000000000001
                         },
                         new
@@ -4097,6 +4444,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 4.4000000000000004,
                             MeasureType = "GramX100",
                             Name = "Tarhana",
+                            PicturePath = "..\\..\\..\\Resources\\Tarhana2.png",
                             Protein = 12.199999999999999
                         },
                         new
@@ -4108,6 +4456,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 75.0,
                             MeasureType = "GramX100",
                             Name = "Yulaf Unu",
+                            PicturePath = "..\\..\\..\\Resources\\Yulaf Unu.png",
                             Protein = 12.0
                         },
                         new
@@ -4119,6 +4468,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 18.0,
                             MeasureType = "Slice",
                             Name = "Cheesecake",
+                            PicturePath = "..\\..\\..\\Resources\\CheeseCake.png",
                             Protein = 5.0
                         },
                         new
@@ -4130,6 +4480,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 213.0,
                             MeasureType = "Whole",
                             Name = "Cheesecake",
+                            PicturePath = "..\\..\\..\\Resources\\CheeseCake.png",
                             Protein = 60.0
                         },
                         new
@@ -4141,6 +4492,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.0,
                             MeasureType = "Piece",
                             Name = "Çikolatalı kurabiye",
+                            PicturePath = "..\\..\\..\\Resources\\Çikolatalı Kurabiye.png",
                             Protein = 0.5
                         },
                         new
@@ -4152,6 +4504,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 18.0,
                             MeasureType = "Slice",
                             Name = "Elmalı turta",
+                            PicturePath = "..\\..\\..\\Resources\\Elmalı Turta.png",
                             Protein = 3.0
                         },
                         new
@@ -4163,6 +4516,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 105.0,
                             MeasureType = "Whole",
                             Name = "Elmalı turta",
+                            PicturePath = "..\\..\\..\\Resources\\Elmalı turta.png",
                             Protein = 21.0
                         },
                         new
@@ -4174,6 +4528,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.5999999999999996,
                             MeasureType = "GramX100",
                             Name = "Hanımgöbeği",
+                            PicturePath = "..\\..\\..\\Resources\\Hanımgöbeği.png",
                             Protein = 2.3999999999999999
                         },
                         new
@@ -4185,6 +4540,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 328.0,
                             MeasureType = "Whole",
                             Name = "Havuçlu kek",
+                            PicturePath = "..\\..\\..\\Resources\\Havuçlu Kek.png",
                             Protein = 63.0
                         },
                         new
@@ -4196,6 +4552,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.0,
                             MeasureType = "Slice",
                             Name = "Havuçlu kek",
+                            PicturePath = "..\\..\\..\\Resources\\Havuçlu Kek.png",
                             Protein = 4.0
                         },
                         new
@@ -4207,6 +4564,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 7.0999999999999996,
                             MeasureType = "GramX100",
                             Name = "Hurma tatlısı",
+                            PicturePath = "..\\..\\..\\Resources\\Hurma Tatlısı.png",
                             Protein = 4.0999999999999996
                         },
                         new
@@ -4218,6 +4576,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 12.5,
                             MeasureType = "GramX100",
                             Name = "İrmik helvası",
+                            PicturePath = "..\\..\\..\\Resources\\İrmik helvası.png",
                             Protein = 3.7999999999999998
                         },
                         new
@@ -4229,6 +4588,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Jöle",
+                            PicturePath = "..\\..\\..\\Resources\\Jole.png",
                             Protein = 6.0999999999999996
                         },
                         new
@@ -4240,6 +4600,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 5.2000000000000002,
                             MeasureType = "GramX100",
                             Name = "Kastırd",
+                            PicturePath = "",
                             Protein = 5.9000000000000004
                         },
                         new
@@ -4251,6 +4612,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.80000000000000004,
                             MeasureType = "GramX100",
                             Name = "Kek pasta",
+                            PicturePath = "..\\..\\..\\Resources\\Kek Pasta.png",
                             Protein = 7.5
                         },
                         new
@@ -4262,6 +4624,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 3.7999999999999998,
                             MeasureType = "GramX100",
                             Name = "Muhallebi",
+                            PicturePath = "..\\..\\..\\Resources\\Muhallebi.png",
                             Protein = 5.0999999999999996
                         },
                         new
@@ -4273,6 +4636,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 2.7000000000000002,
                             MeasureType = "GramX100",
                             Name = "Sütlaç",
+                            PicturePath = "..\\..\\..\\Resources\\Sütlaç.png",
                             Protein = 3.3999999999999999
                         },
                         new
@@ -4284,6 +4648,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 9.0999999999999996,
                             MeasureType = "GramX100",
                             Name = "Tel kadayıf (fıstıklı)",
+                            PicturePath = "..\\..\\..\\Resources\\Tel Kadayıf.png",
                             Protein = 4.2999999999999998
                         },
                         new
@@ -4295,6 +4660,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 21.899999999999999,
                             MeasureType = "GramX100",
                             Name = "Wafers",
+                            PicturePath = "",
                             Protein = 4.7000000000000002
                         },
                         new
@@ -4306,6 +4672,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.1,
                             MeasureType = "GramX100",
                             Name = "Bıldırcın yumurta",
+                            PicturePath = "..\\..\\..\\Resources\\Bıldırcın Yumurtası.png",
                             Protein = 13.1
                         },
                         new
@@ -4317,6 +4684,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 13.300000000000001,
                             MeasureType = "GramX100",
                             Name = "Kaz yumurta",
+                            PicturePath = "..\\..\\..\\Resources\\Kaz Yumurta.png",
                             Protein = 13.9
                         },
                         new
@@ -4328,6 +4696,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 13.800000000000001,
                             MeasureType = "GramX100",
                             Name = "Ördek yumurta",
+                            PicturePath = "..\\..\\..\\Resources\\Ördek Yumurta.png",
                             Protein = 12.800000000000001
                         },
                         new
@@ -4339,6 +4708,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 0.0,
                             MeasureType = "GramX100",
                             Name = "Tavuk yumurta (beyaz)",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk Yumurta (Beyaz).png",
                             Protein = 10.1
                         },
                         new
@@ -4350,6 +4720,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 32.899999999999999,
                             MeasureType = "GramX100",
                             Name = "Tavuk yumurta (sarı)",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk Yumurta (Sarı).png",
                             Protein = 16.399999999999999
                         },
                         new
@@ -4361,6 +4732,7 @@ namespace WFA_ProDiet.DAL.Migrations
                             Fat = 11.199999999999999,
                             MeasureType = "GramX100",
                             Name = "Tavuk yumurta (tam)",
+                            PicturePath = "..\\..\\..\\Resources\\Tavuk Yumurta (Tam).png",
                             Protein = 12.1
                         });
                 });

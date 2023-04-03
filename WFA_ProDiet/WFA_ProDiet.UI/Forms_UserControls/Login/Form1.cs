@@ -1,6 +1,7 @@
 using WFA_ProDiet.BLL;
 using WFA_ProDiet.MODELS.Models;
 using WFA_ProDiet.UI.HelpersUI;
+using WFA_ProDiet.UI.Properties;
 
 namespace WFA_ProDiet.UI
 {
@@ -16,9 +17,10 @@ namespace WFA_ProDiet.UI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var path = CrudProcess.GetAll<Food>().Where(x => x.FoodId == 1).FirstOrDefault();
 
+            pictureBox1.Image = Image.FromFile("..\\..\\..\\Resources\\Býldýrcýn.png");
         }
-
         private void lnkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {      
             create = new CreateAccount();
@@ -59,6 +61,11 @@ namespace WFA_ProDiet.UI
                 MessageBox.Show("Kullanýcý adý bulunamadý.");
             }
            
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
