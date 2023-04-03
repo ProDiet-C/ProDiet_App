@@ -28,15 +28,15 @@ namespace WFA_ProDiet.UI
             cbAktivite.SelectedIndex = (int)Current.Customer.ActivityLevel;
             nudWeight.Value = (decimal)Current.Customer.Weight;
             try
-            {pbUserPic.Image = Image.FromFile(Current.Customer.PicturePath); }
-            catch (Exception) 
-            {pbUserPic.Image = Properties.Resources.logo; }
-            
+            { pbUserPic.Image = Image.FromFile(Current.Customer.PicturePath); }
+            catch (Exception)
+            { pbUserPic.Image = Properties.Resources.logo; }
+
         }
 
         private void ıconButton2_Click(object sender, EventArgs e)
         {
-          
+
             Current.Customer.FirstName = txtFirstName.Text;
             Current.Customer.LastName = txtLastName.Text;
             Current.Customer.BirthDate = dtpBirthDate.Value.Date;
@@ -44,7 +44,7 @@ namespace WFA_ProDiet.UI
             Current.Customer.Height = (int)nudHeight.Value;
             Current.Customer.Gender = rbMale.Checked ? Gender.Man : Gender.Woman;
             CrudProcess.Edit(Current.Customer);
-        
+
         }
 
         private void ıconButton1_Click(object sender, EventArgs e)

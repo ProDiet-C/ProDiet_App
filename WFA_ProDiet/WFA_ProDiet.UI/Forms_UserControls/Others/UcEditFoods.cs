@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using WFA_ProDiet.BLL;
 using WFA_ProDiet.MODELS.Enums;
 using WFA_ProDiet.MODELS.Models;
+using WFA_ProDiet.UI.HelpersUI;
 
 namespace WFA_ProDiet.UI
 {
@@ -20,7 +21,7 @@ namespace WFA_ProDiet.UI
             InitializeComponent();
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
         }
-
+        string picturePath;
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
@@ -38,15 +39,32 @@ namespace WFA_ProDiet.UI
             food.Category = catagory;
             food.CategoryId = catagory.CategoryId;
             food.MeasureType = (MeasureType)(cbMeasure.SelectedIndex);
+            food.PicturePath = picturePath ?? "";
 
             CrudProcess.Add(food);
             MessageBox.Show($"{food.Name} Eklendi");
+
+
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddPict_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Image Files (*.jpg;*.jpeg,*.png)|*.jpg;*.jpeg;*.png";
+
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    pbFood.Image = Image.FromFile(openFileDialog.FileName);
+                    picturePath = openFileDialog.FileName;
+                }
+            }
         }
     }
 }

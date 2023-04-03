@@ -28,342 +28,312 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtLastName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFirstName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.cbAktivite = new System.Windows.Forms.ComboBox();
-            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.nudHeight = new System.Windows.Forms.NumericUpDown();
-            this.nudWeight = new System.Windows.Forms.NumericUpDown();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.pbUserPic = new System.Windows.Forms.PictureBox();
-            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.rbFemale = new System.Windows.Forms.RadioButton();
-            this.rbMale = new System.Windows.Forms.RadioButton();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPic)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
+            txtLastName = new TextBox();
+            label2 = new Label();
+            txtFirstName = new TextBox();
+            label1 = new Label();
+            txtEmail = new TextBox();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            cbAktivite = new ComboBox();
+            dtpBirthDate = new DateTimePicker();
+            nudHeight = new NumericUpDown();
+            nudWeight = new NumericUpDown();
+            label6 = new Label();
+            label9 = new Label();
+            pbUserPic = new PictureBox();
+            ıconButton1 = new FontAwesome.Sharp.IconButton();
+            ıconButton2 = new FontAwesome.Sharp.IconButton();
+            panel1 = new Panel();
+            rbFemale = new RadioButton();
+            rbMale = new RadioButton();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbUserPic).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(180, 209);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtLastName.Name = "txtLastName";
-            this.txtLastName.Size = new System.Drawing.Size(230, 27);
-            this.txtLastName.TabIndex = 2;
+            txtLastName.Location = new Point(180, 209);
+            txtLastName.Margin = new Padding(4);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(230, 27);
+            txtLastName.TabIndex = 2;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(4, 209);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 27);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Soyad :";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label2.Location = new Point(4, 209);
+            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(168, 27);
+            label2.TabIndex = 1;
+            label2.Text = "Soyad :";
+            label2.TextAlign = ContentAlignment.MiddleRight;
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(180, 174);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFirstName.Name = "txtFirstName";
-            this.txtFirstName.Size = new System.Drawing.Size(230, 27);
-            this.txtFirstName.TabIndex = 1;
+            txtFirstName.Location = new Point(180, 174);
+            txtFirstName.Margin = new Padding(4);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(230, 27);
+            txtFirstName.TabIndex = 1;
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(4, 174);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 27);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ad :";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label1.Location = new Point(4, 174);
+            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(168, 27);
+            label1.TabIndex = 1;
+            label1.Text = "Ad :";
+            label1.TextAlign = ContentAlignment.MiddleRight;
             // 
             // txtEmail
             // 
-            this.txtEmail.Enabled = false;
-            this.txtEmail.Location = new System.Drawing.Point(180, 141);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(230, 27);
-            this.txtEmail.TabIndex = 0;
+            txtEmail.Enabled = false;
+            txtEmail.Location = new Point(180, 141);
+            txtEmail.Margin = new Padding(4);
+            txtEmail.Name = "txtEmail";
+            txtEmail.ReadOnly = true;
+            txtEmail.Size = new Size(230, 27);
+            txtEmail.TabIndex = 0;
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(4, 141);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 27);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Kullanıcı Adı / Eposta :";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label3.Location = new Point(4, 141);
+            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(168, 27);
+            label3.TabIndex = 1;
+            label3.Text = "Kullanıcı Adı / Eposta :";
+            label3.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(4, 241);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(168, 27);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Doğum Tarihi :";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label4.Location = new Point(4, 241);
+            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Name = "label4";
+            label4.Size = new Size(168, 27);
+            label4.TabIndex = 1;
+            label4.Text = "Doğum Tarihi :";
+            label4.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(5, 277);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(168, 27);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Aktivite Düzeyi :";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label5.Location = new Point(5, 277);
+            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Name = "label5";
+            label5.Size = new Size(168, 27);
+            label5.TabIndex = 1;
+            label5.Text = "Aktivite Düzeyi :";
+            label5.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            this.label7.Location = new System.Drawing.Point(4, 349);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(168, 27);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Kilo :";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label7.Location = new Point(4, 349);
+            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Name = "label7";
+            label7.Size = new Size(168, 27);
+            label7.TabIndex = 1;
+            label7.Text = "Kilo :";
+            label7.TextAlign = ContentAlignment.MiddleRight;
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(4, 314);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(168, 27);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Boy :";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            label8.Location = new Point(4, 314);
+            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Name = "label8";
+            label8.Size = new Size(168, 27);
+            label8.TabIndex = 1;
+            label8.Text = "Boy :";
+            label8.TextAlign = ContentAlignment.MiddleRight;
             // 
             // cbAktivite
             // 
-            this.cbAktivite.FormattingEnabled = true;
-            this.cbAktivite.Items.AddRange(new object[] {
-            "Aktivite Yok (Masabaşı iş-Hareketsiz)",
-            "Az Aktif (Hafif egzersizler-Günlük işler)",
-            "Aktif (Hafta 2-4 gün spor)",
-            "Çok Aktif (Haftada 4+ gün spor)"});
-            this.cbAktivite.Location = new System.Drawing.Point(181, 276);
-            this.cbAktivite.Name = "cbAktivite";
-            this.cbAktivite.Size = new System.Drawing.Size(230, 28);
-            this.cbAktivite.TabIndex = 4;
+            cbAktivite.FormattingEnabled = true;
+            cbAktivite.Items.AddRange(new object[] { "Aktivite Yok (Masabaşı iş-Hareketsiz)", "Az Aktif (Hafif egzersizler-Günlük işler)", "Aktif (Hafta 2-4 gün spor)", "Çok Aktif (Haftada 4+ gün spor)" });
+            cbAktivite.Location = new Point(181, 276);
+            cbAktivite.Name = "cbAktivite";
+            cbAktivite.Size = new Size(230, 28);
+            cbAktivite.TabIndex = 4;
             // 
             // dtpBirthDate
             // 
-            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpBirthDate.Location = new System.Drawing.Point(180, 243);
-            this.dtpBirthDate.Name = "dtpBirthDate";
-            this.dtpBirthDate.Size = new System.Drawing.Size(230, 27);
-            this.dtpBirthDate.TabIndex = 3;
+            dtpBirthDate.Format = DateTimePickerFormat.Short;
+            dtpBirthDate.Location = new Point(180, 243);
+            dtpBirthDate.Name = "dtpBirthDate";
+            dtpBirthDate.Size = new Size(230, 27);
+            dtpBirthDate.TabIndex = 3;
             // 
             // nudHeight
             // 
-            this.nudHeight.Location = new System.Drawing.Point(180, 314);
-            this.nudHeight.Margin = new System.Windows.Forms.Padding(4);
-            this.nudHeight.Maximum = new decimal(new int[] {
-            250,
-            0,
-            0,
-            0});
-            this.nudHeight.Minimum = new decimal(new int[] {
-            130,
-            0,
-            0,
-            0});
-            this.nudHeight.Name = "nudHeight";
-            this.nudHeight.Size = new System.Drawing.Size(49, 27);
-            this.nudHeight.TabIndex = 5;
-            this.nudHeight.Value = new decimal(new int[] {
-            130,
-            0,
-            0,
-            0});
+            nudHeight.Location = new Point(180, 314);
+            nudHeight.Margin = new Padding(4);
+            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
+            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
+            nudHeight.Name = "nudHeight";
+            nudHeight.Size = new Size(49, 27);
+            nudHeight.TabIndex = 5;
+            nudHeight.Value = new decimal(new int[] { 130, 0, 0, 0 });
             // 
             // nudWeight
             // 
-            this.nudWeight.Location = new System.Drawing.Point(180, 349);
-            this.nudWeight.Margin = new System.Windows.Forms.Padding(5);
-            this.nudWeight.Maximum = new decimal(new int[] {
-            250,
-            0,
-            0,
-            0});
-            this.nudWeight.Minimum = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
-            this.nudWeight.Name = "nudWeight";
-            this.nudWeight.Size = new System.Drawing.Size(49, 27);
-            this.nudWeight.TabIndex = 6;
-            this.nudWeight.Value = new decimal(new int[] {
-            40,
-            0,
-            0,
-            0});
+            nudWeight.Location = new Point(180, 349);
+            nudWeight.Margin = new Padding(5);
+            nudWeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
+            nudWeight.Minimum = new decimal(new int[] { 40, 0, 0, 0 });
+            nudWeight.Name = "nudWeight";
+            nudWeight.Size = new Size(49, 27);
+            nudWeight.TabIndex = 6;
+            nudWeight.Value = new decimal(new int[] { 40, 0, 0, 0 });
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(236, 314);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(38, 27);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "cm";
+            label6.Location = new Point(236, 314);
+            label6.Name = "label6";
+            label6.Size = new Size(38, 27);
+            label6.TabIndex = 5;
+            label6.Text = "cm";
             // 
             // label9
             // 
-            this.label9.Location = new System.Drawing.Point(236, 349);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 27);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "kg";
+            label9.Location = new Point(236, 349);
+            label9.Name = "label9";
+            label9.Size = new Size(47, 27);
+            label9.TabIndex = 5;
+            label9.Text = "kg";
             // 
             // pbUserPic
             // 
-            this.pbUserPic.BackColor = System.Drawing.Color.Transparent;
-            this.pbUserPic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbUserPic.Image = global::WFA_ProDiet.UI.Properties.Resources.WhatsApp_Image_2023_03_03_at_14_29_51;
-            this.pbUserPic.Location = new System.Drawing.Point(144, 3);
-            this.pbUserPic.Name = "pbUserPic";
-            this.pbUserPic.Size = new System.Drawing.Size(121, 99);
-            this.pbUserPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbUserPic.TabIndex = 6;
-            this.pbUserPic.TabStop = false;
+            pbUserPic.BackColor = Color.Transparent;
+            pbUserPic.BorderStyle = BorderStyle.Fixed3D;
+            pbUserPic.Location = new Point(144, 3);
+            pbUserPic.Name = "pbUserPic";
+            pbUserPic.Size = new Size(121, 108);
+            pbUserPic.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbUserPic.TabIndex = 6;
+            pbUserPic.TabStop = false;
             // 
             // ıconButton1
             // 
-            this.ıconButton1.BackColor = System.Drawing.Color.Transparent;
-            this.ıconButton1.FlatAppearance.BorderSize = 0;
-            this.ıconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
-            this.ıconButton1.IconColor = System.Drawing.Color.Black;
-            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.IconSize = 35;
-            this.ıconButton1.Location = new System.Drawing.Point(146, 78);
-            this.ıconButton1.Name = "ıconButton1";
-            this.ıconButton1.Size = new System.Drawing.Size(25, 24);
-            this.ıconButton1.TabIndex = 7;
-            this.ıconButton1.UseVisualStyleBackColor = false;
+            ıconButton1.BackColor = Color.Transparent;
+            ıconButton1.FlatAppearance.BorderSize = 0;
+            ıconButton1.FlatStyle = FlatStyle.Flat;
+            ıconButton1.IconChar = FontAwesome.Sharp.IconChar.UserEdit;
+            ıconButton1.IconColor = Color.Black;
+            ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton1.IconSize = 35;
+            ıconButton1.Location = new Point(147, 87);
+            ıconButton1.Name = "ıconButton1";
+            ıconButton1.Size = new Size(25, 24);
+            ıconButton1.TabIndex = 7;
+            ıconButton1.UseVisualStyleBackColor = false;
             // 
             // ıconButton2
             // 
-            this.ıconButton2.BackColor = System.Drawing.Color.Transparent;
-            this.ıconButton2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.ıconButton2.FlatAppearance.BorderSize = 0;
-            this.ıconButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
-            this.ıconButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
-            this.ıconButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ıconButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton2.IconColor = System.Drawing.Color.Black;
-            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.Location = new System.Drawing.Point(0, 441);
-            this.ıconButton2.Name = "ıconButton2";
-            this.ıconButton2.Size = new System.Drawing.Size(414, 119);
-            this.ıconButton2.TabIndex = 9;
-            this.ıconButton2.Text = "Değişikleri Kaydet";
-            this.ıconButton2.UseVisualStyleBackColor = false;
+            ıconButton2.BackColor = Color.Transparent;
+            ıconButton2.Dock = DockStyle.Bottom;
+            ıconButton2.FlatAppearance.BorderSize = 0;
+            ıconButton2.FlatAppearance.MouseDownBackColor = Color.FromArgb(198, 198, 198);
+            ıconButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(165, 197, 62);
+            ıconButton2.FlatStyle = FlatStyle.Flat;
+            ıconButton2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            ıconButton2.IconColor = Color.Black;
+            ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            ıconButton2.Location = new Point(0, 441);
+            ıconButton2.Name = "ıconButton2";
+            ıconButton2.Size = new Size(414, 119);
+            ıconButton2.TabIndex = 9;
+            ıconButton2.Text = "Değişikleri Kaydet";
+            ıconButton2.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.rbFemale);
-            this.panel1.Controls.Add(this.rbMale);
-            this.panel1.Controls.Add(this.ıconButton1);
-            this.panel1.Controls.Add(this.txtEmail);
-            this.panel1.Controls.Add(this.pbUserPic);
-            this.panel1.Controls.Add(this.ıconButton2);
-            this.panel1.Controls.Add(this.txtLastName);
-            this.panel1.Controls.Add(this.txtFirstName);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.nudWeight);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.nudHeight);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.dtpBirthDate);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.cbAktivite);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(414, 560);
-            this.panel1.TabIndex = 0;
+            panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(rbFemale);
+            panel1.Controls.Add(rbMale);
+            panel1.Controls.Add(ıconButton1);
+            panel1.Controls.Add(txtEmail);
+            panel1.Controls.Add(pbUserPic);
+            panel1.Controls.Add(ıconButton2);
+            panel1.Controls.Add(txtLastName);
+            panel1.Controls.Add(txtFirstName);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label9);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(nudWeight);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(nudHeight);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(dtpBirthDate);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(cbAktivite);
+            panel1.Controls.Add(label8);
+            panel1.Dock = DockStyle.Left;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(414, 560);
+            panel1.TabIndex = 0;
             // 
             // rbFemale
             // 
-            this.rbFemale.AutoSize = true;
-            this.rbFemale.Location = new System.Drawing.Point(252, 384);
-            this.rbFemale.Name = "rbFemale";
-            this.rbFemale.Size = new System.Drawing.Size(64, 24);
-            this.rbFemale.TabIndex = 8;
-            this.rbFemale.TabStop = true;
-            this.rbFemale.Text = "Kadın";
-            this.rbFemale.UseVisualStyleBackColor = true;
+            rbFemale.AutoSize = true;
+            rbFemale.Location = new Point(252, 384);
+            rbFemale.Name = "rbFemale";
+            rbFemale.Size = new Size(64, 24);
+            rbFemale.TabIndex = 8;
+            rbFemale.TabStop = true;
+            rbFemale.Text = "Kadın";
+            rbFemale.UseVisualStyleBackColor = true;
             // 
             // rbMale
             // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Location = new System.Drawing.Point(180, 384);
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(66, 24);
-            this.rbMale.TabIndex = 7;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Erkek";
-            this.rbMale.UseVisualStyleBackColor = true;
+            rbMale.AutoSize = true;
+            rbMale.Location = new Point(180, 384);
+            rbMale.Name = "rbMale";
+            rbMale.Size = new Size(66, 24);
+            rbMale.TabIndex = 7;
+            rbMale.TabStop = true;
+            rbMale.Text = "Erkek";
+            rbMale.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox2.Image = global::WFA_ProDiet.UI.Properties.Resources.AktiviteDüzey;
-            this.pictureBox2.Location = new System.Drawing.Point(414, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(546, 560);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 10;
-            this.pictureBox2.TabStop = false;
+            pictureBox2.Dock = DockStyle.Fill;
+            pictureBox2.Image = Properties.Resources.AktiviteDüzey;
+            pictureBox2.Location = new Point(414, 0);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(546, 560);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 10;
+            pictureBox2.TabStop = false;
             // 
             // UcUserInfo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UcUserInfo";
-            this.Size = new System.Drawing.Size(960, 560);
-            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbUserPic)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox2);
+            Controls.Add(panel1);
+            Font = new Font("Segoe MDL2 Assets", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            Margin = new Padding(4);
+            Name = "UcUserInfo";
+            Size = new Size(960, 560);
+            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbUserPic).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

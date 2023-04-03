@@ -353,6 +353,16 @@ namespace WFA_ProDiet.UI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap basephoto {
+            get {
+                object obj = ResourceManager.GetObject("basephoto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bey_Peynir_Edirne {
             get {
                 object obj = ResourceManager.GetObject("Bey_Peynir_Edirne", resourceCulture);
