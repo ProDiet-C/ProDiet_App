@@ -30,7 +30,7 @@ namespace WFA_ProDiet.UI
             try
             {pbUserPic.Image = Image.FromFile(Current.Customer.PicturePath); }
             catch (Exception) 
-            {pbUserPic.Image = WFA_ProDiet.UI.Properties.Resources.logo; }
+            {pbUserPic.Image = Properties.Resources.logo; }
             
         }
 
