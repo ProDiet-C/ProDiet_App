@@ -194,7 +194,6 @@ namespace WFA_ProDiet.UI
 
         private void lstDailyMeal_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //
             if (lstDailyMeal.SelectedIndex != -1)
             {
                 Meal meal = GetDayMeal();
