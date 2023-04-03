@@ -75,7 +75,7 @@
             this.btnCreatePlan.Location = new System.Drawing.Point(357, 183);
             this.btnCreatePlan.Name = "btnCreatePlan";
             this.btnCreatePlan.Size = new System.Drawing.Size(248, 65);
-            this.btnCreatePlan.TabIndex = 12;
+            this.btnCreatePlan.TabIndex = 4;
             this.btnCreatePlan.Text = "Plan Oluştur";
             this.btnCreatePlan.UseVisualStyleBackColor = false;
             this.btnCreatePlan.Click += new System.EventHandler(this.btnCreatePlan_Click);
@@ -87,7 +87,7 @@
             this.lnkProTakip.Location = new System.Drawing.Point(433, 345);
             this.lnkProTakip.Name = "lnkProTakip";
             this.lnkProTakip.Size = new System.Drawing.Size(123, 47);
-            this.lnkProTakip.TabIndex = 20;
+            this.lnkProTakip.TabIndex = 5;
             this.lnkProTakip.TabStop = true;
             this.lnkProTakip.Text = "ProTakip";
             this.lnkProTakip.Visible = false;
@@ -111,7 +111,7 @@
             0});
             this.nudCurrentWeight.Name = "nudCurrentWeight";
             this.nudCurrentWeight.Size = new System.Drawing.Size(102, 27);
-            this.nudCurrentWeight.TabIndex = 9;
+            this.nudCurrentWeight.TabIndex = 1;
             this.nudCurrentWeight.Value = new decimal(new int[] {
             80,
             0,
@@ -135,7 +135,7 @@
             0});
             this.nudHeight.Name = "nudHeight";
             this.nudHeight.Size = new System.Drawing.Size(101, 27);
-            this.nudHeight.TabIndex = 10;
+            this.nudHeight.TabIndex = 0;
             this.nudHeight.Value = new decimal(new int[] {
             170,
             0,
@@ -150,7 +150,7 @@
             this.dtpTargetDate.MinDate = new System.DateTime(2023, 4, 2, 0, 0, 0, 0);
             this.dtpTargetDate.Name = "dtpTargetDate";
             this.dtpTargetDate.Size = new System.Drawing.Size(102, 27);
-            this.dtpTargetDate.TabIndex = 19;
+            this.dtpTargetDate.TabIndex = 3;
             // 
             // nudTargetWeight
             // 
@@ -170,7 +170,7 @@
             0});
             this.nudTargetWeight.Name = "nudTargetWeight";
             this.nudTargetWeight.Size = new System.Drawing.Size(102, 27);
-            this.nudTargetWeight.TabIndex = 11;
+            this.nudTargetWeight.TabIndex = 2;
             this.nudTargetWeight.Value = new decimal(new int[] {
             70,
             0,

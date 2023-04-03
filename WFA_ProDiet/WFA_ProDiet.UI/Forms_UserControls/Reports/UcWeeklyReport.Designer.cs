@@ -60,7 +60,7 @@
             this.btnCompareByCalorie.Location = new System.Drawing.Point(665, 66);
             this.btnCompareByCalorie.Name = "btnCompareByCalorie";
             this.btnCompareByCalorie.Size = new System.Drawing.Size(281, 50);
-            this.btnCompareByCalorie.TabIndex = 4;
+            this.btnCompareByCalorie.TabIndex = 1;
             this.btnCompareByCalorie.Text = "KALORİ KIYASLA";
             this.btnCompareByCalorie.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompareByCalorie.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -124,7 +124,7 @@
             this.cbCategory.Location = new System.Drawing.Point(665, 31);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(281, 29);
-            this.cbCategory.TabIndex = 2;
+            this.cbCategory.TabIndex = 0;
             // 
             // rbAll
             // 
@@ -138,7 +138,7 @@
             this.rbAll.Location = new System.Drawing.Point(46, 35);
             this.rbAll.Name = "rbAll";
             this.rbAll.Size = new System.Drawing.Size(64, 23);
-            this.rbAll.TabIndex = 1;
+            this.rbAll.TabIndex = 0;
             this.rbAll.TabStop = true;
             this.rbAll.Text = "Hepsi";
             this.rbAll.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             this.rbExtra.Location = new System.Drawing.Point(442, 35);
             this.rbExtra.Name = "rbExtra";
             this.rbExtra.Size = new System.Drawing.Size(67, 23);
-            this.rbExtra.TabIndex = 1;
+            this.rbExtra.TabIndex = 4;
             this.rbExtra.Text = "Ekstra";
             this.rbExtra.UseVisualStyleBackColor = true;
             // 
@@ -169,7 +169,7 @@
             this.rbLaunch.Location = new System.Drawing.Point(201, 35);
             this.rbLaunch.Name = "rbLaunch";
             this.rbLaunch.Size = new System.Drawing.Size(109, 23);
-            this.rbLaunch.TabIndex = 1;
+            this.rbLaunch.TabIndex = 2;
             this.rbLaunch.Text = "Öğle Yemeği";
             this.rbLaunch.UseVisualStyleBackColor = true;
             // 
@@ -184,7 +184,7 @@
             this.rbDinner.Location = new System.Drawing.Point(316, 35);
             this.rbDinner.Name = "rbDinner";
             this.rbDinner.Size = new System.Drawing.Size(120, 23);
-            this.rbDinner.TabIndex = 1;
+            this.rbDinner.TabIndex = 3;
             this.rbDinner.Text = "Akşam Yemeği";
             this.rbDinner.UseVisualStyleBackColor = true;
             // 

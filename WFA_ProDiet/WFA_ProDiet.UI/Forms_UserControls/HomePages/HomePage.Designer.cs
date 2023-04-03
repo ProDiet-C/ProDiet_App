@@ -171,7 +171,7 @@
             this.btnFoods.Location = new System.Drawing.Point(0, 480);
             this.btnFoods.Name = "btnFoods";
             this.btnFoods.Size = new System.Drawing.Size(200, 54);
-            this.btnFoods.TabIndex = 6;
+            this.btnFoods.TabIndex = 2;
             this.btnFoods.Text = "Besinler";
             this.btnFoods.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFoods.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -305,7 +305,7 @@
             this.btnReports.Location = new System.Drawing.Point(0, 257);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(200, 54);
-            this.btnReports.TabIndex = 4;
+            this.btnReports.TabIndex = 1;
             this.btnReports.Text = "Raporlar";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -342,7 +342,7 @@
             this.btnProTakip.Location = new System.Drawing.Point(0, 41);
             this.btnProTakip.Name = "btnProTakip";
             this.btnProTakip.Size = new System.Drawing.Size(200, 40);
-            this.btnProTakip.TabIndex = 4;
+            this.btnProTakip.TabIndex = 1;
             this.btnProTakip.Text = "Pro Takip";
             this.btnProTakip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProTakip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -366,7 +366,7 @@
             this.btnProPlan.Location = new System.Drawing.Point(0, 0);
             this.btnProPlan.Name = "btnProPlan";
             this.btnProPlan.Size = new System.Drawing.Size(200, 41);
-            this.btnProPlan.TabIndex = 3;
+            this.btnProPlan.TabIndex = 0;
             this.btnProPlan.Text = "Pro Planım";
             this.btnProPlan.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProPlan.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -389,7 +389,7 @@
             this.btnTakip.Location = new System.Drawing.Point(0, 96);
             this.btnTakip.Name = "btnTakip";
             this.btnTakip.Size = new System.Drawing.Size(200, 54);
-            this.btnTakip.TabIndex = 2;
+            this.btnTakip.TabIndex = 0;
             this.btnTakip.Text = "Takip";
             this.btnTakip.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnTakip.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

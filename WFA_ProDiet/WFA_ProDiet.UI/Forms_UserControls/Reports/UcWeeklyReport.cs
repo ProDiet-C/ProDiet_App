@@ -34,21 +34,21 @@ namespace WFA_ProDiet.UI
         Category category;
         Meal meal;
         DateTime today = DateTime.Now;
+        List<Customer> customers = CrudProcess.GetAll<Customer>();
+
         double[] userCalories = new double[7];
         double[] avgCalories = new double[7];
-        List<Customer> customers = CrudProcess.GetAll<Customer>();
         private void btnCompareByCalorie_Click(object sender, EventArgs e)
         {
-
             DrawAndShowGraph();
         }
         ProDietDBContext _pro = new ProDietDBContext();
         private void DrawAndShowGraph()
         {
-
             SetGraphTittle();
             FindCategoryOrCategories();
             FindMeals();
+
             if (category != null) // categori seçildi ise
             {
                 if (rbAll.Checked) // öğün seçmezse
@@ -71,7 +71,6 @@ namespace WFA_ProDiet.UI
                     for (int i = 6; i > 0; i--)
                     {
                         userCalories[i] = Convert.ToDouble(Current.Customer.Meals.Where(m => m.Name == resultMeals[0].Name && m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).Sum(m => m.MealCalorie));
-                      
 
                         var meals = CrudProcess.GetAll<Meal>().Where(m => m.EatDay == DateTime.Today.Subtract(new TimeSpan(i, 0, 0, 0))).ToList();
                         var customerMeals = meals.GroupBy(m => m.CustomerId).Select(g => new
@@ -83,43 +82,9 @@ namespace WFA_ProDiet.UI
                         avgCalories[i] = Convert.ToDouble(customerMeals.Average(cmeal => cmeal.TotalCalories));
                     }
                 }
-                
             }
-
-
             DrawGraph();
-
         }
-
-        private void FindMeals()
-        {
-            
-            if (rbAll.Checked) // meal için hepsi seçerse
-            {
-                meal = null;
-            }
-            else // meal seçerse
-            {
-                if (rbBreakFast.Checked)
-                {
-                    resultMeals = _meals.Where(m => m.Name == MealName.Breakfast).ToList();
-                }
-                else if (rbDinner.Checked)
-                {
-                    resultMeals = _meals.Where(m => m.Name == MealName.Dinner).ToList();
-                }
-                else if (rbLaunch.Checked)
-                {
-                    resultMeals = _meals.Where(m => m.Name == MealName.Lunch).ToList();
-                }
-                else if (rbExtra.Checked)
-                {
-                    resultMeals = _meals.Where(m => m.Name == MealName.Extra).ToList();
-                }
-
-            }
-        }
-
         private void CategoryVeOgunNull()
         {
             for (int i = 6; i >= 0; i--)
@@ -159,6 +124,37 @@ namespace WFA_ProDiet.UI
             }
         }
 
+        private void FindMeals()
+        {
+            
+            if (rbAll.Checked) // meal için hepsi seçerse
+            {
+                meal = null;
+            }
+            else // meal seçerse
+            {
+                if (rbBreakFast.Checked)
+                {
+                    resultMeals = _meals.Where(m => m.Name == MealName.Breakfast).ToList();
+                }
+                else if (rbDinner.Checked)
+                {
+                    resultMeals = _meals.Where(m => m.Name == MealName.Dinner).ToList();
+                }
+                else if (rbLaunch.Checked)
+                {
+                    resultMeals = _meals.Where(m => m.Name == MealName.Lunch).ToList();
+                }
+                else if (rbExtra.Checked)
+                {
+                    resultMeals = _meals.Where(m => m.Name == MealName.Extra).ToList();
+                }
+
+            }
+        }
+
+ 
+
         private void FindCategoryOrCategories()
         {
             _categories.Clear();
@@ -172,7 +168,6 @@ namespace WFA_ProDiet.UI
                 category = CrudProcess.GetByID<Category>(cbCategory.SelectedIndex); // sadece seçilen kategori
             }
         }
-
         private void DrawGraph()
         {
             for (int i = 0; i < userCalories.Length; i++)

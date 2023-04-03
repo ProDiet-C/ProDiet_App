@@ -90,7 +90,7 @@
             this.dtpMealDate.Location = new System.Drawing.Point(12, 52);
             this.dtpMealDate.Name = "dtpMealDate";
             this.dtpMealDate.Size = new System.Drawing.Size(246, 27);
-            this.dtpMealDate.TabIndex = 2;
+            this.dtpMealDate.TabIndex = 0;
             this.dtpMealDate.ValueChanged += new System.EventHandler(this.dtpMealDate_ValueChanged);
             // 
             // label2

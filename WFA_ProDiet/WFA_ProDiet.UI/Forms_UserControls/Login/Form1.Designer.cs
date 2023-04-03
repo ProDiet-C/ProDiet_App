@@ -82,14 +82,14 @@
             this.pnlUserLogin.Location = new System.Drawing.Point(17, 30);
             this.pnlUserLogin.Name = "pnlUserLogin";
             this.pnlUserLogin.Size = new System.Drawing.Size(275, 132);
-            this.pnlUserLogin.TabIndex = 8;
+            this.pnlUserLogin.TabIndex = 0;
             // 
             // label3
             // 
             this.label3.Location = new System.Drawing.Point(19, 82);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(112, 23);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 0;
             this.label3.Text = "Hesabınız yok mu ?";
             // 
             // btnLogin
@@ -106,7 +106,7 @@
             this.btnLogin.Location = new System.Drawing.Point(150, 63);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(94, 60);
-            this.btnLogin.TabIndex = 7;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Giris";
             this.btnLogin.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -117,14 +117,14 @@
             this.txtEmail.Location = new System.Drawing.Point(63, 6);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(168, 23);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 0;
             // 
             // txtPassword
             // 
             this.txtPassword.Location = new System.Drawing.Point(63, 35);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(168, 23);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // btnShowPassword
@@ -148,7 +148,7 @@
             this.label1.Location = new System.Drawing.Point(13, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 15);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Email :";
             // 
             // lnkCreateAccount
@@ -160,7 +160,7 @@
             this.lnkCreateAccount.Location = new System.Drawing.Point(31, 105);
             this.lnkCreateAccount.Name = "lnkCreateAccount";
             this.lnkCreateAccount.Size = new System.Drawing.Size(82, 15);
-            this.lnkCreateAccount.TabIndex = 4;
+            this.lnkCreateAccount.TabIndex = 3;
             this.lnkCreateAccount.TabStop = true;
             this.lnkCreateAccount.Text = "Hesap Oluştur";
             this.lnkCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkCreateAccount_LinkClicked);
@@ -171,7 +171,7 @@
             this.label2.Location = new System.Drawing.Point(19, 43);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(36, 15);
-            this.label2.TabIndex = 3;
+            this.label2.TabIndex = 0;
             this.label2.Text = "Şifre :";
             // 
             // label4
@@ -179,7 +179,7 @@
             this.label4.Location = new System.Drawing.Point(17, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(275, 336);
-            this.label4.TabIndex = 9;
+            this.label4.TabIndex = 0;
             this.label4.Text = "Mert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mustafa Öz" +
     "can\r\n\r\nMert Akdur\r\n\r\nAtakan Bektaş\r\n\r\nOğuz Kağan\r\n\r\nİlkiz Kasapoğlu\r\n\r\nMehmet Mu" +
     "stafa Özcan\r\n";
@@ -191,7 +191,7 @@
             this.label5.Location = new System.Drawing.Point(17, 204);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(275, 23);
-            this.label5.TabIndex = 10;
+            this.label5.TabIndex = 0;
             this.label5.Text = "TOP 10 Kullanıcı";
             this.label5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 

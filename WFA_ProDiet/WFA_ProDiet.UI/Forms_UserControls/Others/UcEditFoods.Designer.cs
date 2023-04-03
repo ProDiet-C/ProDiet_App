@@ -74,7 +74,7 @@
             this.btnAdd.Location = new System.Drawing.Point(597, 106);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(270, 73);
-            this.btnAdd.TabIndex = 4;
+            this.btnAdd.TabIndex = 8;
             this.btnAdd.Text = "Ekle";
             this.btnAdd.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -131,7 +131,7 @@
             this.btnAddPict.Location = new System.Drawing.Point(35, 173);
             this.btnAddPict.Name = "btnAddPict";
             this.btnAddPict.Size = new System.Drawing.Size(150, 47);
-            this.btnAddPict.TabIndex = 11;
+            this.btnAddPict.TabIndex = 9;
             this.btnAddPict.Text = "Resim Ekle";
             this.btnAddPict.UseVisualStyleBackColor = true;
             // 
@@ -167,7 +167,7 @@
             this.cbCategory.Location = new System.Drawing.Point(363, 250);
             this.cbCategory.Name = "cbCategory";
             this.cbCategory.Size = new System.Drawing.Size(156, 29);
-            this.cbCategory.TabIndex = 10;
+            this.cbCategory.TabIndex = 7;
             // 
             // nudQuantity
             // 
@@ -175,7 +175,7 @@
             this.nudQuantity.Margin = new System.Windows.Forms.Padding(8, 11, 8, 11);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(156, 28);
-            this.nudQuantity.TabIndex = 8;
+            this.nudQuantity.TabIndex = 6;
             // 
             // nudCalorieQ
             // 
@@ -183,7 +183,7 @@
             this.nudCalorieQ.Margin = new System.Windows.Forms.Padding(8, 11, 8, 11);
             this.nudCalorieQ.Name = "nudCalorieQ";
             this.nudCalorieQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCalorieQ.TabIndex = 8;
+            this.nudCalorieQ.TabIndex = 4;
             // 
             // nudFatQ
             // 
@@ -191,7 +191,7 @@
             this.nudFatQ.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.nudFatQ.Name = "nudFatQ";
             this.nudFatQ.Size = new System.Drawing.Size(156, 28);
-            this.nudFatQ.TabIndex = 8;
+            this.nudFatQ.TabIndex = 3;
             // 
             // nudCarbohydrateQ
             // 
@@ -199,7 +199,7 @@
             this.nudCarbohydrateQ.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.nudCarbohydrateQ.Name = "nudCarbohydrateQ";
             this.nudCarbohydrateQ.Size = new System.Drawing.Size(156, 28);
-            this.nudCarbohydrateQ.TabIndex = 8;
+            this.nudCarbohydrateQ.TabIndex = 2;
             // 
             // nudProteinQ
             // 
@@ -207,7 +207,7 @@
             this.nudProteinQ.Margin = new System.Windows.Forms.Padding(4);
             this.nudProteinQ.Name = "nudProteinQ";
             this.nudProteinQ.Size = new System.Drawing.Size(156, 28);
-            this.nudProteinQ.TabIndex = 8;
+            this.nudProteinQ.TabIndex = 1;
             // 
             // cbMeasure
             // 
@@ -227,7 +227,7 @@
             this.cbMeasure.Location = new System.Drawing.Point(363, 182);
             this.cbMeasure.Name = "cbMeasure";
             this.cbMeasure.Size = new System.Drawing.Size(156, 29);
-            this.cbMeasure.TabIndex = 7;
+            this.cbMeasure.TabIndex = 5;
             // 
             // label8
             // 
@@ -306,7 +306,7 @@
             this.txtFoodName.Location = new System.Drawing.Point(363, 12);
             this.txtFoodName.Name = "txtFoodName";
             this.txtFoodName.Size = new System.Drawing.Size(156, 28);
-            this.txtFoodName.TabIndex = 5;
+            this.txtFoodName.TabIndex = 0;
             // 
             // UcEditFoods
             // 

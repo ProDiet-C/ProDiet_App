@@ -131,7 +131,7 @@
             this.btnAddPhoto.Location = new System.Drawing.Point(-38, 9);
             this.btnAddPhoto.Name = "btnAddPhoto";
             this.btnAddPhoto.Size = new System.Drawing.Size(27, 27);
-            this.btnAddPhoto.TabIndex = 4;
+            this.btnAddPhoto.TabIndex = 6;
             this.btnAddPhoto.UseVisualStyleBackColor = false;
             // 
             // lblInfo
@@ -140,10 +140,10 @@
             this.lblInfo.BackColor = System.Drawing.SystemColors.Info;
             this.lblInfo.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.lblInfo.Location = new System.Drawing.Point(-177, 235);
+            this.lblInfo.Location = new System.Drawing.Point(-186, 337);
             this.lblInfo.Name = "lblInfo";
             this.lblInfo.Size = new System.Drawing.Size(356, 304);
-            this.lblInfo.TabIndex = 25;
+            this.lblInfo.TabIndex = 0;
             this.lblInfo.Text = resources.GetString("lblInfo.Text");
             this.lblInfo.Visible = false;
             // 
@@ -239,7 +239,7 @@
             0});
             this.nudWeight.Name = "nudWeight";
             this.nudWeight.Size = new System.Drawing.Size(63, 28);
-            this.nudWeight.TabIndex = 22;
+            this.nudWeight.TabIndex = 1;
             this.nudWeight.Value = new decimal(new int[] {
             80,
             0,
@@ -263,7 +263,7 @@
             0});
             this.nudHeight.Name = "nudHeight";
             this.nudHeight.Size = new System.Drawing.Size(63, 28);
-            this.nudHeight.TabIndex = 23;
+            this.nudHeight.TabIndex = 0;
             this.nudHeight.Value = new decimal(new int[] {
             170,
             0,
@@ -277,7 +277,7 @@
             this.rbFemale.Location = new System.Drawing.Point(91, 105);
             this.rbFemale.Name = "rbFemale";
             this.rbFemale.Size = new System.Drawing.Size(65, 25);
-            this.rbFemale.TabIndex = 20;
+            this.rbFemale.TabIndex = 3;
             this.rbFemale.Text = "Kadın";
             this.rbFemale.UseVisualStyleBackColor = true;
             // 
@@ -289,7 +289,7 @@
             this.rbMale.Location = new System.Drawing.Point(11, 105);
             this.rbMale.Name = "rbMale";
             this.rbMale.Size = new System.Drawing.Size(67, 25);
-            this.rbMale.TabIndex = 21;
+            this.rbMale.TabIndex = 2;
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Erkek";
             this.rbMale.UseVisualStyleBackColor = true;
@@ -319,7 +319,7 @@
             this.dtpBirthDate.Location = new System.Drawing.Point(-76, 162);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(230, 28);
-            this.dtpBirthDate.TabIndex = 15;
+            this.dtpBirthDate.TabIndex = 4;
             this.dtpBirthDate.Value = new System.DateTime(1995, 1, 1, 0, 0, 0, 0);
             // 
             // cbActivityLevel
@@ -334,7 +334,7 @@
             this.cbActivityLevel.Location = new System.Drawing.Point(-75, 195);
             this.cbActivityLevel.Name = "cbActivityLevel";
             this.cbActivityLevel.Size = new System.Drawing.Size(191, 29);
-            this.cbActivityLevel.TabIndex = 14;
+            this.cbActivityLevel.TabIndex = 5;
             // 
             // btnContinue
             // 
@@ -349,7 +349,7 @@
             this.btnContinue.Location = new System.Drawing.Point(-113, 245);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(229, 38);
-            this.btnContinue.TabIndex = 27;
+            this.btnContinue.TabIndex = 6;
             this.btnContinue.Text = "Devam Et";
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
@@ -463,7 +463,7 @@
             this.btnSignUp.Location = new System.Drawing.Point(143, 209);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(211, 35);
-            this.btnSignUp.TabIndex = 4;
+            this.btnSignUp.TabIndex = 5;
             this.btnSignUp.Text = "Kayıt Ol";
             this.btnSignUp.UseVisualStyleBackColor = true;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -475,7 +475,7 @@
             this.txtPasswordCheck.Location = new System.Drawing.Point(143, 175);
             this.txtPasswordCheck.Name = "txtPasswordCheck";
             this.txtPasswordCheck.Size = new System.Drawing.Size(211, 28);
-            this.txtPasswordCheck.TabIndex = 3;
+            this.txtPasswordCheck.TabIndex = 4;
             this.txtPasswordCheck.TextChanged += new System.EventHandler(this.txtPasswordCheck_TextChanged);
             // 
             // txtPassword
@@ -485,7 +485,7 @@
             this.txtPassword.Location = new System.Drawing.Point(143, 141);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(211, 28);
-            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TabIndex = 3;
             this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtEmail
@@ -495,7 +495,7 @@
             this.txtEmail.Location = new System.Drawing.Point(143, 107);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(211, 28);
-            this.txtEmail.TabIndex = 1;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtLastName
@@ -516,7 +516,7 @@
             this.txtName.Location = new System.Drawing.Point(143, 39);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(211, 28);
-            this.txtName.TabIndex = 1;
+            this.txtName.TabIndex = 0;
             this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
             this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
