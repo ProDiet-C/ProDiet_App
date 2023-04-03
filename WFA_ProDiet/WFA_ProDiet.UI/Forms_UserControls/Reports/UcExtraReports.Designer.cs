@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -139,6 +140,7 @@
             this.btnLeastConsumed.Text = "En az tüketilenler";
             this.btnLeastConsumed.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLeastConsumed.UseVisualStyleBackColor = false;
+
             panel1 = new Panel();
             label2 = new Label();
             label1 = new Label();
@@ -274,6 +276,7 @@
             // 
             // UcExtraReports
             // 
+
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvExtraReports);
@@ -286,6 +289,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvExtraReports)).EndInit();
             this.ResumeLayout(false);
 
+
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(dgvExtraReports);
@@ -297,7 +301,6 @@
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvExtraReports).EndInit();
             ResumeLayout(false);
-
         }
 
         #endregion
