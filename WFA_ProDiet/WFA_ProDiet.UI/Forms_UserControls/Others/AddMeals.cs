@@ -60,9 +60,9 @@ namespace WFA_ProDiet.UI
                         CustomerId = Current.Customer.CustomerId,
                         EatDay = dtpMealDate.Value.Date,
                         MealCalorie = (food.Calorie * quantity),
-                        MealCarbohydrate = (food.Carbohydrate * quantity),
-                        MealProtein = (food.Protein * quantity),
-                        MealFat = (food.Fat * quantity)
+                        MealCarbohydrate = ((double)food.Carbohydrate * quantity),
+                        MealProtein = ((double)food.Protein * quantity),
+                        MealFat = ((double)food.Fat * quantity)
 
                     };
                     addmeal.Name = GetMealName();
@@ -71,9 +71,9 @@ namespace WFA_ProDiet.UI
                 else
                 {
                     addmeal.MealCalorie += (food.Calorie * quantity);
-                    addmeal.MealCarbohydrate += (food.Carbohydrate * quantity);
-                    addmeal.MealProtein += (food.Protein * quantity);
-                    addmeal.MealFat += (food.Fat * quantity);
+                    addmeal.MealCarbohydrate += ((double)food.Carbohydrate * quantity);
+                    addmeal.MealProtein += ((double)food.Protein * quantity);
+                    addmeal.MealFat += ((double)food.Fat * quantity);
                     CrudProcess.Edit(addmeal);
                 }
 
@@ -162,7 +162,7 @@ namespace WFA_ProDiet.UI
                 int newQuantity = (updateFoodFromMeal == null) ? ((int)nudQuantity.Value) : ((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
                 if (updateFoodFromMeal != null)//eğer aynı yemeğin sadece adetini değiştireceksem
                 {
-                    meal.MealCalorie += ((newFood.Calorie * newQuantity));
+                    meal.MealCalorie += (newFood.Calorie * newQuantity);
                     meal.MealCarbohydrate += (newFood.Carbohydrate * newQuantity);
                     meal.MealProtein += (newFood.Protein * newQuantity);
                     meal.MealFat += (newFood.Fat * newQuantity);

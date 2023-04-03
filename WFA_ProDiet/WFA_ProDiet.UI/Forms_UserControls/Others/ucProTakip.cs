@@ -19,7 +19,7 @@ namespace WFA_ProDiet.UI
         public ucProTakip()
         {
             InitializeComponent();
-            lblTargetCalorie.Text = Current.Customer.TargetCalorie.ToString();
+            lblTargetCalorie.Text = (Convert.ToInt32(Current.Customer.TargetCalorie)).ToString();
             lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
             lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
             lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
@@ -70,7 +70,7 @@ namespace WFA_ProDiet.UI
 
         public void dtpMealDate_ValueChanged(object sender, EventArgs e)
         {
-            lblTargetCalorie.Text = Current.Customer.TargetCalorie.ToString();
+            lblTargetCalorie.Text = (Convert.ToInt32(Current.Customer.TargetCalorie)).ToString(); 
             lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);
             lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
             lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);

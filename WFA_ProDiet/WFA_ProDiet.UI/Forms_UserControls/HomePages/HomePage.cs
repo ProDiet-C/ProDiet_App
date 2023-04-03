@@ -20,7 +20,7 @@ namespace WFA_ProDiet.UI
         ucProPlan ucProPlan = new ucProPlan();
         UcExtraReports ucEkstraReports = new UcExtraReports();
         UcEditFoods ucEditFoods = new UcEditFoods();
-        UcUserInfo userInfo=new UcUserInfo();
+        UcUserInfo userInfo = new UcUserInfo();
 
         public HomePage()
         {
@@ -123,12 +123,12 @@ namespace WFA_ProDiet.UI
 
         private void btnReturnLogin_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?","Uyarı",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            DialogResult dialogResult = MessageBox.Show("Çıkış yapmak istediğinize emin misiniz?", "Uyarı", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialogResult == DialogResult.Yes)
             {
                 new Form1().Show();
-                this.Close();
-            }         
+                this.Hide();
+            }
         }
 
         private void HomePage_Activated(object sender, EventArgs e)
@@ -136,6 +136,9 @@ namespace WFA_ProDiet.UI
             ucProTakip.dtpMealDate_ValueChanged(sender, e);
         }
 
-
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
