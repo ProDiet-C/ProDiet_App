@@ -33,21 +33,21 @@ namespace WFA_ProDiet.UI
 
         private List<object> GetFilteredMealDetails(bool orderByDescending = true)
         {
-          
-            var query =CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });//query i heryerde kullanabilmek için mecbur kaldım
-           
+
+            var query = CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });//query i heryerde kullanabilmek için mecbur kaldım
+
             //Hiçbirşey seçmezse
             //  List<object> filter;
             if ((cbMealDetail.SelectedIndex == 0 || cbMealDetail.SelectedIndex == -1) && (cbCategoryDetail.SelectedIndex == 0 || cbCategoryDetail.SelectedIndex == -1))
             {
-                 query = CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });
-              
+                query = CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });
+
             }
             //Sadece Öğün seçerse
             else if ((cbCategoryDetail.SelectedIndex == 0 || cbCategoryDetail.SelectedIndex == -1))
             {
                 query = CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer && c.Meal.Name == (MealName)(cbMealDetail.SelectedIndex - 1)).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });
-               
+
             }
             //Sadece Kategori Seçerse
             else if ((cbMealDetail.SelectedIndex == 0 || cbMealDetail.SelectedIndex == -1))
@@ -55,10 +55,10 @@ namespace WFA_ProDiet.UI
                 int categoryId = CrudProcess.GetAll<Category>().Where(c => c.Name == cbCategoryDetail.SelectedItem.ToString()).FirstOrDefault().CategoryId;
 
                 query = CrudProcess.GetAll<MealDetail>().Where(c => c.Meal.Customer == Current.Customer && c.Food.CategoryId == categoryId).GroupBy(f => f.Food).Select(f => new { Yemek = f.Key.Name, ToplamTüketilen = f.Sum(f => f.Quantity), Birim = f.Key.MeasureType, ToplamKalori = f.Sum(f => f.Quantity) * f.Key.Calorie });
-               
+
             }
             //hem kategori hem öğün seçerse
-            else
+            else if (cbMealDetail.SelectedIndex > 0 && cbCategoryDetail.SelectedIndex > 0)
             {
                 int categoryId = CrudProcess.GetAll<Category>().Where(c => c.Name == cbCategoryDetail.SelectedItem.ToString()).FirstOrDefault().CategoryId;
 
@@ -71,6 +71,6 @@ namespace WFA_ProDiet.UI
 
         }
 
-       
+
     }
 }

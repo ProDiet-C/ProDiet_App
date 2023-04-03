@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using WFA_ProDiet.MODELS.Enums;
 
 namespace WFA_ProDiet.MODELS.Models
@@ -10,7 +11,7 @@ namespace WFA_ProDiet.MODELS.Models
         {
             MealDetails = new List<MealDetail>();
         }
-
+      
         public int FoodId { get; set; }
         public string Name { get; set; } = null!;
         public string? PicturePath { get; set; }
@@ -19,9 +20,11 @@ namespace WFA_ProDiet.MODELS.Models
         public double? Fat { get; set; } = 0;
         public double? Protein { get; set; } = 0;
         public MeasureType MeasureType { get; set; }
+        
         public int? CategoryId { get; set; }
-
+        [Browsable(false)]
         public virtual Category? Category { get; set; }
+        [Browsable(false)]
         public virtual ICollection<MealDetail> MealDetails { get; set; }
 
         public override string ToString()

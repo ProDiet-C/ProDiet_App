@@ -49,7 +49,7 @@ namespace WFA_ProDiet.UI
             RemoveAllUc();
             AddUserControl(ucProTakip);
         }
-        private void btnEditFoods_Click(object sender, EventArgs e)
+        public void btnEditFoods_Click(object sender, EventArgs e)
         {
             RemoveAllUc();
             AddUserControl(ucEditFoods);

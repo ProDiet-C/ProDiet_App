@@ -127,7 +127,7 @@ namespace WFA_ProDiet.UI
             customer.Gender = rbMale.Checked ? Gender.Man : Gender.Woman;
             customer.Height = (int)nudHeight.Value;
             customer.Weight = (double)nudWeight.Value;
-            
+
             if (cbActivityLevel.SelectedIndex == 0) // aktivite yok
             {
                 customer.ActivityLevel = ActivityLevel.NoActivitiy;

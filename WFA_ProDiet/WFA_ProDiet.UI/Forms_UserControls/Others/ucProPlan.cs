@@ -39,8 +39,6 @@ namespace WFA_ProDiet.UI
 
             dtpTargetDate.MinDate = DateTime.Today.AddDays(1);
             // DateTimePicker kontrolünün MinDate özelliğini bugünün tarihi olarak ayarlayın
-
-
         }
         private void lnkProTakip_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -55,8 +53,6 @@ namespace WFA_ProDiet.UI
             homePage.btnProTakip_Click(proTakipControl, EventArgs.Empty);
 
         }
-
-
         private void btnCreatePlan_Click(object sender, EventArgs e)
         {
 

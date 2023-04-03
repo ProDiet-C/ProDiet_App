@@ -20,6 +20,9 @@ namespace WFA_ProDiet.UI
         {
             InitializeComponent();
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
+            dgvFoods.Columns["PicturePath"].Width = 0;
+            dgvFoods.Columns[0].Width = 0;//foodID
+            dgvFoods.Columns["CategoryId"].Width = 0;
         }
         string picturePath;
         private void btnAdd_Click(object sender, EventArgs e)

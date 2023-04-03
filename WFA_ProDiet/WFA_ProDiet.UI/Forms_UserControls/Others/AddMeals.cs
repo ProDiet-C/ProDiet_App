@@ -28,7 +28,8 @@ namespace WFA_ProDiet.UI
         private void AddMeals_Load(object sender, EventArgs e)
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
-            dgvFoods.Columns["PicturePath"].Width = 1;
+            dgvFoods.Columns["PicturePath"].Width = 0;
+           
             txtFood.Text = "";
             lstMealRefresh();
 
@@ -309,6 +310,11 @@ namespace WFA_ProDiet.UI
         }
 
         private void pbFoods_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddNewFood_Click(object sender, EventArgs e)
         {
 
         }
