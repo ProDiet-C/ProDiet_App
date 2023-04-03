@@ -28,547 +28,576 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
-            pnlMainInfo = new Panel();
-            pnlUserInfo = new Panel();
-            lblInfo = new Label();
-            btnInfo = new FontAwesome.Sharp.IconButton();
-            label5 = new Label();
-            label7 = new Label();
-            label8 = new Label();
-            label10 = new Label();
-            nudWeight = new NumericUpDown();
-            nudHeight = new NumericUpDown();
-            rbFemale = new RadioButton();
-            rbMale = new RadioButton();
-            label9 = new Label();
-            label6 = new Label();
-            dtpBirthDate = new DateTimePicker();
-            cbActivityLevel = new ComboBox();
-            btnContinue = new FontAwesome.Sharp.IconButton();
-            panel2 = new Panel();
-            lblText = new Label();
-            panel4 = new Panel();
-            lblPasswordCheckInfo = new Label();
-            lblPasswordInfo = new Label();
-            lblEmailInfo = new Label();
-            lblLastNameInfo = new Label();
-            lblNameInfo = new Label();
-            btnSignUp = new FontAwesome.Sharp.IconButton();
-            txtPasswordCheck = new MaskedTextBox();
-            txtPassword = new MaskedTextBox();
-            txtEmail = new TextBox();
-            txtLastName = new TextBox();
-            txtName = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
-            label11 = new Label();
-            label4 = new Label();
-            label1 = new Label();
-            lblWelcome = new Label();
-            tmrWelcome = new System.Windows.Forms.Timer(components);
-            tmrOpenForm = new System.Windows.Forms.Timer(components);
-            pnlMainInfo.SuspendLayout();
-            pnlUserInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)nudHeight).BeginInit();
-            panel2.SuspendLayout();
-            panel4.SuspendLayout();
-            SuspendLayout();
+            this.pnlMainInfo = new System.Windows.Forms.Panel();
+            this.pnlUserInfo = new System.Windows.Forms.Panel();
+            this.lblInfo = new System.Windows.Forms.Label();
+            this.btnInfo = new FontAwesome.Sharp.IconButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nudWeight = new System.Windows.Forms.NumericUpDown();
+            this.nudHeight = new System.Windows.Forms.NumericUpDown();
+            this.rbFemale = new System.Windows.Forms.RadioButton();
+            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.cbActivityLevel = new System.Windows.Forms.ComboBox();
+            this.btnContinue = new FontAwesome.Sharp.IconButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblText = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lblPasswordCheckInfo = new System.Windows.Forms.Label();
+            this.lblPasswordInfo = new System.Windows.Forms.Label();
+            this.lblEmailInfo = new System.Windows.Forms.Label();
+            this.lblLastNameInfo = new System.Windows.Forms.Label();
+            this.lblNameInfo = new System.Windows.Forms.Label();
+            this.btnSignUp = new FontAwesome.Sharp.IconButton();
+            this.txtPasswordCheck = new System.Windows.Forms.MaskedTextBox();
+            this.txtPassword = new System.Windows.Forms.MaskedTextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtLastName = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblWelcome = new System.Windows.Forms.Label();
+            this.tmrWelcome = new System.Windows.Forms.Timer(this.components);
+            this.tmrOpenForm = new System.Windows.Forms.Timer(this.components);
+            this.pnlMainInfo.SuspendLayout();
+            this.pnlUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.SuspendLayout();
             // 
             // pnlMainInfo
             // 
-            pnlMainInfo.Controls.Add(pnlUserInfo);
-            pnlMainInfo.Dock = DockStyle.Fill;
-            pnlMainInfo.Location = new Point(669, 0);
-            pnlMainInfo.Margin = new Padding(4);
-            pnlMainInfo.Name = "pnlMainInfo";
-            pnlMainInfo.Size = new Size(0, 571);
-            pnlMainInfo.TabIndex = 0;
+            this.pnlMainInfo.Controls.Add(this.pnlUserInfo);
+            this.pnlMainInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMainInfo.Location = new System.Drawing.Point(669, 0);
+            this.pnlMainInfo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlMainInfo.Name = "pnlMainInfo";
+            this.pnlMainInfo.Size = new System.Drawing.Size(0, 571);
+            this.pnlMainInfo.TabIndex = 0;
             // 
             // pnlUserInfo
             // 
-            pnlUserInfo.BackColor = Color.Transparent;
-            pnlUserInfo.BackgroundImageLayout = ImageLayout.Stretch;
-            pnlUserInfo.Controls.Add(lblInfo);
-            pnlUserInfo.Controls.Add(btnInfo);
-            pnlUserInfo.Controls.Add(label5);
-            pnlUserInfo.Controls.Add(label7);
-            pnlUserInfo.Controls.Add(label8);
-            pnlUserInfo.Controls.Add(label10);
-            pnlUserInfo.Controls.Add(nudWeight);
-            pnlUserInfo.Controls.Add(nudHeight);
-            pnlUserInfo.Controls.Add(rbFemale);
-            pnlUserInfo.Controls.Add(rbMale);
-            pnlUserInfo.Controls.Add(label9);
-            pnlUserInfo.Controls.Add(label6);
-            pnlUserInfo.Controls.Add(dtpBirthDate);
-            pnlUserInfo.Controls.Add(cbActivityLevel);
-            pnlUserInfo.Controls.Add(btnContinue);
-            pnlUserInfo.Dock = DockStyle.Fill;
-            pnlUserInfo.Location = new Point(0, 0);
-            pnlUserInfo.Name = "pnlUserInfo";
-            pnlUserInfo.Size = new Size(0, 571);
-            pnlUserInfo.TabIndex = 27;
-            pnlUserInfo.Visible = false;
+            this.pnlUserInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlUserInfo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlUserInfo.Controls.Add(this.lblInfo);
+            this.pnlUserInfo.Controls.Add(this.btnInfo);
+            this.pnlUserInfo.Controls.Add(this.label5);
+            this.pnlUserInfo.Controls.Add(this.label7);
+            this.pnlUserInfo.Controls.Add(this.label8);
+            this.pnlUserInfo.Controls.Add(this.label10);
+            this.pnlUserInfo.Controls.Add(this.nudWeight);
+            this.pnlUserInfo.Controls.Add(this.nudHeight);
+            this.pnlUserInfo.Controls.Add(this.rbFemale);
+            this.pnlUserInfo.Controls.Add(this.rbMale);
+            this.pnlUserInfo.Controls.Add(this.label9);
+            this.pnlUserInfo.Controls.Add(this.label6);
+            this.pnlUserInfo.Controls.Add(this.dtpBirthDate);
+            this.pnlUserInfo.Controls.Add(this.cbActivityLevel);
+            this.pnlUserInfo.Controls.Add(this.btnContinue);
+            this.pnlUserInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlUserInfo.Location = new System.Drawing.Point(0, 0);
+            this.pnlUserInfo.Name = "pnlUserInfo";
+            this.pnlUserInfo.Size = new System.Drawing.Size(0, 571);
+            this.pnlUserInfo.TabIndex = 27;
+            this.pnlUserInfo.Visible = false;
             // 
             // lblInfo
             // 
-            lblInfo.Anchor = AnchorStyles.None;
-            lblInfo.BackColor = SystemColors.Info;
-            lblInfo.Font = new Font("Segoe MDL2 Assets", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblInfo.ForeColor = Color.FromArgb(0, 0, 64);
-            lblInfo.Location = new Point(-186, 337);
-            lblInfo.Name = "lblInfo";
-            lblInfo.Size = new Size(356, 304);
-            lblInfo.TabIndex = 0;
-            lblInfo.Text = resources.GetString("lblInfo.Text");
-            lblInfo.Visible = false;
+            this.lblInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblInfo.BackColor = System.Drawing.SystemColors.Info;
+            this.lblInfo.Font = new System.Drawing.Font("Segoe MDL2 Assets", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblInfo.Location = new System.Drawing.Point(-186, 234);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(356, 304);
+            this.lblInfo.TabIndex = 0;
+            this.lblInfo.Text = resources.GetString("lblInfo.Text");
+            this.lblInfo.Visible = false;
             // 
             // btnInfo
             // 
-            btnInfo.Anchor = AnchorStyles.None;
-            btnInfo.BackColor = Color.Transparent;
-            btnInfo.FlatAppearance.BorderSize = 0;
-            btnInfo.FlatStyle = FlatStyle.Flat;
-            btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
-            btnInfo.IconColor = Color.DimGray;
-            btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnInfo.IconSize = 25;
-            btnInfo.Location = new Point(122, 194);
-            btnInfo.Name = "btnInfo";
-            btnInfo.Size = new Size(33, 30);
-            btnInfo.TabIndex = 26;
-            btnInfo.UseVisualStyleBackColor = false;
-            btnInfo.MouseEnter += btnInfo_MouseEnter;
-            btnInfo.MouseLeave += btnInfo_MouseLeave;
+            this.btnInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.IconChar = FontAwesome.Sharp.IconChar.CircleInfo;
+            this.btnInfo.IconColor = System.Drawing.Color.DimGray;
+            this.btnInfo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInfo.IconSize = 25;
+            this.btnInfo.Location = new System.Drawing.Point(122, 194);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(33, 30);
+            this.btnInfo.TabIndex = 26;
+            this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.MouseEnter += new System.EventHandler(this.btnInfo_MouseEnter);
+            this.btnInfo.MouseLeave += new System.EventHandler(this.btnInfo_MouseLeave);
             // 
             // label5
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.Location = new Point(-200, 194);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(118, 27);
-            label5.TabIndex = 10;
-            label5.Text = "Aktivite Düzeyi :";
-            label5.TextAlign = ContentAlignment.MiddleRight;
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.Location = new System.Drawing.Point(-200, 194);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(118, 27);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Aktivite Düzeyi :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.Location = new Point(2, 67);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(56, 27);
-            label7.TabIndex = 11;
-            label7.Text = "Kilo :";
-            label7.TextAlign = ContentAlignment.MiddleRight;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.Location = new System.Drawing.Point(2, 67);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 27);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Kilo :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label8
             // 
-            label8.Anchor = AnchorStyles.None;
-            label8.Location = new Point(-201, 162);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new Size(118, 27);
-            label8.TabIndex = 12;
-            label8.Text = "Doğum Tarihi :";
-            label8.TextAlign = ContentAlignment.MiddleRight;
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.Location = new System.Drawing.Point(-201, 162);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(118, 27);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Doğum Tarihi :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label10
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.Location = new Point(2, 32);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new Size(56, 27);
-            label10.TabIndex = 13;
-            label10.Text = "Boy :";
-            label10.TextAlign = ContentAlignment.MiddleRight;
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.Location = new System.Drawing.Point(2, 32);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(56, 27);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "Boy :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // nudWeight
             // 
-            nudWeight.Anchor = AnchorStyles.None;
-            nudWeight.Location = new Point(65, 66);
-            nudWeight.Margin = new Padding(6, 7, 6, 7);
-            nudWeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudWeight.Minimum = new decimal(new int[] { 40, 0, 0, 0 });
-            nudWeight.Name = "nudWeight";
-            nudWeight.Size = new Size(63, 28);
-            nudWeight.TabIndex = 1;
-            nudWeight.Value = new decimal(new int[] { 80, 0, 0, 0 });
+            this.nudWeight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudWeight.Location = new System.Drawing.Point(65, 66);
+            this.nudWeight.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
+            this.nudWeight.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nudWeight.Minimum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.nudWeight.Name = "nudWeight";
+            this.nudWeight.Size = new System.Drawing.Size(63, 28);
+            this.nudWeight.TabIndex = 1;
+            this.nudWeight.Value = new decimal(new int[] {
+            80,
+            0,
+            0,
+            0});
             // 
             // nudHeight
             // 
-            nudHeight.Anchor = AnchorStyles.None;
-            nudHeight.Location = new Point(65, 31);
-            nudHeight.Margin = new Padding(5, 6, 5, 6);
-            nudHeight.Maximum = new decimal(new int[] { 250, 0, 0, 0 });
-            nudHeight.Minimum = new decimal(new int[] { 130, 0, 0, 0 });
-            nudHeight.Name = "nudHeight";
-            nudHeight.Size = new Size(63, 28);
-            nudHeight.TabIndex = 0;
-            nudHeight.Value = new decimal(new int[] { 170, 0, 0, 0 });
+            this.nudHeight.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.nudHeight.Location = new System.Drawing.Point(65, 31);
+            this.nudHeight.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.nudHeight.Maximum = new decimal(new int[] {
+            250,
+            0,
+            0,
+            0});
+            this.nudHeight.Minimum = new decimal(new int[] {
+            130,
+            0,
+            0,
+            0});
+            this.nudHeight.Name = "nudHeight";
+            this.nudHeight.Size = new System.Drawing.Size(63, 28);
+            this.nudHeight.TabIndex = 0;
+            this.nudHeight.Value = new decimal(new int[] {
+            170,
+            0,
+            0,
+            0});
             // 
             // rbFemale
             // 
-            rbFemale.Anchor = AnchorStyles.None;
-            rbFemale.AutoSize = true;
-            rbFemale.Location = new Point(91, 105);
-            rbFemale.Name = "rbFemale";
-            rbFemale.Size = new Size(65, 25);
-            rbFemale.TabIndex = 3;
-            rbFemale.Text = "Kadın";
-            rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbFemale.AutoSize = true;
+            this.rbFemale.Location = new System.Drawing.Point(91, 105);
+            this.rbFemale.Name = "rbFemale";
+            this.rbFemale.Size = new System.Drawing.Size(65, 25);
+            this.rbFemale.TabIndex = 3;
+            this.rbFemale.Text = "Kadın";
+            this.rbFemale.UseVisualStyleBackColor = true;
             // 
             // rbMale
             // 
-            rbMale.Anchor = AnchorStyles.None;
-            rbMale.AutoSize = true;
-            rbMale.Checked = true;
-            rbMale.Location = new Point(11, 105);
-            rbMale.Name = "rbMale";
-            rbMale.Size = new Size(67, 25);
-            rbMale.TabIndex = 2;
-            rbMale.TabStop = true;
-            rbMale.Text = "Erkek";
-            rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rbMale.AutoSize = true;
+            this.rbMale.Checked = true;
+            this.rbMale.Location = new System.Drawing.Point(11, 105);
+            this.rbMale.Name = "rbMale";
+            this.rbMale.Size = new System.Drawing.Size(67, 25);
+            this.rbMale.TabIndex = 2;
+            this.rbMale.TabStop = true;
+            this.rbMale.Text = "Erkek";
+            this.rbMale.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
-            label9.Anchor = AnchorStyles.None;
-            label9.Location = new Point(132, 70);
-            label9.Name = "label9";
-            label9.Size = new Size(47, 27);
-            label9.TabIndex = 18;
-            label9.Text = "kg";
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.Location = new System.Drawing.Point(132, 70);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(47, 27);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "kg";
             // 
             // label6
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.Location = new Point(132, 35);
-            label6.Name = "label6";
-            label6.Size = new Size(38, 27);
-            label6.TabIndex = 19;
-            label6.Text = "cm";
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.Location = new System.Drawing.Point(132, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(38, 27);
+            this.label6.TabIndex = 19;
+            this.label6.Text = "cm";
             // 
             // dtpBirthDate
             // 
-            dtpBirthDate.Anchor = AnchorStyles.None;
-            dtpBirthDate.Format = DateTimePickerFormat.Short;
-            dtpBirthDate.Location = new Point(-76, 162);
-            dtpBirthDate.Name = "dtpBirthDate";
-            dtpBirthDate.Size = new Size(230, 28);
-            dtpBirthDate.TabIndex = 4;
-            dtpBirthDate.Value = new DateTime(1995, 1, 1, 0, 0, 0, 0);
+            this.dtpBirthDate.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dtpBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpBirthDate.Location = new System.Drawing.Point(-76, 162);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(230, 28);
+            this.dtpBirthDate.TabIndex = 4;
+            this.dtpBirthDate.Value = new System.DateTime(1995, 1, 1, 0, 0, 0, 0);
             // 
             // cbActivityLevel
             // 
-            cbActivityLevel.Anchor = AnchorStyles.None;
-            cbActivityLevel.FormattingEnabled = true;
-            cbActivityLevel.Items.AddRange(new object[] { "Aktivite Yok", "Az Aktif", "Aktif", "Çok Aktif" });
-            cbActivityLevel.Location = new Point(-75, 195);
-            cbActivityLevel.Name = "cbActivityLevel";
-            cbActivityLevel.Size = new Size(191, 29);
-            cbActivityLevel.TabIndex = 5;
+            this.cbActivityLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbActivityLevel.FormattingEnabled = true;
+            this.cbActivityLevel.Items.AddRange(new object[] {
+            "Aktivite Yok",
+            "Az Aktif",
+            "Aktif",
+            "Çok Aktif"});
+            this.cbActivityLevel.Location = new System.Drawing.Point(-75, 195);
+            this.cbActivityLevel.Name = "cbActivityLevel";
+            this.cbActivityLevel.Size = new System.Drawing.Size(191, 29);
+            this.cbActivityLevel.TabIndex = 5;
             // 
             // btnContinue
             // 
-            btnContinue.Anchor = AnchorStyles.None;
-            btnContinue.FlatAppearance.BorderColor = Color.FromArgb(198, 198, 198);
-            btnContinue.FlatAppearance.MouseOverBackColor = Color.FromArgb(141, 197, 62);
-            btnContinue.FlatStyle = FlatStyle.Flat;
-            btnContinue.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnContinue.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnContinue.IconColor = Color.Black;
-            btnContinue.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnContinue.Location = new Point(-113, 245);
-            btnContinue.Name = "btnContinue";
-            btnContinue.Size = new Size(229, 38);
-            btnContinue.TabIndex = 6;
-            btnContinue.Text = "Devam Et";
-            btnContinue.UseVisualStyleBackColor = true;
-            btnContinue.Click += btnContinue_Click;
+            this.btnContinue.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnContinue.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnContinue.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContinue.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnContinue.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnContinue.IconColor = System.Drawing.Color.Black;
+            this.btnContinue.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnContinue.Location = new System.Drawing.Point(-113, 245);
+            this.btnContinue.Name = "btnContinue";
+            this.btnContinue.Size = new System.Drawing.Size(229, 38);
+            this.btnContinue.TabIndex = 6;
+            this.btnContinue.Text = "Devam Et";
+            this.btnContinue.UseVisualStyleBackColor = true;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // panel2
             // 
-            panel2.Controls.Add(lblText);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(lblWelcome);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(4);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(669, 571);
-            panel2.TabIndex = 1;
+            this.panel2.Controls.Add(this.lblText);
+            this.panel2.Controls.Add(this.panel4);
+            this.panel2.Controls.Add(this.lblWelcome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(669, 571);
+            this.panel2.TabIndex = 1;
             // 
             // lblText
             // 
-            lblText.BackColor = Color.FromArgb(141, 197, 62);
-            lblText.Font = new Font("Segoe Print", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblText.Location = new Point(287, 65);
-            lblText.Name = "lblText";
-            lblText.Size = new Size(370, 40);
-            lblText.TabIndex = 6;
+            this.lblText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.lblText.Font = new System.Drawing.Font("Segoe Print", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblText.Location = new System.Drawing.Point(287, 65);
+            this.lblText.Name = "lblText";
+            this.lblText.Size = new System.Drawing.Size(370, 40);
+            this.lblText.TabIndex = 6;
             // 
             // panel4
             // 
-            panel4.Controls.Add(lblPasswordCheckInfo);
-            panel4.Controls.Add(lblPasswordInfo);
-            panel4.Controls.Add(lblEmailInfo);
-            panel4.Controls.Add(lblLastNameInfo);
-            panel4.Controls.Add(lblNameInfo);
-            panel4.Controls.Add(btnSignUp);
-            panel4.Controls.Add(txtPasswordCheck);
-            panel4.Controls.Add(txtPassword);
-            panel4.Controls.Add(txtEmail);
-            panel4.Controls.Add(txtLastName);
-            panel4.Controls.Add(txtName);
-            panel4.Controls.Add(label3);
-            panel4.Controls.Add(label2);
-            panel4.Controls.Add(label11);
-            panel4.Controls.Add(label4);
-            panel4.Controls.Add(label1);
-            panel4.Dock = DockStyle.Fill;
-            panel4.Location = new Point(0, 158);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(669, 413);
-            panel4.TabIndex = 6;
+            this.panel4.Controls.Add(this.lblPasswordCheckInfo);
+            this.panel4.Controls.Add(this.lblPasswordInfo);
+            this.panel4.Controls.Add(this.lblEmailInfo);
+            this.panel4.Controls.Add(this.lblLastNameInfo);
+            this.panel4.Controls.Add(this.lblNameInfo);
+            this.panel4.Controls.Add(this.btnSignUp);
+            this.panel4.Controls.Add(this.txtPasswordCheck);
+            this.panel4.Controls.Add(this.txtPassword);
+            this.panel4.Controls.Add(this.txtEmail);
+            this.panel4.Controls.Add(this.txtLastName);
+            this.panel4.Controls.Add(this.txtName);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 158);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(669, 413);
+            this.panel4.TabIndex = 6;
             // 
             // lblPasswordCheckInfo
             // 
-            lblPasswordCheckInfo.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPasswordCheckInfo.ForeColor = Color.FromArgb(192, 0, 0);
-            lblPasswordCheckInfo.Location = new Point(360, 174);
-            lblPasswordCheckInfo.Name = "lblPasswordCheckInfo";
-            lblPasswordCheckInfo.Size = new Size(297, 28);
-            lblPasswordCheckInfo.TabIndex = 5;
-            lblPasswordCheckInfo.Text = "Şifreler aynı değil.";
-            lblPasswordCheckInfo.TextAlign = ContentAlignment.MiddleLeft;
-            lblPasswordCheckInfo.Visible = false;
+            this.lblPasswordCheckInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPasswordCheckInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPasswordCheckInfo.Location = new System.Drawing.Point(360, 174);
+            this.lblPasswordCheckInfo.Name = "lblPasswordCheckInfo";
+            this.lblPasswordCheckInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblPasswordCheckInfo.TabIndex = 5;
+            this.lblPasswordCheckInfo.Text = "Şifreler aynı değil.";
+            this.lblPasswordCheckInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPasswordCheckInfo.Visible = false;
             // 
             // lblPasswordInfo
             // 
-            lblPasswordInfo.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPasswordInfo.ForeColor = Color.FromArgb(192, 0, 0);
-            lblPasswordInfo.Location = new Point(360, 140);
-            lblPasswordInfo.Name = "lblPasswordInfo";
-            lblPasswordInfo.Size = new Size(297, 28);
-            lblPasswordInfo.TabIndex = 5;
-            lblPasswordInfo.Text = "Düşük Güvenlik";
-            lblPasswordInfo.TextAlign = ContentAlignment.MiddleLeft;
-            lblPasswordInfo.Visible = false;
+            this.lblPasswordInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblPasswordInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPasswordInfo.Location = new System.Drawing.Point(360, 140);
+            this.lblPasswordInfo.Name = "lblPasswordInfo";
+            this.lblPasswordInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblPasswordInfo.TabIndex = 5;
+            this.lblPasswordInfo.Text = "Düşük Güvenlik";
+            this.lblPasswordInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblPasswordInfo.Visible = false;
             // 
             // lblEmailInfo
             // 
-            lblEmailInfo.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblEmailInfo.ForeColor = Color.FromArgb(192, 0, 0);
-            lblEmailInfo.Location = new Point(360, 106);
-            lblEmailInfo.Name = "lblEmailInfo";
-            lblEmailInfo.Size = new Size(297, 28);
-            lblEmailInfo.TabIndex = 5;
-            lblEmailInfo.Text = "Email formatı uygun değil.";
-            lblEmailInfo.TextAlign = ContentAlignment.MiddleLeft;
-            lblEmailInfo.Visible = false;
+            this.lblEmailInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblEmailInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblEmailInfo.Location = new System.Drawing.Point(360, 106);
+            this.lblEmailInfo.Name = "lblEmailInfo";
+            this.lblEmailInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblEmailInfo.TabIndex = 5;
+            this.lblEmailInfo.Text = "Email formatı uygun değil.";
+            this.lblEmailInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblEmailInfo.Visible = false;
             // 
             // lblLastNameInfo
             // 
-            lblLastNameInfo.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblLastNameInfo.ForeColor = Color.FromArgb(192, 0, 0);
-            lblLastNameInfo.Location = new Point(360, 72);
-            lblLastNameInfo.Name = "lblLastNameInfo";
-            lblLastNameInfo.Size = new Size(297, 28);
-            lblLastNameInfo.TabIndex = 5;
-            lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
-            lblLastNameInfo.TextAlign = ContentAlignment.MiddleLeft;
-            lblLastNameInfo.Visible = false;
+            this.lblLastNameInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblLastNameInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblLastNameInfo.Location = new System.Drawing.Point(360, 72);
+            this.lblLastNameInfo.Name = "lblLastNameInfo";
+            this.lblLastNameInfo.Size = new System.Drawing.Size(297, 28);
+            this.lblLastNameInfo.TabIndex = 5;
+            this.lblLastNameInfo.Text = "Soyad en az 2 karakterden oluşmalıdır.";
+            this.lblLastNameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblLastNameInfo.Visible = false;
             // 
             // lblNameInfo
             // 
-            lblNameInfo.Font = new Font("Calibri", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
-            lblNameInfo.ForeColor = Color.FromArgb(192, 0, 0);
-            lblNameInfo.Location = new Point(360, 41);
-            lblNameInfo.Name = "lblNameInfo";
-            lblNameInfo.Size = new Size(297, 25);
-            lblNameInfo.TabIndex = 5;
-            lblNameInfo.Text = "Ad en az 2 karakterden oluşmalıdır.";
-            lblNameInfo.TextAlign = ContentAlignment.MiddleLeft;
-            lblNameInfo.Visible = false;
+            this.lblNameInfo.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblNameInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblNameInfo.Location = new System.Drawing.Point(360, 41);
+            this.lblNameInfo.Name = "lblNameInfo";
+            this.lblNameInfo.Size = new System.Drawing.Size(297, 25);
+            this.lblNameInfo.TabIndex = 5;
+            this.lblNameInfo.Text = "Ad en az 2 karakterden oluşmalıdır.";
+            this.lblNameInfo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblNameInfo.Visible = false;
             // 
             // btnSignUp
             // 
-            btnSignUp.Anchor = AnchorStyles.None;
-            btnSignUp.FlatAppearance.BorderColor = Color.FromArgb(198, 198, 198);
-            btnSignUp.FlatAppearance.MouseDownBackColor = Color.FromArgb(198, 198, 198);
-            btnSignUp.FlatAppearance.MouseOverBackColor = Color.FromArgb(141, 197, 62);
-            btnSignUp.FlatStyle = FlatStyle.Flat;
-            btnSignUp.Font = new Font("Calibri", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSignUp.IconChar = FontAwesome.Sharp.IconChar.None;
-            btnSignUp.IconColor = Color.Black;
-            btnSignUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            btnSignUp.Location = new Point(143, 209);
-            btnSignUp.Name = "btnSignUp";
-            btnSignUp.Size = new Size(211, 35);
-            btnSignUp.TabIndex = 5;
-            btnSignUp.Text = "Kayıt Ol";
-            btnSignUp.UseVisualStyleBackColor = true;
-            btnSignUp.Click += btnSignUp_Click;
+            this.btnSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSignUp.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnSignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(198)))), ((int)(((byte)(198)))), ((int)(((byte)(198)))));
+            this.btnSignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.btnSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignUp.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnSignUp.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSignUp.IconColor = System.Drawing.Color.Black;
+            this.btnSignUp.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSignUp.Location = new System.Drawing.Point(143, 209);
+            this.btnSignUp.Name = "btnSignUp";
+            this.btnSignUp.Size = new System.Drawing.Size(211, 35);
+            this.btnSignUp.TabIndex = 5;
+            this.btnSignUp.Text = "Kayıt Ol";
+            this.btnSignUp.UseVisualStyleBackColor = true;
+            this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
             // 
             // txtPasswordCheck
             // 
-            txtPasswordCheck.Anchor = AnchorStyles.None;
-            txtPasswordCheck.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPasswordCheck.Location = new Point(143, 175);
-            txtPasswordCheck.Name = "txtPasswordCheck";
-            txtPasswordCheck.Size = new Size(211, 28);
-            txtPasswordCheck.TabIndex = 4;
-            txtPasswordCheck.TextChanged += txtPasswordCheck_TextChanged;
+            this.txtPasswordCheck.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPasswordCheck.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPasswordCheck.Location = new System.Drawing.Point(143, 175);
+            this.txtPasswordCheck.Name = "txtPasswordCheck";
+            this.txtPasswordCheck.Size = new System.Drawing.Size(211, 28);
+            this.txtPasswordCheck.TabIndex = 4;
+            this.txtPasswordCheck.TextChanged += new System.EventHandler(this.txtPasswordCheck_TextChanged);
             // 
             // txtPassword
             // 
-            txtPassword.Anchor = AnchorStyles.None;
-            txtPassword.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPassword.Location = new Point(143, 141);
-            txtPassword.Name = "txtPassword";
-            txtPassword.Size = new Size(211, 28);
-            txtPassword.TabIndex = 3;
-            txtPassword.TextChanged += txtPassword_TextChanged;
+            this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtPassword.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtPassword.Location = new System.Drawing.Point(143, 141);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(211, 28);
+            this.txtPassword.TabIndex = 3;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // txtEmail
             // 
-            txtEmail.Anchor = AnchorStyles.None;
-            txtEmail.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtEmail.Location = new Point(143, 107);
-            txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(211, 28);
-            txtEmail.TabIndex = 2;
-            txtEmail.TextChanged += txtEmail_TextChanged;
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtEmail.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtEmail.Location = new System.Drawing.Point(143, 107);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(211, 28);
+            this.txtEmail.TabIndex = 2;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtLastName
             // 
-            txtLastName.Anchor = AnchorStyles.None;
-            txtLastName.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtLastName.Location = new Point(143, 73);
-            txtLastName.Name = "txtLastName";
-            txtLastName.Size = new Size(211, 28);
-            txtLastName.TabIndex = 1;
-            txtLastName.TextChanged += txtLastName_TextChanged;
-            txtLastName.Leave += txtLastName_Leave;
+            this.txtLastName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLastName.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtLastName.Location = new System.Drawing.Point(143, 73);
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.Size = new System.Drawing.Size(211, 28);
+            this.txtLastName.TabIndex = 1;
+            this.txtLastName.TextChanged += new System.EventHandler(this.txtLastName_TextChanged);
+            this.txtLastName.Leave += new System.EventHandler(this.txtLastName_Leave);
             // 
             // txtName
             // 
-            txtName.Anchor = AnchorStyles.None;
-            txtName.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            txtName.Location = new Point(143, 39);
-            txtName.Name = "txtName";
-            txtName.Size = new Size(211, 28);
-            txtName.TabIndex = 0;
-            txtName.TextChanged += txtName_TextChanged;
-            txtName.Leave += txtName_Leave;
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtName.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtName.Location = new System.Drawing.Point(143, 39);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(211, 28);
+            this.txtName.TabIndex = 0;
+            this.txtName.TextChanged += new System.EventHandler(this.txtName_TextChanged);
+            this.txtName.Leave += new System.EventHandler(this.txtName_Leave);
             // 
             // label3
             // 
-            label3.Anchor = AnchorStyles.None;
-            label3.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(22, 175);
-            label3.Name = "label3";
-            label3.Size = new Size(104, 28);
-            label3.TabIndex = 0;
-            label3.Text = "Şifre Tekrar :";
-            label3.TextAlign = ContentAlignment.MiddleRight;
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(22, 175);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 28);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Şifre Tekrar :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
             // 
-            label2.Anchor = AnchorStyles.None;
-            label2.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(22, 141);
-            label2.Name = "label2";
-            label2.Size = new Size(104, 28);
-            label2.TabIndex = 0;
-            label2.Text = "Şifre :";
-            label2.TextAlign = ContentAlignment.MiddleRight;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(22, 141);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(104, 28);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Şifre :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label11
             // 
-            label11.Anchor = AnchorStyles.None;
-            label11.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label11.Location = new Point(22, 73);
-            label11.Name = "label11";
-            label11.Size = new Size(104, 28);
-            label11.TabIndex = 0;
-            label11.Text = "Soyad :";
-            label11.TextAlign = ContentAlignment.MiddleRight;
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(22, 73);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(104, 28);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Soyad :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label4
             // 
-            label4.Anchor = AnchorStyles.None;
-            label4.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(22, 107);
-            label4.Name = "label4";
-            label4.Size = new Size(104, 28);
-            label4.TabIndex = 0;
-            label4.Text = "E-mail :";
-            label4.TextAlign = ContentAlignment.MiddleRight;
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(22, 107);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 28);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "E-mail :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            label1.Anchor = AnchorStyles.None;
-            label1.Font = new Font("Calibri", 12.75F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(22, 39);
-            label1.Name = "label1";
-            label1.Size = new Size(104, 28);
-            label1.TabIndex = 0;
-            label1.Text = "Ad :";
-            label1.TextAlign = ContentAlignment.MiddleRight;
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(22, 39);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 28);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ad :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lblWelcome
             // 
-            lblWelcome.BackColor = Color.FromArgb(141, 197, 62);
-            lblWelcome.Dock = DockStyle.Top;
-            lblWelcome.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            lblWelcome.ForeColor = Color.Black;
-            lblWelcome.Image = Properties.Resources.PRODİET_TRANSPARAN_DENEME_13;
-            lblWelcome.ImageAlign = ContentAlignment.MiddleLeft;
-            lblWelcome.Location = new Point(0, 0);
-            lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(669, 158);
-            lblWelcome.TabIndex = 5;
-            lblWelcome.TextAlign = ContentAlignment.MiddleRight;
+            this.lblWelcome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(197)))), ((int)(((byte)(62)))));
+            this.lblWelcome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblWelcome.ForeColor = System.Drawing.Color.Black;
+            this.lblWelcome.Image = global::WFA_ProDiet.UI.Properties.Resources.PRODİET_TRANSPARAN_DENEME_13;
+            this.lblWelcome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblWelcome.Location = new System.Drawing.Point(0, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(669, 158);
+            this.lblWelcome.TabIndex = 5;
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tmrWelcome
             // 
-            tmrWelcome.Tick += tmrWelcome_Tick;
+            this.tmrWelcome.Tick += new System.EventHandler(this.tmrWelcome_Tick);
             // 
             // tmrOpenForm
             // 
-            tmrOpenForm.Interval = 5;
-            tmrOpenForm.Tick += tmrOpenForm_Tick;
+            this.tmrOpenForm.Interval = 5;
+            this.tmrOpenForm.Tick += new System.EventHandler(this.tmrOpenForm_Tick);
             // 
             // CreateAccount
             // 
-            AutoScaleDimensions = new SizeF(9F, 21F);
-            AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(668, 571);
-            Controls.Add(pnlMainInfo);
-            Controls.Add(panel2);
-            Font = new Font("Segoe MDL2 Assets", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Margin = new Padding(4);
-            Name = "CreateAccount";
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "CreateAccount";
-            Load += CreateAccount_Load;
-            pnlMainInfo.ResumeLayout(false);
-            pnlUserInfo.ResumeLayout(false);
-            pnlUserInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)nudWeight).EndInit();
-            ((System.ComponentModel.ISupportInitialize)nudHeight).EndInit();
-            panel2.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(669, 571);
+            this.Controls.Add(this.pnlMainInfo);
+            this.Controls.Add(this.panel2);
+            this.Font = new System.Drawing.Font("Segoe MDL2 Assets", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "CreateAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "CreateAccount";
+            this.Load += new System.EventHandler(this.CreateAccount_Load);
+            this.pnlMainInfo.ResumeLayout(false);
+            this.pnlUserInfo.ResumeLayout(false);
+            this.pnlUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudWeight)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudHeight)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.ResumeLayout(false);
+
         }
 
         #endregion

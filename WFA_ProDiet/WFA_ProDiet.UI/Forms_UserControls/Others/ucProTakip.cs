@@ -19,10 +19,7 @@ namespace WFA_ProDiet.UI
         public ucProTakip()
         {
             InitializeComponent();
-            lblTargetCalorie.Text = (Convert.ToInt32(Current.Customer.TargetCalorie)).ToString();
-            lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
-            lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
-            lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
+            lblTargetCalorie.Text = (Convert.ToInt32(Current.Customer.TargetCalorie)).ToString();      
             lblCurrentKcalBF.Text = GetCurrentKcal(MealName.Breakfast);
             lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
             lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);
@@ -75,6 +72,10 @@ namespace WFA_ProDiet.UI
             lblCurrentKcalLunch.Text = GetCurrentKcal(MealName.Lunch);
             lblCurrentKcalDinner.Text = GetCurrentKcal(MealName.Dinner);
             lblCurrentKcalExtra.Text = GetCurrentKcal(MealName.Extra);
+
+            lblTargetKcalBF.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.25).ToString();
+            lblTargetKcalDinner.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
+            lblTargetKcalLunch.Text = (Convert.ToDouble(lblTargetCalorie.Text) * 0.375).ToString();
 
         }
     }
