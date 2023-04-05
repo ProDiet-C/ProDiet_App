@@ -29,7 +29,7 @@ namespace WFA_ProDiet.UI
         {
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             dgvFoods.Columns["PicturePath"].Width = 0;
-           
+
             txtFood.Text = "";
             lstMealRefresh();
 
@@ -64,7 +64,6 @@ namespace WFA_ProDiet.UI
                         MealCarbohydrate = ((double)food.Carbohydrate * quantity),
                         MealProtein = ((double)food.Protein * quantity),
                         MealFat = ((double)food.Fat * quantity)
-                        
 
                     };
                     addmeal.Name = GetMealName();
@@ -155,8 +154,7 @@ namespace WFA_ProDiet.UI
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
             Meal meal = GetDayMeal();
             MealDetail md = GetMealDetail(newFood, meal);
-            // CrudProcess.GetAll<MealDetail>().Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//aynı yemek kontrolü--------boşa çıktı
-            MealDetail updateFoodFromMeal = GetMealDetail(removeFood, meal); //ProDietDb._context.MealDetails.Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//???
+            MealDetail updateFoodFromMeal = GetMealDetail(removeFood, meal);
 
             if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
             {
@@ -178,6 +176,7 @@ namespace WFA_ProDiet.UI
                     meal.MealCalorie += ((newFood.Calorie * newQuantity) - (removeFood.Calorie * updateFoodFromMeal.Quantity));
 
                     meal.MealCarbohydrate += ((newFood.Carbohydrate * newQuantity) - (removeFood.Carbohydrate * updateFoodFromMeal.Quantity));
+
                     meal.MealProtein += ((newFood.Protein * newQuantity) - (removeFood.Protein * updateFoodFromMeal.Quantity));
 
                     meal.MealFat += ((newFood.Fat * newQuantity) - (removeFood.Fat * updateFoodFromMeal.Quantity));
@@ -227,7 +226,6 @@ namespace WFA_ProDiet.UI
             Meal meal = GetDayMeal();
             Food food = ((Food)lstDailyMeal.SelectedItem);
             MealDetail removefood = GetMealDetail(food, meal);
-            //ProDietDb._context.MealDetails.Where(x => x.Food == food && x.Meal == meal).FirstOrDefault();
             if (food != null && meal != null && meal.MealDetails.Count > 1)//food remove olunca sadece cross tablodan silinir, sonuçta ben yemek silmiyorum öğündeki yemeği siliyorum...
             {
                 meal.MealCalorie -= (removefood.Food.Calorie * removefood.Quantity);
@@ -290,7 +288,6 @@ namespace WFA_ProDiet.UI
         private void dgvFoods_MouseClick(object sender, MouseEventArgs e)
         {
             var path = dgvFoods.CurrentRow.Cells["PicturePath"].Value ?? "";
-            //path = path.ToString();
             if (path != "")
             {
                 try
@@ -298,28 +295,17 @@ namespace WFA_ProDiet.UI
                     pbFoods.Image = Image.FromFile(path.ToString());
 
                 }
-                catch (Exception ahata)
+                catch
                 {
-                    MessageBox.Show(ahata.Message);
+                    pbFoods.Image = WFA_ProDiet.UI.Properties.Resources.basephoto;
                 }
             }
             else
             { pbFoods.Image = Properties.Resources.basephoto; }
         }
 
-        private void btnOrder_Click(object sender, EventArgs e)
-        {
+       
 
-        }
-
-        private void pbFoods_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddNewFood_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

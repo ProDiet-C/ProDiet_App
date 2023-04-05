@@ -17,6 +17,7 @@ namespace WFA_ProDiet.UI
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            var path = CrudProcess.GetAll<Food>().Where(x => x.FoodId == 1).FirstOrDefault();
 
             pictureBox1.Image = Image.FromFile("..\\..\\..\\Resources\\logo.jpeg");
         }
@@ -46,8 +47,8 @@ namespace WFA_ProDiet.UI
                 {
                     Current.Customer= customer;
                     homePage = new HomePage();
-                    homePage.Show();
                     HelperUI.SetOpacityWhenOpen(homePage);
+                    homePage.Show();
                     Hide();
                 }
                 else
