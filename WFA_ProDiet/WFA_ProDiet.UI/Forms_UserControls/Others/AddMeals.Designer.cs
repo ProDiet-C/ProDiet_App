@@ -108,9 +108,6 @@
             this.dgvFoods.Size = new System.Drawing.Size(625, 319);
             this.dgvFoods.TabIndex = 3;
             this.dgvFoods.SelectionChanged += new System.EventHandler(this.dgvFoods_SelectionChanged);
-
-            this.dgvFoods.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvFoods_MouseClick);
-
             // 
             // txtSearchFood
             // 

@@ -154,15 +154,15 @@ namespace WFA_ProDiet.UI
             Food newFood = (Food)dgvFoods.CurrentRow.DataBoundItem;
             Food removeFood = (Food)lstDailyMeal.SelectedItem;
             Meal meal = GetDayMeal();
-            MealDetail md = GetMealDetail(newFood, meal);
+            // MealDetail md = GetMealDetail(removeFood, meal);
             // CrudProcess.GetAll<MealDetail>().Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//aynı yemek kontrolü--------boşa çıktı
             MealDetail updateFoodFromMeal = GetMealDetail(removeFood, meal); //ProDietDb._context.MealDetails.Where(x => x.Food == removeFood && x.Meal == meal).FirstOrDefault();//???
 
             if (newFood != null && meal != null && removeFood != null && updateFoodFromMeal != null)
             {
                 CrudProcess.Delete(updateFoodFromMeal);
-                int newQuantity = (md == null) ? ((int)nudQuantity.Value) : ((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
-                if (md != null)//eğer aynı yemeğin sadece adetini değiştireceksem
+                int newQuantity = (updateFoodFromMeal == null) ? ((int)nudQuantity.Value) : ((int)nudQuantity.Value - updateFoodFromMeal.Quantity);
+                if (updateFoodFromMeal != null)//eğer aynı yemeğin sadece adetini değiştireceksem
                 {
                     meal.MealCalorie += (newFood.Calorie * newQuantity);
                     meal.MealCarbohydrate += (newFood.Carbohydrate * newQuantity);
@@ -186,9 +186,12 @@ namespace WFA_ProDiet.UI
 
                 updateFoodFromMeal.Quantity = (int)nudQuantity.Value;
                 CrudProcess.Add(updateFoodFromMeal);
+<<<<<<< HEAD
 
                 CrudProcess.Edit(meal);
 
+=======
+>>>>>>> 708bdd30d8667d1a4e9388eae00cced1d1eb918f
             }
             lstMealRefresh();
         }
