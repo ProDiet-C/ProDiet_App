@@ -20,6 +20,8 @@ namespace WFA_ProDiet.UI
         public UcUserInfo()
         {
             InitializeComponent();
+            rbMale.Checked = Current.Customer.Gender == Gender.Man;
+            rbFemale.Checked = Current.Customer.Gender == Gender.Woman;
             txtEmail.Text = Current.Customer.Email;
             txtFirstName.Text = Current.Customer.FirstName;
             txtLastName.Text = Current.Customer.LastName;

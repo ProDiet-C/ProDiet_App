@@ -19,7 +19,7 @@ namespace WFA_ProDiet.UI
         {
             var path = CrudProcess.GetAll<Food>().Where(x => x.FoodId == 1).FirstOrDefault();
 
-            pictureBox1.Image = Image.FromFile("..\\..\\..\\Resources\\Býldýrcýn.png");
+            pictureBox1.Image = Image.FromFile("..\\..\\..\\Resources\\logo.jpeg");
         }
         private void lnkCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {      

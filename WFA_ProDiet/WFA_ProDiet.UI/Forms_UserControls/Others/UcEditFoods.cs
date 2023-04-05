@@ -19,6 +19,7 @@ namespace WFA_ProDiet.UI
         public UcEditFoods()
         {
             InitializeComponent();
+            cbCategory.SelectedIndex = 0;
             dgvFoods.DataSource = CrudProcess.GetAll<Food>();
             dgvFoods.Columns["PicturePath"].Width = 0;
             dgvFoods.Columns[0].Width = 0;//foodID
@@ -28,7 +29,7 @@ namespace WFA_ProDiet.UI
         private void btnAdd_Click(object sender, EventArgs e)
         {
 
-            Category catagory = ProDietDb._context.Categories.Where(x => x.CategoryId == cbCategory.SelectedIndex).FirstOrDefault();//kategori yakalama
+            Category catagory = ProDietDb._context.Categories.Where(x => x.CategoryId == cbCategory.SelectedIndex+1).FirstOrDefault();//kategori yakalama
 
             Food food = new()
             {
